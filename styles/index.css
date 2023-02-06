@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;700;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --font-family: "Outfit", sans-serif;
+
+  --color-subtext: #827B93;
+  --color-bg: #fff;
+  --color-footer : #110A25;
+  --color-text: #361E77;
+  --color-btn: linear-gradient(98.97deg, #2474C6 -35.95%, #C4A2E7 114.36%);
+}
