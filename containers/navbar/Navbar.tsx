@@ -18,7 +18,11 @@ function Menu(){
 
 export default function Navbar() {
   const [hamMenu, setHamMenu] = useState(false)
-  const [inVis, setinVis] = useState(true)
+  const [SiInvis, setSiInvis] = useState(true)
+
+  function siVisible(bool: boolean){
+    setSiInvis(bool)
+  }
 
   return (
     <nav className="nv-navbar">
@@ -32,10 +36,10 @@ export default function Navbar() {
             <Menu/>
           </div>
           <button className="nv-connect">{"Connect"}</button>
-          <FontAwesomeIcon icon={faBarsStaggered} className="nv-hamburger" onClick={()=>{setHamMenu(prev=>!prev)}}/>
+          <FontAwesomeIcon icon={faBarsStaggered} className="nv-hamburger" onClick={()=>{setSiInvis(prev=>!prev)}}/>
           {
-            hamMenu && (
-              <Sidebar/>
+            !SiInvis && (
+              <Sidebar myVis={siVisible}/>
             )
           }
           {/* <div className={hamMenu ? "nv-ham-menu-container" : "nv-inVis"}>
