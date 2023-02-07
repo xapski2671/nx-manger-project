@@ -10,15 +10,23 @@ export default function Sidebar() {
   return (
     <div className={`si-sidebar-reactive ${close && "si-inVis"}`} onClick={()=>{setClose(true)}}>
       <div className="si-sidebar">
-        <div className="si-sidebar-menu">
-          <Link href="./">{"Campaigns"}</Link>
-          <Link href="/">{"How it works"}</Link>
-          <Link href="/">{"About us"}</Link>
-          <Link href="/">{"Blog"}</Link>
+        <div className="si-sidebar-menu fl-tl">
+          <div className="si-sidebar-menu-link">
+            <Link href="./">{"Campaigns"}</Link>
+          </div>
+          <div className="si-sidebar-menu-link">
+            <Link href="./">{"Campaigns"}</Link>
+          </div>
+          <div className="si-sidebar-menu-link">
+            <Link href="./">{"Campaigns"}</Link>
+          </div>
+          <div className="si-sidebar-menu-link">
+            <Link href="./">{"Campaigns"}</Link>
+          </div>
         </div>
         <div className="si-connect-wrapper">
           <button className="si-connect">
-            <FontAwesomeIcon icon={faWallet}/>
+            <FontAwesomeIcon icon={faWallet} className="si-wallet-icon"/>
             {"Connect your wallet"}
           </button>
         </div>

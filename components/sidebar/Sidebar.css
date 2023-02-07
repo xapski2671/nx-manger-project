@@ -18,6 +18,7 @@
   min-height: 100vh;
   width: 40%;
   background-color: var(--color-footer);
+  padding: 2em;
 }
 @media(max-width: 350px){
   .si-sidebar{
@@ -27,4 +28,30 @@
 
 .si-inVis{
   display: none;
+}
+
+.si-sidebar-menu.fl-tl{
+  flex-direction: column;
+  gap: 4em;
+}
+
+.si-sidebar-menu-link{
+  width: 100%;
+  border-bottom: 1px solid var(--color-htext);
+  padding-bottom: 1em;
+}
+
+.si-sidebar-menu-link a{
+  font-family: var(--font-family);
+  color: var(--color-htext);
+  font-weight: 700;
+  font-size: clamp(16px, 4.1vw, 18px);
+  line-height: 1em;
+  letter-spacing: 0.04em;
+}
+
+.si-wallet-icon{
+  width: 30px;
+  height: 30px;
+  color: var(--color-htext);
 }
