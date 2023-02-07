@@ -42,12 +42,6 @@ export default function Navbar() {
               <Sidebar myVis={siVisible}/>
             )
           }
-          {/* <div className={hamMenu ? "nv-ham-menu-container" : "nv-inVis"}>
-            <div className="nv-menu-links fl-tl">
-              <Menu/>
-              <button className="nv-connect nv-ham-connect">{"Connect"}</button>
-            </div>
-          </div> */}
         </div>
       </div>
     </nav>

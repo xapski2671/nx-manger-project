@@ -59,9 +59,31 @@ a {
   justify-content: flex-end;
 }
 
+.fl-bl{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.fl-bc{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.fl-br{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
 /* space-between */
 .fl-sb{
   justify-content: space-between;
+}
+
+.fl-c{
+  flex-direction: column;
 }
 
 .sc-padding{
@@ -80,3 +102,4 @@ a {
 
 @import "../containers/navbar/Navbar.css";
 @import "../components/sidebar/Sidebar.css";
+@import "../containers/header/Header.css";

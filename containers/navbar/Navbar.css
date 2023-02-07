@@ -6,6 +6,7 @@
   right: 0;
   background-color: var(--color-footer);
   padding: 1em 8em;
+  z-index: 10;
 }
 @media (max-width: 1050px){
   .nv-navbar{
@@ -79,6 +80,7 @@
   line-height: 1em;
   letter-spacing: 0.04em;
   color: var(--color-htext);
+  cursor: pointer;
 }
 @media (max-width: 350px){
   .nv-connect{display: none;}

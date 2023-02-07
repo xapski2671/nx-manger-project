@@ -7,6 +7,7 @@
   --color-bg: #fff;
   --color-footer : #110A25;
   --color-text: #361E77;
-  --color-htext: #fff;
+  --color-htext: #F6F4FB;
   --color-btn: linear-gradient(98.97deg, #2474C6 -35.95%, #C4A2E7 114.36%);
+  --color-header-bg: linear-gradient(180deg, #9071DF 1.12%, #361E77 41.15%, #080410 95.83%);
 }

@@ -115,6 +115,7 @@
   line-height: 1em;
   letter-spacing: 0.04em;
   color: var(--color-htext);
+  cursor: pointer;
 }
 
 .si-connect.fl-cc.si-con-small{display: none;}

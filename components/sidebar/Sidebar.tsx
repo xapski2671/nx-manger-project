@@ -21,7 +21,10 @@ export default function Sidebar({ myVis }: Props) {
   }
 
   return (
-    <div className={`si-sidebar-reactive ${showMe ? "si-slide-in" : "si-slide-out"}`} onClick={()=>{handleClick()}} onAnimationEnd={(e)=>{handleAnimationFinished(e)}}>
+    <div className={`si-sidebar-reactive ${showMe ? "si-slide-in" : "si-slide-out"}`} 
+      onClick={()=>{handleClick()}} 
+      onAnimationEnd={(e)=>{handleAnimationFinished(e)}}
+    >
       <div className="si-sidebar fl-tl">
         <div className="si-nav fl-cc fl-sb">
           <div className="nv-logo fl-cl">
