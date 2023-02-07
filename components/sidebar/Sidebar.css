@@ -1,0 +1,30 @@
+/* si */
+.si-sidebar-reactive{
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  background: none;
+}
+@media (max-width: 850px){
+  .si-sidebar-reactive{
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.si-sidebar{
+  min-height: 100vh;
+  width: 40%;
+  background-color: var(--color-footer);
+}
+@media(max-width: 350px){
+  .si-sidebar{
+    width: 50%;
+  }
+}
+
+.si-inVis{
+  display: none;
+}

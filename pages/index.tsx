@@ -10,7 +10,7 @@ export default function Home() {
         <title>Manger</title>
         <meta name="description" content="Manger Project - Fundraising on the blockchain" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/assets/manger_favicon.svg" />
       </Head>
       <h1>Manger Project</h1>
     </>
