@@ -101,5 +101,9 @@ a {
 
 
 @import "../containers/navbar/Navbar.css";
-@import "../components/sidebar/Sidebar.css";
 @import "../containers/header/Header.css";
+@import "../containers/campaigns/Campaigns.css";
+
+@import "../components/sidebar/Sidebar.css";
+@import "../components/campaignGrid/CampaignGrid.css";
+@import "../components/categoryFilter/CategoryFilter.css";
