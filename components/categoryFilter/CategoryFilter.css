@@ -1,1 +1,39 @@
 /* cf */
+.cf-wrapper.fl-cc{
+  max-width: 100%;
+  gap: 1rem;
+}
+
+.cf-category{
+  padding: 0.5em 0.9em;
+  /* gap: 10px; */
+  border: 1px solid #361E77;
+  border-radius: 8px;
+  width: max-content;
+  /* flex-wrap: nowrap; */
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1em;
+  color: #544776;
+  cursor: pointer;
+}
+
+.cf-arrow-btn{
+  width: 2vw;
+  height: 2vw;
+  color: #544776;
+  cursor: pointer;
+}
+
+.cf-other-cat-wrapper.fl-cl{
+  gap: 1rem;
+  width: 86%;
+}
+
+.cf-other-cat.fl-cl{
+  gap: 1rem;
+  width: 92%;
+  overflow: hidden;
+}
