@@ -27,7 +27,7 @@ export default function Sidebar({ myVis }: Props) {
     >
       <div className="si-sidebar fl-tl">
         <div className="si-nav fl-cc fl-sb">
-          <div className="nv-logo fl-cl">
+          <div className="si-logo fl-cl">
             <p>{"MANGER"}</p>
           </div>
 

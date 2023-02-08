@@ -1,23 +1,37 @@
 /* cf */
 .cf-wrapper.fl-cc{
   max-width: 100%;
-  gap: 1rem;
+  gap: 0.7vw;
 }
 
 .cf-category{
   padding: 0.5em 0.9em;
   /* gap: 10px; */
   border: 1px solid #361E77;
-  border-radius: 8px;
+  border-radius: 0.5em;
   width: max-content;
   /* flex-wrap: nowrap; */
 
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.25vw;
   line-height: 1em;
   color: #544776;
   cursor: pointer;
+
+  -webkit-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
+}
+.cf-category:hover{
+  background-color: #9071DF;
+  color: var(--color-htext);
+  border-color: #9071DF;
+}
+.cf-category.active{
+  background-color: #361E77;
+  border-color: #361E77;
+  color: var(--color-htext);
 }
 
 .cf-arrow-btn{
@@ -27,13 +41,13 @@
   cursor: pointer;
 }
 
-.cf-other-cat-wrapper.fl-cl{
-  gap: 1rem;
+.cf-other-cat-wrapper.fl-cc{
+  gap: 0.7vw;
   width: 86%;
 }
 
 .cf-other-cat.fl-cl{
-  gap: 1rem;
+  gap: 0.7vw;
   width: 92%;
   overflow: hidden;
 }

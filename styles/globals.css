@@ -120,4 +120,5 @@ a {
 
 @import "../components/sidebar/Sidebar.css";
 @import "../components/campaignGrid/CampaignGrid.css";
+@import "../components/campaignCard/CampaignCard.css";
 @import "../components/categoryFilter/CategoryFilter.css";

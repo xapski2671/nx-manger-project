@@ -1,14 +1,16 @@
 import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
 interface props{
   name: string
 }
 
 function Category({ name }:props){
+  const [active, setActive] = useState(false)
+
   return (
-    <div className="cf-category">
+    <div className={`cf-category ${active && "active"}`} onClick={()=>{setActive(prev=>!prev)}}>
       {`${name}`}
     </div>
   )
@@ -26,8 +28,10 @@ export default function CategoryFilter() {
 
   return (
     <div className="cf-wrapper fl-cc">
-      <Category name="All Categories"/>
-      <div className="cf-other-cat-wrapper fl-cl">
+      <div className="cf-all-cat-wrapper">
+        <Category name="All Categories"/>
+      </div>
+      <div className="cf-other-cat-wrapper fl-cc">
         <FontAwesomeIcon icon={faAnglesLeft} className="cf-arrow-btn" onClick={scrollLeft}/>
         <div className="cf-other-cat fl-cl" ref={scrollRef}>
           <Category name="Metaverse"/>

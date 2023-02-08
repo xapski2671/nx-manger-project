@@ -72,6 +72,22 @@
   padding-bottom: 1em;
 }
 
+.si-logo.fl-cl{
+  gap: 0.5em;
+}
+
+.si-logo img{
+  width: clamp(20px, 1.9vw, 36px);
+}
+
+.si-logo p{
+  font-family: 'Barlow';
+  font-weight: 700;
+  font-size: clamp(16px, 1.6vw, 30px);
+  letter-spacing: 0.03em;
+  color: var(--color-htext);
+}
+
 .si-sidebar-menu.fl-tl{
   flex-direction: column;
   gap: 4em;

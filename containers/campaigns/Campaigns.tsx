@@ -1,10 +1,10 @@
-import { CategoryFilter, CategoryGrid } from "@/components/exportComps"
+import { CampaignGrid, CategoryFilter } from "@/components/exportComps"
 
 export default function Campaigns() {
   return (
     <section className="cp-campaigns sc-padding fl-cl fl-c">
       <CategoryFilter/>
-      <CategoryGrid/>
+      <CampaignGrid/>
       <button className="cp-see-more">{"See more"}</button>
     </section>
   )
