@@ -1,27 +1,17 @@
 /* nv */
-.nv-navbar{
+.nv-navbar.sc-padding{
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--color-footer);
-  padding: 1em 8em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   z-index: 10;
+  transition: background-color 0.8s ease;
 }
-@media (max-width: 1050px){
-  .nv-navbar{
-    padding: 1em 4em;
-  }
-}
-@media (max-width: 550px){
-  .nv-navbar{
-    padding: 1em 1.6em;
-  }
-}
-@media (max-width: 350px){
-  .nv-navbar{
-    padding: 1em;
-  }
+.nv-navbar.sc-padding.nv-active{
+  position: fixed;
+  background-color: var(--color-footer);
 }
 
 .nv-logo.fl-cl{

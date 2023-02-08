@@ -1,5 +1,6 @@
 import { Sidebar } from "@/components/exportComps"
-import { faBars, faBarsStaggered } from "@fortawesome/free-solid-svg-icons"
+import { useScroll } from "@/hooks/useScroll"
+import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"
 import { useState } from "react"
@@ -17,15 +18,15 @@ function Menu(){
 }
 
 export default function Navbar() {
-  const [hamMenu, setHamMenu] = useState(false)
   const [SiInvis, setSiInvis] = useState(true)
+  const { scrollY, scrollX, scrollDirection } = useScroll()
 
   function siVisible(bool: boolean){
     setSiInvis(bool)
   }
 
   return (
-    <nav className="nv-navbar">
+    <nav className={`nv-navbar sc-padding ${scrollDirection == "down" ? scrollY >= 8 ? "nv-active" : "" : ""}`} onScroll={()=>{console.log(scrollY)}}>
       <div className="fl-cc fl-sb nv-menu-wrapper">
         <div className="nv-logo fl-cl">
           <img src="/assets/manger_logo.svg" alt="logo" />

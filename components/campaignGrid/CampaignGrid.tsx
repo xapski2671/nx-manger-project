@@ -1,5 +1,10 @@
+import { CampaignCard } from "../exportComps"
+
 export default function CampaignGrid() {
   return (
-    <div>campaignGrid</div>
+    <div>
+      campaignGrid
+      <CampaignCard/>
+    </div>
   )
 }

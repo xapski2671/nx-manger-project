@@ -10,7 +10,7 @@
 }
 
 .hd-hero img{
-  width: clamp(250px, 50%, 800px);
+  width: clamp(180px, 50%, 800px);
   mix-blend-mode: screen;
   opacity: 0.87;
 }
