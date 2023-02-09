@@ -1,1 +1,85 @@
 /* hi */
+.hi-section.fl-cl.fl-c.sc-padding{
+  padding-bottom: 3.5vw;
+  padding-top: 3.5vw;
+  gap: 4.2vw;
+}
+
+.hi-title.fl-cl.fl-c{
+  gap: 0.9vw;
+}
+
+.hi-section-title{
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 1.74vw;
+  line-height: 1em;
+  letter-spacing: 0.04em;
+  color: var(--color-card-text);
+  text-align: center;
+}
+
+.hi-section-subtitle{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.04vw;
+  line-height: 1em;
+  color: var(--color-card-text);
+}
+
+.hi-infobox-container.fl-tc.fl-sb{
+  width: 100%;
+}
+
+.hi-infobox.fl-cl.fl-c{
+  width: 28%;
+  gap: 1.39vw;
+  /* border: 1px solid #000; */
+}
+
+.hi-infobox-details.fl-cl.fl-c{
+  gap: 0.69vw;
+}
+
+.hi-infobox-icon{
+  width: 3.47vw;
+  height: 3.47vw;
+  color: var(--color-card-text);
+}
+
+.hi-info-title{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.39vw;
+  line-height: 1em;
+  color: var(--color-card-text);
+  text-align: center;
+}
+
+.hi-info{
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 0.83vw;
+  line-height: 1.5em;
+  color: var(--color-card-text);
+  text-align: center;
+  width: 80%;
+}
+
+.hi-info-cta{
+  background: var(--color-btn);
+  box-shadow: 0px 8px 25px rgba(54, 30, 119, 0.1);
+  border-radius: 0.53em;
+  padding: 0.6em 1.2em;
+  
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: clamp(4.69px, 1.04vw, 26.667px); /*15px*/
+  line-height: 1em;
+  color: var(--color-htext);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+button.hi-info-cta:hover{
+  transform: scale(1.2);  
+}

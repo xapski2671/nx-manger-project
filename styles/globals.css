@@ -101,6 +101,10 @@ button{
   justify-content: space-between;
 }
 
+.fl-sa{
+  justify-content: space-around;
+}
+
 .fl-c{
   flex-direction: column;
 }

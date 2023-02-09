@@ -27,4 +27,8 @@
   line-height: 1em;
   color: var(--color-htext);
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+button.cg-see-more.fl-cc:hover{
+  transform: scale(1.2);  
 }
