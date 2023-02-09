@@ -5,7 +5,6 @@ export default function Campaigns() {
     <section className="cp-campaigns sc-padding fl-cl fl-c">
       <CategoryFilter/>
       <CampaignGrid/>
-      <button className="cp-see-more">{"See more"}</button>
     </section>
   )
 }

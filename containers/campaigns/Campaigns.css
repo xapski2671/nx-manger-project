@@ -1,5 +1,6 @@
 /* cp */
-.cp-campaigns.sc-padding{
-  padding-top: 1.5vw;
-  padding-bottom: 1.5vw;
+.cp-campaigns.sc-padding.fl-cl.fl-c{
+  padding-top: 3.5vw;
+  padding-bottom: 3.5vw;
+  gap: 50px;
 }

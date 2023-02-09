@@ -27,7 +27,7 @@ export default function CampaignCard() {
           <div className="cc-amounts fl-tl fl-c">
             <div className="cc-amt-raised fl-cl">
               <FontAwesomeIcon icon={faEthereum} className="cc-curr-icon"/>
-              <p className="cc-amt-figure">{"3.00"}</p>
+              <p className="cc-amt-figure">{"30.00"}</p>
               <p className="cc-amt-curr">{"ETH"}</p>
             </div>
             <div className="cc-goal">
@@ -38,14 +38,17 @@ export default function CampaignCard() {
           <div className="cc-progress-bar"><div className="cc-progress-level"></div></div>
         
           <div className="cc-percent fl-bl fl-c">
-            <p>{"30%"}</p>
+            <p>{"3596%"}</p>
             <p>{"funded"}</p>
           </div>
         </div>
 
-        <div className="cc-creator-eta">
-          <div className="cc-creator"></div>
-          <div className="cc-eta">
+        <div className="cc-creator-eta fl-cl fl-sb">
+          <div className="cc-creator fl-cl">
+            <div className="cc-creator-jazzicon"></div>
+            <p>{"bullishmei"}</p>
+          </div>
+          <div className="cc-eta fl-tr">
             <p>{"13"}</p>
             <p>{"days to go"}</p>
           </div>

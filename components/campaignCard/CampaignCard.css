@@ -1,74 +1,83 @@
 /* cc */
 .cc-container{
-  width: 400px;
-  height: 465px;
+  width: 27.78vw;
+  height: 32.3vw;
   background: #FFFFFF;
   box-shadow: 0px 10px 50px rgba(29, 7, 84, 0.08);
-  border-radius: 20px;
+  border-radius: 1.39vw;
 }
 
 .cc-img{
   width: 100%;
-  border-radius: 20px;
+  border-radius: 1.39vw;
 }
 
 .cc-img img{
   width: 100%;
   height: auto;
-  border-radius: 20px 20px 0 0;
+  border-radius: 1.39vw 1.39vw 0 0;
   object-fit: cover;
 }
 
 .cc-details.fl-cl.fl-c{
-  gap: 20px;
+  justify-content: space-between;
   width: 100%;
-  padding: 15px 20px;
+  height: 100%;
+  padding: 1.04vw 1.39vw;
 }
 
 .cc-cta{
   width: 100%;
 }
 
+.cc-cat-icon{
+  width: 1.67em;
+  height: 1.67em;
+  color: var(--color-card-text);
+}
+
 .cc-cat-name.fl-cl{
-  gap: 10px;
+  gap: 0.57em;
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 15px;
-  line-height: 19px;
+  font-size: 1.04vw;
+  line-height: 1em;
   letter-spacing: 0.03em;
   color: var(--color-card-text);
 }
 
 .cc-cta button.fl-tl{
-  padding: 5px 10px;
-  gap: 10px;
+  padding: 0.6em 0.91em;
+  gap: 0.91em;
   border: 1px solid rgba(84, 71, 118, 0.57);
-  border-radius: 8px;
+  border-radius: 0.73em;
   background: none;
 
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 11px;
+  font-size: 0.76vw;
   line-height: 1em;
   letter-spacing: 0.03em;
   color: var(--color-subtext);
+  cursor: pointer;
+  transition: all 0.4s ease;
 }
 
-.cc-cat-icon{
-  width: 25px;
-  height: 25px;
-  color: var(--color-card-text);
+.cc-cta button:hover{
+  background-color: #9071DF;
+  color: var(--color-htext);
+  border-color: #9071DF;
 }
 
 .cc-camp-title.fl-tl.fl-c{
-  gap: 6px;
+  gap: 0.42vw;
   width: 100%;
 }
 
 .cc-camp-title h4{
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.25vw;
   line-height: 1em;
   letter-spacing: 0.02em;
   color: var(--color-text);
@@ -77,8 +86,8 @@
 .cc-camp-title p{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 1.04vw; /*15px*/
+  line-height: 1.33em;
   letter-spacing: 0.01em;
   color: var(--color-subtext);
 } 
@@ -87,12 +96,17 @@
   width: 100%;
 }
 
+.cc-amounts.fl-tl.fl-c,
+.cc-percent.fl-bl.fl-c{
+  gap: 0.34vw;
+}
+
 .cc-amt-raised.fl-cl{
-  gap: 3px;
+  gap: 0.2vw;
 }
 
 .cc-curr-icon{
-  width: 10px;
+  width: 0.69vw; /*10px*/
   height: auto;
   color: var(--color-card-text);
 }
@@ -102,7 +116,7 @@
 .cc-goal{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.25vw;  /*18px*/
   line-height: 1em;
   color: var(--color-subtext);
 }
@@ -113,29 +127,80 @@
 
 .cc-goal
 {
-  font-size: 11px;
-  line-height: 14px;
+  font-size: 0.76vw; /*11px*/
+  line-height: 1em;
 }
 
 .cc-progress-bar{
-  width: 20%;
-  height: 1em;
-  border-radius: 0.5em;
-  background-color: var(--color-subtext);
+  width: 48%;
+  height: 0.69vw;
+  border-radius: 0.35vw;
+  background-color: #E0DCE4;;
+}
+
+.cc-progress-level{
+  width: 30%;
+  height: 100%;
+  border-radius: 0.35vw;
+  background-color: var(--color-card-text);
 }
 
 .cc-percent p:first-child{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 17px;
-  line-height: 21px;
+  font-size: 1.18vw;
+  line-height: 1em;
   color: var(--color-card-text);
 }
 
 .cc-percent p:last-child{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 11px;
-  line-height: 14px;
+  font-size: 0.76vw;
+  line-height: 1em;
   color: var(--color-card-text);
+}
+
+.cc-creator-eta.fl-cl.fl-sb{
+  width: 100%;
+}
+
+.cc-creator.fl-cl{
+  gap: 0.69vw;
+}
+
+.cc-creator-jazzicon{
+  width: 2.08vw;
+  height: 2.08vw;
+  background: var(--color-btn);
+  opacity: 0.74;
+  border-radius: 0.55vw;
+}
+
+.cc-creator p{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.04vw;
+  line-height: 1em;
+  color: var(--color-subtext);
+}
+
+.cc-eta.fl-tr{
+  gap: 0.3em;
+}
+
+.cc-eta p:first-child{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.04vw;
+  line-height: 1em;
+  color: var(--color-card-text);
+}
+
+.cc-eta p:last-child{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 0.76vw;
+  line-height: 1em;
+  color: var(--color-subtext);
 }
