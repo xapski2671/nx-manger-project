@@ -1,6 +1,6 @@
 /* cg */
 .cg-container.fl-cl.fl-c{
-  gap: 50px;
+  gap: 3.47vw;
 }
 
 .cg-grid{
@@ -8,21 +8,23 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.8vw;
 }
-@media (max-width: 760px){
+@media (max-width: 400px){
   .cg-grid{
     grid-template-columns: repeat(2, 1fr);
-  }
+    grid-gap: 3.5vw;
+  } 
 }
 
 .cg-see-more{
   background: var(--color-btn);
   box-shadow: 0px 8px 25px rgba(54, 30, 119, 0.1);
-  border-radius: 8px;
-  padding: 12px 18px;
+  border-radius: 0.53em;
+  padding: 0.8em 1.2em;
   
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 15px;
+  font-size: clamp(4.69px, 1.04vw, 26.667px); /*15px*/
   line-height: 1em;
   color: var(--color-htext);
+  cursor: pointer;
 }

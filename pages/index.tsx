@@ -1,6 +1,6 @@
 import Head from "next/head"
 import Image from "next/image"
-import { Campaigns, Header } from "@/containers/exportConts"
+import { Campaigns, Header, HowItWorks } from "@/containers/exportConts"
 
 
 export default function Home() {
@@ -14,6 +14,7 @@ export default function Home() {
       </Head>
       <Header/>
       <Campaigns/>
+      <HowItWorks/>
     </>
   )
 }

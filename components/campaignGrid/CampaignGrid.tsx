@@ -11,7 +11,7 @@ export default function CampaignGrid() {
         <CampaignCard/>
         <CampaignCard/>
       </div>
-      <button className="cg-see-more">{"See more"}</button>
+      <button className="cg-see-more fl-cc">{"See more"}</button>
     </div>
   )
 }

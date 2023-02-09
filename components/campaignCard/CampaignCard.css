@@ -1,21 +1,21 @@
 /* cc */
 .cc-container{
-  width: clamp(222.23px, 27.78vw, 711.16px);
-  height: clamp(258.39px, 32.3vw, 826.88px);
+  width: clamp(125px, 27.78vw, 711.16px);
+  height: clamp(145.31px, 32.3vw, 826.88px);
   background: #FFFFFF;
   box-shadow: 0px 10px 50px rgba(29, 7, 84, 0.08);
-  border-radius: clamp(11.1px, 1.39vw, 35.5px);
+  border-radius: clamp(6.25px, 1.39vw, 35.5px);
 }
 
 .cc-img{
   width: 100%;
-  border-radius: clamp(11.1px, 1.39vw, 35.5px);
+  border-radius: clamp(6.25px, 1.39vw, 35.5px);
 }
 
 .cc-img img{
   width: 100%;
   height: auto;
-  border-radius: clamp(11.1px, 1.39vw, 35.5px) clamp(11.1px, 1.39vw, 35.5px) 0 0;
+  border-radius: clamp(6.25px, 1.39vw, 35.5px) clamp(6.25px, 1.39vw, 35.5px) 0 0;
   object-fit: cover;
 }
 
@@ -23,7 +23,7 @@
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: clamp(8.333px, 1.04vw, 26.667px)  clamp(11.1px, 1.39vw, 35.5px);
+  padding: clamp(4.69px, 1.04vw, 26.667px)  clamp(6.25px, 1.39vw, 35.5px);
 }
 
 .cc-cta{
@@ -40,14 +40,14 @@
   gap: 0.57em;
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: clamp(8.333px, 1.04vw, 26.667px);
+  font-size: clamp(4.69px, 1.04vw, 26.667px);
   line-height: 1em;
   letter-spacing: 0.03em;
   color: var(--color-card-text);
 }
 
-.cc-cta button.fl-tl{
-  padding: 0.6em 0.91em;
+.cc-cta button.fl-cc{
+  padding: 0.7em 0.91em 0.5em;
   gap: 0.91em;
   border: 1px solid rgba(84, 71, 118, 0.57);
   border-radius: 0.73em;
@@ -55,7 +55,7 @@
 
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: clamp(6.1px, 0.76vw, 19.56px);
+  font-size: clamp(3.44px, 0.76vw, 19.56px);
   line-height: 1em;
   letter-spacing: 0.03em;
   color: var(--color-subtext);
@@ -70,14 +70,14 @@
 }
 
 .cc-camp-title.fl-tl.fl-c{
-  gap: clamp(3.33px, 0.42vw, 10.67px);
+  gap: clamp(1.87px, 0.42vw, 10.67px);
   width: 100%;
 }
 
 .cc-camp-title h4{
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: clamp(10px, 1.25vw, 32px);
+  font-size: clamp(5.62px, 1.25vw, 32px);
   line-height: 1em;
   letter-spacing: 0.02em;
   color: var(--color-text);
@@ -86,7 +86,7 @@
 .cc-camp-title p{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: clamp(8.333px, 1.04vw, 26.667px); /*15px*/
+  font-size: clamp(4.69px, 1.04vw, 26.667px); /*15px*/
   line-height: 1.33em;
   letter-spacing: 0.01em;
   color: var(--color-subtext);
@@ -98,15 +98,15 @@
 
 .cc-amounts.fl-tl.fl-c,
 .cc-percent.fl-bl.fl-c{
-  gap: clamp(2.78px, 0.34vw, 8.89px);
+  gap: clamp(1.56px, 0.34vw, 8.89px);
 }
 
 .cc-amt-raised.fl-cl{
-  gap: clamp(1.67px, 0.2vw, 5.33px);
+  gap: clamp(0.94px, 0.2vw, 5.33px);
 }
 
 .cc-curr-icon{
-  width: clamp(5.5px, 0.69vw, 17.8px); /*10px*/
+  width: clamp(3.12px, 0.69vw, 17.8px); /*10px*/
   height: auto;
   color: var(--color-card-text);
 }
@@ -116,7 +116,7 @@
 .cc-goal{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: clamp(10px, 1.25vw, 32px);  /*18px*/
+  font-size: clamp(5.62px, 1.25vw, 32px);  /*18px*/
   line-height: 1em;
   color: var(--color-subtext);
 }
@@ -127,28 +127,28 @@
 
 .cc-goal
 {
-  font-size: clamp(6.1px, 0.76vw, 19.56px); /*11px*/
+  font-size: clamp(3.44px, 0.76vw, 19.56px); /*11px*/
   line-height: 1em;
 }
 
 .cc-progress-bar{
-  width: clamp(96px, 48%, 307.19px);
-  height: clamp(5.5px, 0.69vw, 17.8px);
-  border-radius: clamp(2.78px, 0.34vw, 8.89px);
+  width: clamp(54px, 48%, 307.19px);
+  height: clamp(3.12px, 0.69vw, 17.8px);
+  border-radius: min(0.34vw, 8.89px);
   background-color: #E0DCE4;;
 }
 
 .cc-progress-level{
   width: 30%;
   height: 100%;
-  border-radius: clamp(2.78px, 0.34vw, 8.89px);
+  border-radius: clamp(1.56px, 0.34vw, 8.89px);
   background-color: var(--color-card-text);
 }
 
 .cc-percent p:first-child{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: clamp(9.4px, 1.18vw, 30.2px);
+  font-size: clamp(5.31px, 1.18vw, 30.2px);
   line-height: 1em;
   color: var(--color-card-text);
 }
@@ -156,7 +156,7 @@
 .cc-percent p:last-child{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: clamp(6.1px, 0.76vw, 19.56px);
+  font-size: clamp(3.44px, 0.76vw, 19.56px);
   line-height: 1em;
   color: var(--color-card-text);
 }
@@ -166,12 +166,12 @@
 }
 
 .cc-creator.fl-cl{
-  gap: clamp(5.5px, 0.69vw, 17.8px);
+  gap: clamp(3.12px, 0.69vw, 17.8px);
 }
 
 .cc-creator-jazzicon{
-  width: clamp(16.67px, 2.08vw, 53.3px);
-  height: clamp(16.67px, 2.08vw, 53.3px);
+  width: clamp(9.38px, 2.08vw, 53.3px);
+  height: clamp(9.38px, 2.08vw, 53.3px);
   background: var(--color-btn);
   opacity: 0.74;
   border-radius: 0.55vw;
@@ -180,7 +180,7 @@
 .cc-creator p{
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: clamp(8.333px, 1.04vw, 26.667px);
+  font-size: clamp(4.69px, 1.04vw, 26.667px);
   line-height: 1em;
   color: var(--color-subtext);
 }
@@ -192,7 +192,7 @@
 .cc-eta p:first-child{
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: clamp(8.333px, 1.04vw, 26.667px);
+  font-size: clamp(4.69px, 1.04vw, 26.667px);
   line-height: 1em;
   color: var(--color-card-text);
 }
@@ -200,7 +200,7 @@
 .cc-eta p:last-child{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: clamp(6.1px, 0.76vw, 19.56px);
+  font-size: clamp(3.44px, 0.76vw, 19.56px);
   line-height: 1em;
   color: var(--color-subtext);
 }

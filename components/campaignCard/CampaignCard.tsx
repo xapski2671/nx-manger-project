@@ -15,7 +15,7 @@ export default function CampaignCard() {
             <FontAwesomeIcon icon={faCubes} className="cc-cat-icon"/>
             {"Metaverse"}
           </div>
-          <button className="fl-tl">{"Read more..."}</button>
+          <button className="fl-cc">{"Read more..."}</button>
         </div>
 
         <div className="cc-camp-title fl-tl fl-c">
