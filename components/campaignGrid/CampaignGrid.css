@@ -8,6 +8,11 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.8vw;
 }
+@media (max-width: 760px){
+  .cg-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 .cg-see-more{
   background: var(--color-btn);
