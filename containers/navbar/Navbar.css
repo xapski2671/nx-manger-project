@@ -71,6 +71,10 @@
   letter-spacing: 0.04em;
   color: var(--color-htext);
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.nv-connect:hover{
+  transform: scale(1.05);
 }
 @media (max-width: 350px){
   .nv-connect{display: none;}

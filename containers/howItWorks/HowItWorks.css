@@ -81,5 +81,5 @@
   transition: transform 0.3s ease;
 }
 button.hi-info-cta:hover{
-  transform: scale(1.2);  
+  transform: scale(1.05);  
 }
