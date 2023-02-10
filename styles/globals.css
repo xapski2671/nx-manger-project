@@ -35,6 +35,9 @@ button{
   border: 6px solid transparent;
 }
 
+.page.sc-padding{
+  padding-top: 7.04vw;
+}
 
 /* top-left */
 .fl-tl{

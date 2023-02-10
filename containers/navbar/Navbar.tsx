@@ -3,6 +3,7 @@ import { useScroll } from "@/hooks/useScroll"
 import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"
+import { useRouter } from "next/router"
 import { useState } from "react"
 
 
@@ -20,13 +21,14 @@ function Menu(){
 export default function Navbar() {
   const [SiInvis, setSiInvis] = useState(true)
   const { scrollY, scrollX, scrollDirection } = useScroll()
+  const router = useRouter()
 
   function siVisible(bool: boolean){
     setSiInvis(bool)
   }
 
   return (
-    <nav className={`nv-navbar sc-padding ${scrollDirection == "down" ? scrollY >= 8 ? "nv-active" : "" : ""}`} onScroll={()=>{console.log(scrollY)}}>
+    <nav className={`nv-navbar sc-padding ${scrollDirection == "down" ? scrollY >= 8 ? "nv-active" : "" : ""}  ${router.pathname !== "/" && "page-fill"}`} onScroll={()=>{console.log(scrollY)}}>
       <div className="fl-cc fl-sb nv-menu-wrapper">
         <div className="nv-logo fl-cl">
           <img src="/assets/manger_logo.svg" alt="logo" />

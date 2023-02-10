@@ -9,6 +9,9 @@
   z-index: 10;
   transition: background-color 0.8s ease;
 }
+.nv-navbar.sc-padding.page-fill{
+  background-color: var(--color-footer);
+}
 .nv-navbar.sc-padding.nv-active{
   position: fixed;
   background-color: var(--color-footer);
