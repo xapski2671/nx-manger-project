@@ -1,5 +1,4 @@
 import Head from "next/head"
-import Image from "next/image"
 import { Blog, Campaigns, Header, HowItWorks } from "@/containers/exportConts"
 
 

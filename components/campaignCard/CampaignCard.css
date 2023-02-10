@@ -18,6 +18,9 @@
   height: 100%;
   border-radius: clamp(6.25px, 1.39vw, 35.5px) clamp(6.25px, 1.39vw, 35.5px) 0 0;
   object-fit: cover;
+  -webkit-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
 }
 
 .cc-details.fl-cl.fl-c{

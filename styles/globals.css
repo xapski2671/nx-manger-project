@@ -127,10 +127,10 @@ button{
 
 
 @import "../containers/navbar/Navbar.css";
-@import "../containers/header/Header.css";
-@import "../containers/campaigns/Campaigns.css";
-@import "../containers/howItWorks/HowItWorks.css";
-@import "../containers/blog/Blog.css";
+@import "../containers/homepage/header/Header.css";
+@import "../containers/homepage/campaigns/Campaigns.css";
+@import "../containers/homepage/howItWorks/HowItWorks.css";
+@import "../containers/homepage/blog/Blog.css";
 @import "../containers/footer/Footer.css";
 
 @import "../components/sidebar/Sidebar.css";
