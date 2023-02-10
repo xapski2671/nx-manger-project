@@ -9,12 +9,13 @@
 
 .cc-img{
   width: 100%;
+  height: 48.8%;
   border-radius: clamp(6.25px, 1.39vw, 35.5px);
 }
 
 .cc-img img{
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: clamp(6.25px, 1.39vw, 35.5px) clamp(6.25px, 1.39vw, 35.5px) 0 0;
   object-fit: cover;
 }
@@ -22,7 +23,7 @@
 .cc-details.fl-cl.fl-c{
   justify-content: space-between;
   width: 100%;
-  height: 100%;
+  height: 51.2%;
   padding: clamp(4.69px, 1.04vw, 26.667px)  clamp(6.25px, 1.39vw, 35.5px);
 }
 
@@ -47,7 +48,7 @@
 }
 
 .cc-cta button.fl-cc{
-  padding: 0.7em 0.91em 0.5em;
+  padding: 0.7em 0.91em 0.6em;
   gap: 0.91em;
   border: 1px solid rgba(84, 71, 118, 0.57);
   border-radius: 0.73em;

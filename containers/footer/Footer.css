@@ -1,0 +1,74 @@
+/* ft */
+.ft-section.sc-padding{
+  margin-top: 3.5vw;
+  padding-top: 2.2vw;
+  padding-bottom: 2.2vw;
+  background-color: var(--color-footer);
+}
+
+.ft-container.fl-cl.fl-c{
+  width: 100%;
+}
+
+.ft-logo.fl-cl{
+  gap: 0.55vw;
+}
+
+.ft-logo img{
+  width: min(1.9vw, 36px);
+}
+
+.ft-logo p{
+  font-family: 'Barlow';
+  font-weight: 700;
+  font-size: min(1.6vw, 30px);
+  letter-spacing: 0.03em;
+  color: var(--color-htext);
+}
+
+.ft-menu.fl-cc.fl-sb{
+  width: 100%;
+}
+
+.ft-menu-links.fl-tc{
+  gap: 1.74vw;
+}
+
+.ft-menu-link{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.32vw;
+  line-height: 1.2em;
+  letter-spacing: 0.03em;
+  color: var(--color-subtext);
+}
+
+.ft-social-links.fl-cr{
+  gap: 0.55vw;
+}
+
+.ft-social-icon{
+  width: 1.74vw;
+  height: 1.74vw;
+  color: #C2B7DC;
+}
+
+.ft-divider{
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-subtext);
+  margin: 1.39vw 0;
+}
+
+.ft-copyright{
+  width: 100%;
+}
+
+.ft-copyright p{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.11vw;
+  line-height: 1.25em;
+  letter-spacing: 0.02em;
+  color: var(--color-subtext);
+}

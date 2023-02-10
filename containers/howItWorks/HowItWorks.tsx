@@ -9,7 +9,7 @@ export default function HowItWorks() {
         <p className="hi-section-subtitle">{"Turn your ideas into reality"}</p>
       </div>
 
-      <div className="hi-infobox-container fl-tc fl-sa">
+      <div className="hi-infobox-container fl-bc fl-sa">
         <div className="hi-infobox fl-cl fl-c">
           <FontAwesomeIcon icon={faChartLine} className="hi-infobox-icon"/>
           <div className="hi-infobox-details fl-cl fl-c">
@@ -32,7 +32,7 @@ export default function HowItWorks() {
           <FontAwesomeIcon icon={faGift} className="hi-infobox-icon"/>
           <div className="hi-infobox-details fl-cl fl-c">
             <h5 className="hi-info-title">{"Receive rewards"}</h5>
-            <p className="hi-info">{"Earn various rewards for your funding efforts on successful campaigns. Rewards aren't promised but creators will reach out to backers frequently."}</p>
+            <p className="hi-info">{"Earn various rewards for your funding efforts on successful campaigns. Rewards aren't promised but creators will reach out to backers frequently. Manger is not responsible for project claims or reward fulfillment."}</p>
             <button className="hi-info-cta">{"Fund a campaign"}</button>
           </div>
         </div>

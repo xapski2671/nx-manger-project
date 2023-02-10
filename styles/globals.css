@@ -128,6 +128,7 @@ button{
 @import "../containers/campaigns/Campaigns.css";
 @import "../containers/howItWorks/HowItWorks.css";
 @import "../containers/blog/Blog.css";
+@import "../containers/footer/Footer.css";
 
 @import "../components/sidebar/Sidebar.css";
 @import "../components/campaignGrid/CampaignGrid.css";

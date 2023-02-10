@@ -1,1 +1,38 @@
 /* bl */
+.bl-section.fl-cl.fl-c.sc-padding{
+  padding-bottom: 3.5vw;
+  padding-top: 3.5vw;
+  gap: 4.2vw;
+}
+
+.bl-section-title.fl-cl.fl-c{
+  gap: 0.9vw;
+}
+
+.bl-title{
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 1.74vw;
+  line-height: 1em;
+  letter-spacing: 0.04em;
+  color: var(--color-card-text);
+  text-align: center;
+}
+
+.bl-subtitle{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.04vw;
+  line-height: 1em;
+  color: var(--color-card-text);
+}
+
+.bl-cards-container{
+  width: 100%;
+  gap: 1.8vw;
+}
+@media (max-width: 450px){
+  .bl-cards-container.fl-tc div.bc-container:last-child{
+    display: none;
+  }
+}
