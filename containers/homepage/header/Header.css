@@ -25,14 +25,14 @@
   }
 }
 
-.hd-hero-title{
+.hd-hero-title.fl-tr.fl-c{
   gap: 1em;
 }
 
 .hd-hero-title h1{
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: clamp(28px, 4.8vw, 80px);
+  font-size: clamp(30px, 4.8vw, 80px);
   line-height: 1.1em;
   color: var(--color-htext);
 }
@@ -45,7 +45,7 @@
 .hd-hero-title p{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: clamp(10px, 1.25vw, 21px);
+  font-size: clamp(11px, 1.25vw, 21px);
   line-height: 1.5em;
   color: var(--color-htext);
 }
@@ -67,7 +67,7 @@
 
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: clamp(8px, 1.2vw, 20px);
+  font-size: clamp(10px, 1.2vw, 20px);
   line-height: 1em;
   letter-spacing: 0.04em;
   color: var(--color-htext);

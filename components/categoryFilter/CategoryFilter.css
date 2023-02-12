@@ -14,8 +14,8 @@
 
   font-family: var(--font-family);
   font-weight: 400;
-  /* font-size: max(8px, 1.25vw); */
-  font-size: 1.25vw;
+  font-size: max(8px, 1.25vw);
+  /* font-size: 1.25vw; */
   line-height: 1em;
   color: #544776;
   cursor: pointer;
@@ -37,10 +37,10 @@
 }
 
 .cf-arrow-btn{
-  /* width: max(14px, 2vw); */
-  width: 2vw;
-  /* height: max(14px, 2vw); */
-  height: 2vw;
+  width: max(14px, 2vw);
+  /* width: 2vw; */
+  height: max(14px, 2vw);
+  /* height: 2vw; */
   color: #544776;
   cursor: pointer;
 }

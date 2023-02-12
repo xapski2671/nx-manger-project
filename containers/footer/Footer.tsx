@@ -1,4 +1,4 @@
-import { faFacebookF, faGithub, faTelegram, faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faFacebook, faFacebookF, faGithub, faTelegram, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"
 
@@ -38,6 +38,48 @@ export default function Footer() {
         <div className="ft-divider"></div>
 
         <div className="ft-copyright fl-cl">
+          <p>{"© 2023 Manger.All Rights Reserved."}</p>
+        </div>
+      </div>
+
+      <div className="mb-ft-container fl-tc fl-c fl-sb">
+        <div className="mb-footer-details fl-tl fl-sb">
+          <div className="mb-footer-bio fl-tl fl-c">
+            <div className="ft-logo fl-cl">
+              <img src="/assets/manger_logo.svg" alt="logo" />
+              <p>{"MANGER"}</p>
+            </div>
+          </div>
+
+          <div className="mb-footer-menu fl-tl">
+            <div className="mb-ft-divider"></div>
+            <div className="mb-ft-menu-wrapper fl-tl fl-c fl-sb">
+              <div className="mb-ft-menu-links fl-tl fl-c">
+                <Link href="./" className="ft-menu-link">{"Campaigns"}</Link>
+                <Link href="./" className="ft-menu-link">{"About us"}</Link>
+                <Link href="./" className="ft-menu-link">{"Blog"}</Link>
+                <Link href="./" className="ft-menu-link">{"Help"}</Link>
+              </div>
+
+              <div className="ft-social-links fl-cr">
+                <div className="ft-social-link">
+                  <FontAwesomeIcon icon={faTwitter} className="ft-social-icon"/>
+                </div>
+                <div className="ft-social-link">
+                  <FontAwesomeIcon icon={faTelegram} className="ft-social-icon"/>
+                </div>
+                <div className="ft-social-link">
+                  <FontAwesomeIcon icon={faGithub} className="ft-social-icon"/>
+                </div>
+                <div className="ft-social-link">
+                  <FontAwesomeIcon icon={faFacebook} className="ft-social-icon"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="ft-copyright fl-cr">
           <p>{"© 2023 Manger.All Rights Reserved."}</p>
         </div>
       </div>

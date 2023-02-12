@@ -2,16 +2,32 @@
 .cg-container.fl-cl.fl-c{
   gap: 3.47vw;
 }
+@media(max-width: 1000px){
+.cg-container.fl-cl.fl-c{
+    gap: 5vw;
+  }
+}
+@media(max-width: 550px){
+.cg-container.fl-cl.fl-c{
+    gap: 8vw;
+  }
+}
 
 .cg-grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.8vw;
 }
-@media (max-width: 400px){
+@media (max-width: 1000px){
   .cg-grid{
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3.5vw;
+    grid-gap: 1.8vw;
+  } 
+}
+@media (max-width: 550px){
+  .cg-grid{
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3.2vw;
   } 
 }
 
@@ -31,4 +47,14 @@
 }
 button.cg-see-more.fl-cc:hover{
   transform: scale(1.2);  
+}
+@media (max-width: 1000px){
+  .cg-see-more{
+    font-size: 1.68vw;
+  }
+}
+@media (max-width: 550px){
+  .cg-see-more{
+    font-size: 2.56vw;
+  }
 }

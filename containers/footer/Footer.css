@@ -1,27 +1,38 @@
 /* ft */
 .ft-section.sc-padding{
   margin-top: 3.5vw;
-  padding-top: 2.2vw;
-  padding-bottom: 2.2vw;
+  padding-top: 2.5vw;
+  padding-bottom: 2.5vw;
   background-color: var(--color-footer);
+}
+@media(max-width: 550px){
+  .ft-section.sc-padding{
+    padding-top: 3vw;
+    padding-bottom: 3vw; 
+  }
 }
 
 .ft-container.fl-cl.fl-c{
   width: 100%;
 }
+@media(max-width: 550px){
+  .ft-container.fl-cl.fl-c{
+    display: none; 
+  }
+}
 
 .ft-logo.fl-cl{
-  gap: 0.55vw;
+  gap: 0.5em;
 }
 
 .ft-logo img{
-  width: min(1.9vw, 36px);
+  width: max(20px, 1.9vw);
 }
 
 .ft-logo p{
   font-family: 'Barlow';
   font-weight: 700;
-  font-size: min(1.6vw, 30px);
+  font-size: max(16px, 1.6vw);
   letter-spacing: 0.03em;
   color: var(--color-htext);
 }
@@ -37,19 +48,19 @@
 .ft-menu-link{
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 1.32vw;
+  font-size: max(13.22px, 1.32vw);
   line-height: 1.2em;
   letter-spacing: 0.03em;
   color: var(--color-subtext);
 }
 
 .ft-social-links.fl-cr{
-  gap: 0.55vw;
+  gap: 0.5em;
 }
 
 .ft-social-icon{
-  width: 1.74vw;
-  height: 1.74vw;
+  width: max(15.4px, 1.74vw);
+  height: max(15.4px, 1.74vw);
   color: #C2B7DC;
 }
 
@@ -67,8 +78,50 @@
 .ft-copyright p{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 1.11vw;
+  font-size: max(11.1px, 1.11vw);
   line-height: 1.25em;
   letter-spacing: 0.02em;
   color: var(--color-subtext);
+}
+
+.mb-ft-container.fl-tc.fl-c.fl-sb{
+  display: none;
+}
+@media(max-width: 550px){
+  .mb-ft-container.fl-tc.fl-c.fl-sb{
+    display: flex;
+    width: 100%;
+    height: 60vw;
+    padding: 0.5em;
+  }
+}
+
+.mb-footer-bio.fl-tl.fl-c{
+  height: 100%;
+  gap: 0.5em;
+}
+
+.mb-footer-details.fl-tl.fl-sb{
+  height: 80%;
+  width: 100%;
+}
+
+.mb-footer-menu.fl-tl{
+  margin-right: 5em;
+  height: 100%;
+  gap: 0.8em;
+}
+
+.mb-ft-divider{
+  height: 100%;
+  width: 1px;
+  background-color: var(--color-subtext);
+}
+
+.mb-ft-menu-wrapper.fl-tl.fl-c.fl-sb{
+  height: 100%;
+}
+
+.mb-ft-menu-links.fl-tl.fl-c{
+  gap: 0.6em;
 }
