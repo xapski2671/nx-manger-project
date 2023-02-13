@@ -187,18 +187,18 @@
 }
 
 .fc-curr-icon{
-  width: min(0.69vw, 17.8px); /*10px*/
+  width: min(1.04vw, 26.67px); /*10px*/
   height: auto;
   color: var(--color-card-text);
 }
 @media(max-width: 1000px){
   .fc-curr-icon{
-    width: 1.12vw;
+    width: 1.68vw;
   }
 }
 @media(max-width: 550px){
   .fc-curr-icon{
-    width: 1.70vw;
+    width: 2.56vw;
   }
 }
 
@@ -207,7 +207,7 @@
 .fc-goal{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: min(1.25vw, 32px);  /*18px*/
+  font-size: min(1.39vw, 35.5px);  /*18px*/
   line-height: 1em;
   color: var(--color-subtext);
 }
@@ -215,14 +215,14 @@
   .fc-amt-figure,
   .fc-amt-curr,
   .fc-goal{
-    font-size: 2.02vw;
+    font-size: 2.25vw;
   }
 }
 @media(max-width: 550px){
   .fc-amt-figure,
   .fc-amt-curr,
   .fc-goal{
-    font-size: 3.07vw;
+    font-size: 3.42vw;
   }
 }
 
@@ -231,17 +231,17 @@
 }
 
 .fc-goal{
-  font-size: min(0.76vw, 19.56px); /*11px*/
+  font-size: min(1.04vw, 26.67px); /*11px*/
   line-height: 1em;
 }
 @media(max-width: 1000px){
   .fc-goal{
-    font-size: 1.23vw;
+    font-size: 1.68vw;
   }
 }
 @media(max-width: 550px){
   .fc-goal{
-    font-size: 1.87vw;
+    font-size: 2.56vw;
   }
 }
 
