@@ -2,7 +2,7 @@ import { CampaignCard } from "../exportComps"
 
 export default function CampaignGrid() {
   return (
-    <div className="cg-container fl-cl fl-c">
+    <div className="cg-container fl-tl fl-c">
       <div className="cg-grid">
         <CampaignCard/>
         <CampaignCard/>
