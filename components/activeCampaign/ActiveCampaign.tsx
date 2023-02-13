@@ -23,28 +23,28 @@ export default function ActiveCampaign() {
           <p>{"Take a surreal dive into the beautiful world of web3, and have fun."}</p>
         </div>
 
-        <div className="ac-progress-bar"><div className="ac-progress-level"></div></div>
-
-        <div className="ac-status fl-cl fl-sb">
-          <div className="ac-amounts fl-tl fl-c">
-            <div className="ac-amt-raised fl-cl">
-              <FontAwesomeIcon icon={faEthereum} className="ac-curr-icon"/>
-              <p className="ac-amt-figure">{"30.00"}</p>
-              <p className="ac-amt-curr">{"ETH"}</p>
+        <div className="ac-status-container fl-tl fl-c">
+          <div className="ac-progress-bar"><div className="ac-progress-level"></div></div>
+          <div className="ac-status fl-cl fl-sb">
+            <div className="ac-amounts fl-tl fl-c">
+              <div className="ac-amt-raised fl-cl">
+                <FontAwesomeIcon icon={faEthereum} className="ac-curr-icon"/>
+                <p className="ac-amt-figure">{"30.00"}</p>
+                <p className="ac-amt-curr">{"ETH"}</p>
+              </div>
+              <div className="ac-goal">
+                {"raised out of 10 ETH"}
+              </div>
             </div>
-            <div className="ac-goal">
-              {"raised out of 10 ETH"}
+          
+            <div className="ac-percent fl-bl fl-c">
+              <p>{"234"}</p>
+              <p>{"backers"}</p>
             </div>
-          </div>
-        
-          <div className="ac-percent fl-bl fl-c">
-            <p>{"234"}</p>
-            <p>{"backers"}</p>
-          </div>
-
-          <div className="ac-percent fl-bl fl-c">
-            <p>{"13"}</p>
-            <p>{"days to go"}</p>
+            <div className="ac-percent fl-bl fl-c">
+              <p>{"13"}</p>
+              <p>{"days to go"}</p>
+            </div>
           </div>
         </div>
 
