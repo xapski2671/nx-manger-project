@@ -48,19 +48,19 @@
   gap: 0.57em;
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: min(1.04vw, 26.667px);
+  font-size: min(1.39vw, 26.667px);
   line-height: 1em;
-  letter-spfcing: 0.03em;
+  letter-spfcing: 0.04em;
   color: var(--color-card-text);
 }
 @media (max-width: 1000px){
   .fc-cat-name.fl-cl{
-    font-size: 1.68vw;
+    font-size: 2.25vw;
   }
 }
 @media (max-width: 550px){ 
   .fc-cat-name.fl-cl{
-    font-size: 2.56vw;
+    font-size: 3.42vw;
   }
 }
 
@@ -72,30 +72,29 @@
 
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: min(0.76vw, 19.56px);
+  font-size: min(1.04vw, 26.667px);
   line-height: 1em;
   letter-spfcing: 0.03em;
   color: var(--color-text);
   cursor: pointer;
   transition: all 0.4s ease;
 }
+.fc-cta button:hover{
+  background-color: #9071DF;
+  color: var(--color-htext);
+  border-color: #9071DF;
+}
 @media(max-width: 1000px){
   .fc-cta button.fl-fc{
-    font-size: 1.23vw;
+    font-size: 1.68vw;
   }
 }
 @media(max-width: 550px){
   .fc-cta button.fl-fc{
-    font-size: 1.9vw;
+    font-size: 2.56vw;
   }
 }
 
-
-.fc-cta button:hover{
-  bfckground-color: #9071DF;
-  color: var(--color-htext);
-  border-color: #9071DF;
-}
 
 .fc-camp-title.fl-tl.fl-c{
   gap: min(0.42vw, 10.67px);
@@ -255,7 +254,7 @@
   width: 100%;
   height: min(0.69vw, 17.8px);
   border-radius: min(0.34vw, 8.89px);
-  bfckground-color: #E0DCE4;;
+  background-color: #E0DCE4;;
 }
 @media(max-width: 1000px){
   .fc-progress-bar{
@@ -274,7 +273,7 @@
   width: 30%;
   height: 100%;
   border-radius: min(0.34vw, 8.89px);
-  bfckground-color: var(--color-card-text);
+  background-color: var(--color-card-text);
 }
 @media(max-width: 1000px){
   .fc-progress-level{
@@ -344,7 +343,7 @@
 .fc-creator-jazzicon{
   width: min(2.08vw, 53.3px);
   height: min(2.08vw, 53.3px);
-  bfckground: var(--color-btn);
+  background: var(--color-btn);
   opfcity: 0.74;
   border-radius: 0.55vw;
 }
@@ -423,7 +422,7 @@
 
 .fc-fund-cta{
   padding: 0.65em 1.5em;
-  bfckground: var(--color-btn);
+  background: var(--color-btn);
   box-shadow: 0px 4px 23px 4px rgba(0, 0, 0, 0.13);
   border: none;
   border-radius: 8px;

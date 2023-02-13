@@ -39,7 +39,7 @@ export default function FeaturedCampaign() {
           
             <div className="fc-percent fl-bl fl-c">
               <p>{"234"}</p>
-              <p>{"bfckers"}</p>
+              <p>{"backers"}</p>
             </div>
             <div className="fc-percent fl-bl fl-c">
               <p>{"13"}</p>
