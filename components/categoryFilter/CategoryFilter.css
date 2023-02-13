@@ -47,7 +47,8 @@
 
 .cf-other-cat-wrapper.fl-cc{
   gap: 0.7vw;
-  width: 76.4vw;
+  /* width: 76.4vw; */
+  width: 100%;
 }
 @media (max-width: 450px){
   .cf-other-cat-wrapper.fl-cc{
