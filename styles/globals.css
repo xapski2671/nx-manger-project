@@ -35,9 +35,7 @@ button{
   border: 6px solid transparent;
 }
 
-.page.sc-padding{
-  padding-top: 7.04vw;
-}
+
 
 /* top-left */
 .fl-tl{
@@ -132,9 +130,11 @@ button{
 @import "../containers/homepage/howItWorks/HowItWorks.css";
 @import "../containers/homepage/blog/Blog.css";
 @import "../containers/footer/Footer.css";
+@import "../containers/campaignspage/CampaignsPage.css";
 
 @import "../components/sidebar/Sidebar.css";
 @import "../components/campaignGrid/CampaignGrid.css";
 @import "../components/campaignCard/CampaignCard.css";
 @import "../components/categoryFilter/CategoryFilter.css";
 @import "../components/blogCard/BlogCard.css";
+@import "../components/activeCampaign/ActiveCampaign.css";

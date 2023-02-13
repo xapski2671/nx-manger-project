@@ -1,7 +1,7 @@
-import { CampaignGrid, CategoryFilter } from "@/components/exportComps"
+import { CampaignsPage } from "@/containers/exportConts"
 import Head from "next/head"
 
-export default function CampaignsPage(){
+export default function Campaigns(){
   return (
     <>
       <Head>
@@ -11,10 +11,7 @@ export default function CampaignsPage(){
         <link rel="icon" href="/assets/manger_favicon.svg" />
       </Head>
 
-      <section className="page sc-padding">
-        <CategoryFilter/>
-        <CampaignGrid/>
-      </section>
+      <CampaignsPage/>
     </>
   )
 }
