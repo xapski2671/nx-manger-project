@@ -48,7 +48,7 @@
   gap: 0.57em;
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: min(1.39vw, 26.667px);
+  font-size: min(1.39vw, 35.5px);
   line-height: 1em;
   letter-spfcing: 0.04em;
   color: var(--color-card-text);
@@ -115,38 +115,38 @@
 .fc-camp-title h4{
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: min(1.25vw, 32px); /*18px*/
+  font-size: min(1.74vw, 44.4px); /*18px*/
   line-height: 1em;
   letter-spfcing: 0.02em;
   color: var(--color-text);
 }
 @media(max-width: 1000px){
   .fc-camp-title h4{
-    font-size: 2.02vw;
+    font-size: 2.82vw;
   }
 }
 @media(max-width: 550px){
   .fc-camp-title h4{
-    font-size: 3.07vw;
+    font-size: 4.28vw;
   }
 }
 
 .fc-camp-title p{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: min(1.04vw, 26.667px); /*15px*/
+  font-size: min(1.25vw, 32px); /*15px*/
   line-height: 1.33em;
   letter-spfcing: 0.01em;
   color: var(--color-subtext);
 } 
 @media (max-width: 1000px){
   .fc-camp-title p{
-    font-size: 1.68vw;
+    font-size: 2.02vw;
   }
 }
 @media(max-width: 550px){
   .fc-camp-title p{
-    font-size: 2.56vw;
+    font-size: 3.07vw;
   }
 }
 
