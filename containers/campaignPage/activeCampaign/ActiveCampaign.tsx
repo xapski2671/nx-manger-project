@@ -53,7 +53,7 @@ export default function ActiveCampaign() {
               {"Metaverse"}
             </div>
             <div className="acp-creator fl-cl">
-              <img src="/assets/manger_logo.svg" alt="bio-logo" />
+              <img src="/assets/manger_bio_logo.svg" alt="bio-logo" />
               <p>{"bullishmei"}</p>
             </div>
           </div>

@@ -319,24 +319,6 @@
   }
 }
 
-.acp-creator p{
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: min(1.25vw, 32px);
-  line-height: 1em;
-  color: var(--color-subtext);
-}
-@media(max-width: 1000px){
-  .acp-creator p{
-    font-size: 2.02vw;
-  }
-}
-@media(max-width: 550px){
-  .acp-creator p{
-    font-size: 3.07vw;
-  }
-}
-
 .acp-fund-cta{
   width: 100%;
   padding: 0.65em 1.5em;
@@ -382,7 +364,8 @@
   color: var(--color-card-text);
 }
 
-.acp-cat-name.fl-cl{
+.acp-cat-name.fl-cl,
+.acp-creator p{
   gap: 0.57em;
   font-family: var(--font-family);
   font-weight: 500;
@@ -402,8 +385,20 @@
   }
 }
 
-.acp-creator svg{
-  width: max(20px, 1.9vw);
-  color: var(--color-text);
+/* .acp-creator p{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: min(1.25vw, 32px);
+  line-height: 1em;
+  color: var(--color-subtext);
 }
-
+@media(max-width: 1000px){
+  .acp-creator p{
+    font-size: 2.02vw;
+  }
+}
+@media(max-width: 550px){
+  .acp-creator p{
+    font-size: 3.07vw;
+  }
+} */
