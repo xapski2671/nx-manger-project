@@ -21,19 +21,19 @@
 
 .fc-details.fl-tl.fl-c{
   width: 48%;
-  height: 100%;
-  gap: 3em;
+  /* height: 100%; */
+  gap: 2.08vw;
 }
-@media (max-width: 1000px){ /*1440-999*/
-  .fc-details.fl-cl.fl-c{
-    padding: 1.68vw 2.25vw;
+/* @media(max-width: 1000px){
+  .fc-details.fl-tl.fl-c{
+    gap: 3.37vw;
   }
 }
-@media (max-width: 550px){ /*768-450*/
-  .fc-details.fl-cl.fl-c{
-    padding: 2.56vw  3.42vw;
+@media(max-width: 550px){
+  .fc-details.fl-tl.fl-c{
+    gap: 5.11vw;
   }
-}
+} */
 
 .fc-cta{
   width: 100%;
@@ -54,7 +54,7 @@
   letter-spfcing: 0.04em;
   color: var(--color-card-text);
 }
-@media (max-width: 1000px){
+/* @media (max-width: 1000px){
   .fc-cat-name.fl-cl{
     font-size: 2.25vw;
   }
@@ -63,7 +63,7 @@
   .fc-cat-name.fl-cl{
     font-size: 3.42vw;
   }
-}
+} */
 
 .fc-cta button.fl-fc{
   padding: 0.7em 0.91em 0.6em;
@@ -85,7 +85,7 @@
   color: var(--color-htext);
   border-color: #9071DF;
 }
-@media(max-width: 1000px){
+/* @media(max-width: 1000px){
   .fc-cta button.fl-fc{
     font-size: 1.68vw;
   }
@@ -94,7 +94,7 @@
   .fc-cta button.fl-fc{
     font-size: 2.56vw;
   }
-}
+} */
 
 
 .fc-camp-title.fl-tl.fl-c{
@@ -121,7 +121,7 @@
   letter-spfcing: 0.02em;
   color: var(--color-text);
 }
-@media(max-width: 1000px){
+/* @media(max-width: 1000px){
   .fc-camp-title h4{
     font-size: 2.82vw;
   }
@@ -130,7 +130,7 @@
   .fc-camp-title h4{
     font-size: 4.28vw;
   }
-}
+} */
 
 .fc-camp-title p{
   font-family: var(--font-family);
@@ -140,7 +140,7 @@
   letter-spfcing: 0.01em;
   color: var(--color-subtext);
 } 
-@media (max-width: 1000px){
+/* @media (max-width: 1000px){
   .fc-camp-title p{
     font-size: 2.02vw;
   }
@@ -149,8 +149,48 @@
   .fc-camp-title p{
     font-size: 3.07vw;
   }
+} */
+
+.fc-status-container.fl-tl.fl-c{
+  gap: 2em;
+  width: 100%;
 }
 
+.fc-progress-bar{
+  width: 100%;
+  height: min(0.69vw, 17.8px);
+  border-radius: min(0.34vw, 8.89px);
+  background-color: #E0DCE4;;
+}
+@media(max-width: 1000px){
+  .fc-progress-bar{
+    height: 1.12vw;
+    border-radius: 0.55vw;
+  }
+}
+@media(max-width: 550px){
+  .fc-progress-bar{
+    height: 1.70vw;
+    border-radius: 0.83vw;
+  }
+}
+
+.fc-progress-level{
+  width: 30%;
+  height: 100%;
+  border-radius: min(0.34vw, 8.89px);
+  background-color: var(--color-card-text);
+}
+@media(max-width: 1000px){
+  .fc-progress-level{
+    border-radius: 0.55vw;
+  }
+}
+@media(max-width: 550px){
+  .fc-progress-level{
+    border-radius: 0.83vw;
+  }
+}
 
 .fc-status.fl-cl.fl-sb{
   width: 100%;
@@ -243,47 +283,6 @@
 @media(max-width: 550px){
   .fc-goal{
     font-size: 2.56vw;
-  }
-}
-
-.fc-status-container.fl-tl.fl-c{
-  gap: 1em;
-  width: 100%;
-}
-
-.fc-progress-bar{
-  width: 100%;
-  height: min(0.69vw, 17.8px);
-  border-radius: min(0.34vw, 8.89px);
-  background-color: #E0DCE4;;
-}
-@media(max-width: 1000px){
-  .fc-progress-bar{
-    height: 1.12vw;
-    border-radius: 0.55vw;
-  }
-}
-@media(max-width: 550px){
-  .fc-progress-bar{
-    height: 1.70vw;
-    border-radius: 0.83vw;
-  }
-}
-
-.fc-progress-level{
-  width: 30%;
-  height: 100%;
-  border-radius: min(0.34vw, 8.89px);
-  background-color: var(--color-card-text);
-}
-@media(max-width: 1000px){
-  .fc-progress-level{
-    border-radius: 0.55vw;
-  }
-}
-@media(max-width: 550px){
-  .fc-progress-level{
-    border-radius: 0.83vw;
   }
 }
 

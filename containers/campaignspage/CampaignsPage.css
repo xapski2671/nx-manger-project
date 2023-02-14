@@ -2,7 +2,7 @@
 .ccp-section.sc-padding.fl-cl.fl-c{
   padding-top: 7.04vw;
   padding-bottom: 7.04vw;
-  gap: 3em;
+  gap: 2.08vw;
 }
 
 .ccp-sub-wrapper{
@@ -23,7 +23,7 @@
   -ms-user-select: none; 
   user-select: none;
 }
-@media (max-width: 1000px){
+/* @media (max-width: 1000px){
   .ccp-subtitle{
     font-size: 2.02vw;
   }
@@ -32,4 +32,4 @@
   .ccp-subtitle{
     font-size: 3.07vw;
   }
-}
+} */
