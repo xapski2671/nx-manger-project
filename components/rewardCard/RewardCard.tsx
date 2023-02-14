@@ -7,8 +7,6 @@ export default function RewardCard() {
   async function fetchRData(){
     const res = await fetch("/reward-text.txt")
     const final = await res.text()
-    // const reader = new FileReader()
-    // reader.readAsText(final)
     setRData(final)
   }
 
