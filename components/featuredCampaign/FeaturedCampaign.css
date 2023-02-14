@@ -289,18 +289,18 @@
 .fc-percent p:first-child{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: min(1.18vw, 30.2px);
+  font-size: min(1.39vw, 35.5px);
   line-height: 1em;
   color: var(--color-card-text);
 }
 @media(max-width: 1000px){
   .fc-percent p:first-child{
-    font-size: 1.91vw;
+    font-size: 2.25vw;
   }
 }
 @media(max-width: 550px){
   .fc-percent p:first-child{
-    font-size: 2.9vw;
+    font-size: 3.42vw;
   }
 }
 
