@@ -22,7 +22,7 @@
 .fc-details.fl-tl.fl-c{
   width: 48%;
   height: 100%;
-  gap: 4em;
+  gap: 3em;
 }
 @media (max-width: 1000px){ /*1440-999*/
   .fc-details.fl-cl.fl-c{
