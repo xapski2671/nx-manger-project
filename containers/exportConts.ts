@@ -8,4 +8,4 @@ export { default as Blog } from "./homepage/blog/Blog"
 
 export { default as CampaignsPage } from "./campaignspage/CampaignsPage"
 
-export { default as ActiveCampaign } from "./campaignPage/ActiveCampaign"
+export { default as CampaignPage } from "./campaignPage/CampaignPage"
