@@ -11,11 +11,14 @@ export default function CampaignDetails() {
         <div className="cpd-separator"><div className="cpd-active-tab-indic"></div></div>
 
         <div className="cpd-tab-rewards">
-          
+          <h2>{"SELECT YOUR REWARD"}</h2>
+          <p>{"Select an option below"}</p>
         </div>
       </main>
-      <aside className="cpd-bio">
-
+      <aside className="cpd-info">
+        <div className="cpd-alert">
+          
+        </div>
       </aside>
     </section>
   )
