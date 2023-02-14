@@ -1,5 +1,5 @@
-import { faEthereum } from "@fortawesome/free-brands-svg-icons"
-import { faCubes } from "@fortawesome/free-solid-svg-icons"
+import { faEthereum, faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faCubes, faGlobe, faShare } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function ActiveCampaign() {
@@ -56,6 +56,12 @@ export default function ActiveCampaign() {
               <img src="/assets/manger_bio_logo.svg" alt="bio-logo" />
               <p>{"bullishmei"}</p>
             </div>
+          </div>
+
+          <div className="acp-bio-socials fl-cr">
+            <FontAwesomeIcon icon={faTwitter} className="acp-social-icon"/>
+            <FontAwesomeIcon icon={faGlobe} className="acp-social-icon"/>
+            <FontAwesomeIcon icon={faShare} className="acp-social-icon"/>
           </div>
         </div>
       </div>

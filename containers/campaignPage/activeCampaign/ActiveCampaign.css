@@ -358,7 +358,8 @@
   gap: 1.2em;
 }
 
-.acp-cat-icon{
+.acp-cat-icon,
+.acp-social-icon{
   width: 1.67em;
   height: 1.67em;
   color: var(--color-card-text);
@@ -388,3 +389,9 @@
 .acp-creator img{
   width: 2vw;
 }
+
+.acp-bio-socials.fl-cr{
+  gap: 1.8em;
+}
+
+
