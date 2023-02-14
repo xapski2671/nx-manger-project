@@ -10,7 +10,7 @@
   transition: background-color 0.8s ease;
 }
 .nv-navbar.sc-padding.page-fill{
-  background-color: var(--color-footer);
+  background-color: #fff;
 }
 .nv-navbar.sc-padding.nv-active{
   position: fixed;
