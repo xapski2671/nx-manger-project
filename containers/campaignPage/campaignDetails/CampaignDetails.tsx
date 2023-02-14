@@ -1,5 +1,9 @@
 export default function CampaignDetails() {
   return (
-    <div>CampaignDetails</div>
+    <section className="cpd-section fl-tc">
+      <div className="cpd-trajectory">
+
+      </div>
+    </section>
   )
 }
