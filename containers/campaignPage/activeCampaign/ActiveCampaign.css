@@ -411,7 +411,7 @@
 
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: min(1.18vw, 26.67px);
+  font-size: min(1.18vw, 30.26px);
   line-height: 1em;
   letter-spacing: 0.05em;
   color: var(--color-htext);
@@ -423,11 +423,11 @@
 }
 @media(max-width: 1000px){
   .acp-fund-cta{
-    font-size: 1.68vw;
+    font-size: 1.91vw;
   }
 }
 @media(max-width: 550px){
   .acp-fund-cta{
-    font-size: 2.56vw;
+    font-size: 2.9vw;
   }
 }
