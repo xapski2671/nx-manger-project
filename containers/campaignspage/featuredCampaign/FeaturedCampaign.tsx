@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function FeaturedCampaign() {
   return (
-    <div className="fc-container fl-tl">
+    <section className="fc-container fl-tl">
       
       <div className="fc-img">
         <img src="/assets/manger-mockup-cmp.jpg" alt="mckp-img" />
@@ -61,6 +61,6 @@ export default function FeaturedCampaign() {
           <button className="fc-fund-cta">{"Fund this project"}</button>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

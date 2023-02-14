@@ -22,13 +22,13 @@
 }
 
 .nv-logo img{
-  width: clamp(20px, 1.9vw, 36px);
+  width: max(20px, 1.9vw);
 }
 
 .nv-logo p{
   font-family: 'Barlow';
   font-weight: 700;
-  font-size: clamp(16px, 1.6vw, 30px);
+  font-size: max(16px, 1.6vw);
   letter-spacing: 0.03em;
   color: var(--color-htext);
 }
@@ -54,10 +54,14 @@
 .nv-menu-links a{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: clamp(13px, 1.1vw, 20px);
+  font-size: max(13px, 1.1vw);
   line-height: 1em;
   letter-spacing: 0.04em;
   color: var(--color-htext);
+  transition: all 0.2s ease;
+}
+.nv-menu-links a:hover{
+  transform: scale(1.05);
 }
 
 .nv-connect{
@@ -69,7 +73,7 @@
 
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: clamp(11px, 1.1vw, 20px);
+  font-size: max(11px, 1.1vw);
   line-height: 1em;
   letter-spacing: 0.04em;
   color: var(--color-htext);
