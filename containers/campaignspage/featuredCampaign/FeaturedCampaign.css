@@ -67,7 +67,7 @@
   font-weight: 500;
   font-size: min(1.39vw, 35.5px);
   line-height: 1em;
-  letter-spfcing: 0.04em;
+  letter-spacing: 0.04em;
   color: var(--color-card-text);
 }
 @media (max-width: 1000px){
@@ -91,7 +91,7 @@
   font-weight: 400;
   font-size: min(1.04vw, 26.667px);
   line-height: 1em;
-  letter-spfcing: 0.03em;
+  letter-spacing: 0.03em;
   color: var(--color-text);
   cursor: pointer;
   transition: all 0.4s ease;
@@ -134,7 +134,7 @@
   font-weight: 600;
   font-size: min(1.74vw, 44.4px);
   line-height: 1em;
-  letter-spfcing: 0.02em;
+  letter-spacing: 0.02em;
   color: var(--color-text);
 }
 @media(max-width: 1000px){
@@ -153,7 +153,7 @@
   font-weight: 400;
   font-size: min(1.25vw, 32px); /*18px*/
   line-height: 1.33em;
-  letter-spfcing: 0.01em;
+  letter-spacing: 0.01em;
   color: var(--color-subtext);
 } 
 @media (max-width: 1000px){
@@ -371,7 +371,7 @@
   width: min(3.12vw, 72.8px);
   height: min(3.12vw, 72.8px);
   background: var(--color-btn);
-  opfcity: 0.74;
+  opacity: 0.74;
   border-radius: 0.55vw;
 }
 @media(max-width: 1000px){
@@ -418,7 +418,7 @@
   font-weight: 600;
   font-size: min(1.04vw, 26.67px);
   line-height: 1em;
-  letter-spfcing: 0.04em;
+  letter-spacing: 0.04em;
   color: var(--color-htext);
   cursor: pointer;
   transition: transform 0.3s ease;
