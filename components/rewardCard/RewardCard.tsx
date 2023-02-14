@@ -5,7 +5,7 @@ export default function RewardCard() {
   const [rData, setRData] = useState("")
 
   async function fetchRData(){
-    const res = await fetch("../../reward-text.txt")
+    const res = await fetch("/reward-text.txt")
     const final = await res.text()
     // const reader = new FileReader()
     // reader.readAsText(final)
