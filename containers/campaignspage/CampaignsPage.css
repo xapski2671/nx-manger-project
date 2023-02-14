@@ -4,3 +4,22 @@
   padding-bottom: 7.04vw;
   gap: 3em;
 }
+
+.ccp-sub-wrapper{
+  width: 100%;
+  -webkit-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
+}
+
+.ccp-subtitle{
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.1em;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+  -webkit-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
+}
