@@ -1,5 +1,4 @@
 /* acp */
-/* acp */
 .acp-section.fl-tl{
   gap: 2.08vw;
 }
@@ -50,7 +49,7 @@
   }
 }
 
-.acp-cta{
+.acp-bio{
   width: 100%;
 }
 
@@ -348,10 +347,6 @@
   }
 }
 
-.acp-creator-eta.fl-cl.fl-sb{
-  width: 100%;
-}
-
 .acp-creator.fl-cl{
   gap: min(0.69vw, 17.8px);
 }
@@ -407,6 +402,7 @@
 }
 
 .acp-fund-cta{
+  width: 100%;
   padding: 0.65em 1.5em;
   background: var(--color-btn);
   box-shadow: 0px 4px 23px 4px rgba(0, 0, 0, 0.13);
@@ -415,9 +411,9 @@
 
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: min(1.04vw, 26.67px);
+  font-size: min(1.18vw, 26.67px);
   line-height: 1em;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   color: var(--color-htext);
   cursor: pointer;
   transition: transform 0.3s ease;

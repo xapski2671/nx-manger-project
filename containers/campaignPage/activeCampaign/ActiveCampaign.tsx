@@ -11,14 +11,6 @@ export default function ActiveCampaign() {
 
       <div className="acp-details fl-tl fl-c">
 
-        <div className="acp-cta fl-tc fl-sb">
-          <div className="acp-cat-name fl-cl">
-            <FontAwesomeIcon icon={faCubes} className="acp-cat-icon"/>
-            {"Metaverse"}
-          </div>
-          <button className="fl-acp">{"Learn more..."}</button>
-        </div>
-
         <div className="acp-camp-title fl-tl fl-c">
           <h4>{"Dive Into The Metaverse"}</h4>
           <p>{"Take a surreal dive into the beautiful world of web3, and have fun."}</p>
@@ -52,12 +44,18 @@ export default function ActiveCampaign() {
           </div>
         </div>
 
-        <div className="acp-creator-eta fl-cl fl-sb">
+        <button className="acp-fund-cta">{"Fund this project"}</button>
+
+        <div className="acp-bio fl-tc fl-sb">
+          <div className="acp-cat-name fl-cl">
+            <FontAwesomeIcon icon={faCubes} className="acp-cat-icon"/>
+            {"Metaverse"}
+          </div>
+
           <div className="acp-creator fl-cl">
             <div className="acp-creator-jazzicon"></div>
             <p>{"bullishmei"}</p>
           </div>
-          <button className="acp-fund-cta">{"Fund this project"}</button>
         </div>
       </div>
     </section>
