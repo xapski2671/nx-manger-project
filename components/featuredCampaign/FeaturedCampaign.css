@@ -390,7 +390,7 @@
 
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: clamp(11px, 1.1vw, 20px);
+  font-size: max(11px, 1.1vw);
   line-height: 1em;
   letter-spfcing: 0.04em;
   color: var(--color-htext);
