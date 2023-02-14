@@ -23,11 +23,7 @@
   -ms-user-select: none; 
   user-select: none;
 }
-@media (max-width: 1000px){
-  .ccp-sub-wrapper.fl-cl{
-    display: none;
-  }
-}
+
 
 
 .ccp-subtitle{
