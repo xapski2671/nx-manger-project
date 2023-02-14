@@ -355,7 +355,7 @@
 }
 
 .acp-bio-native.fl-cl{
-  gap: 1em;
+  gap: 1.2em;
 }
 
 .acp-cat-icon{
@@ -366,7 +366,7 @@
 
 .acp-cat-name.fl-cl,
 .acp-creator p{
-  gap: 0.57em;
+  gap: 0.5em;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: min(1.39vw, 35.5px);
@@ -385,20 +385,6 @@
   }
 }
 
-/* .acp-creator p{
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: min(1.25vw, 32px);
-  line-height: 1em;
-  color: var(--color-subtext);
+.acp-creator img{
+  width: 2vw;
 }
-@media(max-width: 1000px){
-  .acp-creator p{
-    font-size: 2.02vw;
-  }
-}
-@media(max-width: 550px){
-  .acp-creator p{
-    font-size: 3.07vw;
-  }
-} */
