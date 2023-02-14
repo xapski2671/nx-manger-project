@@ -50,11 +50,11 @@
   /* width: 76.4vw; */
   width: 100%;
 }
-@media (max-width: 450px){
+/* @media (max-width: 450px){
   .cf-other-cat-wrapper.fl-cc{
     width: 70.4vw;
   }
-}
+} */
 
 .cf-other-cat.fl-cl{
   gap: 0.7vw;
