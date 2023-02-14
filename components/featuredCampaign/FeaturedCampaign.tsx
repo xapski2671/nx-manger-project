@@ -5,11 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 export default function FeaturedCampaign() {
   return (
     <div className="fc-container fl-tl">
+      
       <div className="fc-img">
         <img src="/assets/manger-mockup-cmp.jpg" alt="mckp-img" />
       </div>
 
       <div className="fc-details fl-tl fl-c">
+
         <div className="fc-cta fl-tc fl-sb">
           <div className="fc-cat-name fl-cl">
             <FontAwesomeIcon icon={faCubes} className="fc-cat-icon"/>
@@ -27,7 +29,7 @@ export default function FeaturedCampaign() {
           <div className="fc-progress-bar"><div className="fc-progress-level"></div></div>
 
           <div className="fc-status fl-cl fl-sb">
-            
+
             <div className="fc-amounts fl-tl fl-c">
               <div className="fc-amt-raised fl-cl">
                 <FontAwesomeIcon icon={faEthereum} className="fc-curr-icon"/>

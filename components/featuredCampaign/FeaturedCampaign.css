@@ -341,23 +341,23 @@
 }
 
 .fc-creator-jazzicon{
-  width: min(2.08vw, 53.3px);
-  height: min(2.08vw, 53.3px);
+  width: min(3.12vw, 72.8px);
+  height: min(3.12vw, 72.8px);
   background: var(--color-btn);
   opfcity: 0.74;
   border-radius: 0.55vw;
 }
 @media(max-width: 1000px){
   .fc-creator-jazzicon{
-    width: 3.37vw;
-    height: 3.37vw;
+    width: 4.6vw;
+    height: 4.6vw;
     border-radius: 0.89vw;
   }
 }
 @media(max-width: 550px){
   .fc-creator-jazzicon{
-    width: 5.11vw;
-    height: 5.11vw;
+    width: 7vw;
+    height: 7vw;
     border-radius: 1.35vw;
   }
 }
@@ -377,46 +377,6 @@
 @media(max-width: 550px){
   .fc-creator p{
     font-size: 3.07vw;
-  }
-}
-
-.fc-eta.fl-tr{
-  gap: 0.3em;
-}
-
-.fc-eta p:first-child{
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: min(1.04vw, 26.667px);
-  line-height: 1em;
-  color: var(--color-card-text);
-}
-@media(max-width: 1000px){
-  .fc-eta p:first-child{
-    font-size: 1.68vw;
-  }
-}
-@media(max-width: 550px){
-  .fc-eta p:first-child{
-    font-size: 2.56vw;
-  }
-}
-
-.fc-eta p:last-child{
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: min(0.76vw, 19.56px);
-  line-height: 1em;
-  color: var(--color-text);
-}
-@media(max-width: 1000px){
-  .fc-eta p:last-child{
-    font-size: 1.23vw;
-  }
-}
-@media(max-width: 550px){
-  .fc-eta p:last-child{
-    font-size: 1.87vw;
   }
 }
 
