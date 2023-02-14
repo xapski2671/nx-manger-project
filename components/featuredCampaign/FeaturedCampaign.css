@@ -1,7 +1,7 @@
 /* fc */
 .fc-container.fl-tl{
   width: 86.9vw;
-  gap: 3em;
+  gap: 2.08vw;
 }
 @media(max-width: 1000px){
   .fc-container.fl-tl{
@@ -9,6 +9,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    gap: 3.37vw;
   }
 }
 
