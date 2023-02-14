@@ -1,4 +1,4 @@
-import { ActiveCampaign, CampaignGrid, CategoryFilter } from "@/components/exportComps"
+import { CampaignGrid, CategoryFilter, FeaturedCampaign } from "@/components/exportComps"
 
 export default function CampaignsPage() {
   
@@ -8,7 +8,7 @@ export default function CampaignsPage() {
       <div className="ccp-sub-wrapper fl-cl">
         <h4 className="ccp-subtitle">{"Featured"}</h4>
       </div>
-      <ActiveCampaign/>
+      <FeaturedCampaign/>
       <div className="ccp-sub-wrapper fl-cl">
         <h4 className="ccp-subtitle">{"Explore 320 Projects"}</h4>
       </div>
