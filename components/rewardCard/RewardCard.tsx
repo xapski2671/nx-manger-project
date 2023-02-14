@@ -1,6 +1,18 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 export default function RewardCard() {
+
+  const [rData, setRData] = useState("")
+
+  async function fetchRData(){
+    const res = await fetch("../../public/assets/reward-text.txt")
+    const final = await res.text()
+    setRData(final)
+  }
+
+  useEffect(()=>{
+    fetchRData()
+  },[])
 
   return (
     <div className="rc-container">
