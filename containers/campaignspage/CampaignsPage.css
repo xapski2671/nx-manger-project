@@ -18,7 +18,7 @@
 }
 
 .ccp-sub-wrapper{
-  width: 100%;
+  width: 86.9vw;
   -webkit-user-select: none;
   -ms-user-select: none; 
   user-select: none;
@@ -28,7 +28,7 @@
 
 .ccp-subtitle{
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 500;
   font-size: min(1.25vw, 32px);
   line-height: 1.1em;
   letter-spacing: 0.02em;

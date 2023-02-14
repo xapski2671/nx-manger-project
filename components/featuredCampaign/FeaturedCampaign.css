@@ -1,6 +1,6 @@
 /* fc */
 .fc-container.fl-tl{
-  width: 100%;
+  width: 86.9vw;
   gap: 3em;
 }
 @media(max-width: 1000px){
