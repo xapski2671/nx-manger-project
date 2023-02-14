@@ -1,3 +1,5 @@
+import { RewardCard } from "@/components/exportComps"
+
 export default function CampaignDetails() {
   return (
     <section className="cpd-section fl-tc">
@@ -13,11 +15,14 @@ export default function CampaignDetails() {
         <div className="cpd-tab-rewards">
           <h2>{"SELECT YOUR REWARD"}</h2>
           <p>{"Select an option below"}</p>
+          <div className="cpd-rewards-container">
+            <RewardCard/>
+          </div>
         </div>
       </main>
       <aside className="cpd-info">
         <div className="cpd-alert">
-          
+
         </div>
       </aside>
     </section>
