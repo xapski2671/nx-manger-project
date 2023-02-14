@@ -25,7 +25,9 @@ export default function FeaturedCampaign() {
 
         <div className="fc-status-container fl-tl fl-c">
           <div className="fc-progress-bar"><div className="fc-progress-level"></div></div>
+
           <div className="fc-status fl-cl fl-sb">
+            
             <div className="fc-amounts fl-tl fl-c">
               <div className="fc-amt-raised fl-cl">
                 <FontAwesomeIcon icon={faEthereum} className="fc-curr-icon"/>
@@ -41,6 +43,7 @@ export default function FeaturedCampaign() {
               <p>{"234"}</p>
               <p>{"backers"}</p>
             </div>
+
             <div className="fc-percent fl-bl fl-c">
               <p>{"13"}</p>
               <p>{"days to go"}</p>

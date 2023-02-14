@@ -307,18 +307,18 @@
 .fc-percent p:last-child{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: min(0.76vw, 19.56px);
+  font-size: min(1.04vw, 26.67px);
   line-height: 1em;
   color: var(--color-card-text);
 }
 @media(max-width: 1000px){
   .fc-percent p:last-child{
-    font-size: 1.23vw;
+    font-size: 1.68vw;
   }
 }
 @media(max-width: 550px){
   .fc-percent p:last-child{
-    font-size: 1.87vw;
+    font-size: 2.56vw;
   }
 }
 
@@ -365,18 +365,18 @@
 .fc-creator p{
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: min(1.04vw, 26.667px);
+  font-size: min(1.25vw, 32px);
   line-height: 1em;
   color: var(--color-subtext);
 }
 @media(max-width: 1000px){
   .fc-creator p{
-    font-size: 1.68vw;
+    font-size: 2.02vw;
   }
 }
 @media(max-width: 550px){
   .fc-creator p{
-    font-size: 2.56vw;
+    font-size: 3.07vw;
   }
 }
 
