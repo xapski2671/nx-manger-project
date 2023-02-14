@@ -4,6 +4,18 @@
   padding-bottom: 7.04vw;
   gap: 2.08vw;
 }
+@media (max-width: 1000px){
+  .ccp-section.sc-padding.fl-cl.fl-c{
+    padding-top: 9vw;
+    padding-bottom: 9vw;
+  }
+}
+@media(max-width: 550px){
+  .ccp-section.sc-padding.fl-cl.fl-c{
+    padding-top: 17.29vw;
+    padding-bottom: 17.29vw;
+  }
+}
 
 .ccp-sub-wrapper{
   width: 100%;
@@ -11,6 +23,12 @@
   -ms-user-select: none; 
   user-select: none;
 }
+@media (max-width: 1000px){
+  .ccp-sub-wrapper.fl-cl{
+    display: none;
+  }
+}
+
 
 .ccp-subtitle{
   font-family: var(--font-family);
