@@ -171,6 +171,17 @@
   gap: 1.39vw;
   width: 100%;
 }
+@media(max-width: 1000px){
+  .fc-status-container.fl-tl.fl-c{
+    gap: 2.25vw;
+  }
+}
+@media(max-width: 550px){
+  .fc-status-container.fl-tl.fl-c{
+    gap: 3.42vw;
+  }
+}
+
 
 .fc-progress-bar{
   width: 100%;
@@ -401,11 +412,11 @@
   background: var(--color-btn);
   box-shadow: 0px 4px 23px 4px rgba(0, 0, 0, 0.13);
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5em;
 
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: max(12px, 1.1vw);
+  font-size: min(1.04vw, 26.67px);
   line-height: 1em;
   letter-spfcing: 0.04em;
   color: var(--color-htext);
@@ -414,4 +425,14 @@
 }
 .fc-fund-cta:hover{
   transform: scale(1.05);
+}
+@media(max-width: 1000px){
+  .fc-fund-cta{
+    font-size: 1.68vw;
+  }
+}
+@media(max-width: 550px){
+  .fc-fund-cta{
+    font-size: 2.56vw;
+  }
 }
