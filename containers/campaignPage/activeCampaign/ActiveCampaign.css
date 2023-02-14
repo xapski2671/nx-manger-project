@@ -49,68 +49,6 @@
   }
 }
 
-.acp-bio{
-  width: 100%;
-}
-
-.acp-cat-icon{
-  width: 1.67em;
-  height: 1.67em;
-  color: var(--color-card-text);
-}
-
-.acp-cat-name.fl-cl{
-  gap: 0.57em;
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: min(1.39vw, 35.5px);
-  line-height: 1em;
-  letter-spacing: 0.04em;
-  color: var(--color-card-text);
-}
-@media (max-width: 1000px){
-  .acp-cat-name.fl-cl{
-    font-size: 2.25vw;
-  }
-}
-@media (max-width: 550px){ 
-  .acp-cat-name.fl-cl{
-    font-size: 3.42vw;
-  }
-}
-
-.acp-cta button.fl-acp{
-  padding: 0.7em 0.91em 0.6em;
-  gap: 0.91em;
-  border: 1px solid rgba(84, 71, 118, 0.57);
-  border-radius: 0.73em;
-
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: min(1.04vw, 26.667px);
-  line-height: 1em;
-  letter-spacing: 0.03em;
-  color: var(--color-text);
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-.acp-cta button:hover{
-  background-color: #9071DF;
-  color: var(--color-htext);
-  border-color: #9071DF;
-}
-@media(max-width: 1000px){
-  .acp-cta button.fl-acp{
-    font-size: 1.68vw;
-  }
-}
-@media(max-width: 550px){
-  .acp-cta button.fl-acp{
-    font-size: 2.56vw;
-  }
-}
-
-
 .acp-camp-title.fl-tl.fl-c{
   gap: min(0.42vw, 10.67px);
   width: 100%;
@@ -125,7 +63,6 @@
     gap: 1.03vw;
   }
 }
-
 
 .acp-camp-title h4{
   font-family: var(--font-family);
@@ -179,7 +116,6 @@
     gap: 3.42vw;
   }
 }
-
 
 .acp-progress-bar{
   width: 100%;
@@ -431,3 +367,43 @@
     font-size: 2.9vw;
   }
 }
+
+.acp-bio{
+  width: 100%;
+}
+
+.acp-bio-native.fl-cl{
+  gap: 1em;
+}
+
+.acp-cat-icon{
+  width: 1.67em;
+  height: 1.67em;
+  color: var(--color-card-text);
+}
+
+.acp-cat-name.fl-cl{
+  gap: 0.57em;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: min(1.39vw, 35.5px);
+  line-height: 1em;
+  letter-spacing: 0.04em;
+  color: var(--color-card-text);
+}
+@media (max-width: 1000px){
+  .acp-cat-name.fl-cl{
+    font-size: 2.25vw;
+  }
+}
+@media (max-width: 550px){ 
+  .acp-cat-name.fl-cl{
+    font-size: 3.42vw;
+  }
+}
+
+.acp-creator svg{
+  width: max(20px, 1.9vw);
+  color: var(--color-text);
+}
+
