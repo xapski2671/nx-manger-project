@@ -1,4 +1,5 @@
-import { CampaignGrid, CategoryFilter, FeaturedCampaign } from "@/components/exportComps"
+import { CampaignGrid, CategoryFilter } from "@/components/exportComps"
+import { FeaturedCampaign } from "../exportConts"
 
 export default function CampaignsPage() {
   
