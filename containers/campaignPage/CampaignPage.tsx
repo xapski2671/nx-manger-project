@@ -1,7 +1,9 @@
-import React from "react"
-
 export default function CampaignPage() {
   return (
-    <div>CampaignPage</div>
+    <section className="acp-section sc-padding">
+      <div className="acp-acp-container">
+        
+      </div>
+    </section>
   )
 }

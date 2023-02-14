@@ -10,5 +10,6 @@ cp campaigns
 hd Header
 hi HowItWorks
 ccp CampaignsPage
+acp CampaignPage
 
 @media(max-width: 1000px){}

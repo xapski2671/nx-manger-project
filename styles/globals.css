@@ -131,11 +131,11 @@ button{
 @import "../containers/homepage/blog/Blog.css";
 @import "../containers/footer/Footer.css";
 @import "../containers/campaignspage/CampaignsPage.css";
+@import "../containers/campaignpage/CampaignPage.css";
 
 @import "../components/sidebar/Sidebar.css";
 @import "../components/campaignGrid/CampaignGrid.css";
 @import "../components/campaignCard/CampaignCard.css";
 @import "../components/categoryFilter/CategoryFilter.css";
 @import "../components/blogCard/BlogCard.css";
-/* @import "../components/activeCampaign/ActiveCampaign.css"; */
 @import "../components/featuredCampaign/FeaturedCampaign.css";
