@@ -1,4 +1,13 @@
 /* cpd */
 .cpd-section.fl-tc{
   width: 100%;
+  flex-wrap: nowrap;
+}
+
+.cpd-trajectory{
+  width: 70%;
+}
+
+.cpd-bio{
+  width: 30%;
 }
