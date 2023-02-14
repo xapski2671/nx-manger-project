@@ -1,9 +1,9 @@
-import { ActiveCampaign } from "@/containers/exportConts"
+import { CampaignPage } from "@/containers/exportConts"
 
 export default function Campaign() {
   return (
     <div>
-      <ActiveCampaign/>
+      <CampaignPage/>
     </div>
   )
 }
