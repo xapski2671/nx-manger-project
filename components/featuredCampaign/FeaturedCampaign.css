@@ -5,6 +5,7 @@
 }
 @media(max-width: 1000px){
   .fc-container.fl-tl{
+    width: 91.8vw;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -19,7 +20,7 @@
 @media(max-width: 1000px){
   .fc-img{
     width: 100%;
-    height: 25%;
+    height: 300px;
   }
 }
 
@@ -27,7 +28,7 @@
   width: 100%;
   height: 100%;
   border-radius: min(1.39vw, 35.5px);
-  object-fit: contain;
+  object-fit: cover;
   -webkit-user-select: none;
   -ms-user-select: none; 
   user-select: none;
