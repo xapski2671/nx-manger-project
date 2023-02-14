@@ -35,7 +35,7 @@
 
 .nv-menu.fl-cr,
 .nv-menu-links.fl-cr{
-  gap: 2em;
+  gap: 1.39vw;
 }
 @media (max-width: 850px){
   .nv-menu.fl-cr{
