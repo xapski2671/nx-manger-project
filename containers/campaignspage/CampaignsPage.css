@@ -25,13 +25,14 @@
   -ms-user-select: none; 
   user-select: none;
 }
+.ccp-sub-wrapper:nth-of-type(3){
+  margin-top: 1.39vw;
+}
 @media(max-width: 1000px){
   .ccp-sub-wrapper{
     width: 91.8vw;
   }
 }
-
-
 
 .ccp-subtitle{
   font-family: var(--font-family);
