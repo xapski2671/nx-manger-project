@@ -35,7 +35,7 @@
 
 .acp-details.fl-tl.fl-c{
   width: 48%;
-  gap: 2.08vw;
+  gap: 1.9vw;
 }
 @media(max-width: 1000px){
   .acp-details.fl-tl.fl-c{
@@ -283,42 +283,6 @@
   }
 }
 
-.acp-creator.fl-cl{
-  gap: min(0.69vw, 17.8px);
-}
-@media(max-width: 1000px){
-  .acp-creator.fl-cl{
-    gap: 1.12vw;
-  }
-}
-@media(max-width: 550px){
-  .acp-creator.fl-cl{
-    gap: 1.7vw;
-  }
-}
-
-.acp-creator-jazzicon{
-  width: min(3.12vw, 72.8px);
-  height: min(3.12vw, 72.8px);
-  background: var(--color-btn);
-  opacity: 0.74;
-  border-radius: 0.55vw;
-}
-@media(max-width: 1000px){
-  .acp-creator-jazzicon{
-    width: 4.6vw;
-    height: 4.6vw;
-    border-radius: 0.89vw;
-  }
-}
-@media(max-width: 550px){
-  .acp-creator-jazzicon{
-    width: 7vw;
-    height: 7vw;
-    border-radius: 1.35vw;
-  }
-}
-
 .acp-fund-cta{
   width: 100%;
   padding: 0.65em 1.5em;
@@ -386,12 +350,39 @@
   }
 }
 
+.acp-creator.fl-cl{
+  gap: min(0.69vw, 17.8px);
+}
+@media(max-width: 1000px){
+  .acp-creator.fl-cl{
+    gap: 1.12vw;
+  }
+}
+@media(max-width: 550px){
+  .acp-creator.fl-cl{
+    gap: 1.7vw;
+  }
+}
+
 .acp-creator img{
   width: 2vw;
 }
 
 .acp-bio-socials.fl-cr{
   gap: 1.8em;
+}
+
+.acp-info{
+  width: 100%;
+}
+
+.acp-info p{
+  width: 92%;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #827B93;
 }
 
 

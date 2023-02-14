@@ -64,6 +64,10 @@ export default function ActiveCampaign() {
             <FontAwesomeIcon icon={faShare} className="acp-social-icon"/>
           </div>
         </div>
+
+        <div className="acp-info">
+          <p>{"All or nothing. This project will only be funded if it reaches its goal by Fri, February 17 2023 5:20 PM CET."}</p>
+        </div>
       </div>
     </section>
   )
