@@ -8,6 +8,7 @@
   .ccp-section.sc-padding.fl-cl.fl-c{
     padding-top: 8vw;
     padding-bottom: 8vw;
+    gap: 3.37vw;
   }
 }
 @media(max-width: 550px){
@@ -22,6 +23,11 @@
   -webkit-user-select: none;
   -ms-user-select: none; 
   user-select: none;
+}
+@media(max-width: 1000px){
+  .ccp-sub-wrapper{
+    width: 91.8vw;
+  }
 }
 
 
