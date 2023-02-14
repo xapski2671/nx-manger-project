@@ -1,12 +1,10 @@
 /* acp */
 /* acp */
-.acp-container.fl-tl{
-  width: 86.9vw;
+.acp-section.fl-tl{
   gap: 2.08vw;
 }
 @media(max-width: 1000px){
-  .acp-container.fl-tl{
-    width: 91.8vw;
+  .acp-section.fl-tl{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
