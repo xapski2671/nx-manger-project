@@ -46,15 +46,16 @@ export default function ActiveCampaign() {
 
         <button className="acp-fund-cta">{"Fund this project"}</button>
 
-        <div className="acp-bio fl-tc fl-sb">
-          <div className="acp-cat-name fl-cl">
-            <FontAwesomeIcon icon={faCubes} className="acp-cat-icon"/>
-            {"Metaverse"}
-          </div>
-
-          <div className="acp-creator fl-cl">
-            <div className="acp-creator-jazzicon"></div>
-            <p>{"bullishmei"}</p>
+        <div className="acp-bio fl-cl fl-sb">
+          <div className="acp-bio-native fl-cl">
+            <div className="acp-cat-name fl-cl">
+              <FontAwesomeIcon icon={faCubes} className="acp-cat-icon"/>
+              {"Metaverse"}
+            </div>
+            <div className="acp-creator fl-cl">
+              <div className="acp-creator-jazzicon"></div>
+              <p>{"bullishmei"}</p>
+            </div>
           </div>
         </div>
       </div>
