@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import DOMPurify from "dompurify"
 
 export default function RewardCard() {
 
@@ -7,7 +8,7 @@ export default function RewardCard() {
   async function fetchRData(){
     const res = await fetch("/reward-text.txt")
     const final = await res.text()
-    const html = { __html: final }
+    const html = { __html: DOMPurify.sanitize(final) }
     setRData(html)
   }
 
