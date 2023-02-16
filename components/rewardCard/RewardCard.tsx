@@ -27,8 +27,8 @@ export default function RewardCard() {
           <p>{"Bonus support (optional)"}</p>
           <div className="rc-fund-container fl-cl">
             <div className="rc-inp fl-cl fl-sb">
-              <input type="number" />
               <p>{"ETH"}</p>
+              <input type="number" />
             </div>
           </div>
         </div>
