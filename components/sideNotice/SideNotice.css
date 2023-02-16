@@ -1,1 +1,48 @@
 /* sn */
+.sn-container.fl-tl.fl-c{
+  gap: 30px;
+}
+
+.sn-info-title{
+  background: rgba(45, 29, 88, 0.89);
+  box-shadow: 8px -8px 0px 4px rgba(173, 165, 192, 0.45);
+  padding: 10px;
+  margin-bottom: 15px;
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1em;
+  
+  color: var(--color-bg);
+}
+
+.sn-info p{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.25em;
+  color: var(--color-card-text);
+}
+
+.sn-faq h4{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1em;
+  color: var(--color-card-text);
+  margin-bottom: 15px;
+}
+
+.sn-faqs.fl-tl.fl-c{
+  gap: 10px;
+}
+
+.sn-faqs li{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1em;
+  color: var(--color-card-text);
+  cursor: pointer;
+}

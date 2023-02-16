@@ -87,3 +87,10 @@
 .rc-cta:hover{
   transform: scale(1.05);
 }
+
+
+/* reward - description */
+.rc-description{
+  width: 100%;
+  padding: 10px;
+}
