@@ -20,6 +20,47 @@
   color: var(--color-text);
 }
 
+/* reward - description */
+.rc-details.fl-tl.fl-c{
+  width: 100%;
+  padding: 10px;
+  gap: 16px;
+}
+
+.rc-title,
+.rc-description,
+.rc-perks-container h5,
+.rc-perks.fl-tl.fl-c li{
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1em;
+  color: var(--color-card-text);
+}
+
+.rc-title{
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+.rc-description{
+  font-weight: 400;
+  line-height: 1.25em;
+}
+
+.rc-perks-container h5{
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+.rc-perks.fl-tl.fl-c{
+  gap: 8px;
+}
+
+.rc-perks.fl-tl.fl-c li{
+  font-weight: 500;
+}
+
 .rc-input-container.fl-bl.fl-sb{
   width: 100%;
 }
@@ -88,9 +129,3 @@
   transform: scale(1.05);
 }
 
-
-/* reward - description */
-.rc-description{
-  width: 100%;
-  padding: 10px;
-}

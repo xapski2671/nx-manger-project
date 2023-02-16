@@ -17,7 +17,9 @@ export default function CampaignDetails() {
             <h2>{"SELECT YOUR REWARD"}</h2>
             <p>{"Select an option below"}</p>
           </div>
-          <div className="cpd-rewards-container">
+          <div className="cpd-rewards-container fl-tl fl-c">
+            <RewardCard/>
+            <RewardCard/>
             <RewardCard/>
           </div>
         </div>
