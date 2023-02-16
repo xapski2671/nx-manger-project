@@ -11,6 +11,7 @@
 
 .cpd-tab-titles.fl-cc{
   gap: 2em;
+  margin-bottom: 8px;
 }
 
 .cpd-tab-titles.fl-cc h4{
@@ -35,11 +36,12 @@
 
 .cpd-tab{
   margin-top: 1.74vw;
+  width: 90%;
 }
 
 .cpd-tab-rewards.fl-tl.fl-c{
   gap: 1.87vw;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .cpd-tab-rewards-title h2,
@@ -57,6 +59,7 @@
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 0;
+  margin-bottom: 0;
 }
 
 .cpd-rewards-container{

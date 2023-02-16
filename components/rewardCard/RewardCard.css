@@ -9,9 +9,9 @@
 }
 
 .rc-reward-id.fl-cc{
-  padding: 8px 10px;
-  border: 1px solid var(--color-text);
+  padding: 10px 12px;
   border-radius: 4px;
+  background-color: var(--color-sub-bg);
 
   font-family: var(--font-family);
   font-weight: 500;
@@ -34,5 +34,56 @@
   font-size: 14px;
   line-height: 1em;
   color: var(--color-card-text);
-  margin-bottom: 8px;
+}
+
+.rc-fund-container.fl-cl{
+  margin-top: 8px;
+  width: 100%;
+}
+
+.rc-inp.fl-cl.fl-sb{
+  width: 100%;
+  border-bottom: 1px solid var(--color-text);
+  background-color: var(--color-sub-bg);
+  border-radius: 4px 4px 0 0;
+  padding: 4px 8px;
+}
+
+.rc-inp input{
+  width: 90%;
+  border: none;
+  outline: none;
+  background-color: var(--color-sub-bg);
+  border-radius: 8px;
+
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1em;
+  color:  var(--color-text);
+}
+
+.rc-inp input:focus{
+  outline: none;
+}
+
+.rc-cta{
+  padding: 0.65em 1.5em;
+  background-color: var(--color-card-text);
+  box-shadow: 0px 4px 23px 4px rgba(0, 0, 0, 0.08);
+  border: none;
+  border-radius: 8px;
+
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: max(11px, 1.1vw);
+  line-height: 1em;
+  letter-spacing: 0.04em;
+  color: var(--color-htext);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.rc-cta:hover{
+  transform: scale(1.05);
 }
