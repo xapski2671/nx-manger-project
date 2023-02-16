@@ -41,7 +41,21 @@ button{
   width: 90%;
 }
 
+.sc-padding{
+  padding: 0 8rem;
+}
+@media (max-width: 1050px) {
+  .sc-padding{padding: 0 4rem;}
+}
+@media (max-width: 850px) {
+  .sc-padding{padding: 0 1.6rem;}
+}
+@media (max-width: 350px) {
+  .sc-padding{padding: 0 0.8rem;}
+}
 
+
+/* FLEXBOX */
 /* top-left */
 .fl-tl{
   display: flex;
@@ -115,20 +129,8 @@ button{
   flex-direction: column;
 }
 
-.sc-padding{
-  padding: 0 8rem;
-}
-@media (max-width: 1050px) {
-  .sc-padding{padding: 0 4rem;}
-}
-@media (max-width: 850px) {
-  .sc-padding{padding: 0 1.6rem;}
-}
-@media (max-width: 350px) {
-  .sc-padding{padding: 0 0.8rem;}
-}
 
-
+/* imports */
 @import "../containers/navbar/Navbar.css";
 @import "../containers/homepage/header/Header.css";
 @import "../containers/homepage/campaigns/Campaigns.css";
@@ -149,3 +151,4 @@ button{
 @import "../components/rewardCard/RewardCard.css";
 @import "../components/sideNotice/SideNotice.css";
 @import "../components/campaignTabs/rewardsTab/RewardsTab.css";
+@import "../components/sideBio/SideBio.css";
