@@ -2,12 +2,67 @@
 .cpd-section.fl-tc{
   width: 100%;
   flex-wrap: nowrap;
+  gap: 4em;
 }
 
 .cpd-trajectory{
   width: 70%;
 }
 
+.cpd-tab-titles.fl-cc{
+  gap: 2em;
+}
+
+.cpd-tab-titles.fl-cc h4{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1em;
+  color: var(--color-card-text);
+}
+
+.cpd-separator{
+  width: 100%;
+  border-top: 1px solid var(--color-subtext);
+}
+
+.cpd-active-tab-indic{
+  height: 5px;
+  width: 70px;
+  background-color: var(--color-card-text);
+  transform: translateX(407px);
+}
+
+.cpd-tab{
+  margin-top: 1.74vw;
+}
+
+.cpd-tab-rewards.fl-tl.fl-c{
+  gap: 1.87vw;
+  width: 100%;
+}
+
+.cpd-tab-rewards-title h2,
+.cpd-tab-rewards-title p{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1em;
+  letter-spacing: 0.04em;
+  color: var(--color-card-text);
+  margin-bottom: 0.5em;
+}
+
+.cpd-tab-rewards-title p{
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.cpd-rewards-container{
+  width: 100%;
+}
+
 .cpd-info{
-  width: 30%;
+  width: 25%;
 }

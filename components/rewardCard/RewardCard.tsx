@@ -17,14 +17,14 @@ export default function RewardCard() {
   },[])
 
   return (
-    <div className="rc-container">
-      <div className="rc-no-reward">{"Pledge 0.5 ETH"}</div>
+    <div className="rc-container fl-tl fl-c">
+      <div className="rc-reward-id fl-cc">{"Pledge 0.5 ETH"}</div>
 
       <article className="rc-description" dangerouslySetInnerHTML={rData}/>
 
-      <div className="rc-input-container">
-        <div>
-          <p>{"Pledge amount"}</p>
+      <div className="rc-input-container fl-bl fl-sb">
+        <div className="rc-input">
+          <p>{"Bonus support (optional)"}</p>
           <input type="number" />
         </div>
         <button className="rc-cta">{"Continue"}</button>

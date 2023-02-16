@@ -1,1 +1,38 @@
 /* rc */
+.rc-container.fl-tl.fl-c{
+  width: 100%;
+  padding: 17px;
+  background: #fff;
+  box-shadow: 0px 4px 23px 4px rgba(54, 30, 119, 0.1);
+  border-radius: 8px;
+  gap: 30px;
+}
+
+.rc-reward-id.fl-cc{
+  padding: 8px 10px;
+  border: 1px solid var(--color-text);
+  border-radius: 4px;
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1em;
+  color: var(--color-text);
+}
+
+.rc-input-container.fl-bl.fl-sb{
+  width: 100%;
+}
+
+.rc-input{
+  width: 70%;
+}
+
+.rc-input p{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1em;
+  color: var(--color-card-text);
+  margin-bottom: 8px;
+}
