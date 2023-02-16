@@ -12,6 +12,7 @@ hi HowItWorks
 ccp CampaignsPage
 cpp CampaignPage
 acp ActiveCampaign
-
+rt RewardsTab
+sn SideNotice
 
 @media(max-width: 1000px){}

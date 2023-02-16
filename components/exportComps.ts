@@ -5,3 +5,5 @@ export { default as CampaignCard } from "./campaignCard/CampaignCard"
 export { default as BlogCard } from "./blogCard/BlogCard"
 export { default as RewardCard } from "./rewardCard/RewardCard"
 export { default as SideNotice } from "./sideNotice/SideNotice"
+
+export { default as RewardsTab } from "./campaignTabs/rewardsTab/RewardsTab"

@@ -1,0 +1,27 @@
+/* rt */
+.rt-container.fl-tl.fl-c{
+  gap: 1.87vw;
+}
+
+.rt-title h2,
+.rt-title p{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1em;
+  letter-spacing: 0.04em;
+  color: var(--color-card-text);
+  margin-bottom: 0.5em;
+}
+
+.rt-title p{
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0;
+  margin-bottom: 0;
+}
+
+.rt-rewards-container.fl-tl.fl-c{
+  width: 100%;
+  gap: 15px;
+}

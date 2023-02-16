@@ -34,39 +34,6 @@
   transform: translateX(407px);
 }
 
-.cpd-tab{
-  margin-top: 1.74vw;
-  width: 90%;
-}
-
-.cpd-tab-rewards.fl-tl.fl-c{
-  gap: 1.87vw;
-  /* width: 100%; */
-}
-
-.cpd-tab-rewards-title h2,
-.cpd-tab-rewards-title p{
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1em;
-  letter-spacing: 0.04em;
-  color: var(--color-card-text);
-  margin-bottom: 0.5em;
-}
-
-.cpd-tab-rewards-title p{
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 0;
-  margin-bottom: 0;
-}
-
-.cpd-rewards-container.fl-tl.fl-c{
-  width: 100%;
-  gap: 15px;
-}
-
 .cpd-info{
   width: 25%;
 }

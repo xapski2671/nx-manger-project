@@ -1,4 +1,4 @@
-import { RewardCard, SideNotice } from "@/components/exportComps"
+import { RewardsTab, SideNotice } from "@/components/exportComps"
 
 export default function CampaignDetails() {
   return (
@@ -12,17 +12,7 @@ export default function CampaignDetails() {
         </div>
         <div className="cpd-separator"><div className="cpd-active-tab-indic"></div></div>
 
-        <div className="cpd-tab cpd-tab-rewards fl-tl fl-c">
-          <div className="cpd-tab-rewards-title">
-            <h2>{"SELECT YOUR REWARD"}</h2>
-            <p>{"Select an option below"}</p>
-          </div>
-          <div className="cpd-rewards-container fl-tl fl-c">
-            <RewardCard/>
-            <RewardCard/>
-            <RewardCard/>
-          </div>
-        </div>
+        <RewardsTab/>
       </main>
 
       <aside className="cpd-info">

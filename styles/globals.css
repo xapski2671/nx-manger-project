@@ -36,6 +36,11 @@ button{
 }
 
 
+.cpd-tab{
+  margin-top: 1.74vw;
+  width: 90%;
+}
+
 
 /* top-left */
 .fl-tl{
@@ -143,3 +148,4 @@ button{
 @import "../components/blogCard/BlogCard.css";
 @import "../components/rewardCard/RewardCard.css";
 @import "../components/sideNotice/SideNotice.css";
+@import "../components/campaignTabs/rewardsTab/RewardsTab.css";
