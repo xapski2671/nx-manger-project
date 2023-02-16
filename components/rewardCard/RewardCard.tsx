@@ -20,7 +20,7 @@ export default function RewardCard() {
     <div className="rc-container">
       <div className="rc-no-reward">{"Pledge 0.5 ETH"}</div>
 
-      <div className="rc-description" dangerouslySetInnerHTML={rData}/>
+      <article className="rc-description" dangerouslySetInnerHTML={rData}/>
 
       <div className="rc-input-container">
         <div>
