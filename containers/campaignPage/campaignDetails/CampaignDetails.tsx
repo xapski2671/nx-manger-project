@@ -1,4 +1,5 @@
 import { RewardsTab, SideNotice } from "@/components/exportComps"
+import SideBio from "@/components/sideBio/SideBio"
 
 export default function CampaignDetails() {
   return (
@@ -20,6 +21,7 @@ export default function CampaignDetails() {
 
       <aside className="cpd-info">
         <SideNotice/>
+        {/* <SideBio/> */}
       </aside>
     </section>
   )

@@ -71,6 +71,7 @@
 
 .cpd-info{
   width: 25%;
+  padding-top: 24px;
 }
 @media(max-width: 1000px){
   .cpd-info{
