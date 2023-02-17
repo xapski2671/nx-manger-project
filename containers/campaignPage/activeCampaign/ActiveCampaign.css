@@ -1,6 +1,7 @@
 /* acp */
 .acp-section.fl-tl{
   gap: 2.08vw;
+  width: 100%;
 }
 @media(max-width: 1000px){
   .acp-section.fl-tl{

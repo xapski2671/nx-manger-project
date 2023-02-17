@@ -4,28 +4,63 @@
   padding: 1.25vw;
   background: var(--color-bg);
   box-shadow: 0px 4px 23px 4px rgba(54, 30, 119, 0.1);
-  border-radius: 8px;
+  border-radius: 0.44em;
   gap: 2.08vw;
+}
+@media(max-width: 1000px){
+  .rc-container.fl-tl.fl-c{
+    padding: 2.02vw;
+    gap: 3.37vw;
+  }
+}
+@media(max-width: 550px){
+  .rc-container.fl-tl.fl-c{
+    padding: 3.07vw;
+    gap: 5.11vw;
+  }
 }
 
 .rc-reward-id.fl-cc{
-  padding: 10px 12px;
-  border-radius: 4px;
+  padding: 0.71em 0.86em;
+  border-radius: 0.28em;
   background-color: var(--color-sub-bg);
 
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.97vw;
   line-height: 1em;
   color: var(--color-text);
+}
+@media(max-width: 1000px){
+  .rc-reward-id.fl-cc{
+    font-size: 1.57vw;
+  }
+}
+@media(max-width: 550px){
+  .rc-reward-id.fl-cc{
+    font-size: 2.39vw;
+  }
 }
 
 /* reward - description */
 .rc-details.fl-tl.fl-c{
   width: 100%;
-  padding: 10px;
-  gap: 16px;
+  padding: 0.69vw;
+  gap: 1.1vw;
 }
+@media(max-width: 1000px){
+  .rc-details.fl-tl.fl-c{
+    padding: 1.12vw;
+    gap: 1.78vw;
+  }
+}
+@media(max-width: 550px){
+  .rc-details.fl-tl.fl-c{
+    padding: 1.7vw;
+    gap: 2.71vw;
+  }
+}
+
 
 .rc-title,
 .rc-description,
@@ -33,14 +68,40 @@
 .rc-perks.fl-tl.fl-c li{
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 13px;
+  font-size: 0.97vw;
   line-height: 1em;
   color: var(--color-card-text);
 }
+@media(max-width: 1000px){
+  .rc-title,
+  .rc-description,
+  .rc-perks-container h5,
+  .rc-perks.fl-tl.fl-c li{
+    font-size: 1.57vw;
+  }
+}
+@media(max-width: 550px){
+  .rc-title,
+  .rc-description,
+  .rc-perks-container h5,
+  .rc-perks.fl-tl.fl-c li{
+    font-size: 2.39vw;
+  }
+}
 
 .rc-title{
-  font-size: 15px;
+  font-size: 1.04vw;
   letter-spacing: 0.02em;
+}
+@media(max-width: 1000px){
+  .rc-title{
+    font-size: 1.68vw;
+  }
+}
+@media(max-width: 550px){
+  .rc-title{
+    font-size: 2.56vw;
+  }
 }
 
 .rc-description{
@@ -50,11 +111,11 @@
 
 .rc-perks-container h5{
   font-weight: 300;
-  margin-bottom: 10px;
+  margin-bottom: 0.71em;
 }
 
 .rc-perks.fl-tl.fl-c{
-  gap: 8px;
+  gap: 0.5vw;
 }
 
 .rc-perks.fl-tl.fl-c li{
@@ -64,6 +125,15 @@
 .rc-input-container.fl-bl.fl-sb{
   width: 100%;
 }
+@media(max-width: 550px){
+  .rc-input-container.fl-bl.fl-sb{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+}
+
 
 .rc-input{
   width: 70%;
@@ -72,13 +142,23 @@
 .rc-input p{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.97vw;
   line-height: 1em;
   color: var(--color-card-text);
 }
+@media(max-width: 1000px){
+  .rc-input p{
+    font-size: 1.57vw;
+  }
+}
+@media(max-width: 550px){
+  .rc-input p{
+    font-size: 2.39vw;
+  }
+}
 
 .rc-fund-container.fl-cl{
-  margin-top: 8px;
+  margin-top: 0.5vw;
   width: 100%;
 }
 
@@ -86,8 +166,8 @@
   width: 100%;
   border-bottom: 1px solid var(--color-text);
   background-color: var(--color-sub-bg);
-  border-radius: 4px 4px 0 0;
-  padding: 4px 8px;
+  border-radius: 0.28em 0.28em 0 0;
+  padding: 0.28em 0.57em;
 }
 
 .rc-inp input{
@@ -95,14 +175,24 @@
   border: none;
   outline: none;
   background-color: var(--color-sub-bg);
-  border-radius: 8px;
+  border-radius: 0.28em;
 
 
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.97vw;
   line-height: 1em;
   color:  var(--color-text);
+}
+@media(max-width: 1000px){
+  .rc-inp input{
+    font-size: 1.57vw;
+  }
+}
+@media(max-width: 550px){
+  .rc-inp input{
+    font-size: 2.39vw;
+  }
 }
 
 .rc-inp input:focus{
@@ -118,7 +208,7 @@
 
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: max(11px, 1.1vw);
+  font-size: 1.1vw;
   line-height: 1em;
   letter-spacing: 0.04em;
   color: var(--color-htext);
@@ -127,5 +217,15 @@
 }
 .rc-cta:hover{
   transform: scale(1.05);
+}
+@media(max-width: 1000px){
+  .rc-cta{
+    font-size: 1.78vw;
+  }
+}
+@media(max-width: 550px){
+  .rc-cta{
+    font-size: 2.71vw;
+  }
 }
 

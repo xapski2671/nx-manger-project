@@ -40,6 +40,18 @@ button{
   margin-top: 1.74vw;
   width: 90%;
 }
+@media(max-width: 1000px){
+  .cpd-tab{
+    margin-top: 2.82vw;
+    width: 100%;
+  }
+}
+@media(max-width: 550px){
+  .cpd-tab{
+    margin-top: 4.28vw;
+  }
+}
+
 
 .sc-padding{
   padding: 0 8rem;
