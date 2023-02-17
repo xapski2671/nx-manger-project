@@ -8,18 +8,34 @@
 .cpd-trajectory{
   width: 70%;
 }
+@media(max-width: 1000px){
+  .cpd-trajectory{
+    width: 100%;
+  }
+}
+
 
 .cpd-tab-titles.fl-cc{
   gap: 2em;
-  margin-bottom: 8px;
+  margin-bottom: 0.55vw;
 }
 
 .cpd-tab-titles.fl-cc h4{
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.39vw;
   line-height: 1em;
   color: var(--color-card-text);
+}
+@media(max-width: 1000px){
+  .cpd-tab-titles.fl-cc h4{
+    font-size: 2.25vw;
+  }
+}
+@media(max-width: 550px){
+  .cpd-tab-titles.fl-cc h4{
+    font-size: 3.42vw;
+  }
 }
 
 .cpd-separator{
@@ -28,12 +44,30 @@
 }
 
 .cpd-active-tab-indic{
-  height: 5px;
-  width: 70px;
+  height: 0.34vw;
+  width: 4.86vw;
   background-color: var(--color-card-text);
-  transform: translateX(407px);
+  transform: translateX(28.26vw); /* 407px */
 }
+@media(max-width: 1000px){
+  .cpd-active-tab-indic{
+    height: 0.55vw;
+    width: 7.86vw;
+  }
+}
+@media(max-width: 550px){
+  .cpd-active-tab-indic{
+    height: 0.83vw;
+    width: 11.86vw;
+  }
+}
+
 
 .cpd-info{
   width: 25%;
+}
+@media(max-width: 1000px){
+  .cpd-info{
+    display: none;
+  }
 }

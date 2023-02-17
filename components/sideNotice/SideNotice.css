@@ -1,17 +1,27 @@
 /* sn */
 .sn-container.fl-tl.fl-c{
-  gap: 30px;
+  gap: 2.08vw;
+}
+@media(max-width: 1000px){
+  .sn-container.fl-tl.fl-c{
+    gap: 3.37vw;
+  }
+}
+@media(max-width: 550px){
+  .sn-container.fl-tl.fl-c{
+    gap: 5.11vw;
+  }
 }
 
 .sn-info-title{
   background: rgba(45, 29, 88, 0.89);
   box-shadow: 8px -8px 0px 4px rgba(173, 165, 192, 0.45);
-  padding: 10px;
-  margin-bottom: 15px;
+  padding: 0.5em;
+  margin-bottom: 0.75em;
 
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.39vw;
   line-height: 1em;
   
   color: var(--color-bg);
@@ -20,7 +30,7 @@
 .sn-info p{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 13px;
+  font-size: 0.9vw;
   line-height: 1.25em;
   color: var(--color-card-text);
 }
@@ -28,20 +38,20 @@
 .sn-faq h4{
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1.1vw;
   line-height: 1em;
   color: var(--color-card-text);
   margin-bottom: 15px;
 }
 
 .sn-faqs.fl-tl.fl-c{
-  gap: 10px;
+  gap: 0.69vw;
 }
 
 .sn-faqs li{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 13px;
+  font-size: 0.9vw;
   line-height: 1em;
   color: var(--color-card-text);
   cursor: pointer;
