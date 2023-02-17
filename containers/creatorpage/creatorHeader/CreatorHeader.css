@@ -20,7 +20,55 @@
 }
 
 .crh-section.fl-cl.fl-c{
-  background-color: blue;
+  background: var(--color-section-hd);
   height: 200px;
   width: 100%;
+}
+
+.crh-bio.fl-tl{
+  width: 100%;
+  gap: 18px;
+}
+
+.crh-jazzicon{
+  background: linear-gradient(98.97deg, #2474C6 -35.95%, #C4A2E7 114.36%);
+  box-shadow: 0px 4px 23px 4px rgba(0, 0, 0, 0.13);
+  border-radius: 8px;
+  width: 90px;
+  height: 90px;
+}
+
+.crh-details.fl-tl.fl-c{
+  gap: 7px;
+}
+
+.crh-curr-icon{
+  height: 18px;
+  color: var(--color-htext);
+}
+
+.crh-address.fl-tl{
+  gap: 5px;
+}
+
+.crh-address.fl-tl p,
+.crh-username,
+.crh-name,
+.crh-contribution{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1em;
+  color: var(--color-htext);
+}
+
+.crh-username{
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.crh-name,
+.crh-contribution{
+  font-size: 15px;
+  font-weight: 400;
 }

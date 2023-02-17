@@ -7,7 +7,7 @@ export default function CreatorHeader() {
       <div className="crh-bio fl-tl">
         <div className="crh-jazzicon"></div>
         <div className="crh-details fl-tl fl-c">
-          <div className="crh-address">
+          <div className="crh-address fl-tl">
             <FontAwesomeIcon icon={faEthereum} className="crh-curr-icon"/>
             <p>{"0x82b9...be0c"}</p>
           </div>
