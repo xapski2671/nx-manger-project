@@ -1,6 +1,7 @@
 /* sb */
 .sb-container.fl-tl.fl-c{
   gap: 50px;
+  width: 100%;
 }
 
 .sb-bio.fl-tl.fl-c{
@@ -91,3 +92,102 @@
   color: var(--color-card-text);
 }
 
+.sb-support.fl-tl.fl-c{
+  gap: 18px;
+  width: 100%;
+}
+
+.sb-support-box.fl-tl.fl-c{
+  background: #FFFFFF;
+  box-shadow: 0px 4px 23px 4px rgba(0, 0, 0, 0.13);
+  border-radius: 8px;
+  gap: 20px;
+  padding: 15px 10px;
+}
+
+.sb-support-box-heading,
+.sb-support-info h4,
+.sb-support-info p{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1em;
+  color: var(--color-card-text);
+}
+
+.sb-input.fl-cl{
+  border-bottom: 1px solid var(--color-card-text);
+  border-radius: 5px 5px 0 0;
+  background-color: var(--color-sub-bg);
+  padding: 5px;
+  gap: 10px;
+  width: 100%;
+}
+
+.sb-input p,
+.sb-input input{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1em;
+  color: var(--color-subtext);
+}
+
+.sb-input input{
+  border: none;
+  outline: none;
+  color: var(--color-text);
+  background-color: var(--color-sub-bg);
+  width: 100%;
+}
+
+.sb-support-info{
+  background-color: var(--color-sub-bg);
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+}
+
+.sb-support-info h4{
+  color: var(--color-text);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.sb-support-info p{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5em;
+  /* width: 90%; */
+}
+
+.sb-fund-cta{
+  width: 100%;
+  padding: 0.65em 1.5em;
+  background: var(--color-btn);
+  box-shadow: 0px 4px 23px 4px rgba(0, 0, 0, 0.07);
+  border: none;
+  border-radius: 0.5em;
+
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: min(1.18vw, 30.26px);
+  line-height: 1em;
+  letter-spacing: 0.05em;
+  color: var(--color-htext);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.sb-fund-cta:hover{
+  transform: scale(1.008);
+}
+@media(max-width: 1000px){
+  .sb-fund-cta{
+    font-size: 1.91vw;
+  }
+}
+@media(max-width: 550px){
+  .sb-fund-cta{
+    font-size: 2.9vw;
+  }
+}

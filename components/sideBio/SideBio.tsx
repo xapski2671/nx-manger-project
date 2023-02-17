@@ -31,7 +31,7 @@ export default function SideBio() {
       <div className="sb-support fl-tl fl-c">
         <h4 className="sb-support-heading">{"Support"}</h4>
         <div className="sb-support-box fl-tl fl-c">
-          <h4 className="sb-support">{"Pledge without a reward"}</h4>
+          <h4 className="sb-support-box-heading">{"Pledge without a reward"}</h4>
 
           <div className="sb-input fl-cl">
             <p>{"ETH"}</p>
@@ -43,7 +43,7 @@ export default function SideBio() {
             <p>{"Support the project for no reward, just because it speaks to you."}</p>
           </div>
           
-          <button className="acp-fund-cta">{"Fund this project"}</button>
+          <button className="sb-fund-cta">{"Fund this project"}</button>
         </div>
       </div>
     </div>
