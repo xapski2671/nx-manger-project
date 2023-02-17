@@ -23,6 +23,7 @@
   font-weight: 500;
   font-size: 1.39vw;
   line-height: 1em;
+  text-align: center;
   
   color: var(--color-bg);
 }

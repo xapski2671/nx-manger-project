@@ -47,7 +47,7 @@
   height: 0.34vw;
   width: 4.86vw;
   background-color: var(--color-card-text);
-  transform: translateX(28.26vw); /* 407px */
+  transform: translateX(30.05vw); /* 407px */
 }
 @media(max-width: 1000px){
   .cpd-active-tab-indic{
