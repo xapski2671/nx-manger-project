@@ -1,3 +1,4 @@
+import { CreatorDetails, CreatorHeader, CreatorPage } from "@/containers/exportConts"
 import Head from "next/head"
 
 export default function Creator() {
@@ -10,7 +11,8 @@ export default function Creator() {
         <link rel="icon" href="/assets/manger_favicon.svg" />
       </Head>
 
-      
+      <CreatorHeader/>
+      <CreatorDetails/>
     </>
   )
 }

@@ -12,3 +12,7 @@ export { default as FeaturedCampaign } from "./campaignspage/featuredCampaign/Fe
 export { default as CampaignPage } from "./campaignpage/CampaignPage"
 export { default as ActiveCampaign } from "./campaignpage/activeCampaign/ActiveCampaign"
 export { default as CampaignDetails } from "./campaignpage/campaignDetails/CampaignDetails"
+
+export { default as CreatorPage } from "./creatorpage/CreatorPage"
+export { default as CreatorHeader } from "./creatorpage/creatorHeader/CreatorHeader"
+export { default as CreatorDetails } from "./creatorpage/creatorDetails/CreatorDetails"
