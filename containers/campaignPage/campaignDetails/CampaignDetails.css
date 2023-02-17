@@ -17,7 +17,7 @@
 
 .cpd-tab-titles.fl-cc{
   gap: 2em;
-  margin-bottom: 0.55vw;
+  /* margin-bottom: 0.55vw; */
 }
 
 .cpd-tab-titles.fl-cc h4{
@@ -26,6 +26,7 @@
   font-size: 1.39vw;
   line-height: 1em;
   color: var(--color-card-text);
+  transition: all 0.2s ease;
 }
 @media(max-width: 1000px){
   .cpd-tab-titles.fl-cc h4{
@@ -36,6 +37,11 @@
   .cpd-tab-titles.fl-cc h4{
     font-size: 3.42vw;
   }
+}
+
+.cpd-active-tab{
+  padding-bottom: 0.18em;
+  border-bottom: 0.2em solid var(--color-card-text);
 }
 
 .cpd-separator{

@@ -47,6 +47,7 @@
 
 .sn-faqs.fl-tl.fl-c{
   gap: 0.69vw;
+  list-style-position: inside;
 }
 
 .sn-faqs li{

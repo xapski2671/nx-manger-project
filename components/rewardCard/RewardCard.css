@@ -116,6 +116,7 @@
 
 .rc-perks.fl-tl.fl-c{
   gap: 0.5vw;
+  list-style-position: inside;
 }
 
 .rc-perks.fl-tl.fl-c li{
