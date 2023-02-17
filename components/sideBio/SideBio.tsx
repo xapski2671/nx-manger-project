@@ -20,9 +20,9 @@ export default function SideBio() {
         </div>
 
         <div className="sb-creator-socials fl-cl">
-          <FontAwesomeIcon icon={faTwitter} className="acp-social-icon"/>
-          <FontAwesomeIcon icon={faGlobe} className="acp-social-icon"/>
-          <FontAwesomeIcon icon={faShareNodes} className="acp-social-icon"/>
+          <FontAwesomeIcon icon={faTwitter} className="sb-social-icon"/>
+          <FontAwesomeIcon icon={faGlobe} className="sb-social-icon"/>
+          <FontAwesomeIcon icon={faShareNodes} className="sb-social-icon"/>
         </div>
 
         <p className="sb-creator-bio">{"A VR engineer and game developer based in San Antonio"}</p>
