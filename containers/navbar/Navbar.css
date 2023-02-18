@@ -8,9 +8,10 @@
   padding-bottom: 1em;
   z-index: 10;
   transition: all 0.8s ease;
-}
-.nv-navbar.sc-padding.page-fill{
   background-color: var(--color-footer);
+}
+.nv-navbar.sc-padding.page-unfill{
+  background-color: transparent;
 }
 .nv-navbar.sc-padding.nv-active{
   position: fixed;

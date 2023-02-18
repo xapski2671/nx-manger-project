@@ -27,8 +27,16 @@ export default function Navbar() {
     setSiInvis(bool)
   }
 
+  console.log(router.pathname)
+
   return (
-    <nav className={`nv-navbar sc-padding ${scrollDirection == "down" ? scrollY >= 8 ? "nv-active" : "" : ""}  ${router.pathname !== "/" && "page-fill"}`} onScroll={()=>{console.log(scrollY)}}>
+    <nav 
+      className={
+        `nv-navbar sc-padding ${scrollDirection == "down" ? scrollY >= 8 ? "nv-active" : "" : ""}  
+        ${(router.pathname == "/" || router.pathname == "/creator") && "page-unfill"}`
+      } 
+      onScroll={()=>{console.log(scrollY)}}
+    >
       <div className="fl-cc fl-sb nv-menu-wrapper">
         <div className="nv-logo fl-cl">
           <img src="/assets/manger_logo.svg" alt="logo" />
