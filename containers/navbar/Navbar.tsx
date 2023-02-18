@@ -27,8 +27,6 @@ export default function Navbar() {
     setSiInvis(bool)
   }
 
-  console.log(router.pathname)
-
   return (
     <nav 
       className={
