@@ -11,6 +11,23 @@ body {
   overflow: overlay;
   font-size: 10px;
 }
+@media(max-width: 1000px){
+  html,body{
+    font-size: 8px;
+  }
+}
+/* @media(max-width: 750px){
+  html,body{
+    font-size: 6px;
+  }
+} */
+@media(max-width: 550px){
+  html,body{
+    font-size: 6px;
+  }
+}
+
+
 
 a {
   color: unset;

@@ -58,10 +58,20 @@
 .crh-contribution{
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 1em;
   color: var(--color-htext);
 }
+/* @media(max-width: 1000px){
+  .crh-address.fl-tl p,
+  .crh-username,
+  .crh-name,
+  .crh-contribution{
+    font-size: 
+  }
+} */
+@media(max-width: 1000px){}
+
 
 .crh-username{
   font-weight: 600;
@@ -70,7 +80,7 @@
 
 .crh-name,
 .crh-contribution{
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
