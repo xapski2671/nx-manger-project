@@ -9,25 +9,25 @@ html,
 body {
   background-color: #fff;
   overflow: overlay;
-  font-size: 10px;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1.6rem;
 }
 @media(max-width: 1000px){
-  html,body{
-    font-size: 8px;
+  body{
+    font-size: 1rem;
   }
 }
-/* @media(max-width: 750px){
-  html,body{
-    font-size: 6px;
-  }
-} */
-@media(max-width: 550px){
-  html,body{
-    font-size: 6px;
+@media(max-width: 600px){
+  body{
+    font-size: 0.8rem;
   }
 }
-
-
 
 a {
   color: unset;
@@ -37,6 +37,7 @@ a {
 button{
   border: none;
   background: none;
+  outline: none;
 }
 
 ::-webkit-scrollbar-track {
@@ -51,7 +52,6 @@ button{
   background-clip: content-box;
   border: 6px solid transparent;
 }
-
 
 .cpd-tab{
   margin-top: 1.74vw;
@@ -69,7 +69,6 @@ button{
   }
 }
 
-
 .sc-padding{
   padding: 0 8rem;
 }
@@ -82,7 +81,6 @@ button{
 @media (max-width: 350px) {
   .sc-padding{padding: 0 0.8rem;}
 }
-
 
 /* FLEXBOX */
 /* top-left */

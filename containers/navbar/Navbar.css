@@ -60,6 +60,8 @@
   letter-spacing: 0.04em;
   color: var(--color-htext);
   transition: all 0.2s ease;
+  outline: none;
+  border: none;
 }
 .nv-menu-links a:hover{
   transform: scale(1.05);

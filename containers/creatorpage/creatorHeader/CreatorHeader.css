@@ -1,34 +1,33 @@
 /* crh */
 .crh-section.sc-padding.fl-cl.fl-c{
+  background: var(--color-section-hd);
+  width: 100%;
+  gap: 3.125em;
   padding-top: 7.04vw;
-  /* padding-bottom: 15px; */
-  /* padding-bottom: 7.04vw; */
-  gap: 1.74vw;
 }
 @media (max-width: 1000px){
   .crh-section.sc-padding.fl-cl.fl-c{
-    padding-top: 8vw;
-    /* padding-bottom: 8vw; */
-    gap: 2.82vw;
+    padding-top: 10vw;
+    gap: 5em;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .crh-section.sc-padding.fl-cl.fl-c{
     padding-top: 17.29vw;
-    /* padding-bottom: 17.29vw; */
-    gap: 3vw;
+    gap: 3em;
   }
-}
-
-.crh-section.sc-padding.fl-cl.fl-c{
-  background: var(--color-section-hd);
-  width: 100%;
-  gap: 50px;
 }
 
 .crh-bio.fl-tl{
   width: 100%;
   gap: 18px;
+}
+@media(max-width: 600px){
+  .crh-bio.fl-tl{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
 
 .crh-jazzicon{
@@ -40,7 +39,19 @@
 }
 
 .crh-details.fl-tl.fl-c{
-  gap: 7px;
+  gap: 0.5em;
+}
+@media(max-width: 1000px){
+  .crh-details.fl-tl.fl-c{
+    gap: 0.7em;
+  }
+}
+@media(max-width: 600px){
+  .crh-details.fl-tl.fl-c{
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.4em;
+  }
 }
 
 .crh-curr-icon{
@@ -62,16 +73,14 @@
   line-height: 1em;
   color: var(--color-htext);
 }
-/* @media(max-width: 1000px){
+@media(max-width: 600px){
   .crh-address.fl-tl p,
   .crh-username,
   .crh-name,
   .crh-contribution{
-    font-size: 
+    text-align: center;
   }
-} */
-@media(max-width: 1000px){}
-
+}
 
 .crh-username{
   font-weight: 600;
@@ -85,7 +94,6 @@
 }
 
 .crh-menu.fl-tc{
-  gap: 340px;
   width: 100%;
   position: relative;
 }
@@ -95,6 +103,12 @@
   position: absolute;
   right: 1%;
 }
+@media(max-width: 600px){
+  .crh-socials.fl-cr{
+    right: auto;
+    top: 0;
+  }
+}
 
 .crh-social-icon{
   height: 18px;
@@ -102,20 +116,30 @@
 }
 
 .crh-tab-menu.fl-cl{
-  gap: 40px;
+  gap: 2.5em;
+}
+@media(max-width: 600px){
+  .crh-tab-menu.fl-cl{
+    margin-top: 6.25em;
+  }
 }
 
 .crh-tab-title{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: 1em;
   letter-spacing: 0.03em;
   color: #FFFFFF;
   border-bottom: 5px solid transparent;
   padding-bottom: 12px;
 }
+@media(max-width: 600px){
+  .crh-tab-title{
+    font-size: 1.3rem;
+  }
+}
 
 .crh-active-tab{
-  border-bottom: 5px solid white;
+  border-bottom: 0.333em solid white;
 }
