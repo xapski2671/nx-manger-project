@@ -15,5 +15,6 @@ acp ActiveCampaign
 rt RewardsTab
 sn SideNotice
 sb SideBio
+crt CreateCampaignPage
 
 @media(max-width: 1000px){}

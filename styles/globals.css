@@ -172,6 +172,7 @@ button{
 @import "../containers/creatorpage/CreatorPage.css";
 @import "../containers/creatorpage/creatorHeader/CreatorHeader.css";
 @import "../containers/creatorpage/creatorDetails/CreatorDetails.css";
+@import "../containers/createcampaignpage/CreateCampaignPage.css";
 
 @import "../components/sidebar/Sidebar.css";
 @import "../components/campaignGrid/CampaignGrid.css";

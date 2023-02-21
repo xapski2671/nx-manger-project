@@ -16,3 +16,5 @@ export { default as CampaignDetails } from "./campaignpage/campaignDetails/Campa
 export { default as CreatorPage } from "./creatorpage/CreatorPage"
 export { default as CreatorHeader } from "./creatorpage/creatorHeader/CreatorHeader"
 export { default as CreatorDetails } from "./creatorpage/creatorDetails/CreatorDetails"
+
+export { default as CreateCampaignPage } from "./createcampaignpage/CreateCampaignPage"
