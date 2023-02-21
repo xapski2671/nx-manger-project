@@ -7,15 +7,18 @@ export default function CreateCampaignPage() {
     <section className="crt-section sc-padding fl-cl fl-c">
       <div className="crt-nav fl-cc">
         <Link href="/">{"Profile"}</Link>
-        <FontAwesomeIcon icon={faAngleRight}/>
+        <FontAwesomeIcon icon={faAngleRight} className="crt-nav-arr-icon"/>
         <Link href="/">{"Basics"}</Link>
-        <FontAwesomeIcon icon={faAngleRight}/>
+        <FontAwesomeIcon icon={faAngleRight} className="crt-nav-arr-icon"/>
         <Link href="/">{"Story"}</Link>
-        <FontAwesomeIcon icon={faAngleRight}/>
+        <FontAwesomeIcon icon={faAngleRight} className="crt-nav-arr-icon"/>
         <Link href="/">{"Rewards"}</Link>
-        <FontAwesomeIcon icon={faAngleRight}/>
+        <FontAwesomeIcon icon={faAngleRight} className="crt-nav-arr-icon"/>
         <Link href="/">{"Creators"}</Link>
       </div>
+
+      <h3 className="crt-tab-title">{"Basics"}</h3>
+      <p className="crt-tab-subtitle">{"Make a good first impression: introduce your campaign objectives and entice people to learn more. This basic information will represent your campaign on your campaign page, on your campaign card, and in searches."}</p>
 
       <div className="crt-form-card fl-tl fl-c">
         <h4>{"Campaign Title"}</h4>
