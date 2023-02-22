@@ -169,10 +169,11 @@ button{
 @import "../containers/campaignpage/CampaignPage.css";
 @import "../containers/campaignpage/activeCampaign/ActiveCampaign.css";
 @import "../containers/campaignpage/campaignDetails/CampaignDetails.css";
-@import "../containers/creatorpage/CreatorPage.css";
 @import "../containers/creatorpage/creatorHeader/CreatorHeader.css";
 @import "../containers/creatorpage/creatorDetails/CreatorDetails.css";
 @import "../containers/createcampaignpage/CreateCampaignPage.css";
+@import "../containers/createcampaignpage/createCampaignHeader/CreateCampaignHeader.css";
+@import "../containers/createcampaignpage/createCampaignTabs/basicsTab/BasicsTab.css";
 
 @import "../components/sidebar/Sidebar.css";
 @import "../components/campaignGrid/CampaignGrid.css";

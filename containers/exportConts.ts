@@ -13,8 +13,8 @@ export { default as CampaignPage } from "./campaignpage/CampaignPage"
 export { default as ActiveCampaign } from "./campaignpage/activeCampaign/ActiveCampaign"
 export { default as CampaignDetails } from "./campaignpage/campaignDetails/CampaignDetails"
 
-export { default as CreatorPage } from "./creatorpage/CreatorPage"
 export { default as CreatorHeader } from "./creatorpage/creatorHeader/CreatorHeader"
 export { default as CreatorDetails } from "./creatorpage/creatorDetails/CreatorDetails"
 
-export { default as CreateCampaignPage } from "./createcampaignpage/CreateCampaignPage"
+export { default as CreateCampaignHeader } from "./createcampaignpage/createCampaignHeader/CreateCampaignHeader"
+export { default as BasicsTab } from "./createcampaignpage/createCampaignTabs/basicsTab/BasicsTab"

@@ -1,4 +1,4 @@
-import { CreatorDetails, CreatorHeader, CreatorPage } from "@/containers/exportConts"
+import { CreatorDetails, CreatorHeader } from "@/containers/exportConts"
 import Head from "next/head"
 
 export default function Creator() {
