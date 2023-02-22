@@ -28,7 +28,7 @@ export default function BasicsTab() {
           </div>
           <p className="bt-card-subtitle">{"Provide a short description that describes your campaign to your audience."}</p>
           <div className="bt-card-input fl-bl fl-c">
-            <textarea name="bt-tagline" id="bt-tagline" cols={91} rows={2} className="bt-card-txt-ta"></textarea>
+            <textarea name="bt-tagline" id="bt-tagline" cols={91} rows={2} className="bt-card-txt-ta" maxLength={100}></textarea>
             <p className="bt-card-char-count">{"100"}</p>
           </div>
         </div>
