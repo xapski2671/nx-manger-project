@@ -2,6 +2,11 @@
 .bt-heading.fl-tl.fl-c{
   gap: 0.8em;
 }
+@media(max-width: 600px){
+  .bt-heading.fl-tl.fl-c{
+    align-items: center;
+  }
+}
 
 .bt-title{
   font-family: var(--font-family);
@@ -9,6 +14,7 @@
   font-size: 3rem;
   line-height: 1em;
   color: var(--color-card-text);
+  width: 100%;
 }
 @media(max-width: 1000px){
   .bt-title{
@@ -17,7 +23,7 @@
 }
 @media(max-width: 600px){
   .bt-title{
-    /* font-size: 1rem; */
+    text-align: center;
   }
 }
 .bt-subtitle{
@@ -36,5 +42,7 @@
 @media(max-width: 600px){
   .bt-subtitle{
     font-size: 1rem;
+    width: 80%;
+    text-align: center;
   }
 }
