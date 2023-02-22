@@ -41,6 +41,11 @@
   gap: 1.8em;
   width: 100%;
 }
+@media(max-width: 600px){
+  .cch-nav.fl-cl{
+    justify-content: center;
+  }
+}
 
 .cch-tab-title{
   font-family: var(--font-family);
@@ -49,8 +54,18 @@
   line-height: 1em;
   color: var(--color-htext);
   border-bottom: 5px solid transparent;
-  padding-bottom: 12px;
+  padding-bottom: 0.8em;
   cursor: pointer;
+}
+@media(max-width: 1000px){
+  .cch-tab-title{
+    font-size: 1.5rem;
+  }
+}
+@media(max-width: 600px){
+  .cch-tab-title{
+    font-size: 1.2rem;
+  }
 }
 
 .cch-active-tab{

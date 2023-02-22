@@ -132,7 +132,7 @@
   letter-spacing: 0.03em;
   color: #FFFFFF;
   border-bottom: 5px solid transparent;
-  padding-bottom: 12px;
+  padding-bottom: 0.8em;
   cursor: pointer;
 }
 @media(max-width: 600px){
