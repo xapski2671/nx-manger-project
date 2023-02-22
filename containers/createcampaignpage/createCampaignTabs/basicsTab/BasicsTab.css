@@ -49,7 +49,7 @@
 }
 
 .bt-form-container.fl-cl.fl-c{
-  gap: 1rem;
+  gap: 3rem;
   width: 100%;
   padding: 1em;
 }
@@ -60,19 +60,23 @@
   background: var(--color-bg);
   box-shadow: 0px 4px 23px 4px rgba(54, 30, 119, 0.1);
   border-radius: 0.44em;
-  gap: 2.08vw;
+  gap: 1.39vw;
 }
 @media(max-width: 1000px){
   .bt-card.fl-tl.fl-c{
     padding: 2.02vw;
-    gap: 3.37vw;
+    gap: 2.25vw;
   }
 }
 @media(max-width: 600px){
   .bt-card.fl-tl.fl-c{
     padding: 3.07vw;
-    gap: 5.11vw;
+    gap: 3.42vw;
   }
+}
+
+.bt-card-heading{
+  width: 100%;
 }
 
 .bt-card-title{
@@ -83,4 +87,56 @@
   letter-spacing: 0.02em;
   color: var(--color-card-text);
   width: 100%;
+  margin-bottom: 0.55em;
+}
+
+.bt-card-sep{
+  width: 100%;
+  height: 1px;
+  background: var(--color-card-text);
+}
+
+.bt-card-subtitle{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1em;
+  color: var(--color-card-text);
+  width: 60%;
+}
+
+.bt-card-input.fl-bl.fl-c{
+  width: 60%;
+  gap: 0.5rem;
+}
+
+.bt-card-txt-input,
+.bt-card-txt-ta{
+  outline: none;
+  border: none;
+  background-color: var(--color-sub-bg);
+  width: 100%;
+  height: 40px;
+  padding: 1rem;
+  border-radius: 0.3em 0.3em 0 0;
+  border-bottom: 1px solid var(--color-card-text);
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1em;
+  color: var(--color-text);
+}
+
+.bt-card-char-count{
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1em;
+  color: var(--color-card-text);
+}
+
+.bt-card-txt-ta{
+  height: 65px;
+  line-height: 1.4em;
 }
