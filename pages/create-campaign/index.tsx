@@ -1,3 +1,4 @@
+import { CreateCampaignHeader, CreateCampaignTabs } from "@/containers/exportConts"
 import Head from "next/head"
 
 export default function CreateCampaign() {
@@ -9,6 +10,9 @@ export default function CreateCampaign() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/manger_favicon.svg" />
       </Head>
+
+      <CreateCampaignHeader/>
+      <CreateCampaignTabs/>
     </>
 
   )
