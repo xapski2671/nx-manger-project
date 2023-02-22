@@ -1,1 +1,12 @@
 /* bt */
+.bt-heading.fl-tl.fl-c{
+  gap: 1em;
+}
+
+.bt-title{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 1em;
+  color: var(--color-card-text);
+}
