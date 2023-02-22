@@ -1,6 +1,6 @@
 /* bt */
 .bt-heading.fl-tl.fl-c{
-  gap: 1em;
+  gap: 0.8em;
 }
 
 .bt-title{
@@ -9,4 +9,32 @@
   font-size: 3rem;
   line-height: 1em;
   color: var(--color-card-text);
+}
+@media(max-width: 1000px){
+  .bt-title{
+    font-size: 2rem;
+  }
+}
+@media(max-width: 600px){
+  .bt-title{
+    /* font-size: 1rem; */
+  }
+}
+.bt-subtitle{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.25em;
+  color: var(--color-card-text); 
+  width: 50%;
+}
+@media(max-width: 1000px){
+  .bt-subtitle{
+    font-size: 1rem;
+  }
+}
+@media(max-width: 600px){
+  .bt-subtitle{
+    font-size: 1rem;
+  }
 }
