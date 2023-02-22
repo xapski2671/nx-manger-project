@@ -171,6 +171,20 @@
   color: #2474C6;  
 }
 
+.bt-category-input{
+  border: none;
+  outline: none;
+  background-color: var(--color-sub-bg);
+  width: 100%;
+  padding: 0.5em;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1em;
+  color: var(--color-text);
+}
+
 .bt-card-select-icon{
   height: 2rem;
   color: var(--color-card-text);

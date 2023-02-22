@@ -45,8 +45,12 @@ export default function BasicsTab() {
                 <p>{"photography"}</p>
                 <FontAwesomeIcon icon={faXmark} className="bt-xmark-icon"/>
               </span>
+              <span className="bt-card-category fl-cc">
+                <p>{"photography"}</p>
+                <FontAwesomeIcon icon={faXmark} className="bt-xmark-icon"/>
+              </span>
             </div>
-            <input type="text" className="bt-category-input"/>
+            <input type="text" className="bt-category-input" maxLength={20}/>
             <FontAwesomeIcon icon={faAngleDown} className="bt-card-select-icon"/>
           </div>
         </div>
