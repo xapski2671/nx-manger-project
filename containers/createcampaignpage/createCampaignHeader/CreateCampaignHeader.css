@@ -1,1 +1,19 @@
 /* cch */
+.cch-section.sc-padding.fl-cl.fl-c{
+  background: var(--color-section-hd);
+  width: 100%;
+  gap: 3.125em;
+  padding-top: 7.04vw;
+}
+@media (max-width: 1000px){
+  .cch-section.sc-padding.fl-cl.fl-c{
+    padding-top: 10vw;
+    gap: 5em;
+  }
+}
+@media(max-width: 600px){
+  .cch-section.sc-padding.fl-cl.fl-c{
+    padding-top: 17.29vw;
+    gap: 3em;
+  }
+}

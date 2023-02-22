@@ -31,7 +31,7 @@ export default function Navbar() {
     <nav 
       className={
         `nv-navbar sc-padding ${scrollDirection == "down" ? scrollY >= 8 ? "nv-active" : "" : ""}  
-        ${(router.pathname == "/" || router.pathname == "/creator") && "page-unfill"}`
+        ${(router.pathname == "/" || router.pathname == "/creator" || router.pathname == "/create-campaign" ) && "page-unfill"}`
       } 
       onScroll={()=>{console.log(scrollY)}}
     >
