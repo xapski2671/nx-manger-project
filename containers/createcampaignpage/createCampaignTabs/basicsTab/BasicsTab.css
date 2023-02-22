@@ -169,13 +169,20 @@
 .bt-xmark-icon{
   height: 1.5rem;
   color: #2474C6;  
+  cursor: pointer;
 }
 
-.bt-category-input{
+.bt-card-select-icon{
+  height: 2rem;
+  color: var(--color-card-text);
+  cursor: pointer;
+}
+
+.bt-tag-input{
   border: none;
   outline: none;
   background-color: var(--color-sub-bg);
-  width: 100%;
+  width: 90%;
   padding: 0.5em;
 
   font-family: var(--font-family);
@@ -183,10 +190,4 @@
   font-size: 1.5rem;
   line-height: 1em;
   color: var(--color-text);
-}
-
-.bt-card-select-icon{
-  height: 2rem;
-  color: var(--color-card-text);
-  cursor: pointer;
 }

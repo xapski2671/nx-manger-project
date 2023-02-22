@@ -50,7 +50,6 @@ export default function BasicsTab() {
                 <FontAwesomeIcon icon={faXmark} className="bt-xmark-icon"/>
               </span>
             </div>
-            <input type="text" className="bt-category-input" maxLength={20}/>
             <FontAwesomeIcon icon={faAngleDown} className="bt-card-select-icon"/>
           </div>
         </div>
@@ -61,11 +60,19 @@ export default function BasicsTab() {
             <div className="bt-card-sep"></div>
           </div>
           <p className="bt-card-subtitle">{"Enter two keywords that best describe your campaign. These tags will help with organization and discoverability."}</p>
-          <div className="bt-card-input fl-bl fl-c">
-            <div className="bt-tags-input fl-cl">
-              <input type="text" className="bt-card-tag-input" maxLength={80}/>
+          <div className="bt-card-select fl-cl fl-sb">
+            <div className="bt-card-categories fl-cl">
+              <span className="bt-card-category fl-cc">
+                <p>{"photography"}</p>
+                <FontAwesomeIcon icon={faXmark} className="bt-xmark-icon"/>
+              </span>
+              <span className="bt-card-category fl-cc">
+                <p>{"photography"}</p>
+                <FontAwesomeIcon icon={faXmark} className="bt-xmark-icon"/>
+              </span>
             </div>
-            <p className="bt-card-char-count">{"80"}</p>
+            <input type="text" className="bt-tag-input" maxLength={20}/>
+            <FontAwesomeIcon icon={faAngleDown} className="bt-card-select-icon"/>
           </div>
         </div>
       </div>
