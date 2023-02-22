@@ -17,5 +17,6 @@ sn SideNotice
 sb SideBio
 cch CreateCampaignheader
 bt basicstab
+cct CreateCampaignTabs
 
 @media(max-width: 1000px){}

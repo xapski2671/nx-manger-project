@@ -17,4 +17,5 @@ export { default as CreatorHeader } from "./creatorpage/creatorHeader/CreatorHea
 export { default as CreatorDetails } from "./creatorpage/creatorDetails/CreatorDetails"
 
 export { default as CreateCampaignHeader } from "./createcampaignpage/createCampaignHeader/CreateCampaignHeader"
+export { default as CreateCampaignTabs } from "./createcampaignpage/createCampaignTabs/CreateCampaignTabs"
 export { default as BasicsTab } from "./createcampaignpage/createCampaignTabs/basicsTab/BasicsTab"
