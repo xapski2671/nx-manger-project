@@ -43,6 +43,20 @@ export default function BasicsTab() {
             <FontAwesomeIcon icon={faAngleDown} className="bt-card-select-icon"/>
           </div>
         </div>
+
+        <div className="bt-card fl-tl fl-c ">
+          <div className="bt-card-heading">
+            <h2 className="bt-card-title">{"Tags"}</h2>
+            <div className="bt-card-sep"></div>
+          </div>
+          <p className="bt-card-subtitle">{"Enter two keywords that best describe your campaign. These tags will help with organization and discoverability."}</p>
+          <div className="bt-card-input fl-bl fl-c">
+            <div className="bt-tags-input fl-cl">
+              <input type="text" className="bt-card-tag-input" maxLength={80}/>
+            </div>
+            <p className="bt-card-char-count">{"80"}</p>
+          </div>
+        </div>
       </div>
     </div>
   )
