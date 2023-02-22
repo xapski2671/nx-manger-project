@@ -1,4 +1,4 @@
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons"
+import { faAngleDown, faXmark } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function BasicsTab() {
@@ -39,7 +39,37 @@ export default function BasicsTab() {
             <div className="bt-card-sep"></div>
           </div>
           <p className="bt-card-subtitle">{"To help backers find your campaign, select a category that best represents your project."}</p>
-          <div className="bt-card-select fl-bl fl-c">
+          <div className="bt-card-select fl-cl fl-sb">
+            <div className="bt-card-categories fl-cl">
+              <span className="bt-card-category fl-cc">
+                <p>{"photography"}</p>
+                <FontAwesomeIcon icon={faXmark} className="bt-xmark-icon"/>
+              </span>
+            </div>
+            <div className="bt-card-categories fl-cl">
+              <span className="bt-card-category fl-cc">
+                <p>{"photography"}</p>
+                <FontAwesomeIcon icon={faXmark} className="bt-xmark-icon"/>
+              </span>
+            </div>
+            <div className="bt-card-categories fl-cl">
+              <span className="bt-card-category fl-cc">
+                <p>{"photography"}</p>
+                <FontAwesomeIcon icon={faXmark} className="bt-xmark-icon"/>
+              </span>
+            </div>
+            <div className="bt-card-categories fl-cl">
+              <span className="bt-card-category fl-cc">
+                <p>{"photography"}</p>
+                <FontAwesomeIcon icon={faXmark} className="bt-xmark-icon"/>
+              </span>
+            </div>
+            <div className="bt-card-categories fl-cl">
+              <span className="bt-card-category fl-cc">
+                <p>{"photography"}</p>
+                <FontAwesomeIcon icon={faXmark} className="bt-xmark-icon"/>
+              </span>
+            </div>
             <FontAwesomeIcon icon={faAngleDown} className="bt-card-select-icon"/>
           </div>
         </div>
