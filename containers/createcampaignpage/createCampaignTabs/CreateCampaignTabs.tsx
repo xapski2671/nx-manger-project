@@ -1,5 +1,9 @@
+import BasicsTab from "./basicsTab/BasicsTab"
+
 export default function CreateCampaignTabs() {
   return (
-    <div>CreateCampaignTabs</div>
+    <section className="cct-section sc-padding fl-tl fl-c">
+      <BasicsTab/>
+    </section>
   )
 }

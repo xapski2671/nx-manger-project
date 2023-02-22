@@ -4,6 +4,7 @@
   width: 100%;
   gap: 3.125em;
   padding-top: 7.04vw;
+  padding-bottom: 0;
 }
 @media (max-width: 1000px){
   .cch-section.sc-padding.fl-tl.fl-c{
