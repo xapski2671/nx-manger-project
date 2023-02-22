@@ -133,6 +133,7 @@
   color: #FFFFFF;
   border-bottom: 5px solid transparent;
   padding-bottom: 12px;
+  cursor: pointer;
 }
 @media(max-width: 600px){
   .crh-tab-title{
