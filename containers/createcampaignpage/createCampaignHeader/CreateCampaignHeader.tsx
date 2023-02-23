@@ -5,7 +5,7 @@ export default function CreateCampaignHeader() {
       <div className="cch-nav fl-cl">
         <h3 className="cch-tab-title">{"Profile"}</h3>
         <h3 className="cch-tab-title cch-active-tab">{"Basics"}</h3>
-        <h3 className="cch-tab-title">{"Story"}</h3>
+        <h3 className="cch-tab-title">{"Content"}</h3>
         <h3 className="cch-tab-title">{"Creators"}</h3>
       </div>
     </section>

@@ -34,7 +34,7 @@ export default function BasicsTab() {
           </div>
         </div>
 
-        <div className="bt-card fl-tl fl-c ">
+        <div className="bt-card fl-tl fl-c">
           <div className="bt-card-heading">
             <h2 className="bt-card-title">{"Category"}</h2>
             <div className="bt-card-sep"></div>
@@ -66,9 +66,16 @@ export default function BasicsTab() {
                 <p>{"photography"}</p>
                 <FontAwesomeIcon icon={faXmark} className="bt-xmark-icon"/>
               </span>
+              <span className="bt-card-tag fl-cc">
+                <p>{"photography"}</p>
+                <FontAwesomeIcon icon={faXmark} className="bt-xmark-icon"/>
+              </span>
+              <span className="bt-card-tag fl-cc">
+                <p>{"photography"}</p>
+                <FontAwesomeIcon icon={faXmark} className="bt-xmark-icon"/>
+              </span>
             </div>
-            <input type="text" className="bt-tag-input" maxLength={20}/>
-            <FontAwesomeIcon icon={faAngleDown} className="bt-card-select-icon"/>
+            <input type="text" className="bt-tag-input" maxLength={20} placeholder="Enter a few tags for your campaign"/>
           </div>
         </div>
 
