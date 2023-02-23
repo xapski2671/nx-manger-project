@@ -8,7 +8,8 @@ export default function BasicsTab() {
         <h2 className="bt-title">{"Basics"}</h2>
         <p className="bt-subtitle">{"Make a good first impression: introduce your campaign objectives and entice people to learn more. This basic information will represent your campaign on your campaign page, on your campaign card, and in searches."}</p>
       </div>
-      <div className="bt-form-container fl-cl fl-c">
+
+      <form className="bt-form-container fl-cl fl-c">
         <div className="bt-card fl-tl fl-c ">
           <div className="bt-card-heading">
             <h2 className="bt-card-title">{"Campaign Title"}</h2>
@@ -42,12 +43,7 @@ export default function BasicsTab() {
           <div className="bt-card-select fl-cl fl-sb">
             <div className="bt-card-categories fl-cl">
               <span className="bt-card-category fl-cc">
-                <p>{"photography"}</p>
-                <FontAwesomeIcon icon={faXmark} className="bt-xmark-icon"/>
-              </span>
-              <span className="bt-card-category fl-cc">
-                <p>{"photography"}</p>
-                <FontAwesomeIcon icon={faXmark} className="bt-xmark-icon"/>
+                <p>{"Arts"}</p>
               </span>
             </div>
             <FontAwesomeIcon icon={faAngleDown} className="bt-card-select-icon"/>
@@ -59,14 +55,14 @@ export default function BasicsTab() {
             <h2 className="bt-card-title">{"Tags"}</h2>
             <div className="bt-card-sep"></div>
           </div>
-          <p className="bt-card-subtitle">{"Enter two keywords that best describe your campaign. These tags will help with organization and discoverability."}</p>
+          <p className="bt-card-subtitle">{"Enter up to five keywords that best describe your campaign. These tags will help with organization and discoverability."}</p>
           <div className="bt-card-select fl-cl fl-sb">
-            <div className="bt-card-categories fl-cl">
-              <span className="bt-card-category fl-cc">
+            <div className="bt-card-tags fl-cl">
+              <span className="bt-card-tag fl-cc">
                 <p>{"photography"}</p>
                 <FontAwesomeIcon icon={faXmark} className="bt-xmark-icon"/>
               </span>
-              <span className="bt-card-category fl-cc">
+              <span className="bt-card-tag fl-cc">
                 <p>{"photography"}</p>
                 <FontAwesomeIcon icon={faXmark} className="bt-xmark-icon"/>
               </span>
@@ -75,7 +71,22 @@ export default function BasicsTab() {
             <FontAwesomeIcon icon={faAngleDown} className="bt-card-select-icon"/>
           </div>
         </div>
-      </div>
+
+        <div className="bt-card fl-tl fl-c ">
+          <div className="bt-card-heading">
+            <h2 className="bt-card-title">{"Campaign Duration"}</h2>
+            <div className="bt-card-sep"></div>
+          </div>
+          <p className="bt-card-subtitle">{"How many days will you be running your campaign for? You can run a campaign for any number of days, with a 60 day duration maximum. Keep in mind that you will be able to extend as many times as you want up until the 60 day duration maximum!"}</p>
+          <div className="bt-card-input fl-tl fl-c">
+            <input type="number" className="bt-card-num-input"/>
+          </div>
+        </div>
+
+        <div className="bt-submit fl-cr">
+          <button type="submit" className="bt-submit-btn">{"Continue"}</button>
+        </div>
+      </form>
     </div>
   )
 }

@@ -56,22 +56,19 @@
 
 .bt-card.fl-tl.fl-c{
   width: 100%;
-  padding: 1.25vw;
+  padding: 1.8rem;
   background: var(--color-bg);
   box-shadow: 0px 4px 23px 4px rgba(54, 30, 119, 0.1);
   border-radius: 0.44em;
-  gap: 1.39vw;
+  gap: 2rem;
+}
+.bt-card:focus-within{
+  border: 2px solid var(--color-card-text);
 }
 @media(max-width: 1000px){
   .bt-card.fl-tl.fl-c{
-    padding: 2.02vw;
-    gap: 2.25vw;
-  }
-}
-@media(max-width: 600px){
-  .bt-card.fl-tl.fl-c{
-    padding: 3.07vw;
-    gap: 3.42vw;
+    padding: 1.5rem;
+    gap: 1.2rem;
   }
 }
 
@@ -89,6 +86,16 @@
   width: 100%;
   margin-bottom: 0.55em;
 }
+@media(max-width: 1000px){
+  .bt-card-title{
+    font-size: 1.5rem;
+  }
+}
+@media(max-width: 600px){
+  .bt-card-title{
+    font-size: 1.2rem;
+  }
+}
 
 .bt-card-sep{
   width: 100%;
@@ -104,6 +111,16 @@
   color: var(--color-card-text);
   width: 60%;
 }
+@media(max-width: 1000px){
+  .bt-card-subtitle{
+    font-size: 1.2rem;
+  }
+}
+@media(max-width: 600px){
+  .bt-card-subtitle{
+    font-size: 1rem;
+  }
+}
 
 .bt-card-input.fl-bl.fl-c{
   width: 60%;
@@ -111,7 +128,8 @@
 }
 
 .bt-card-txt-input,
-.bt-card-txt-ta{
+.bt-card-txt-ta,
+.bt-card-num-input{
   outline: none;
   border: none;
   background-color: var(--color-sub-bg);
@@ -126,6 +144,21 @@
   font-size: 1.5rem;
   line-height: 1em;
   color: var(--color-text);
+}
+@media(max-width: 1000px){
+  .bt-card-txt-input,
+  .bt-card-txt-ta,
+  .bt-card-num-input{
+    font-size: 1.2rem;
+    height: 30px;
+  }
+}
+@media(max-width: 600px){
+  .bt-card-txt-input,
+  .bt-card-txt-ta,
+  .bt-card-num-input{
+    font-size: 1rem;
+  }
 }
 
 .bt-card-char-count{
@@ -148,17 +181,19 @@
   background-color: var(--color-sub-bg);
 }
 
-.bt-card-categories.fl-cl{
+.bt-card-categories.fl-cl,
+.bt-card-tags.fl-cl{
   gap: 0.8rem;
 }
 
-.bt-card-category.fl-cc{
+.bt-card-tag.fl-cc{
   gap: 0.5rem;
   background-color: #fff;
   padding: 0.5em;
 }
 
-.bt-card-category p{
+.bt-card-category p,
+.bt-card-tag p{
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 1.5rem;
@@ -182,7 +217,7 @@
   border: none;
   outline: none;
   background-color: var(--color-sub-bg);
-  width: 90%;
+  width: 80%;
   padding: 0.5em;
 
   font-family: var(--font-family);
@@ -190,4 +225,28 @@
   font-size: 1.5rem;
   line-height: 1em;
   color: var(--color-text);
+}
+
+.bt-submit{
+  width: 100%;
+}
+
+.bt-submit-btn{
+  padding: 0.65em 1.5em;
+  background: var(--color-btn);
+  box-shadow: 0px 4px 23px 4px rgba(0, 0, 0, 0.13);
+  border: none;
+  border-radius: 8px;
+
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1em;
+  letter-spacing: 0.04em;
+  color: var(--color-htext);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.bt-submit-btn:hover{
+  transform: scale(1.05);
 }
