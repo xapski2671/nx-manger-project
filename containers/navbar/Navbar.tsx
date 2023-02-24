@@ -1,4 +1,4 @@
-import { Sidebar } from "@/components/exportComps"
+import { Logo, Sidebar } from "@/components/exportComps"
 import { useScroll } from "@/hooks/useScroll"
 import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -10,10 +10,10 @@ import { useState } from "react"
 function Menu(){
   return (
     <>
-      <Link href="/">{"Campaigns"}</Link>
-      <Link href="/">{"How it works"}</Link>
+      <Link href="/campaigns">{"Campaigns"}</Link>
+      <Link href="/#how-it-works">{"How it works"}</Link>
       <Link href="/">{"About us"}</Link>
-      <Link href="/">{"Blog"}</Link>
+      <Link href="/#blog">{"Blog"}</Link>
     </>
   )
 }
@@ -36,10 +36,7 @@ export default function Navbar() {
       onScroll={()=>{console.log(scrollY)}}
     >
       <div className="fl-cc fl-sb nv-menu-wrapper">
-        <div className="nv-logo fl-cl">
-          <img src="/assets/manger_logo.svg" alt="logo" />
-          <p>{"MANGER"}</p>
-        </div>
+        <Logo className="nv-logo fl-cl"/>
         <div className="nv-menu fl-cr">
           <div className="nv-menu-links fl-cr">
             <Menu/>
