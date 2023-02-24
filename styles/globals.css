@@ -166,7 +166,6 @@ button{
 @import "../containers/footer/Footer.css";
 @import "../containers/campaignspage/CampaignsPage.css";
 @import "../containers/campaignspage/featuredCampaign/FeaturedCampaign.css";
-@import "../containers/campaignpage/CampaignPage.css";
 @import "../containers/campaignpage/activeCampaign/ActiveCampaign.css";
 @import "../containers/campaignpage/campaignDetails/CampaignDetails.css";
 @import "../containers/creatorpage/creatorHeader/CreatorHeader.css";

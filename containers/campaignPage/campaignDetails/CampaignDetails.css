@@ -1,8 +1,19 @@
 /* cpd */
-.cpd-section.fl-tc{
+.cpd-section.sc-padding.fl-tc{
   width: 100%;
   flex-wrap: nowrap;
-  gap: 4em;
+  gap: 6.4rem;
+  padding-bottom: 7.04vw;
+}
+@media (max-width: 1000px){
+  .cpd-section.sc-padding.fl-tc{
+    padding-bottom: 8vw;
+  }
+}
+@media(max-width: 600px){
+  .cpd-section.sc-padding.fl-tc{
+    padding-bottom: 17.29vw;
+  }
 }
 
 .cpd-trajectory{

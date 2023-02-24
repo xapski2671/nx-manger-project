@@ -3,7 +3,7 @@ import SideBio from "@/components/sideBio/SideBio"
 
 export default function CampaignDetails() {
   return (
-    <section className="cpd-section fl-tc">
+    <section className="cpd-section sc-padding fl-tc">
       <main className="cpd-trajectory">
         <div className="cpd-title-bar">
           <div className="cpd-tab-titles fl-cc">

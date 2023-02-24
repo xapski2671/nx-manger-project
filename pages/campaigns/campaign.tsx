@@ -1,4 +1,4 @@
-import { ActiveCampaign, CampaignDetails, CampaignPage } from "@/containers/exportConts"
+import { ActiveCampaign, CampaignDetails } from "@/containers/exportConts"
 import Head from "next/head"
 
 export default function Campaign() {

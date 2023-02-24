@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function ActiveCampaign() {
   return (
-    <section className="acp-section fl-tl">
+    <section className="acp-section sc-padding fl-tl">
       <div className="acp-img">
         <img src="/assets/manger-mockup-cmp.jpg" alt="mckp-img" />
       </div>
