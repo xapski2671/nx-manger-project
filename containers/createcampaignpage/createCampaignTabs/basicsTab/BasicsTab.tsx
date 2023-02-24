@@ -1,4 +1,4 @@
-import { faAngleDown, faXmark } from "@fortawesome/free-solid-svg-icons"
+import { faAngleDown, faImages, faXmark } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function BasicsTab() {
@@ -31,6 +31,22 @@ export default function BasicsTab() {
           <div className="bt-card-input fl-bl fl-c">
             <textarea name="bt-tagline" id="bt-tagline" cols={91} rows={2} className="bt-card-txt-ta" maxLength={100}></textarea>
             <p className="bt-card-char-count">{"100"}</p>
+          </div>
+        </div>
+
+        <div className="bt-card fl-tl fl-c ">
+          <div className="bt-card-heading">
+            <h2 className="bt-card-title">{"Campaign Card Image"}</h2>
+            <div className="bt-card-sep"></div>
+          </div>
+          <p className="bt-card-subtitle">{"Upload a square image that represents your campaign. 640 x 640px is the recommended and minimun resolution."}</p>
+          <div className="bt-card-img-input fl-cl fl-c">
+            <input type="file" id="bt-card-img" hidden/>
+            <label htmlFor="bt-card-img" className="bt-img-label">
+              <div className="bt-img-container fl-cc">
+                <FontAwesomeIcon icon={faImages} className="bt-card-img-icon"/>
+              </div>
+            </label>
           </div>
         </div>
 

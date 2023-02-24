@@ -130,7 +130,6 @@
   }
 }
 
-
 .cc-cta button:hover{
   background-color: #9071DF;
   color: var(--color-htext);
@@ -151,7 +150,6 @@
     gap: 1.03vw;
   }
 }
-
 
 .cc-camp-title h4{
   font-family: var(--font-family);
