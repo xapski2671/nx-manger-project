@@ -1,4 +1,4 @@
-import { CampaignPage } from "@/containers/exportConts"
+import { ActiveCampaign, CampaignDetails, CampaignPage } from "@/containers/exportConts"
 import Head from "next/head"
 
 export default function Campaign() {
@@ -10,7 +10,8 @@ export default function Campaign() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/manger_favicon.svg" />
       </Head>
-      <CampaignPage/>
+      <ActiveCampaign/>
+      <CampaignDetails/>
     </>
   )
 }
