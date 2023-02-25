@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { useState } from "react"
-import { useMoralis } from "react-moralis/lib/hooks"
+import { useMoralis } from "react-moralis"
 
 
 function Menu(){
@@ -45,7 +45,7 @@ export default function Navbar() {
           <div className="nv-menu-links fl-cr">
             <Menu/>
           </div>
-          <button className="nv-connect">{"Connect"}</button>
+          <button className="nv-connect" onClick={()=>{enableWeb3()}}>{isWeb3Enabled ? "Connected" : "Connect"}</button>
           <FontAwesomeIcon icon={faBarsStaggered} className="nv-hamburger" onClick={()=>{setSiInvis(prev=>!prev)}}/>
           {
             !SiInvis && (
