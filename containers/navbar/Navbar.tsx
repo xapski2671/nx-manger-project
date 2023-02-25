@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { useState } from "react"
+import { useMoralis } from "react-moralis/lib/hooks"
 
 
 function Menu(){
@@ -23,6 +24,7 @@ export default function Navbar() {
   const [SiInvis, setSiInvis] = useState(true)
   const { scrollY, scrollX, scrollDirection } = useScroll()
   const router = useRouter()
+  const { enableWeb3, isWeb3Enabled } = useMoralis()
   
 
   function siVisible(bool: boolean){
