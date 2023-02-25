@@ -1,10 +1,11 @@
 import { Logo, Sidebar } from "@/components/exportComps"
+import { ConnectionContext } from "@/contexts/connection"
 import { useScroll } from "@/hooks/useScroll"
 import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { useState } from "react"
+import { useContext, useState } from "react"
 
 
 function Menu(){
@@ -22,6 +23,8 @@ export default function Navbar() {
   const [SiInvis, setSiInvis] = useState(true)
   const { scrollY, scrollX, scrollDirection } = useScroll()
   const router = useRouter()
+  const payload = useContext(ConnectionContext)
+  
 
   function siVisible(bool: boolean){
     setSiInvis(bool)
@@ -41,7 +44,7 @@ export default function Navbar() {
           <div className="nv-menu-links fl-cr">
             <Menu/>
           </div>
-          <button className="nv-connect">{"Connect"}</button>
+          <button className="nv-connect" onClick={payload.connect}>{payload.isConnected ? "Connected" : "Connect"}</button>
           <FontAwesomeIcon icon={faBarsStaggered} className="nv-hamburger" onClick={()=>{setSiInvis(prev=>!prev)}}/>
           {
             !SiInvis && (
