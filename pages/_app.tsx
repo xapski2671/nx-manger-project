@@ -7,11 +7,9 @@ import { ConnectionProvider } from "@/contexts/connection"
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <ConnectionProvider>
-        <Navbar/>
-        <Component {...pageProps} />
-        <Footer/>
-      </ConnectionProvider>
+      <Navbar/>
+      <Component {...pageProps} />
+      <Footer/>
     </>
   )
 }
