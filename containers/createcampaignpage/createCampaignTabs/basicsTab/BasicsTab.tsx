@@ -17,7 +17,7 @@ export default function BasicsTab() {
           </div>
           <p className="bt-card-subtitle">{"What is the title of your campaign?"}</p>
           <div className="bt-card-input fl-bl fl-c">
-            <input type="text" className="bt-card-txt-input" maxLength={80} defaultValue="Tamarinds"/>
+            <input type="text" className="bt-card-txt-input" maxLength={80}/>
             <p className="bt-card-char-count">{"80"}</p>
           </div>
         </div>
