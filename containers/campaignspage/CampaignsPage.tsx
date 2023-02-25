@@ -1,5 +1,5 @@
 import { CampaignGrid, CategoryFilter } from "@/components/exportComps"
-import { FeaturedCampaign } from "../exportConts"
+import { Blog, FeaturedCampaign } from "../exportConts"
 
 export default function CampaignsPage() {
   
@@ -14,6 +14,7 @@ export default function CampaignsPage() {
         <h4 className="ccp-subtitle">{"Explore 320 Projects"}</h4>
       </div>
       <CampaignGrid/>
+      <Blog/>
     </section>
   )
 }

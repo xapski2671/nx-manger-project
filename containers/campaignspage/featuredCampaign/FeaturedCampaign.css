@@ -416,7 +416,7 @@
 
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: min(1.04vw, 26.67px);
+  font-size: min(1.18vw, 32px);
   line-height: 1em;
   letter-spacing: 0.04em;
   color: var(--color-htext);
