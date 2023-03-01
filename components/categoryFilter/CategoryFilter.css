@@ -49,11 +49,27 @@
 }
 
 .cf-arrow-btn{
-  width: max(14px, 2vw);
-  height: max(14px, 2vw);
+  /* width: max(14px, 2vw); */
+  height: 2.5rem;
   color: #544776;
   cursor: pointer;
 }
+@media(max-width: 1250px){
+  .cf-arrow-btn{
+    height: 1.8rem;
+  }
+}
+@media(max-width: 1000px){
+  .cf-arrow-btn{
+    height: 2.2rem;
+  }
+}
+@media(max-width: 600px){
+  .cf-arrow-btn{
+    height: 1.5rem;
+  }
+}
+
 
 .cf-other-cat-wrapper.fl-cc{
   gap: 0.7vw;
