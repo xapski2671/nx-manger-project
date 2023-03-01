@@ -1,7 +1,7 @@
 /* cc */
 .cc-container{
   width: min(27.78vw, 711.16px);
-  height: min(32.3vw, 826.88px);
+  height: min(34vw, 826.88px);
   background: #FFFFFF;
   box-shadow: 0px 10px 50px rgba(29, 7, 84, 0.08);
   border-radius: min(1.39vw, 35.5px);
@@ -61,7 +61,7 @@
   justify-content: space-between;
   width: 100%;
   height: 51.2%;
-  padding: min(1.04vw, 26.667px)  min(1.39vw, 35.5px);
+  padding: min(1.04vw, 26.667px)  min(1.25vw, 35.5px);
 }
 @media (max-width: 1000px){ /*1440-999*/
   .cc-details.fl-cl.fl-c{
@@ -93,7 +93,7 @@
   letter-spacing: 0.03em;
   color: var(--color-card-text);
 }
-@media (max-width: 1000px){
+@media (max-width: 1250px){
   .cc-cat-name.fl-cl{
     font-size: 1.2rem;
   }
@@ -118,6 +118,11 @@
   color: var(--color-text);
   cursor: pointer;
   transition: all 0.4s ease;
+}
+@media(max-width: 1250px){
+  .cc-cta button.fl-cc{
+    font-size: 0.9rem;
+  }
 }
 @media(max-width: 1000px){
   .cc-cta button.fl-cc{
@@ -155,6 +160,11 @@
   letter-spacing: 0.02em;
   color: var(--color-text);
 }
+@media(max-width: 1250px){
+  .cc-camp-title h4{
+    font-size: 1.2rem;
+  }
+}
 @media(max-width: 1000px){
   .cc-camp-title h4{
     font-size: 1.5rem;
@@ -174,7 +184,7 @@
   letter-spacing: 0.01em;
   color: var(--color-subtext);
 } 
-@media (max-width: 1000px){
+@media (max-width: 1250px){
   .cc-camp-title p{
     font-size: 1.2rem;
   }
@@ -222,12 +232,17 @@
 }
 
 .cc-curr-icon{
-  height: 1rem; /*10px*/
+  height: 1.2rem; /*10px*/
   color: var(--color-card-text);
+}
+@media(max-width: 1250px){
+  .cc-curr-icon{
+    height: 0.8rem;
+  }
 }
 @media(max-width: 1000px){
   .cc-curr-icon{
-    width: 0.7rem;
+    height: 1.2rem;
   }
 }
 
@@ -240,6 +255,12 @@
   font-size: 1.8rem;  /*18px*/
   line-height: 1em;
   color: var(--color-subtext);
+}
+@media(max-width: 1250px){
+  .cc-amt-figure,
+  .cc-amt-curr{
+    font-size: 1.2rem;
+  }
 }
 @media(max-width: 1000px){
   .cc-amt-figure,
@@ -261,6 +282,11 @@
 .cc-goal{
   font-size: 1.1rem; /*11px*/
   line-height: 1em;
+}
+@media(max-width: 1250px){
+  .cc-goal{
+    font-size: 0.9rem;
+  }
 }
 @media(max-width: 600px){
   .cc-goal{
@@ -312,6 +338,11 @@
   line-height: 1em;
   color: var(--color-card-text);
 }
+@media(max-width: 1250px){
+  .cc-percent p:first-child{
+    font-size: 1.1rem;
+  }
+}
 @media(max-width: 1000px){
   .cc-percent p:first-child{
     font-size: 1.4rem;
@@ -329,6 +360,11 @@
   font-size: 1.1rem;
   line-height: 1em;
   color: var(--color-card-text);
+}
+@media(max-width: 1250px){
+  .cc-percent p:last-child{
+    font-size: 0.9rem;
+  }
 }
 @media(max-width: 600px){
   .cc-percent p:last-child{
@@ -384,7 +420,7 @@
   line-height: 1em;
   color: var(--color-subtext);
 }
-@media(max-width: 1000px){
+@media(max-width: 1250px){
   .cc-creator p{
     font-size: 1.2rem;
   }
@@ -406,7 +442,7 @@
   line-height: 1em;
   color: var(--color-card-text);
 }
-@media(max-width: 1000px){
+@media(max-width: 1250px){
   .cc-eta p:first-child{
     font-size: 1.2rem;
   }
@@ -423,6 +459,11 @@
   font-size: 1.1rem;
   line-height: 1em;
   color: var(--color-text);
+}
+@media(max-width: 1250px){
+  .cc-eta p:last-child{
+    font-size: 0.9rem;
+  }
 }
 @media(max-width: 1000px){
   .cc-eta p:last-child{
