@@ -13,7 +13,7 @@
     border-radius: 2.25vw;
   }
 }
-@media (max-width: 550px){ /*768-450*/
+@media (max-width: 600px){ /*768-450*/
   .bc-container{
     width: 68.3vw;
     height: 79.4vw; 
@@ -31,7 +31,7 @@
     border-radius: 2.25vw;
   }
 }
-@media (max-width: 550px){ /*768-450*/
+@media (max-width: 600px){ /*768-450*/
   .bc-img{
     border-radius: 3.42vw; /*20px*/
   }
@@ -48,7 +48,7 @@
     border-radius: 2.25vw 2.25vw 0 0; 
   }
 }
-@media (max-width: 550px){ /*768-450*/
+@media (max-width: 600px){ /*768-450*/
   .bc-img img{
     border-radius: 3.42vw 3.42vw 0 0; /*20px*/
   }
@@ -65,7 +65,7 @@
     padding: 1.68vw 2.25vw;
   }
 }
-@media (max-width: 550px){ /*768-450*/
+@media (max-width: 600px){ /*768-450*/
   .bc-details.fl-cl.fl-c{
     padding: 2.56vw  3.42vw;
   }
@@ -80,7 +80,7 @@
     gap: 0.68vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .bc-blog-title.fl-tl.fl-c{
     gap: 1.03vw;
   }
@@ -89,37 +89,37 @@
 .bc-blog-title h4{
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: clamp(7.81px, 1.74vw, 44.4px);
+  font-size: 2.5rem;
   color: var(--color-text);
   line-height: 1.27em;
   letter-spacing: 0.02em;
 }
 @media (max-width: 1000px){
   .bc-blog-title h4{
-    font-size: 2.82vw;
+    font-size: 2.2rem;
   }
 }
-@media (max-width: 550px){
+@media (max-width: 600px){
   .bc-blog-title h4{
-    font-size: 4.28vw;
+    font-size: 1.5rem;
   }
 }
 
 .bc-blog-title p{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: clamp(4.69px, 1.04vw, 26.667px); /*15px*/
+  font-size: 1.5rem; /*15px*/
   line-height: 1.33em;
   color: var(--color-subtext);
 }
 @media (max-width: 1000px){
   .bc-blog-title p{
-    font-size: 1.68vw;
+    font-size: 1.2rem;
   }
 }
-@media (max-width: 550px){
+@media (max-width: 600px){
   .bc-blog-title p{
-    font-size: 2.56vw;
+    font-size: 1rem;
   }
 }
 
@@ -130,7 +130,7 @@
 
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: clamp(3.44px, 0.76vw, 19.56px);
+  font-size: 1.1rem;
   line-height: 1em;
   letter-spacing: 0.03em;
   color: var(--color-card-text);
@@ -144,11 +144,6 @@
 }
 @media (max-width: 1000px){
   .bc-blog-cta{
-    font-size: 1.23vw;
-  }
-}
-@media (max-width: 550px){
-  .bc-blog-cta{
-    font-size: 1.87vw;
+    font-size: 0.8rem;
   }
 }

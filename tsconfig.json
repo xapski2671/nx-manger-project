@@ -19,6 +19,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "contexts/connection.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "contexts/connection.ts"],
   "exclude": ["node_modules"]
 }
