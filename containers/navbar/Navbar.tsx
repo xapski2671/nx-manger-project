@@ -24,7 +24,7 @@ export default function Navbar() {
   const [SiInvis, setSiInvis] = useState(true)
   const { scrollY, scrollX, scrollDirection } = useScroll()
   const router = useRouter()
-  const { enableWeb3, isWeb3Enabled } = useMoralis()
+  const { enableWeb3, isWeb3Enabled, provider } = useMoralis()
   
 
   function siVisible(bool: boolean){
