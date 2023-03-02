@@ -1,5 +1,4 @@
-import { RewardsTab, SideNotice } from "@/components/exportComps"
-import SideBio from "@/components/sideBio/SideBio"
+import { RewardsTab, SideNotice, SideBio } from "@/components/exportComps"
 
 export default function CampaignDetails() {
   return (
@@ -21,8 +20,8 @@ export default function CampaignDetails() {
       </main>
 
       <aside className="cpd-info">
-        {/* <SideNotice/> */}
-        <SideBio/>
+        <SideNotice/>
+        {/* <SideBio/> */}
       </aside>
     </section>
   )

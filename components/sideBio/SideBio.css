@@ -44,8 +44,13 @@
 }
 
 .sb-bio-curr-icon{
-  height: 1.04vw;
+  height: 1.5rem;
   color: var(--color-card-text);
+}
+@media(max-width: 1250px){
+  .sb-bio-curr-icon{
+    height: 1.2rem;
+  }
 }
 
 .sb-creator-address.fl-cl{
@@ -72,35 +77,42 @@
   line-height: 1em;
   color: var(--color-card-text);
 }
+@media(max-width: 1250px){
+  .sb-creator-name{
+    font-size: 1.4rem;
+  }
+}
 
 .sb-creator-socials.fl-cl{
   gap: 0.69vw;
 }
 
 .sb-social-icon{
-  width: 1.25vw;
-  height: 1.25vw;
+  height: 1.8rem;
   color: var(--color-card-text);
+}
+@media(max-width: 1250px){
+  .sb-social-icon{
+    height: 1.2rem;
+  }
 }
 @media(max-width: 1000px){
   .sb-social-icon{
-    width: 2.02vw;
-    height: 2.02vw;
-  }
-}
-@media(max-width: 550px){
-  .sb-social-icon{
-    width: 3.07vw;
-    height: 3.07vw;
+    height: 1.5rem;
   }
 }
 
 .sb-creator-bio{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 0.97vw;
+  font-size: 1.4rem;
   line-height: 1.25em;
   color: var(--color-card-text);
+}
+@media(max-width: 1250px){
+  .sb-creator-bio{
+    font-size: 1.1rem;
+  }
 }
 
 .sb-support.fl-tl.fl-c{
@@ -121,9 +133,16 @@
 .sb-support-info p{
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 1.04vw;
+  font-size: 1.5rem;
   line-height: 1em;
   color: var(--color-card-text);
+}
+@media(max-width: 1250px){
+  .sb-support-box-heading,
+  .sb-support-info h4,
+  .sb-support-info p{
+    font-size: 1.2rem;
+  }
 }
 
 .sb-input.fl-cl{
@@ -139,9 +158,15 @@
 .sb-input input{
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 0.97vw;
+  font-size: 1.4rem;
   line-height: 1em;
   color: var(--color-subtext);
+}
+@media(max-width: 1250px){
+  .sb-input p,
+  .sb-input input{
+    font-size: 1.1rem;
+  }
 }
 
 .sb-input input{
@@ -167,9 +192,13 @@
 
 .sb-support-info p{
   font-weight: 400;
-  font-size: 0.97vw;
+  font-size: 1.4rem;
   line-height: 1.5em;
-  /* width: 90%; */
+}
+@media(max-width: 1250px){
+  .sb-support-info p{
+    font-size: 1.1rem;
+  }
 }
 
 .sb-fund-cta{
@@ -182,23 +211,24 @@
 
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: min(1.18vw, 30.26px);
+  font-size: 1.7rem;
   line-height: 1em;
   letter-spacing: 0.05em;
   color: var(--color-htext);
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.sb-fund-cta:hover{
-  transform: scale(1.008);
+@media(max-width: 1250px){
+  .sb-fund-cta{
+    font-size: 1.1rem;
+  }
 }
 @media(max-width: 1000px){
   .sb-fund-cta{
-    font-size: 1.91vw;
+    font-size: 1.4rem;
   }
 }
-@media(max-width: 550px){
-  .sb-fund-cta{
-    font-size: 2.9vw;
-  }
+.sb-fund-cta:hover{
+  transform: scale(1.008);
 }
+

@@ -21,28 +21,43 @@
 
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 1.39vw;
+  font-size: 2rem;
   line-height: 1em;
   text-align: center;
   
   color: var(--color-bg);
 }
+@media(max-width: 1250px){
+  .sn-info-title{
+    font-size: 1.4rem;
+  }
+}
 
 .sn-info p{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 0.9vw;
+  font-size: 1.3rem;
   line-height: 1.25em;
   color: var(--color-card-text);
+}
+@media(max-width: 1250px){
+  .sn-info p{
+    font-size: 1rem;
+  }
 }
 
 .sn-faq h4{
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 1.1vw;
+  font-size: 1.6rem;
   line-height: 1em;
   color: var(--color-card-text);
   margin-bottom: 15px;
+}
+@media(max-width: 1250px){
+  .sn-faq h4{
+    font-size: 1.3rem;
+  }
 }
 
 .sn-faqs.fl-tl.fl-c{
@@ -53,8 +68,13 @@
 .sn-faqs li{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 0.9vw;
+  font-size: 1.3rem;
   line-height: 1em;
   color: var(--color-card-text);
   cursor: pointer;
+}
+@media(max-width: 1250px){
+  .sn-faqs li{
+    font-size: 1rem;
+  }
 }

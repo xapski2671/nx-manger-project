@@ -54,7 +54,7 @@
     gap: 3.37vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-details.fl-tl.fl-c{
     gap: 5.11vw;
   }
@@ -69,7 +69,7 @@
     gap: 0.68vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-camp-title.fl-tl.fl-c{
     gap: 1.03vw;
   }
@@ -88,7 +88,7 @@
     font-size: 2.82vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-camp-title h4{
     font-size: 4.28vw;
   }
@@ -107,7 +107,7 @@
     font-size: 2.02vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-camp-title p{
     font-size: 3.07vw;
   }
@@ -122,7 +122,7 @@
     gap: 2.25vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-status-container.fl-tl.fl-c{
     gap: 3.42vw;
   }
@@ -140,7 +140,7 @@
     border-radius: 0.55vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-progress-bar{
     height: 1.70vw;
     border-radius: 0.83vw;
@@ -158,7 +158,7 @@
     border-radius: 0.55vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-progress-level{
     border-radius: 0.83vw;
   }
@@ -178,7 +178,7 @@
     gap: 0.55vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-amounts.fl-tl.fl-c,
   .acp-percent.fl-bl.fl-c{
     gap: 0.83vw;
@@ -193,7 +193,7 @@
     gap: 0.32vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-amt-raised.fl-cl{
     gap: 0.49vw;
   }
@@ -209,7 +209,7 @@
     width: 1.68vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-curr-icon{
     width: 2.56vw;
   }
@@ -231,7 +231,7 @@
     font-size: 2.25vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-amt-figure,
   .acp-amt-curr,
   .acp-goal{
@@ -252,7 +252,7 @@
     font-size: 1.68vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-goal{
     font-size: 2.56vw;
   }
@@ -270,7 +270,7 @@
     font-size: 2.25vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-percent p:first-child{
     font-size: 3.42vw;
   }
@@ -288,7 +288,7 @@
     font-size: 1.68vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-percent p:last-child{
     font-size: 2.56vw;
   }
@@ -319,7 +319,7 @@
     font-size: 1.91vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-fund-cta{
     font-size: 2.9vw;
   }
@@ -350,7 +350,7 @@
     height: 2.02vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-social-icon{
     width: 3.07vw;
     height: 3.07vw;
@@ -373,7 +373,7 @@
     font-size: 2.25vw;
   }
 }
-@media (max-width: 550px){ 
+@media (max-width: 600px){ 
   .acp-cat-name.fl-cl,
   .acp-creator p{
     font-size: 3.42vw;
@@ -388,7 +388,7 @@
     gap: 1.12vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-creator.fl-cl{
     gap: 1.7vw;
   }
@@ -402,7 +402,7 @@
     width: 3.37vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-creator img{
     width: 5.11vw;
   }
@@ -429,7 +429,7 @@
     font-size: 1.57vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .acp-info p{
     width: 100%;
     font-size: 2.5vw;
