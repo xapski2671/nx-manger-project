@@ -83,9 +83,24 @@
 .si-logo p{
   font-family: 'Barlow';
   font-weight: 700;
-  font-size: clamp(16px, 1.6vw, 30px);
+  font-size: 2.3rem;
   letter-spacing: 0.03em;
   color: var(--color-htext);
+}
+@media(max-width: 1250px){
+  .si-logo p{
+    font-size: 1.7rem;
+  }
+}
+@media(max-width: 1000px){
+  .si-logo p{
+    font-size: 2rem;
+  }
+}
+@media(max-width: 600px){
+  .si-logo p{
+    font-size: 1.7rem;
+  }
 }
 
 .si-sidebar-menu.fl-tl{
@@ -104,9 +119,19 @@
   font-family: var(--font-family);
   color: var(--color-htext);
   font-weight: 500;
-  font-size: clamp(13px, 1.1vw, 16px);
+  font-size: 1.6rem;
   line-height: 1em;
   letter-spacing: 0.06em;
+}
+@media(max-width: 1250px){
+  .si-sidebar-menu-link a{
+    font-size: 1.3rem;
+  }
+}
+@media(max-width: 600px){
+  .si-sidebar-menu-link a{
+    font-size: 1rem;
+  }
 }
 
 .si-connect-wrapper{
@@ -127,11 +152,21 @@
 
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: clamp(13px, 1.8vw, 16px);
+  font-size: 2.6rem;
   line-height: 1em;
   letter-spacing: 0.04em;
   color: var(--color-htext);
   cursor: pointer;
+}
+@media(max-width: 1250px){
+  .si-connect.fl-cc{
+    font-size: 2.3rem;
+  }
+}
+@media(max-width: 600px){
+  .si-connect.fl-cc{
+    font-size: 2rem;
+  }
 }
 
 .si-connect.fl-cc.si-con-small{display: none;}
