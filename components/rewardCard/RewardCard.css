@@ -13,7 +13,7 @@
     gap: 3.37vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .rc-container.fl-tl.fl-c{
     padding: 3.07vw;
     gap: 5.11vw;
@@ -31,18 +31,18 @@
 
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 0.97vw;
+  font-size: 1.4rem;
   line-height: 1em;
   color: var(--color-text);
 }
-@media(max-width: 1000px){
+@media(max-width: 1250px){
   .rc-reward-id.fl-cc{
-    font-size: 1.57vw;
+    font-size: 1.1rem;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .rc-reward-id.fl-cc{
-    font-size: 2.39vw;
+    font-size: 0.8rem;
   }
 }
 
@@ -53,18 +53,38 @@
 .rc-reward-del.fl-bl.fl-c p:first-child{
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 0.96vw;
+  font-size: 1.4rem;
   line-height: 1em;
   letter-spacing: 0.02em;
   color: var(--color-card-text);
+}
+@media(max-width: 1250px){
+  .rc-reward-del.fl-bl.fl-c p:first-child{
+    font-size: 1.1rem;
+  }
+}
+@media(max-width: 600px){
+  .rc-reward-del.fl-bl.fl-c p:first-child{
+    font-size: 0.8rem;
+  }
 }
 
 .rc-reward-del.fl-bl.fl-c p:last-child{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 1.04vw;
+  font-size: 1.5rem;
   line-height: 1em;
   color: var(--color-card-text);
+}
+@media(max-width: 1250px){
+  .rc-reward-del.fl-bl.fl-c p:last-child{
+    font-size: 1.2rem;
+  }
+}
+@media(max-width: 600px){
+  .rc-reward-del.fl-bl.fl-c p:last-child{
+    font-size: 1rem;
+  }
 }
 
 /* reward - description */
@@ -79,7 +99,7 @@
     gap: 1.78vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .rc-details.fl-tl.fl-c{
     padding: 1.7vw;
     gap: 2.71vw;
@@ -93,39 +113,39 @@
 .rc-perks.fl-tl.fl-c li{
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 0.97vw;
+  font-size: 1.4rem;
   line-height: 1em;
   color: var(--color-card-text);
 }
-@media(max-width: 1000px){
+@media(max-width: 1250px){
   .rc-title,
   .rc-description,
   .rc-perks-container h5,
   .rc-perks.fl-tl.fl-c li{
-    font-size: 1.57vw;
+    font-size: 1.1rem;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .rc-title,
   .rc-description,
   .rc-perks-container h5,
   .rc-perks.fl-tl.fl-c li{
-    font-size: 2.39vw;
+    font-size: 0.8rem;
   }
 }
 
 .rc-title{
-  font-size: 1.04vw;
+  font-size: 1.5rem;
   letter-spacing: 0.02em;
 }
-@media(max-width: 1000px){
+@media(max-width: 1250px){
   .rc-title{
-    font-size: 1.68vw;
+    font-size: 1.2rem;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .rc-title{
-    font-size: 2.56vw;
+    font-size: 1rem;
   }
 }
 
@@ -151,7 +171,7 @@
 .rc-input-container.fl-bl.fl-sb{
   width: 100%;
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .rc-input-container.fl-bl.fl-sb{
     flex-direction: column;
     align-items: flex-start;
@@ -167,19 +187,19 @@
 .rc-input p{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 0.97vw;
+  font-size: 1.4rem;
   line-height: 1em;
   color: var(--color-card-text);
   margin-bottom: 0.71em;
 }
-@media(max-width: 1000px){
+@media(max-width: 1250px){
   .rc-input p{
-    font-size: 1.57vw;
+    font-size: 1.1rem;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .rc-input p{
-    font-size: 2.39vw;
+    font-size: 0.8rem;
   }
 }
 
@@ -209,18 +229,18 @@ p.rc-inp-curr{
 
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 0.97vw;
+  font-size: 1.4rem;
   line-height: 1em;
   color:  var(--color-text);
 }
 @media(max-width: 1000px){
   .rc-inp input{
-    font-size: 1.57vw;
+    font-size: 1.1rem;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .rc-inp input{
-    font-size: 2.39vw;
+    font-size: 0.8rem;
   }
 }
 
@@ -237,24 +257,24 @@ p.rc-inp-curr{
 
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 1.1vw;
+  font-size: 1.6rem;
   line-height: 1em;
   letter-spacing: 0.04em;
   color: var(--color-htext);
   cursor: pointer;
   transition: transform 0.3s ease;
 }
+@media(max-width: 1250px){
+  .rc-cta{
+    font-size: 1.3rem;
+  }
+}
+@media(max-width: 1250px){
+  .rc-cta{
+    font-size: 1rem;
+  }
+}
 .rc-cta:hover{
   transform: scale(1.05);
-}
-@media(max-width: 1000px){
-  .rc-cta{
-    font-size: 1.78vw;
-  }
-}
-@media(max-width: 550px){
-  .rc-cta{
-    font-size: 2.71vw;
-  }
 }
 
