@@ -140,7 +140,8 @@
   padding: 1em 0;
 }
 
-.si-connect.fl-cc{
+.si-connect.fl-cc.si-con-big,
+.si-connect.fl-cc.si-con-small{
   padding: 0.65em 1em;
   background: var(--color-btn);
   box-shadow: 0px 4px 23px 4px rgba(0, 0, 0, 0.13);
@@ -152,22 +153,25 @@
 
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 2.6rem;
+  font-size: 1.6rem;
   line-height: 1em;
   letter-spacing: 0.04em;
   color: var(--color-htext);
   cursor: pointer;
 }
 @media(max-width: 1250px){
-  .si-connect.fl-cc{
-    font-size: 2.3rem;
+  .si-connect.fl-cc.si-con-big,
+  .si-connect.fl-cc.si-con-small{
+    font-size: 1.3rem;
   }
 }
 @media(max-width: 600px){
-  .si-connect.fl-cc{
-    font-size: 2rem;
+  .si-connect.fl-cc.si-con-big{
+    font-size: 1rem;
   }
 }
+
+
 
 .si-connect.fl-cc.si-con-small{display: none;}
 @media(max-width: 740px){
@@ -175,9 +179,11 @@
   .si-connect.fl-cc.si-con-small{display: flex;}
 }
 
+
+
 .si-wallet-icon{
-  width: 18px;
-  height: 18px;
+  /* width: 18px; */
+  height: 1.8rem;
   color: var(--color-htext);
 }
 

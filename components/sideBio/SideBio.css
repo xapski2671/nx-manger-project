@@ -13,12 +13,18 @@
 .sb-support-heading{
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 1.39vw;
+  font-size: 2rem;
   line-height: 1em;
   color: var(--color-card-text);
   background-color: var(--color-sub-bg);
   padding: 0.5em;
   width: 100%;
+}
+@media(max-width: 1250px){
+  .sb-bio-heading,
+  .sb-support-heading{
+    font-size: 1.4rem;
+  } 
 }
 
 .sb-bio-details.fl-tl{
@@ -49,15 +55,20 @@
 .sb-creator-address p{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 1.04vw;
+  font-size: 1.5rem;
   line-height: 1em;
   color: var(--color-card-text);
+}
+@media(max-width: 1250px){
+  .sb-creator-address p{
+    font-size: 1.2rem;
+  }
 }
 
 .sb-creator-name{
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 1.39vw;
+  font-size: 2rem;
   line-height: 1em;
   color: var(--color-card-text);
 }
