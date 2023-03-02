@@ -18,7 +18,13 @@ export default function RewardCard() {
 
   return (
     <div className="rc-container fl-tl fl-c">
-      <div className="rc-reward-id fl-cc">{"Pledge 0.5 ETH"}</div>
+      <div className="rc-id-del fl-tc fl-sb">
+        <div className="rc-reward-id fl-cc">{"Pledge 0.5 ETH"}</div>
+        <div className="rc-reward-del fl-bl fl-c">
+          <p>{"EST. DELIVERY"}</p>
+          <p>{"Nov 2023"}</p>
+        </div>
+      </div>
 
       {/* <article className="rc-description" dangerouslySetInnerHTML={rData}/> */}
       <article className="rc-details fl-tl fl-c">

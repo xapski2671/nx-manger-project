@@ -20,6 +20,10 @@
   }
 }
 
+.rc-id-del.fl-tc.fl-sb{
+  width: 100%;
+}
+
 .rc-reward-id.fl-cc{
   padding: 0.71em 0.86em;
   border-radius: 0.28em;
@@ -40,6 +44,27 @@
   .rc-reward-id.fl-cc{
     font-size: 2.39vw;
   }
+}
+
+.rc-reward-del.fl-bl.fl-c{
+  gap: 0.3em;
+}
+
+.rc-reward-del.fl-bl.fl-c p:first-child{
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 0.96vw;
+  line-height: 1em;
+  letter-spacing: 0.02em;
+  color: var(--color-card-text);
+}
+
+.rc-reward-del.fl-bl.fl-c p:last-child{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.04vw;
+  line-height: 1em;
+  color: var(--color-card-text);
 }
 
 /* reward - description */
