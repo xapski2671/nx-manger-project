@@ -29,9 +29,24 @@
 .nv-logo p{
   font-family: 'Barlow';
   font-weight: 700;
-  font-size: max(16px, 1.6vw);
+  font-size: 2.3rem;
   letter-spacing: 0.03em;
   color: var(--color-htext);
+}
+@media(max-width: 1250px){
+  .nv-logo p{
+    font-size: 1.7rem;
+  }
+}
+@media(max-width: 1000px){
+  .nv-logo p{
+    font-size: 2rem;
+  }
+}
+@media(max-width: 600px){
+  .nv-logo p{
+    font-size: 1.7rem;
+  }
 }
 
 .nv-menu.fl-cr,
@@ -55,13 +70,23 @@
 .nv-menu-links a{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: max(13px, 1.1vw);
+  font-size: 1.58rem;
   line-height: 1em;
   letter-spacing: 0.04em;
   color: var(--color-htext);
   transition: all 0.2s ease;
   outline: none;
   border: none;
+}
+@media(max-width: 1250px){
+  .nv-menu-links a{
+    font-size: 1.2rem;
+  }
+}
+@media(max-width: 600px){
+  .nv-menu-links a{
+    font-size: 1rem;
+  }
 }
 .nv-menu-links a:hover{
   transform: scale(1.05);
@@ -76,12 +101,17 @@
 
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: max(11px, 1.1vw);
+  font-size: 1.58rem;
   line-height: 1em;
   letter-spacing: 0.04em;
   color: var(--color-htext);
   cursor: pointer;
   transition: transform 0.3s ease;
+}
+@media(max-width: 1250px){
+  .nv-connect{
+    font-size: 1.2rem;
+  }
 }
 .nv-connect:hover{
   transform: scale(1.05);

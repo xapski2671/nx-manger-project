@@ -84,12 +84,12 @@
 .hi-infobox-container.fl-bc.fl-sa{
   width: 100%;
 }
-@media(max-width: 600px){
+@media(max-width: 1000px){
   .hi-infobox-container.fl-bc.fl-sa{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 3em;
+    gap: 5em;
   }
 }
 
@@ -99,6 +99,7 @@
 }
 @media(max-width: 1000px){
   .hi-infobox.fl-cl.fl-c{
+    width: 100%;
     gap: 1.8vw;
   }
 }
@@ -114,12 +115,12 @@
 }
 @media(max-width: 1000px){
   .hi-infobox-details.fl-cl.fl-c{
-    gap: 1.12vw;
+    gap: 1.4vw;
   }
 }
 @media(max-width: 600px){
   .hi-infobox-details.fl-cl.fl-c{
-    gap: 1.70vw;
+    gap: 2vw;
   }
 }
 
@@ -142,8 +143,8 @@
 }
 @media(max-width: 600px){
   .hi-infobox-icon{
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 2rem;
+    height: 2rem;
   }
 }
 
@@ -180,15 +181,15 @@
   text-align: center;
   width: 90%;
 }
-@media(max-width: 1000px){
+@media(max-width: 1250px){
   .hi-info{
-    font-size: 1.3vw;
+    font-size: 1.2rem;
     width: 96%;
   }
 }
 @media(max-width: 600px){
   .hi-info{
-    font-size: 2.56vw;
+    font-size: 1rem;
   }
 }
 
@@ -200,7 +201,7 @@
   
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: min(1.25vw, 32px); /*15px*/
+  font-size: 1.8rem; /*15px*/
   line-height: 1em;
   letter-spacing: 0.02em;
   color: var(--color-htext);
@@ -210,13 +211,18 @@
 button.hi-info-cta:hover{
   transform: scale(1.05);  
 }
+@media(max-width: 1250px){
+  .hi-info-cta{
+    font-size: 1.2rem;
+  }
+}
 @media(max-width: 1000px){
   .hi-info-cta{
-    font-size: 1.6vw;
+    font-size: 1.5rem;
   }
 }
 @media(max-width: 600px){
   .hi-info-cta{
-    font-size: 3.07vw;
+    font-size: 1.2rem;
   }
 }
