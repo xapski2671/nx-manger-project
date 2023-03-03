@@ -45,7 +45,7 @@
     gap: 3.37vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .fc-details.fl-tl.fl-c{
     gap: 5.11vw;
   }
@@ -65,19 +65,24 @@
   gap: 0.57em;
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: min(1.39vw, 35.5px);
+  font-size: 2rem;
   line-height: 1em;
   letter-spacing: 0.04em;
   color: var(--color-card-text);
 }
-@media (max-width: 1000px){
+@media (max-width: 1250px){
   .fc-cat-name.fl-cl{
-    font-size: 2.25vw;
+    font-size: 1.5rem;
   }
 }
-@media (max-width: 550px){ 
+@media (max-width: 1000px){
   .fc-cat-name.fl-cl{
-    font-size: 3.42vw;
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 600px){ 
+  .fc-cat-name.fl-cl{
+    font-size: 1.4rem;
   }
 }
 
@@ -89,7 +94,7 @@
 
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: min(1.04vw, 26.667px);
+  font-size: 1.5rem;
   line-height: 1em;
   letter-spacing: 0.03em;
   color: var(--color-text);
@@ -101,14 +106,14 @@
   color: var(--color-htext);
   border-color: #9071DF;
 }
-@media(max-width: 1000px){
+@media(max-width: 1250px){
   .fc-cta button.fl-fc{
-    font-size: 1.68vw;
+    font-size: 1.2rem;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .fc-cta button.fl-fc{
-    font-size: 2.56vw;
+    font-size: 1rem;
   }
 }
 
@@ -122,7 +127,7 @@
     gap: 0.68vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .fc-camp-title.fl-tl.fl-c{
     gap: 1.03vw;
   }
@@ -132,38 +137,48 @@
 .fc-camp-title h4{
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: min(1.74vw, 44.4px);
+  font-size: 2.5rem;
   line-height: 1em;
   letter-spacing: 0.02em;
   color: var(--color-text);
 }
-@media(max-width: 1000px){
+@media(max-width: 600px){
   .fc-camp-title h4{
-    font-size: 2.82vw;
+    font-size: 1.8rem;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 1000px){
   .fc-camp-title h4{
-    font-size: 4.28vw;
+    font-size: 2.2rem;
+  }
+}
+@media(max-width: 600px){
+  .fc-camp-title h4{
+    font-size: 1.5rem;
   }
 }
 
 .fc-camp-title p{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: min(1.25vw, 32px); /*18px*/
+  font-size: 1.8rem; /*18px*/
   line-height: 1.33em;
   letter-spacing: 0.01em;
   color: var(--color-subtext);
 } 
-@media (max-width: 1000px){
+@media(max-width: 1250px){
   .fc-camp-title p{
-    font-size: 2.02vw;
+    font-size: 1.2rem;
   }
 }
-@media(max-width: 550px){
+@media (max-width: 1000px){
   .fc-camp-title p{
-    font-size: 3.07vw;
+    font-size: 1.5rem;
+  }
+}
+@media(max-width: 600px){
+  .fc-camp-title p{
+    font-size: 1.2rem;
   }
 }
 
@@ -176,7 +191,7 @@
     gap: 2.25vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .fc-status-container.fl-tl.fl-c{
     gap: 3.42vw;
   }
@@ -195,7 +210,7 @@
     border-radius: 0.55vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .fc-progress-bar{
     height: 1.70vw;
     border-radius: 0.83vw;
@@ -213,7 +228,7 @@
     border-radius: 0.55vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .fc-progress-level{
     border-radius: 0.83vw;
   }
@@ -233,7 +248,7 @@
     gap: 0.55vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .fc-amounts.fl-tl.fl-c,
   .fc-percent.fl-bl.fl-c{
     gap: 0.83vw;
@@ -248,25 +263,24 @@
     gap: 0.32vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .fc-amt-raised.fl-cl{
     gap: 0.49vw;
   }
 }
 
 .fc-curr-icon{
-  width: min(1.04vw, 26.67px); /*10px*/
-  height: auto;
+  height: 1.5rem;
   color: var(--color-card-text);
 }
-@media(max-width: 1000px){
+@media(max-width: 1250px){
   .fc-curr-icon{
-    width: 1.68vw;
+    height: 1.2rem;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .fc-curr-icon{
-    width: 2.56vw;
+    height: 1rem;
   }
 }
 
@@ -275,22 +289,29 @@
 .fc-goal{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: min(1.39vw, 35.5px);  /*18px*/
+  font-size: 2rem;
   line-height: 1em;
   color: var(--color-subtext);
+}
+@media(max-width: 1250px){
+  .fc-amt-figure,
+  .fc-amt-curr,
+  .fc-goal{
+    font-size: 1.5rem;
+  }
 }
 @media(max-width: 1000px){
   .fc-amt-figure,
   .fc-amt-curr,
   .fc-goal{
-    font-size: 2.25vw;
+    font-size: 1.7rem;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .fc-amt-figure,
   .fc-amt-curr,
   .fc-goal{
-    font-size: 3.42vw;
+    font-size: 1.4rem;
   }
 }
 
@@ -307,7 +328,7 @@
     font-size: 1.68vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .fc-goal{
     font-size: 2.56vw;
   }
@@ -325,7 +346,7 @@
     font-size: 2.25vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .fc-percent p:first-child{
     font-size: 3.42vw;
   }
@@ -343,7 +364,7 @@
     font-size: 1.68vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .fc-percent p:last-child{
     font-size: 2.56vw;
   }
@@ -361,7 +382,7 @@
     gap: 1.12vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .fc-creator.fl-cl{
     gap: 1.7vw;
   }
@@ -381,7 +402,7 @@
     border-radius: 0.89vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .fc-creator-jazzicon{
     width: 7vw;
     height: 7vw;
@@ -401,7 +422,7 @@
     font-size: 2.02vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .fc-creator p{
     font-size: 3.07vw;
   }
@@ -431,7 +452,7 @@
     font-size: 1.68vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .fc-fund-cta{
     font-size: 2.56vw;
   }
