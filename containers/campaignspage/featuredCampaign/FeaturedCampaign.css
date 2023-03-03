@@ -82,12 +82,12 @@
 }
 @media (max-width: 600px){ 
   .fc-cat-name.fl-cl{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 
 .fc-cta button.fl-fc{
-  padding: 0.7em 0.91em 0.6em;
+  padding: 0.6em 0.91em;
   gap: 0.91em;
   border: 1px solid rgba(84, 71, 118, 0.57);
   border-radius: 0.73em;
@@ -320,53 +320,58 @@
 }
 
 .fc-goal{
-  font-size: min(1.04vw, 26.67px); /*11px*/
+  font-size: 1.5rem;
   line-height: 1em;
 }
-@media(max-width: 1000px){
+@media(max-width: 1250px){
   .fc-goal{
-    font-size: 1.68vw;
+    font-size: 1.2rem;
   }
 }
 @media(max-width: 600px){
   .fc-goal{
-    font-size: 2.56vw;
+    font-size: 1rem;
   }
 }
 
 .fc-percent p:first-child{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: min(1.39vw, 35.5px);
+  font-size: 2rem;
   line-height: 1em;
   color: var(--color-card-text);
 }
+@media(max-width: 1250px){
+  .fc-percent p:first-child{
+    font-size: 1.5rem;
+  }
+}
 @media(max-width: 1000px){
   .fc-percent p:first-child{
-    font-size: 2.25vw;
+    font-size: 1.7rem;
   }
 }
 @media(max-width: 600px){
   .fc-percent p:first-child{
-    font-size: 3.42vw;
+    font-size: 1.4rem;
   }
 }
 
 .fc-percent p:last-child{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: min(1.04vw, 26.67px);
+  font-size: 1.5rem;
   line-height: 1em;
   color: var(--color-card-text);
 }
-@media(max-width: 1000px){
+@media(max-width: 1250px){
   .fc-percent p:last-child{
-    font-size: 1.68vw;
+    font-size: 1.2rem;
   }
 }
 @media(max-width: 600px){
   .fc-percent p:last-child{
-    font-size: 2.56vw;
+    font-size: 1rem;
   }
 }
 
@@ -413,18 +418,23 @@
 .fc-creator p{
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: min(1.25vw, 32px);
+  font-size: 1.8rem;
   line-height: 1em;
   color: var(--color-subtext);
 }
+@media(max-width: 1250px){
+  .fc-creator p{
+    font-size: 1.2rem;
+  }
+}
 @media(max-width: 1000px){
   .fc-creator p{
-    font-size: 2.02vw;
+    font-size: 1.5rem;
   }
 }
 @media(max-width: 600px){
   .fc-creator p{
-    font-size: 3.07vw;
+    font-size: 1.2rem;
   }
 }
 
@@ -437,7 +447,7 @@
 
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: min(1.18vw, 32px);
+  font-size: 1.7rem;
   line-height: 1em;
   letter-spacing: 0.04em;
   color: var(--color-htext);
@@ -447,13 +457,18 @@
 .fc-fund-cta:hover{
   transform: scale(1.05);
 }
+@media(max-width: 1250px){
+  .fc-fund-cta{
+    font-size: 1.1rem;
+  }
+}
 @media(max-width: 1000px){
   .fc-fund-cta{
-    font-size: 1.68vw;
+    font-size: 1.4rem;
   }
 }
 @media(max-width: 600px){
   .fc-fund-cta{
-    font-size: 2.56vw;
+    font-size: 1.1rem;
   }
 }

@@ -48,7 +48,7 @@
 .ccp-subtitle{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: min(1.25vw, 32px);
+  font-size: 1.8rem;
   line-height: 1em;
   letter-spacing: 0.02em;
   color: var(--color-subtext);
@@ -56,13 +56,18 @@
   -ms-user-select: none; 
   user-select: none;
 }
-@media (max-width: 1000px){
+@media(max-width: 1250px){
   .ccp-subtitle{
-    font-size: 2.02vw;
+    font-size: 1.2rem;
   }
 }
-@media(max-width: 550px){
+@media (max-width: 1000px){
   .ccp-subtitle{
-    font-size: 3.07vw;
+    font-size: 1.5rem;
+  }
+}
+@media(max-width: 600px){
+  .ccp-subtitle{
+    font-size: 1.2rem;
   }
 }
