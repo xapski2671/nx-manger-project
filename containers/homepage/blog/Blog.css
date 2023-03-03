@@ -11,7 +11,7 @@
     gap: 6vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
 .bl-section.fl-cl.fl-c.sc-padding{
   padding-bottom: 9vw;
   padding-top: 9vw;
@@ -27,7 +27,7 @@
     gap: 1.3vw;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .bl-section-title.fl-cl.fl-c{
     gap: 1.9vw;
   }
@@ -36,38 +36,48 @@
 .bl-title{
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 2.08vw;
+  font-size: 3rem;
   line-height: 1em;
   letter-spacing: 0.04em;
   color: var(--color-card-text);
   text-align: center;
 }
-@media(max-width: 1000px){
+@media(max-width: 1250px){
   .bl-title{
-    font-size: 3.37vw;
+    font-size: 2.3rem;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 1000px){
   .bl-title{
-    font-size: 5.11vw;
+    font-size: 2.7rem;
+  }
+}
+@media(max-width: 600px){
+  .bl-title{
+    font-size: 2rem;
   }
 }
 
 .bl-subtitle{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 1.25vw;
+  font-size: 1.8rem;
   line-height: 1em;
   color: var(--color-card-text);
 }
-@media(max-width: 1000px){
+@media(max-width: 1250px){
   .bl-subtitle{
-    font-size: 1.6vw;
+    font-size: 1.2rem;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 1000px){
   .bl-subtitle{
-    font-size: 3.07vw;
+    font-size: 1.5rem;
+  }
+}
+@media(max-width: 600px){
+  .bl-subtitle{
+    font-size: 1.2rem;
   }
 }
 
@@ -80,7 +90,7 @@
     display: none;
   }
 }
-@media(max-width: 550px){
+@media(max-width: 600px){
   .bl-cards-container.fl-tc{
     flex-direction: column;
     align-items: center;
