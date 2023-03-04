@@ -1,6 +1,7 @@
 import { faEthereum } from "@fortawesome/free-brands-svg-icons"
 import { faCubes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useWeb3Contract } from "react-moralis"
 
 interface props{
   address?: string
@@ -8,6 +9,17 @@ interface props{
 }
 
 export default function CampaignCard({ address, creator }:props) {
+  // const { data:contractData, error:contractError, runContractFunction, isFetching, isLoading } = useWeb3Contract()
+
+  // useEffect(() => {
+  //   first
+  
+  //   return () => {
+  //     second
+  //   }
+  // }, [third])
+  
+
   return (
     <div className="cc-container fl-cl fl-c">
       <div className="cc-img">
