@@ -4,7 +4,9 @@ interface props {
   mapArray: Array<Object>
 }
 
-export default function CampaignGrid({}:props) {
+export default function CampaignGrid({ mapArray }:props) {
+  console.log(mapArray)
+
   return (
     <div className="cg-container fl-cl fl-c">
       <div className="cg-grid">
