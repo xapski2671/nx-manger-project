@@ -5,6 +5,10 @@
   background: #FFFFFF;
   box-shadow: 0px 10px 50px rgba(29, 7, 84, 0.08);
   border-radius: min(1.39vw, 35.5px);
+  transition: all 0.3s ease;
+}
+.cc-container:hover{
+  transform: scale(1.02);
 }
 @media (max-width: 1000px){ /*1440-999*/
   .cc-container{
@@ -45,6 +49,7 @@
   -webkit-user-select: none;
   -ms-user-select: none; 
   user-select: none;
+  cursor: pointer;
 }
 @media (max-width: 1000px){ /*1440-999*/
   .cc-img img{
@@ -91,6 +96,7 @@
   font-size: 1.5rem;
   line-height: 1em;
   letter-spacing: 0.03em;
+  cursor: pointer;
   color: var(--color-card-text);
 }
 @media (max-width: 1250px){
@@ -105,7 +111,7 @@
 }
 
 .cc-cta button.fl-cc{
-  padding: 0.7em 0.91em 0.6em;
+  padding: 0.6em 0.91em;
   gap: 0.91em;
   border: 1px solid rgba(84, 71, 118, 0.57);
   border-radius: 0.73em;
@@ -159,6 +165,7 @@
   line-height: 1em;
   letter-spacing: 0.02em;
   color: var(--color-text);
+  cursor: pointer;
 }
 @media(max-width: 1250px){
   .cc-camp-title h4{
@@ -379,6 +386,7 @@
 
 .cc-creator.fl-cl{
   gap: min(0.69vw, 17.8px);
+  cursor: pointer;
 }
 @media(max-width: 1000px){
   .cc-creator.fl-cl{
