@@ -4,7 +4,7 @@ export default function Campaigns() {
   return (
     <section className="cp-campaigns sc-padding fl-cl fl-c">
       <CategoryFilter/>
-      <CampaignGrid/>
+      <CampaignGrid mapArray={[]}/>
     </section>
   )
 }

@@ -1,6 +1,10 @@
 import { CampaignCard } from "../exportComps"
 
-export default function CampaignGrid() {
+interface props {
+  mapArray: Array<Object>
+}
+
+export default function CampaignGrid({}:props) {
   return (
     <div className="cg-container fl-cl fl-c">
       <div className="cg-grid">
