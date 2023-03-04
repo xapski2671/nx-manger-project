@@ -4,18 +4,24 @@ interface props {
   mapArray: Array<Object>
 }
 
+interface CmpObject {
+  campaignAddress?: string
+  creator?: string
+}
+
 export default function CampaignGrid({ mapArray }:props) {
-  console.log(mapArray)
 
   return (
     <div className="cg-container fl-cl fl-c">
       <div className="cg-grid">
-        <CampaignCard/>
-        <CampaignCard/>
-        <CampaignCard/>
-        <CampaignCard/>
-        <CampaignCard/>
-        <CampaignCard/>
+        {
+          mapArray.map((cmpObj, index)=>{
+            const { campaignAddress, creator }:CmpObject = cmpObj
+            return (
+              <CampaignCard key={index} address={campaignAddress} creator={creator}/>
+            )
+          })
+        }
       </div>
       <button className="cg-see-more fl-cc">{"See more"}</button>
     </div>

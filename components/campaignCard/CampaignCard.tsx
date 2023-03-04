@@ -2,7 +2,12 @@ import { faEthereum } from "@fortawesome/free-brands-svg-icons"
 import { faCubes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-export default function CampaignCard() {
+interface props{
+  address?: string
+  creator?: string
+}
+
+export default function CampaignCard({ address, creator }:props) {
   return (
     <div className="cc-container fl-cl fl-c">
       <div className="cc-img">
