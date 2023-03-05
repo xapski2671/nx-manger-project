@@ -1,12 +1,12 @@
 import { CampaignCard } from "../exportComps"
 
 interface props {
-  mapArray: Array<Object>
+  mapArray: Array<CmpObject>
 }
 
 interface CmpObject {
-  campaignAddress?: string
-  creator?: string
+  campaignAddress: string
+  creator: string
 }
 
 export default function CampaignGrid({ mapArray }:props) {

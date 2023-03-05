@@ -21,7 +21,7 @@ function ConnectionProvider ({ children }:props) {
   const [hasMetamask, setHasMetamask] = useState(false)
   const [isConnected, setIsConnected] = useState(false)
   const [chainId, setChainId] = useState("31337")
-  const [signer, setSigner] = useState<JsonRpcSigner | (() => JsonRpcSigner) | any>(JsonRpcSigner)
+  const [signer, setSigner] = useState<JsonRpcSigner | (() => JsonRpcSigner) | null>(null)
   const [account, setAccount] = useState("0x0")
 
   async function connect()

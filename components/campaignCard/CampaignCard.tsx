@@ -14,11 +14,11 @@ interface props{
 }
 
 export default function CampaignCard({ address, creator }:props) {
-  const { hasMetamask, isConnected, chainId, signer, account, connect }:conn = useContext(ConnectionContext)
+  const { hasMetamask, isConnected, chainId, signer, account, connect }:conn = useContext(ConnectionContext)!
 
   useEffect(() => {
     async function startCard(){
-      const CmpCntrt = new ethers.Contract(address, JSON.stringify(campaignABI), signer)
+      const CmpCntrt = new ethers.Contract(address, campaignABI.abi, signer)
       try{
         const cmpData = await CmpCntrt.getCampaignDetails()
         console.log(cmpData)
@@ -26,7 +26,7 @@ export default function CampaignCard({ address, creator }:props) {
       catch(e){console.log(e)}
     }    
     isConnected && startCard()
-  }, [])
+  }, [isConnected])
 
   return (
     <div className="cc-container fl-cl fl-c">
