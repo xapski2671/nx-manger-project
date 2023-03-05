@@ -6,6 +6,7 @@ import { MoralisProvider } from "react-moralis"
 import { ApolloClient } from "@apollo/client"
 import { InMemoryCache } from "@apollo/client/cache"
 import { ApolloProvider } from "@apollo/client/react"
+import { ConnectionProvider } from "@/contexts/connection"
 
 const graphClient = new ApolloClient({
   cache: new InMemoryCache(),
@@ -15,13 +16,13 @@ const graphClient = new ApolloClient({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <MoralisProvider initializeOnMount={false}>
+      <ConnectionProvider>
         <ApolloProvider client={graphClient}>
           <Navbar/>
           <Component {...pageProps} />
           <Footer/>
         </ApolloProvider>
-      </MoralisProvider>
+      </ConnectionProvider>
     </>
   )
 }

@@ -1,22 +1,35 @@
-import { ethers } from "ethers"
+import { ethers, JsonRpcSigner } from "ethers"
+import { MetaMaskInpageProvider } from "@metamask/providers"
 import { useRouter } from "next/router"
 import { createContext, ReactNode, useState, useEffect } from "react"
 
-// interface Props{
-//   children: ReactNode
-// }
+interface props{
+  children: ReactNode
+}
 
-// var window: any
+interface conn{
+  hasMetamask: boolean
+  isConnected: boolean
+  chainId: string
+  signer: JsonRpcSigner | (() => JsonRpcSigner) | any
+  account: string
+  connect: () => Promise<void>
+}
 
+declare global{
+  interface Window {
+    ethereum?: MetaMaskInpageProvider | any
+  }
+}
 
-const ConnectionContext = createContext()
+const ConnectionContext = createContext<conn | null>(null)
 
-function ConnectionProvider ({ children }) {
+function ConnectionProvider ({ children }:props) {
   const router = useRouter()
   const [hasMetamask, setHasMetamask] = useState(false)
   const [isConnected, setIsConnected] = useState(false)
   const [chainId, setChainId] = useState("31337")
-  const [signer, setSigner] = useState(undefined)
+  const [signer, setSigner] = useState<JsonRpcSigner | (() => JsonRpcSigner) | any>(JsonRpcSigner)
   const [account, setAccount] = useState("0x0")
 
   async function connect()
@@ -25,8 +38,9 @@ function ConnectionProvider ({ children }) {
       try {
         await window.ethereum.request({ method: "eth_requestAccounts" })
         setIsConnected(true)
-        const provider = new ethers.providers.Web3Provider(window.ethereum)
-        setSigner(provider.getSigner())
+        const provider = new ethers.BrowserProvider(window.ethereum)
+        const signer = await provider.getSigner()
+        setSigner(signer)
         const { chainId } = await provider.getNetwork()
         setChainId(chainId.toString())
       } catch (e) {
@@ -46,10 +60,11 @@ function ConnectionProvider ({ children }) {
         if(accounts.length)
         {
           setIsConnected(true)
-          const provider = new ethers.providers.Web3Provider(window.ethereum)
-          setSigner(provider.getSigner())
+          const provider = new ethers.BrowserProvider(window.ethereum)
+          const signer = await provider.getSigner()
+          setSigner(signer)
           const { chainId } = await provider.getNetwork()
-          if(chainId !== "5")
+          if(chainId.toString() !== "5")
           {
             await window.ethereum.request({
               method: "wallet_switchEthereumChain",
@@ -79,7 +94,9 @@ function ConnectionProvider ({ children }) {
     if (typeof window.ethereum !== "undefined") {
       setHasMetamask(true)
       updateUI()
-    }else{alert("Pls Install Metamask")}
+    }else{if(confirm("You need a Metamask wallet to use this site,\nWould you like to install Metamask")){
+      window.open("https://metamask.io/", "_blank")
+    }else{alert("Please install Metamask ;)")}}
   }, [account, chainId])
 
   const payload = { hasMetamask, isConnected, chainId, signer, account, connect }
