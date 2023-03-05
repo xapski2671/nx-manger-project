@@ -2,18 +2,10 @@ import { ethers, JsonRpcSigner } from "ethers"
 import { MetaMaskInpageProvider } from "@metamask/providers"
 import { useRouter } from "next/router"
 import { createContext, ReactNode, useState, useEffect } from "react"
+import { conn } from "@/types"
 
 interface props{
   children: ReactNode
-}
-
-interface conn{
-  hasMetamask: boolean
-  isConnected: boolean
-  chainId: string
-  signer: JsonRpcSigner | (() => JsonRpcSigner) | any
-  account: string
-  connect: () => Promise<void>
 }
 
 declare global{
@@ -22,7 +14,7 @@ declare global{
   }
 }
 
-const ConnectionContext = createContext<conn | null>(null)
+const ConnectionContext = createContext<conn | any>(null)
 
 function ConnectionProvider ({ children }:props) {
   const router = useRouter()
@@ -99,7 +91,7 @@ function ConnectionProvider ({ children }:props) {
     }else{alert("Please install Metamask ;)")}}
   }, [account, chainId])
 
-  const payload = { hasMetamask, isConnected, chainId, signer, account, connect }
+  const payload:conn = { hasMetamask, isConnected, chainId, signer, account, connect }
 
   return (
     <ConnectionContext.Provider value={payload}>

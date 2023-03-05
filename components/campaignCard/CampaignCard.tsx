@@ -1,34 +1,32 @@
 import { faEthereum } from "@fortawesome/free-brands-svg-icons"
 import { faCubes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useEffect } from "react"
+import { useContext, useEffect } from "react"
 import { useMoralis, useWeb3Contract } from "react-moralis"
 import campaignABI from "@/constants/Campaign.json"
+import { ConnectionContext } from "@/contexts/connection"
+import { conn } from "@/types"
+import { ethers } from "ethers"
 
 interface props{
-  address?: string
-  creator?: string
+  address: string
+  creator: string
 }
 
 export default function CampaignCard({ address, creator }:props) {
-  const { isWeb3Enabled, enableWeb3, account } = useMoralis()
-  const { data:contractData, error:contractError, runContractFunction:getCmpData, isFetching, isLoading } = useWeb3Contract({
-    abi: campaignABI,
-    contractAddress: address,
-    functionName: "getCampaignDetails"
-  })
+  const { hasMetamask, isConnected, chainId, signer, account, connect }:conn = useContext(ConnectionContext)
 
   useEffect(() => {
     async function startCard(){
-      const cmpData = await getCmpData({
-        onError: (error)=>{console.log(error)},
-      })
-      console.log(cmpData)
-    }
-
-    isWeb3Enabled && startCard()
-  }, [isWeb3Enabled])
-  
+      const CmpCntrt = new ethers.Contract(address, JSON.stringify(campaignABI), signer)
+      try{
+        const cmpData = await CmpCntrt.getCampaignDetails()
+        console.log(cmpData)
+      }
+      catch(e){console.log(e)}
+    }    
+    isConnected && startCard()
+  }, [])
 
   return (
     <div className="cc-container fl-cl fl-c">
