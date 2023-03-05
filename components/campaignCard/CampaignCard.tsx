@@ -1,7 +1,9 @@
 import { faEthereum } from "@fortawesome/free-brands-svg-icons"
 import { faCubes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useWeb3Contract } from "react-moralis"
+import { useEffect } from "react"
+import { useMoralis, useWeb3Contract } from "react-moralis"
+import campaignABI from "@/constants/Campaign.json"
 
 interface props{
   address?: string
@@ -9,15 +11,23 @@ interface props{
 }
 
 export default function CampaignCard({ address, creator }:props) {
-  // const { data:contractData, error:contractError, runContractFunction, isFetching, isLoading } = useWeb3Contract()
+  const { isWeb3Enabled, enableWeb3, account } = useMoralis()
+  const { data:contractData, error:contractError, runContractFunction:getCmpData, isFetching, isLoading } = useWeb3Contract({
+    abi: campaignABI,
+    contractAddress: address,
+    functionName: "getCampaignDetails"
+  })
 
-  // useEffect(() => {
-  //   first
-  
-  //   return () => {
-  //     second
-  //   }
-  // }, [third])
+  useEffect(() => {
+    async function startCard(){
+      const cmpData = await getCmpData({
+        onError: (error)=>{console.log(error)},
+      })
+      console.log(cmpData)
+    }
+
+    isWeb3Enabled && startCard()
+  }, [isWeb3Enabled])
   
 
   return (
