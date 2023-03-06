@@ -33,12 +33,13 @@ export default function CampaignCard({ address, creator }:props) {
   const [campaignDetails, setCampaignDetails] = useState<cmp>()
   const [progess, setProgress] = useState(0)
   const [daysUntil, setDaysUntil] = useState(0)
+  const [imageURI, setImageURI] = useState("")
 
   async function calcDetails(){
     const plevel = (campaignDetails!.currentBalance.div(campaignDetails!.goalAmount)).toNumber() * 100
     setProgress(plevel)
+
     let deadline = new Date(campaignDetails!.deadline.toNumber() * 1000)
-    console.log(deadline)
     let dNow = new Date()
     const days = (d1:Date, d2:Date) => {
       let diff = d2.getTime() - d1.getTime()
@@ -47,6 +48,9 @@ export default function CampaignCard({ address, creator }:props) {
     }
     const daysUntil = await days(dNow, deadline)
     setDaysUntil(daysUntil)
+
+    let uri = campaignDetails!.imageURI.replace("ipfs://", "https://ipfs.io/ipfs/")
+    setImageURI(uri)
   }
 
   useEffect(() => {
@@ -62,17 +66,19 @@ export default function CampaignCard({ address, creator }:props) {
         setLoading(false)
         await calcDetails()
       }
-      catch(e){console.log(e)}
+      catch(e){
+        console.log(e)
+      }
     }    
     isConnected && startCard()
-  }, [isConnected])
+  }, [isConnected, campaignDetails])
 
   return (
     <div className="cc-container fl-cl fl-c">
       { !loading &&
  <>
    <div className="cc-img">
-     <img src="/assets/manger-mockup-cmp.jpg" alt="cc-mckp" />
+     <img src={imageURI} alt="cc-mckp" />
    </div>
 
    <div className="cc-details fl-cl fl-c">

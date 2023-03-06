@@ -289,7 +289,7 @@
 }
 
 .cc-goal{
-  font-size: 1.1rem; /*11px*/
+  font-size: 1.2rem; /*11px*/
   line-height: 1em;
   letter-spacing: 0.02em;
   font-weight: 500;
@@ -368,7 +368,7 @@
 .cc-percent p:last-child{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1em;
   color: var(--color-card-text);
 }
@@ -468,7 +468,7 @@
 .cc-eta p:last-child{
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1em;
   color: var(--color-text);
 }
