@@ -38,6 +38,7 @@ export default function CampaignCard({ address, creator }:props) {
     const plevel = (campaignDetails!.currentBalance.div(campaignDetails!.goalAmount)).toNumber() * 100
     setProgress(plevel)
     let deadline = new Date(campaignDetails!.deadline.toNumber() * 1000)
+    console.log(deadline)
     let dNow = new Date()
     const days = (d1:Date, d2:Date) => {
       let diff = d2.getTime() - d1.getTime()
