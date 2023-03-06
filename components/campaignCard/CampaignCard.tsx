@@ -59,17 +59,19 @@ export default function CampaignCard({ address, creator }:props) {
       uri: process.env.NEXT_PUBLIC_SUBGRAPH_URI,
       cache: new InMemoryCache(),
     })
-
+  
     // const userData = await client
     //   .query({
     //     query: GET_USERNAME,
     //     variables: { userAddress: creator }
     //   })
-    //   .then(async data => data)
+    //   .then(async (data) => {return data})
     //   .catch(err => console.log("Error fetching data: ", err))
-
+  
     // console.log(userData)
   }
+
+
 
   useEffect(() => {
     async function startCard(){
