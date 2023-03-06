@@ -38,65 +38,27 @@ export default function CampaignCard({ address, creator }:props) {
   const [imageURI, setImageURI] = useState("")
   const [creatorVal, setCreatorVal] = useState("")
 
-  async function startCard() {
-    const CmpCntrt = new ethers.Contract(address, campaignABI.abi, signer)
-    try{
-      const cmpData = await CmpCntrt.getCampaignDetails()
-      let cmpProxy:cmp | any = {}
-      for(let i = 0; i < cmpData.length; i++){
-        cmpProxy[(Object.keys(cmpObject)[i])] = cmpData[i]
-      }
-      setCampaignDetails(cmpProxy)
-      await calcDetails()
-    }
-    catch(e){
-      console.log(e)
-    }
-  }
-
-  async function calcDetails(){
-    if(campaignDetails.goalAmount.toString() !== "0"){
-      const plevel = (campaignDetails.currentBalance.div(campaignDetails.goalAmount)).toNumber() * 100
-      setProgress(plevel)
-    }
-
-    if(campaignDetails.deadline.toString() !== "0"){
-      let deadline = new Date(campaignDetails.deadline.toNumber() * 1000)
-      let dNow = new Date()
-      const days = (d1:Date, d2:Date) => {
-        let diff = d2.getTime() - d1.getTime()
-        let totalDays = Math.ceil(diff / (1000 * 3600 * 24))
-        return totalDays
-      }
-      const daysUntil = await days(dNow, deadline)
-      setDaysUntil(daysUntil)
-    }
-
-    let uri = campaignDetails.imageURI.replace("ipfs://", "https://ipfs.io/ipfs/")
-    console.log(uri)
-    setImageURI(uri)
-
-    const client = new ApolloClient({
-      uri: process.env.NEXT_PUBLIC_SUBGRAPH_URI,
-      cache: new InMemoryCache(),
-    })
-  
-    const userData = await client
-      .query({
-        query: GET_USERNAME,
-        variables: { userAddress: creator }
-      })
-      .then(async (data) => {return data})
-      .catch(err => console.log("Error fetching data: ", err))
-  
-    console.log(userData)
-  }
-
-
-
   useEffect(() => {  
-    isConnected && startCard()
-  }, [])
+    let isIn = true
+
+    async function startCard() {
+      const CmpCntrt = new ethers.Contract(address, campaignABI.abi, signer)
+      try{
+        const cmpData = await CmpCntrt.getCampaignDetails()
+        let cmpProxy:cmp | any = {}
+        for(let i = 0; i < cmpData.length; i++){
+          cmpProxy[(Object.keys(cmpObject)[i])] = cmpData[i]
+        }
+        isIn && setCampaignDetails(cmpProxy)
+      }
+      catch(e){
+        console.log(e)
+      }
+    }
+
+    isConnected && startCard().catch(console.error)
+    return () => {isIn = false}
+  }, [isConnected])
 
   return (
     <div className="cc-container fl-cl fl-c">
