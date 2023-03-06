@@ -1,11 +1,10 @@
 import { faEthereum } from "@fortawesome/free-brands-svg-icons"
 import { faCubes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useContext, useEffect } from "react"
-import { useMoralis, useWeb3Contract } from "react-moralis"
+import { useContext, useEffect, useState } from "react"
 import campaignABI from "@/constants/Campaign.json"
 import { ConnectionContext } from "@/contexts/connection"
-import { conn } from "@/types"
+import { cmp, conn } from "@/types"
 import { ethers } from "ethers"
 
 interface props{
@@ -13,15 +12,36 @@ interface props{
   creator: string
 }
 
+let cmpObject:cmp = {
+  creator: "",
+  title: "",
+  description: "",
+  category: "",
+  tags: [],
+  goalAmount: BigInt("0"),
+  duration: BigInt("0"),
+  currentBalance: BigInt("0"),
+  state: 0,
+  imageURI: "",
+  campaignURI: "",
+  deadline: BigInt("0")
+}
+
 export default function CampaignCard({ address, creator }:props) {
   const { hasMetamask, isConnected, chainId, signer, account, connect }:conn = useContext(ConnectionContext)!
+  const [campaignDetails, setCampaignDetails] = useState<cmp>()
 
   useEffect(() => {
     async function startCard(){
       const CmpCntrt = new ethers.Contract(address, campaignABI.abi, signer)
       try{
         const cmpData = await CmpCntrt.getCampaignDetails()
-        console.log(cmpData.creator)
+        let cmpProxy:cmp | any = {}
+        for(let i = 0; i < cmpData.length; i++){
+          cmpProxy[(Object.keys(cmpObject)[i])] = cmpData[i]
+        }
+        setCampaignDetails(cmpProxy)
+        console.log(cmpProxy.creator)
       }
       catch(e){console.log(e)}
     }    
@@ -38,7 +58,7 @@ export default function CampaignCard({ address, creator }:props) {
         <div className="cc-cta fl-tc fl-sb">
           <div className="cc-cat-name fl-cl">
             <FontAwesomeIcon icon={faCubes} className="cc-cat-icon"/>
-            {"Metaverse"}
+            {campaignDetails?.category}
           </div>
           <button className="fl-cc">{"Learn more..."}</button>
         </div>
@@ -52,11 +72,11 @@ export default function CampaignCard({ address, creator }:props) {
           <div className="cc-amounts fl-tl fl-c">
             <div className="cc-amt-raised fl-cl">
               <FontAwesomeIcon icon={faEthereum} className="cc-curr-icon"/>
-              <p className="cc-amt-figure">{"30.00"}</p>
+              <p className="cc-amt-figure">{campaignDetails?.currentBalance.toString()}</p>
               <p className="cc-amt-curr">{"ETH"}</p>
             </div>
             <div className="cc-goal">
-              {"raised out of 10 ETH"}
+              {`raised out of ${campaignDetails?.goalAmount.toString()} ETH`}
             </div>
           </div>
 
