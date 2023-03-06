@@ -78,11 +78,11 @@ export default function CampaignCard({ address, creator }:props) {
        <div className="cc-amounts fl-tl fl-c">
          <div className="cc-amt-raised fl-cl">
            <FontAwesomeIcon icon={faEthereum} className="cc-curr-icon"/>
-           <p className="cc-amt-figure">{(campaignDetails!.currentBalance.valueOf() / deci).toString()}</p>
+           <p className="cc-amt-figure">{ethers.parseUnits(campaignDetails!.currentBalance.toString(), "ether").toString()}</p>
            <p className="cc-amt-curr">{"ETH"}</p>
          </div>
          <div className="cc-goal">
-           {`raised out of ${(campaignDetails!.goalAmount.valueOf() / deci).toString()} ETH`}
+           {`raised out of ${ethers.parseUnits(campaignDetails!.goalAmount.toString(), "ether").toString()} ETH`}
          </div>
        </div>
 
