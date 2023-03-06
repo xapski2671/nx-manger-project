@@ -21,7 +21,7 @@ export default function CampaignCard({ address, creator }:props) {
       const CmpCntrt = new ethers.Contract(address, campaignABI.abi, signer)
       try{
         const cmpData = await CmpCntrt.getCampaignDetails()
-        console.log(cmpData)
+        console.log(cmpData.creator)
       }
       catch(e){console.log(e)}
     }    

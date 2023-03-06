@@ -14,7 +14,7 @@ declare global{
   }
 }
 
-const ConnectionContext = createContext<conn | any>(null)
+const ConnectionContext = createContext<conn | null>(null)
 
 function ConnectionProvider ({ children }:props) {
   const router = useRouter()
