@@ -6,6 +6,8 @@ import campaignABI from "@/constants/Campaign.json"
 import { ConnectionContext } from "@/contexts/connection"
 import { cmp, conn } from "@/types"
 import { BigNumber, ethers } from "ethers"
+import { ApolloClient, gql, InMemoryCache } from "@apollo/client"
+import { GET_USERNAME } from "@/constants/subgraphQueries"
 
 interface props{
   address: string
@@ -34,6 +36,7 @@ export default function CampaignCard({ address, creator }:props) {
   const [progess, setProgress] = useState(0)
   const [daysUntil, setDaysUntil] = useState(0)
   const [imageURI, setImageURI] = useState("")
+  const [creatorVal, setCreatorVal] = useState("")
 
   async function calcDetails(){
     const plevel = (campaignDetails!.currentBalance.div(campaignDetails!.goalAmount)).toNumber() * 100
@@ -51,6 +54,21 @@ export default function CampaignCard({ address, creator }:props) {
 
     let uri = campaignDetails!.imageURI.replace("ipfs://", "https://ipfs.io/ipfs/")
     setImageURI(uri)
+
+    const client = new ApolloClient({
+      uri: process.env.NEXT_PUBLIC_SUBGRAPH_URI,
+      cache: new InMemoryCache(),
+    })
+
+    // const userData = await client
+    //   .query({
+    //     query: GET_USERNAME,
+    //     variables: { userAddress: creator }
+    //   })
+    //   .then(async data => data)
+    //   .catch(err => console.log("Error fetching data: ", err))
+
+    // console.log(userData)
   }
 
   useEffect(() => {

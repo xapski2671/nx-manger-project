@@ -10,3 +10,12 @@ export const GET_HOMEPAGE_CAMPAIGNS = gql`
   }
 `
 
+export const GET_USERNAME = gql`
+  query getUserName($userAddress: String!){
+    userAdded(id: $userAddress){
+      username
+      address
+    }
+  }
+`
+
