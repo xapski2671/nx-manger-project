@@ -284,11 +284,15 @@
 
 .cc-amt-curr{
   color: var(--color-card-text);
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
 .cc-goal{
   font-size: 1.1rem; /*11px*/
   line-height: 1em;
+  letter-spacing: 0.02em;
+  font-weight: 500;
 }
 @media(max-width: 1250px){
   .cc-goal{
@@ -322,7 +326,7 @@
 }
 
 .cc-progress-level{
-  width: 30%;
+  /* width: 30%; */
   height: 100%;
   border-radius: min(0.34vw, 8.89px);
   background-color: var(--color-card-text);

@@ -1,4 +1,4 @@
-import { ethers, JsonRpcSigner } from "ethers"
+import { ethers } from "ethers"
 import { MetaMaskInpageProvider } from "@metamask/providers"
 import { useRouter } from "next/router"
 import { createContext, ReactNode, useState, useEffect } from "react"
@@ -21,7 +21,7 @@ function ConnectionProvider ({ children }:props) {
   const [hasMetamask, setHasMetamask] = useState(false)
   const [isConnected, setIsConnected] = useState(false)
   const [chainId, setChainId] = useState("31337")
-  const [signer, setSigner] = useState<JsonRpcSigner | (() => JsonRpcSigner) | null>(null)
+  const [signer, setSigner] = useState<ethers.providers.JsonRpcSigner | (() => ethers.providers.JsonRpcSigner) | null>(null)
   const [account, setAccount] = useState("0x0")
 
   async function connect()
@@ -30,7 +30,7 @@ function ConnectionProvider ({ children }:props) {
       try {
         await window.ethereum.request({ method: "eth_requestAccounts" })
         setIsConnected(true)
-        const provider = new ethers.BrowserProvider(window.ethereum)
+        const provider = new ethers.providers.Web3Provider(window.ethereum)
         const signer = await provider.getSigner()
         setSigner(signer)
         const { chainId } = await provider.getNetwork()
@@ -52,7 +52,7 @@ function ConnectionProvider ({ children }:props) {
         if(accounts.length)
         {
           setIsConnected(true)
-          const provider = new ethers.BrowserProvider(window.ethereum)
+          const provider = new ethers.providers.Web3Provider(window.ethereum)
           const signer = await provider.getSigner()
           setSigner(signer)
           const { chainId } = await provider.getNetwork()

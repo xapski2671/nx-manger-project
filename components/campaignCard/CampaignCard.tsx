@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from "react"
 import campaignABI from "@/constants/Campaign.json"
 import { ConnectionContext } from "@/contexts/connection"
 import { cmp, conn } from "@/types"
-import { ethers } from "ethers"
+import { BigNumber, ethers } from "ethers"
 
 interface props{
   address: string
@@ -18,21 +18,35 @@ let cmpObject:cmp = {
   description: "",
   category: "",
   tags: [],
-  goalAmount: BigInt("0"),
-  duration: BigInt("0"),
-  currentBalance: BigInt("0"),
+  goalAmount: BigNumber.from("0"),
+  duration: BigNumber.from("0"),
+  currentBalance: BigNumber.from("0"),
   state: 0,
   imageURI: "",
   campaignURI: "",
-  deadline: BigInt("0")
+  deadline: BigNumber.from("0")
 }
-
-const deci = BigInt("1000000000000000000").valueOf()
 
 export default function CampaignCard({ address, creator }:props) {
   const { hasMetamask, isConnected, chainId, signer, account, connect }:conn = useContext(ConnectionContext)!
   const [loading, setLoading] = useState(true)
   const [campaignDetails, setCampaignDetails] = useState<cmp>()
+  const [progess, setProgress] = useState(0)
+  const [daysUntil, setDaysUntil] = useState(0)
+
+  async function calcDetails(){
+    const plevel = (campaignDetails!.currentBalance.div(campaignDetails!.goalAmount)).toNumber() * 100
+    setProgress(plevel)
+    let deadline = new Date(campaignDetails!.deadline.toNumber() * 1000)
+    let dNow = new Date()
+    const days = (d1:Date, d2:Date) => {
+      let diff = d2.getTime() - d1.getTime()
+      let totalDays = Math.ceil(diff / (1000 * 3600 * 24))
+      return totalDays
+    }
+    const daysUntil = await days(dNow, deadline)
+    setDaysUntil(daysUntil)
+  }
 
   useEffect(() => {
     async function startCard(){
@@ -45,7 +59,7 @@ export default function CampaignCard({ address, creator }:props) {
         }
         setCampaignDetails(cmpProxy)
         setLoading(false)
-        console.log(cmpProxy.creator)
+        await calcDetails()
       }
       catch(e){console.log(e)}
     }    
@@ -70,26 +84,26 @@ export default function CampaignCard({ address, creator }:props) {
      </div>
 
      <div className="cc-camp-title fl-tl fl-c">
-       <h4>{"Dive Into The Metaverse"}</h4>
-       <p>{"Take a surreal dive into the beautiful world of web3, and have fun."}</p>
+       <h4>{campaignDetails?.title}</h4>
+       <p>{campaignDetails?.description}</p>
      </div>
 
      <div className="cc-status fl-cl fl-sb">
        <div className="cc-amounts fl-tl fl-c">
          <div className="cc-amt-raised fl-cl">
            <FontAwesomeIcon icon={faEthereum} className="cc-curr-icon"/>
-           <p className="cc-amt-figure">{ethers.parseUnits(campaignDetails!.currentBalance.toString(), "ether").toString()}</p>
+           <p className="cc-amt-figure">{ethers.utils.formatEther(campaignDetails!.currentBalance)}</p>
            <p className="cc-amt-curr">{"ETH"}</p>
          </div>
          <div className="cc-goal">
-           {`raised out of ${ethers.parseUnits(campaignDetails!.goalAmount.toString(), "ether").toString()} ETH`}
+           {`raised out of ${ethers.utils.formatEther(campaignDetails!.goalAmount)} ETH`}
          </div>
        </div>
 
-       <div className="cc-progress-bar"><div className="cc-progress-level"></div></div>
+       <div className="cc-progress-bar"><div className="cc-progress-level" style={{ width: progess }}></div></div>
         
        <div className="cc-percent fl-bl fl-c">
-         <p>{"3596%"}</p>
+         <p>{`${progess}%`}</p>
          <p>{"funded"}</p>
        </div>
      </div>
@@ -100,7 +114,7 @@ export default function CampaignCard({ address, creator }:props) {
          <p>{"bullishmei"}</p>
        </div>
        <div className="cc-eta fl-tr">
-         <p>{"13"}</p>
+         <p>{daysUntil}</p>
          <p>{"days to go"}</p>
        </div>
      </div>

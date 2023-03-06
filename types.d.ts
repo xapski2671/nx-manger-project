@@ -1,3 +1,5 @@
+import { BigNumber } from "ethers"
+
 export interface conn{
   hasMetamask: boolean
   isConnected: boolean
@@ -13,11 +15,11 @@ export interface cmp{
   description: string
   category: string
   tags: Array<string>
-  goalAmount: BigInt
-  duration: BigInt
-  currentBalance: BigInt
+  goalAmount: BigNumber
+  duration: BigNumber
+  currentBalance: BigNumber
   state: number
   imageURI: string
   campaignURI: string
-  deadline: BigInt
+  deadline: BigNumber
 }
