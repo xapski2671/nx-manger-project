@@ -29,7 +29,7 @@ export default function ActiveCampaign({ address }: props) {
     daysUntil,
     deadlineStatement
   } = useCdata(address)
-  const { creatorVal } = useQCData(address, campaignDetails.creator)
+  const { creatorVal, cDetails } = useQCData(address, campaignDetails.creator)
 
 
   const [cdata, setCdata] = useState<any>()
@@ -88,7 +88,7 @@ export default function ActiveCampaign({ address }: props) {
             </div>
           
             <div className="acp-percent fl-bl fl-c">
-              <p>{"234"}</p>
+              <p>{ !cDetails ? 0 : cDetails.funderCount}</p>
               <p>{"backers"}</p>
             </div>
 
