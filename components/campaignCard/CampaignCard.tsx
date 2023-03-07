@@ -85,7 +85,10 @@ export default function CampaignCard({ address, creator }:props) {
   },[campaignDetails.imageURI, campaignDetails.currentBalance, campaignDetails.goalAmount])
 
   useEffect(()=>{
-    calcDetails().catch(e=>console.log(e))
+    let isIn = true
+
+    isIn && calcDetails().catch(e=>console.log(e))
+    return () => {isIn = false}
   },[calcDetails])
 
   useEffect(()=>{
@@ -114,20 +117,21 @@ export default function CampaignCard({ address, creator }:props) {
   return (
     <div className="cc-container fl-cl fl-c">
       <div className="cc-img">
-        {!imgLoad ? <Skeleton style={{ "height": "100%", "borderRadius": "1.39vw 1.39vw 0 0" }}/> : <img src={imageURI} alt="cc-mckp" onLoad={()=>{setImgLoad(true)}}/>}
+        {!imgLoad && <Skeleton style={{ "height": "100%", "borderRadius": "1.39vw 1.39vw 0 0" }}/>}
+        <img src={imageURI} alt="cc-mckp" onLoad={()=>{setImgLoad(true)}} style={!imgLoad ? { "display": "none" } : {}}/>
       </div>
 
       <div className="cc-details fl-cl fl-c">
         <div className="cc-cta fl-tc fl-sb">
           <div className="cc-cat-name fl-cl">
             <FontAwesomeIcon icon={faCubes} className="cc-cat-icon"/>
-            {loading ? <Skeleton count={1}/> : campaignDetails.category}
+            {loading ? <Skeleton/> : campaignDetails.category}
           </div>
           <button className="fl-cc">{"Learn more..."}</button>
         </div>
 
         <div className="cc-camp-title fl-tl fl-c">
-          <h4>{!loading ? campaignDetails.title : <Skeleton count={1}/>}</h4>
+          <h4>{!loading ? campaignDetails.title : <Skeleton/>}</h4>
           <p>{!loading ? campaignDetails.description : <Skeleton/>}</p>
         </div>
 

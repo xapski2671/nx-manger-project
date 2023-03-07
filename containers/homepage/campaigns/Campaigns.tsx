@@ -42,7 +42,7 @@ export default function Campaigns() {
     <section className="cp-campaigns sc-padding fl-cl fl-c">
       <CategoryFilter/>
       {
-        loading ? <Skeleton/> : 
+        loading ? <Skeleton style={{ "width":"100%", "height":"100px" }}/> : 
           <CampaignGrid mapArray={campaigns}/>
       }
     </section>
