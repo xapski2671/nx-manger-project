@@ -24,7 +24,6 @@ export default function Campaign() {
           : <Error statusCode={404}/>
           : <Error statusCode={404}/>
       }
-
     </>
   )
 }

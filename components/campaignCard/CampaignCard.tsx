@@ -11,6 +11,7 @@ import { BigNumber, ethers } from "ethers"
 import { ApolloClient, gql, InMemoryCache } from "@apollo/client"
 import { GET_USERNAME } from "@/constants/subgraphQueries"
 import { truncateStr } from "@/utils/truncateStr"
+import Link from "next/link"
 
 interface props{
   address: string
@@ -127,7 +128,7 @@ export default function CampaignCard({ address, creator }:props) {
             <FontAwesomeIcon icon={faCubes} className="cc-cat-icon"/>
             {loading ? <Skeleton/> : campaignDetails.category}
           </div>
-          <button className="fl-cc">{"Learn more..."}</button>
+          <Link href={`/campaigns/${address}`}><button className="fl-cc">{"Learn more..."}</button></Link>
         </div>
 
         <div className="cc-camp-title fl-tl fl-c">
