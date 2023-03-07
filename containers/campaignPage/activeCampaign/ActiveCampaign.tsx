@@ -1,12 +1,36 @@
 import { faEthereum, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { faCubes, faGlobe, faShareNodes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { ethers } from "ethers"
+import { useContext, useEffect } from "react"
+import campaignABI from "@/constants/Campaign.json"
+import { conn } from "@/types"
+import { ConnectionContext } from "@/contexts/connection"
+
 
 interface props{
   address: string
 }
 
 export default function ActiveCampaign({ address }: props) {
+  const { isConnected, signer }:conn = useContext(ConnectionContext)!
+
+
+  useEffect(()=>{
+    async function start(){
+      const cmpCntrt = new ethers.Contract(address, campaignABI.abi, signer)
+      let cmpDets
+      try{
+        const uri = await cmpCntrt.s_campaignURI()
+        const httpUri = uri.replace("ipfs://", "https://ipfs.io/ipfs/")
+        cmpDets = await fetch(httpUri).then(res => res.json()).then(data => data).catch(e=>console.log(e))
+        console.log(cmpDets)
+      }catch(e){console.log(e)}
+    }
+
+    isConnected && start().catch(e=>console.log(e))
+  },[isConnected])
+  
   return (
     <section className="acp-section sc-padding fl-tl">
       <div className="acp-img">
