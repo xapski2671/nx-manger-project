@@ -1,12 +1,12 @@
 /* acp */
-.acp-section.sc-padding.fl-tl{
+.acp-section.sc-padding.fl-cl{
   padding-top: 7.04vw;
   padding-bottom: 7.04vw;
   gap: 2.08vw;
   width: 100%;
 }
 @media(max-width: 1000px){
-  .acp-section.sc-padding.fl-tl{
+  .acp-section.sc-padding.fl-cl{
     padding-top: 8vw;
     padding-bottom: 8vw;
     flex-direction: column;
@@ -16,25 +16,25 @@
   }
 }
 @media(max-width: 600px){
-  .acp-section.sc-padding.fl-tl{
+  .acp-section.sc-padding.fl-cl{
     padding-top: 17.29vw;
     padding-bottom: 17.29vw;
   }
 }
 
-.acp-img{
+.acp-img.fl-cc{
   width: 50%;
   border-radius: min(1.39vw, 35.5px);
   box-shadow: 0px 10px 50px rgba(29, 7, 84, 0.08);
 }
 @media(max-width: 1000px){
-  .acp-img{
+  .acp-img.fl-cc{
     width: 100%;
     height: 30vw;
   }
 }
 
-.acp-img img{
+.acp-img.fl-cc img{
   width: 100%;
   height: 100%;
   border-radius: min(1.39vw, 35.5px);

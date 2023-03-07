@@ -27,6 +27,7 @@ export function useCdata(address:string){
   const [campaignDetails, setCampaignDetails] = useState<cmp>(cmpObject)
   const [progress, setProgress] = useState(0)
   const [daysUntil, setDaysUntil] = useState(0)
+  const [deadlineStatement, setDeadlineStatement] = useState("") 
   const [imageURI, setImageURI] = useState("")
 
   useEffect(() => {  
@@ -56,7 +57,10 @@ export function useCdata(address:string){
     setProgress(plevel)
   
     let deadline = new Date(campaignDetails.deadline.toNumber() * 1000)
-    console.log(deadline)
+    const options:Intl.DateTimeFormatOptions = { weekday: "short", year: "numeric", month: "long", day: "numeric" }
+    const dDate = deadline.toLocaleDateString("en-US", options)
+    const dTime = deadline.toLocaleTimeString("en-US")
+    setDeadlineStatement(`${dDate} ${dTime}`)
     let dNow = new Date()
     const days = (d1:Date, d2:Date) => {
       let diff = d2.getTime() - d1.getTime()
@@ -85,6 +89,7 @@ export function useCdata(address:string){
     imgLoad,
     setImgLoad,
     progress,
-    daysUntil
+    daysUntil,
+    deadlineStatement
   }
 }

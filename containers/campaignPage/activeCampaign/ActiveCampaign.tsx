@@ -25,7 +25,8 @@ export default function ActiveCampaign({ address }: props) {
     imgLoad,
     setImgLoad,
     progress,
-    daysUntil
+    daysUntil,
+    deadlineStatement
   } = useCdata(address)
   const [cdata, setCdata] = useState<any>()
   const [fcLoading, setFcLoading] = useState(true)
@@ -51,8 +52,8 @@ export default function ActiveCampaign({ address }: props) {
   },[isConnected])
   
   return (
-    <section className="acp-section sc-padding fl-tl">
-      <div className="acp-img">
+    <section className="acp-section sc-padding fl-cl">
+      <div className="acp-img fl-cc">
         {!imgLoad && <Skeleton style={{ "height": "100%", "borderRadius": "1.39vw 1.39vw 0 0" }}/>}
         <img src={imageURI} alt="cc-mckp" onLoad={()=>{setImgLoad(true)}} style={!imgLoad ? { "display": "none" } : {}}/>
       </div>
@@ -114,7 +115,7 @@ export default function ActiveCampaign({ address }: props) {
         </div>
 
         <div className="acp-info">
-          <p>{"All or nothing. This project will only be funded if it reaches its goal by Fri, February 17 2023 5:20 PM CET."}</p>
+          <p>{`All or nothing. This project will only be funded if it reaches its goal by ${deadlineStatement} CET.`}</p>
         </div>
       </div>
     </section>
