@@ -52,7 +52,7 @@ export function useCdata(address:string){
   }, [isConnected])
 
   const calcDetails = useCallback(async()=>{
-    const plevel = (campaignDetails.currentBalance.div(campaignDetails.goalAmount)).toNumber() * 100
+    const plevel = (campaignDetails.currentBalance.div(loading ? BigNumber.from("1") : campaignDetails.goalAmount)).toNumber() * 100
     setProgress(plevel)
   
     let deadline = new Date(campaignDetails.deadline.toNumber() * 1000)

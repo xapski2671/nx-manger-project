@@ -8,6 +8,7 @@ import { conn } from "@/types"
 import { ConnectionContext } from "@/contexts/connection"
 import Skeleton from "react-loading-skeleton"
 import "react-loading-skeleton/dist/skeleton.css"
+import { useCdata } from "@/hooks/useCdata"
 
 
 
@@ -17,8 +18,18 @@ interface props{
 
 export default function ActiveCampaign({ address }: props) {
   const { isConnected, signer }:conn = useContext(ConnectionContext)!
+  const {    
+    loading,
+    secloading,
+    campaignDetails,
+    imageURI,
+    imgLoad,
+    setImgLoad,
+    progress,
+    daysUntil
+  } = useCdata(address)
   const [cdata, setCdata] = useState<any>()
-  const [loading, setLoading] = useState(true)
+  const [fcLoading, setFcLoading] = useState(true)
 
 
   useEffect(()=>{
@@ -32,7 +43,7 @@ export default function ActiveCampaign({ address }: props) {
         const httpUri = uri.replace("ipfs://", "https://ipfs.io/ipfs/")
         cmpd = await fetch(httpUri).then(res => res.json()).then(data => data).catch(e=>console.log(e))
         isIn && setCdata(cmpd)
-        isIn && setLoading(false)
+        isIn && setFcLoading(false)
       }catch(e){console.log(e)}
     }
 
@@ -49,12 +60,12 @@ export default function ActiveCampaign({ address }: props) {
       <div className="acp-details fl-tl fl-c">
 
         <div className="acp-camp-title fl-tl fl-c">
-          <h4>{loading ? <Skeleton/> : cdata.title}</h4>
-          <p>{loading ? <Skeleton count={2}/> : cdata.tagline}</p>
+          <h4>{fcLoading ? <Skeleton/> : cdata.title}</h4>
+          <p>{fcLoading ? <Skeleton count={2}/> : cdata.tagline}</p>
         </div>
 
         <div className="acp-status-container fl-tl fl-c">
-          <div className="acp-progress-bar"><div className="acp-progress-level"></div></div>
+          <div className="acp-progress-bar"><div className="acp-progress-level" style={{ "width":`${secloading ? 0 : progress}%` }}></div></div>
 
           <div className="acp-status fl-cl fl-sb">
 
