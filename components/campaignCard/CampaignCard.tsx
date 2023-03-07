@@ -132,7 +132,7 @@ export default function CampaignCard({ address, creator }:props) {
 
         <div className="cc-camp-title fl-tl fl-c">
           <h4>{!loading ? campaignDetails.title : <Skeleton/>}</h4>
-          <p>{!loading ? campaignDetails.description : <Skeleton/>}</p>
+          <p>{!loading ? campaignDetails.description : <Skeleton count={2}/>}</p>
         </div>
 
         <div className="cc-status fl-cl fl-sb">
