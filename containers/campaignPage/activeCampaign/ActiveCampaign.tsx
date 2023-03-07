@@ -6,6 +6,9 @@ import { useContext, useEffect, useState } from "react"
 import campaignABI from "@/constants/Campaign.json"
 import { conn } from "@/types"
 import { ConnectionContext } from "@/contexts/connection"
+import Skeleton from "react-loading-skeleton"
+import "react-loading-skeleton/dist/skeleton.css"
+
 
 
 interface props{
@@ -46,8 +49,8 @@ export default function ActiveCampaign({ address }: props) {
       <div className="acp-details fl-tl fl-c">
 
         <div className="acp-camp-title fl-tl fl-c">
-          <h4>{loading ? "" : cdata.title}</h4>
-          <p>{"Take a surreal dive into the beautiful world of web3, and have fun."}</p>
+          <h4>{loading ? <Skeleton/> : cdata.title}</h4>
+          <p>{loading ? <Skeleton count={2}/> : cdata.tagline}</p>
         </div>
 
         <div className="acp-status-container fl-tl fl-c">

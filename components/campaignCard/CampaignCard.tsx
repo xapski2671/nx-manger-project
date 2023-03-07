@@ -107,7 +107,7 @@ export default function CampaignCard({ address, creator }:props) {
         .then(async (data) => {return data.data.userAdded})
         .catch(err => console.log("Error fetching data: ", err))
       
-      if(userData.username == null){setCreatorVal(truncateStr(userData.address, 10))}
+      if(userData.username == null){setCreatorVal(truncateStr(creator, 10))}
       else{setCreatorVal(userData.username)}
     }
 
