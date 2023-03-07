@@ -2,7 +2,7 @@ import { faEthereum, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { faCubes, faGlobe, faShareNodes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ethers } from "ethers"
-import { useContext, useEffect } from "react"
+import { useContext, useEffect, useState } from "react"
 import campaignABI from "@/constants/Campaign.json"
 import { conn } from "@/types"
 import { ConnectionContext } from "@/contexts/connection"
@@ -14,21 +14,27 @@ interface props{
 
 export default function ActiveCampaign({ address }: props) {
   const { isConnected, signer }:conn = useContext(ConnectionContext)!
+  const [cdata, setCdata] = useState<any>()
+  const [loading, setLoading] = useState(true)
 
 
   useEffect(()=>{
+    let isIn = true
+
     async function start(){
       const cmpCntrt = new ethers.Contract(address, campaignABI.abi, signer)
-      let cmpDets
+      let cmpd
       try{
         const uri = await cmpCntrt.s_campaignURI()
         const httpUri = uri.replace("ipfs://", "https://ipfs.io/ipfs/")
-        cmpDets = await fetch(httpUri).then(res => res.json()).then(data => data).catch(e=>console.log(e))
-        console.log(cmpDets)
+        cmpd = await fetch(httpUri).then(res => res.json()).then(data => data).catch(e=>console.log(e))
+        isIn && setCdata(cmpd)
+        isIn && setLoading(false)
       }catch(e){console.log(e)}
     }
 
     isConnected && start().catch(e=>console.log(e))
+    return () => {isIn = false}
   },[isConnected])
   
   return (
@@ -40,7 +46,7 @@ export default function ActiveCampaign({ address }: props) {
       <div className="acp-details fl-tl fl-c">
 
         <div className="acp-camp-title fl-tl fl-c">
-          <h4>{"Dive Into The Metaverse"}</h4>
+          <h4>{loading ? "" : cdata.title}</h4>
           <p>{"Take a surreal dive into the beautiful world of web3, and have fun."}</p>
         </div>
 

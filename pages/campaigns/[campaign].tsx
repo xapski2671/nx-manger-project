@@ -2,6 +2,8 @@ import { ActiveCampaign, CampaignDetails } from "@/containers/exportConts"
 import Error from "next/error"
 import Head from "next/head"
 import { useRouter } from "next/router"
+import ReactLoading from "react-loading"
+
 
 export default function Campaign() {
   const router = useRouter()
@@ -16,13 +18,14 @@ export default function Campaign() {
         <link rel="icon" href="/assets/manger_favicon.svg" />
       </Head>
       {
-        typeof(campaign) == "string" && campaign ? campaign.includes("0x") && campaign.length == 42 
-          ? <>
-            <ActiveCampaign address={campaign}/>
-            <CampaignDetails address={campaign}/>
-          </>
-          : <Error statusCode={404}/>
-          : <Error statusCode={404}/>
+        !campaign 
+          ? <ReactLoading type="bubbles" color="#827B93"/> 
+          : typeof(campaign) == "string" && campaign.includes("0x") && campaign.length == 42 
+            ? <>
+              <ActiveCampaign address={campaign}/>
+              <CampaignDetails address={campaign}/>
+            </>
+            : <Error statusCode={404}/>
       }
     </>
   )
