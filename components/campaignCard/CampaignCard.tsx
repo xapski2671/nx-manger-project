@@ -1,6 +1,8 @@
 import { faEthereum } from "@fortawesome/free-brands-svg-icons"
 import { faCubes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Skeleton from "react-loading-skeleton"
+import "react-loading-skeleton/dist/skeleton.css"
 import { useCallback, useContext, useEffect, useState } from "react"
 import campaignABI from "@/constants/Campaign.json"
 import { ConnectionContext } from "@/contexts/connection"
@@ -33,6 +35,7 @@ let cmpObject:cmp = {
 export default function CampaignCard({ address, creator }:props) {
   const { hasMetamask, isConnected, chainId, signer, account, connect }:conn = useContext(ConnectionContext)!
   const [loading, setLoading] = useState(true)
+  const [secloading, setSecloading] = useState(true)
   const [campaignDetails, setCampaignDetails] = useState<cmp>(cmpObject)
   const [progess, setProgress] = useState(0)
   const [daysUntil, setDaysUntil] = useState(0)
@@ -50,7 +53,8 @@ export default function CampaignCard({ address, creator }:props) {
         for(let i = 0; i < cmpData.length; i++){
           cmpProxy[(Object.keys(cmpObject)[i])] = cmpData[i]
         }
-        isIn && setCampaignDetails(cmpProxy)
+        isIn && setCampaignDetails(cmpProxy) 
+        isIn && setLoading(false)
       }
       catch(e){
         console.log(e)
@@ -76,6 +80,7 @@ export default function CampaignCard({ address, creator }:props) {
   
     let uri = campaignDetails.imageURI.replace("ipfs://", "https://ipfs.io/ipfs/")
     setImageURI(uri)
+    setSecloading(false)
   },[campaignDetails.imageURI, campaignDetails.currentBalance, campaignDetails.goalAmount])
 
   useEffect(()=>{
@@ -108,7 +113,7 @@ export default function CampaignCard({ address, creator }:props) {
   return (
     <div className="cc-container fl-cl fl-c">
       <div className="cc-img">
-        <img src={imageURI} alt="cc-mckp" />
+        {secloading ? <Skeleton style={{ "height": "100%", "borderRadius": "1.39vw 1.39vw 0 0" }}/> : <img src={imageURI} alt="cc-mckp" />}
       </div>
 
       <div className="cc-details fl-cl fl-c">
@@ -121,23 +126,23 @@ export default function CampaignCard({ address, creator }:props) {
         </div>
 
         <div className="cc-camp-title fl-tl fl-c">
-          <h4>{campaignDetails.title}</h4>
-          <p>{campaignDetails.description}</p>
+          <h4>{!loading ? campaignDetails.title : <Skeleton/>}</h4>
+          <p>{!loading ? campaignDetails.description : <Skeleton/>}</p>
         </div>
 
         <div className="cc-status fl-cl fl-sb">
           <div className="cc-amounts fl-tl fl-c">
             <div className="cc-amt-raised fl-cl">
               <FontAwesomeIcon icon={faEthereum} className="cc-curr-icon"/>
-              <p className="cc-amt-figure">{ethers.utils.formatEther(campaignDetails.currentBalance)}</p>
+              <p className="cc-amt-figure">{loading ? <Skeleton/> : ethers.utils.formatEther(campaignDetails.currentBalance)}</p>
               <p className="cc-amt-curr">{"ETH"}</p>
             </div>
             <div className="cc-goal">
-              {`raised out of ${ethers.utils.formatEther(campaignDetails.goalAmount)} ETH`}
+              {`raised out of ${loading ? <Skeleton/> : ethers.utils.formatEther(campaignDetails.goalAmount)} ETH`}
             </div>
           </div>
 
-          <div className="cc-progress-bar"><div className="cc-progress-level" style={{ width: progess }}></div></div>
+          <div className="cc-progress-bar"><div className="cc-progress-level" style={{ "width": `${progess}%` }}></div></div>
         
           <div className="cc-percent fl-bl fl-c">
             <p>{`${progess}%`}</p>
@@ -148,10 +153,10 @@ export default function CampaignCard({ address, creator }:props) {
         <div className="cc-creator-eta fl-cl fl-sb">
           <div className="cc-creator fl-cl">
             <div className="cc-creator-jazzicon"></div>
-            <p>{creatorVal}</p>
+            <p>{secloading ? <Skeleton/> : creatorVal}</p>
           </div>
           <div className="cc-eta fl-tr">
-            <p>{daysUntil}</p>
+            <p>{secloading ? <Skeleton/> : daysUntil}</p>
             <p>{"days to go"}</p>
           </div>
         </div>

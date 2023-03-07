@@ -28,16 +28,16 @@
 .cc-img{
   width: 100%;
   height: 48.8%;
-  border-radius: min(1.39vw, 35.5px); /*20px*/
+  border-radius: min(1.39vw, 35.5px) min(1.39vw, 35.5px) 0 0; /*20px*/
 }
 @media (max-width: 1000px){ /*1440-999*/
   .cc-img{
-    border-radius: 2.25vw;
+    border-radius: 2.25vw 2.25vw 0 0;
   }
 }
 @media (max-width: 600px){ /*768-450*/
   .cc-img{
-    border-radius: 3.42vw; /*20px*/
+    border-radius: 3.42vw 3.42vw 0 0;
   }
 }
 
