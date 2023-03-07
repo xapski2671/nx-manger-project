@@ -121,13 +121,13 @@ export default function CampaignCard({ address, creator }:props) {
         <div className="cc-cta fl-tc fl-sb">
           <div className="cc-cat-name fl-cl">
             <FontAwesomeIcon icon={faCubes} className="cc-cat-icon"/>
-            {loading ? <Skeleton/> : campaignDetails.category}
+            {loading ? <Skeleton count={1}/> : campaignDetails.category}
           </div>
           <button className="fl-cc">{"Learn more..."}</button>
         </div>
 
         <div className="cc-camp-title fl-tl fl-c">
-          <h4>{!loading ? campaignDetails.title : <Skeleton/>}</h4>
+          <h4>{!loading ? campaignDetails.title : <Skeleton count={1}/>}</h4>
           <p>{!loading ? campaignDetails.description : <Skeleton/>}</p>
         </div>
 
