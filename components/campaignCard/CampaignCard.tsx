@@ -139,11 +139,11 @@ export default function CampaignCard({ address, creator }:props) {
           <div className="cc-amounts fl-tl fl-c">
             <div className="cc-amt-raised fl-cl">
               <FontAwesomeIcon icon={faEthereum} className="cc-curr-icon"/>
-              <p className="cc-amt-figure">{loading ? <Skeleton/> : ethers.utils.formatEther(campaignDetails.currentBalance)}</p>
+              <p className="cc-amt-figure">{ethers.utils.formatEther(campaignDetails.currentBalance)}</p>
               <p className="cc-amt-curr">{"ETH"}</p>
             </div>
             <div className="cc-goal">
-              {`raised out of ${loading ? <Skeleton/> : ethers.utils.formatEther(campaignDetails.goalAmount)} ETH`}
+              {`raised out of ${ethers.utils.formatEther(campaignDetails.goalAmount)} ETH`}
             </div>
           </div>
 

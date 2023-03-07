@@ -185,6 +185,7 @@
 }
 
 .cc-camp-title p{
+  width: 100%;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 1.5rem; /*15px*/
@@ -427,6 +428,7 @@
 }
 
 .cc-creator p{
+  min-width: 40%;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 1.5rem;
