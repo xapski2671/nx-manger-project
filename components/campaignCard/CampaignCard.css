@@ -90,6 +90,7 @@
 }
 
 .cc-cat-name.fl-cl{
+  min-width: 30%;
   gap: 0.57em;
   font-family: var(--font-family);
   font-weight: 500;

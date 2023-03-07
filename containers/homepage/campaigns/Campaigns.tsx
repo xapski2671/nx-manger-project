@@ -4,9 +4,7 @@ import { ConnectionContext } from "@/contexts/connection"
 import { conn } from "@/types"
 import { ApolloClient, InMemoryCache, useQuery } from "@apollo/client"
 import { useContext, useEffect, useState } from "react"
-import Skeleton from "react-loading-skeleton"
-import "react-loading-skeleton/dist/skeleton.css"
-
+import ReactLoading from "react-loading"
 
 export default function Campaigns() {
   const { isConnected }:conn = useContext(ConnectionContext)!
@@ -42,7 +40,7 @@ export default function Campaigns() {
     <section className="cp-campaigns sc-padding fl-cl fl-c">
       <CategoryFilter/>
       {
-        loading ? <Skeleton style={{ "width":"100%", "height":"100px" }}/> : 
+        loading ? <ReactLoading type={"bubbles"} color="#827B93"/> : 
           <CampaignGrid mapArray={campaigns}/>
       }
     </section>
