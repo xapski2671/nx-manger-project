@@ -36,7 +36,7 @@ let cmpObject:cmp = {
 export default function CampaignCard({ address, creator }:props) {
   const { hasMetamask, isConnected, chainId, signer, account, connect }:conn = useContext(ConnectionContext)!
   const [loading, setLoading] = useState(true)
-  const [secloading, setSecloading] = useState(true)
+  // const [secloading, setSecloading] = useState(true)
   const [imgLoad, setImgLoad] = useState(false)
   const [campaignDetails, setCampaignDetails] = useState<cmp>(cmpObject)
   const [progess, setProgress] = useState(0)
@@ -82,7 +82,7 @@ export default function CampaignCard({ address, creator }:props) {
   
     let uri = campaignDetails.imageURI.replace("ipfs://", "https://ipfs.io/ipfs/")
     setImageURI(uri)
-    setSecloading(false)
+    // setSecloading(false)
   },[campaignDetails.imageURI, campaignDetails.currentBalance, campaignDetails.goalAmount])
 
   useEffect(()=>{
@@ -159,10 +159,10 @@ export default function CampaignCard({ address, creator }:props) {
         <div className="cc-creator-eta fl-cl fl-sb">
           <div className="cc-creator fl-cl">
             <div className="cc-creator-jazzicon"></div>
-            <p>{secloading ? <Skeleton/> : creatorVal}</p>
+            <p>{creatorVal}</p>
           </div>
           <div className="cc-eta fl-tr">
-            <p>{secloading ? <Skeleton/> : daysUntil}</p>
+            <p>{daysUntil}</p>
             <p>{"days to go"}</p>
           </div>
         </div>

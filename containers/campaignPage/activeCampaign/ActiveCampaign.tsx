@@ -20,7 +20,6 @@ export default function ActiveCampaign({ address }: props) {
   const { isConnected, signer }:conn = useContext(ConnectionContext)!
   const {    
     loading,
-    secloading,
     campaignDetails,
     imageURI,
     imgLoad,
@@ -54,14 +53,15 @@ export default function ActiveCampaign({ address }: props) {
   return (
     <section className="acp-section sc-padding fl-tl">
       <div className="acp-img">
-        <img src="/assets/manger-mockup-cmp.jpg" alt="mckp-img" />
+        {!imgLoad && <Skeleton style={{ "height": "100%", "borderRadius": "1.39vw 1.39vw 0 0" }}/>}
+        <img src={imageURI} alt="cc-mckp" onLoad={()=>{setImgLoad(true)}} style={!imgLoad ? { "display": "none" } : {}}/>
       </div>
 
       <div className="acp-details fl-tl fl-c">
 
         <div className="acp-camp-title fl-tl fl-c">
-          <h4>{fcLoading ? <Skeleton/> : cdata.title}</h4>
-          <p>{fcLoading ? <Skeleton count={2}/> : cdata.tagline}</p>
+          <h4>{loading ? <Skeleton/> : campaignDetails.title}</h4>
+          <p>{loading ? <Skeleton count={2}/> : campaignDetails.description}</p>
         </div>
 
         <div className="acp-status-container fl-tl fl-c">
@@ -86,7 +86,7 @@ export default function ActiveCampaign({ address }: props) {
             </div>
 
             <div className="acp-percent fl-bl fl-c">
-              <p>{"13"}</p>
+              <p>{daysUntil}</p>
               <p>{"days to go"}</p>
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function ActiveCampaign({ address }: props) {
           <div className="acp-bio-native fl-cl">
             <div className="acp-cat-name fl-cl">
               <FontAwesomeIcon icon={faCubes} className="acp-cat-icon"/>
-              {"Metaverse"}
+              {campaignDetails.category}
             </div>
             <div className="acp-creator fl-cl">
               <img src="/assets/manger_bio_logo.svg" alt="bio-logo" />

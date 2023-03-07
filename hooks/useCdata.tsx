@@ -22,7 +22,7 @@ let cmpObject:cmp = {
 export function useCdata(address:string){
   const { isConnected, signer }:conn = useContext(ConnectionContext)!
   const [loading, setLoading] = useState(true)
-  const [secloading, setSecloading] = useState(true)
+  // const [secloading, setSecloading] = useState(true)
   const [imgLoad, setImgLoad] = useState(false)
   const [campaignDetails, setCampaignDetails] = useState<cmp>(cmpObject)
   const [progress, setProgress] = useState(0)
@@ -56,6 +56,7 @@ export function useCdata(address:string){
     setProgress(plevel)
   
     let deadline = new Date(campaignDetails.deadline.toNumber() * 1000)
+    console.log(deadline)
     let dNow = new Date()
     const days = (d1:Date, d2:Date) => {
       let diff = d2.getTime() - d1.getTime()
@@ -67,7 +68,7 @@ export function useCdata(address:string){
   
     let uri = campaignDetails.imageURI.replace("ipfs://", "https://ipfs.io/ipfs/")
     setImageURI(uri)
-    setSecloading(false)
+    // setSecloading(false)
   },[campaignDetails.imageURI, campaignDetails.currentBalance, campaignDetails.goalAmount])
 
   useEffect(()=>{
@@ -79,7 +80,6 @@ export function useCdata(address:string){
 
   return {
     loading,
-    secloading,
     campaignDetails,
     imageURI,
     imgLoad,
