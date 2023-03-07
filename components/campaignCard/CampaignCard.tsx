@@ -8,6 +8,7 @@ import { cmp, conn } from "@/types"
 import { BigNumber, ethers } from "ethers"
 import { ApolloClient, gql, InMemoryCache } from "@apollo/client"
 import { GET_USERNAME } from "@/constants/subgraphQueries"
+import { truncateStr } from "@/utils/truncateStr"
 
 interface props{
   address: string
@@ -55,10 +56,54 @@ export default function CampaignCard({ address, creator }:props) {
         console.log(e)
       }
     }
-
-    isConnected && startCard().catch(console.error)
+    isConnected && startCard().catch(e=>console.log(e))
     return () => {isIn = false}
   }, [isConnected])
+
+  const calcDetails = useCallback(async()=>{
+    const plevel = (campaignDetails.currentBalance.div(campaignDetails.goalAmount)).toNumber() * 100
+    setProgress(plevel)
+  
+    let deadline = new Date(campaignDetails.deadline.toNumber() * 1000)
+    let dNow = new Date()
+    const days = (d1:Date, d2:Date) => {
+      let diff = d2.getTime() - d1.getTime()
+      let totalDays = Math.ceil(diff / (1000 * 3600 * 24))
+      return totalDays
+    }
+    const daysUntil = await days(dNow, deadline)
+    setDaysUntil(daysUntil)
+  
+    let uri = campaignDetails.imageURI.replace("ipfs://", "https://ipfs.io/ipfs/")
+    setImageURI(uri)
+  },[campaignDetails.imageURI, campaignDetails.currentBalance, campaignDetails.goalAmount])
+
+  useEffect(()=>{
+    calcDetails().catch(e=>console.log(e))
+  },[calcDetails])
+
+  useEffect(()=>{
+    async function getUserDetails(){
+      const client = new ApolloClient({
+        uri: process.env.NEXT_PUBLIC_SUBGRAPH_URI,
+        cache: new InMemoryCache(),
+      })
+      
+      const userData = await client
+        .query({
+          query: GET_USERNAME,
+          variables: { userAddress: creator }
+        })
+        .then(async (data) => {return data.data.userAdded})
+        .catch(err => console.log("Error fetching data: ", err))
+      
+      if(userData.username == null){setCreatorVal(truncateStr(userData.address, 10))}
+      else{setCreatorVal(userData.username)}
+    }
+
+    getUserDetails().catch(e=>console.log(e))
+  },[isConnected])
+
 
   return (
     <div className="cc-container fl-cl fl-c">
@@ -103,7 +148,7 @@ export default function CampaignCard({ address, creator }:props) {
         <div className="cc-creator-eta fl-cl fl-sb">
           <div className="cc-creator fl-cl">
             <div className="cc-creator-jazzicon"></div>
-            <p>{"bullishmei"}</p>
+            <p>{creatorVal}</p>
           </div>
           <div className="cc-eta fl-tr">
             <p>{daysUntil}</p>

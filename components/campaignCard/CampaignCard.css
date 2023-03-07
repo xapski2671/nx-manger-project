@@ -389,17 +389,17 @@
 }
 
 .cc-creator.fl-cl{
-  gap: min(0.69vw, 17.8px);
+  gap: min(0.5vw, 17.8px);
   cursor: pointer;
 }
 @media(max-width: 1000px){
   .cc-creator.fl-cl{
-    gap: 1.12vw;
+    gap: 0.81vw;
   }
 }
 @media(max-width: 600px){
   .cc-creator.fl-cl{
-    gap: 1.7vw;
+    gap: 1.23vw;
   }
 }
 

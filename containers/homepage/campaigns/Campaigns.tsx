@@ -10,25 +10,27 @@ export default function Campaigns() {
   const [loading, setLoading] = useState(true)
   const [campaigns, setCampaigns] = useState([])
   
-  async function callCampaigns(){
-    const client = new ApolloClient({
-      uri: process.env.NEXT_PUBLIC_SUBGRAPH_URI,
-      cache: new InMemoryCache(),
-    })
 
-    const campaigns = await client
-      .query({
-        query: GET_HOMEPAGE_CAMPAIGNS
-      })
-      .then(async data => data.data.campaignAddeds)
-      .catch(error => console.log(error))
-
-    setCampaigns(campaigns)
-  }
 
   useEffect(() => {
+    async function callCampaigns(){
+      const client = new ApolloClient({
+        uri: process.env.NEXT_PUBLIC_SUBGRAPH_URI,
+        cache: new InMemoryCache(),
+      })
+  
+      const campaigns = await client
+        .query({
+          query: GET_HOMEPAGE_CAMPAIGNS
+        })
+        .then(async data => data.data.campaignAddeds)
+        .catch(error => console.log(error))
+  
+      setCampaigns(campaigns)
+      setLoading(false)
+    }
+
     isConnected && callCampaigns()
-    setLoading(false)
   }, [isConnected])
   
 
