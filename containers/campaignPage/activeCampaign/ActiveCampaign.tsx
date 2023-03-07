@@ -2,7 +2,11 @@ import { faEthereum, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { faCubes, faGlobe, faShareNodes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-export default function ActiveCampaign() {
+interface props{
+  address: string
+}
+
+export default function ActiveCampaign({ address }: props) {
   return (
     <section className="acp-section sc-padding fl-tl">
       <div className="acp-img">

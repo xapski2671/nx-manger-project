@@ -1,6 +1,10 @@
 import { RewardsTab, SideNotice, SideBio } from "@/components/exportComps"
 
-export default function CampaignDetails() {
+interface props{
+  address: string
+}
+
+export default function CampaignDetails({ address }: props) {
   return (
     <section className="cpd-section sc-padding fl-tc">
       <main className="cpd-trajectory">
