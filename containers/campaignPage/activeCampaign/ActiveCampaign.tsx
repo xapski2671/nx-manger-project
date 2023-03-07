@@ -9,6 +9,7 @@ import { ConnectionContext } from "@/contexts/connection"
 import Skeleton from "react-loading-skeleton"
 import "react-loading-skeleton/dist/skeleton.css"
 import { useCdata } from "@/hooks/useCdata"
+import { useQCData } from "@/hooks/useQCData"
 
 
 
@@ -28,6 +29,9 @@ export default function ActiveCampaign({ address }: props) {
     daysUntil,
     deadlineStatement
   } = useCdata(address)
+  const { creatorVal } = useQCData(address, campaignDetails.creator)
+
+
   const [cdata, setCdata] = useState<any>()
   const [fcLoading, setFcLoading] = useState(true)
 
@@ -50,6 +54,8 @@ export default function ActiveCampaign({ address }: props) {
     isConnected && start().catch(e=>console.log(e))
     return () => {isIn = false}
   },[isConnected])
+
+
   
   return (
     <section className="acp-section sc-padding fl-cl">
@@ -103,7 +109,7 @@ export default function ActiveCampaign({ address }: props) {
             </div>
             <div className="acp-creator fl-cl">
               <img src="/assets/manger_bio_logo.svg" alt="bio-logo" />
-              <p>{"bullishmei"}</p>
+              <p>{creatorVal}</p>
             </div>
           </div>
 

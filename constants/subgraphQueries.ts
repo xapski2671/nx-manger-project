@@ -19,3 +19,15 @@ export const GET_USERNAME = gql`
   }
 `
 
+export const GET_CAMPAIGN_DETAILS = gql`
+  query getCampaignDetails($campaignAddress: String!){
+    campaignAdded(id: $campaignAddress){
+      campaignAddress
+      creator
+      funders
+      funderCount
+    }
+  }
+`
+
+
