@@ -36,6 +36,7 @@ export default function CampaignCard({ address, creator }:props) {
   const { hasMetamask, isConnected, chainId, signer, account, connect }:conn = useContext(ConnectionContext)!
   const [loading, setLoading] = useState(true)
   const [secloading, setSecloading] = useState(true)
+  const [imgLoad, setImgLoad] = useState(false)
   const [campaignDetails, setCampaignDetails] = useState<cmp>(cmpObject)
   const [progess, setProgress] = useState(0)
   const [daysUntil, setDaysUntil] = useState(0)
@@ -113,7 +114,7 @@ export default function CampaignCard({ address, creator }:props) {
   return (
     <div className="cc-container fl-cl fl-c">
       <div className="cc-img">
-        {secloading ? <Skeleton style={{ "height": "100%", "borderRadius": "1.39vw 1.39vw 0 0" }}/> : <img src={imageURI} alt="cc-mckp" />}
+        {!imgLoad ? <Skeleton style={{ "height": "100%", "borderRadius": "1.39vw 1.39vw 0 0" }}/> : <img src={imageURI} alt="cc-mckp" onLoad={()=>{setImgLoad(true)}}/>}
       </div>
 
       <div className="cc-details fl-cl fl-c">
