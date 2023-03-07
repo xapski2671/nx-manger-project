@@ -361,8 +361,8 @@
 }
 
 .acp-cat-icon{
-  width: 1.67em;
-  height: 1.67em;
+  width: 1em;
+  height: 1em;
   color: var(--color-card-text);
 }
 
@@ -391,31 +391,31 @@
 }
 
 .acp-cat-name.fl-cl,
-.acp-creator p{
+.acp-creator.fl-cl p{
   gap: 0.5em;
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1em;
   letter-spacing: 0.04em;
   color: var(--color-card-text);
 }
 @media (max-width: 1250px){ 
   .acp-cat-name.fl-cl,
-  .acp-creator p{
-    font-size: 1.4rem;
+  .acp-creator.fl-cl p{
+    font-size: 1.2rem;
   }
 }
 @media (max-width: 1000px){
   .acp-cat-name.fl-cl,
-  .acp-creator p{
-    font-size: 1.7rem;
+  .acp-creator.fl-cl p{
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 600px){ 
   .acp-cat-name.fl-cl,
-  .acp-creator p{
-    font-size: 1.4rem;
+  .acp-creator.fl-cl p{
+    font-size: 1.2rem;
   }
 }
 
@@ -434,16 +434,21 @@
 }
 
 .acp-creator img{
-  width: 2.08vw;
+  width: 1.8rem;
+}
+@media(max-width: 1250px){
+  .acp-creator img{
+    width: 1.2rem;
+  }
 }
 @media(max-width: 1000px){
   .acp-creator img{
-    width: 3.37vw;
+    width: 1.5rem;
   }
 }
 @media(max-width: 600px){
   .acp-creator img{
-    width: 5.11vw;
+    width: 1.2rem;
   }
 }
 
