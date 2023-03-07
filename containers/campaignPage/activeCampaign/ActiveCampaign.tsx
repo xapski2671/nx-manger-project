@@ -65,18 +65,18 @@ export default function ActiveCampaign({ address }: props) {
         </div>
 
         <div className="acp-status-container fl-tl fl-c">
-          <div className="acp-progress-bar"><div className="acp-progress-level" style={{ "width":`${secloading ? 0 : progress}%` }}></div></div>
+          <div className="acp-progress-bar"><div className="acp-progress-level" style={{ "width":`${progress}%` }}></div></div>
 
           <div className="acp-status fl-cl fl-sb">
 
             <div className="acp-amounts fl-tl fl-c">
               <div className="acp-amt-raised fl-cl">
                 <FontAwesomeIcon icon={faEthereum} className="acp-curr-icon"/>
-                <p className="acp-amt-figure">{"30.00"}</p>
+                <p className="acp-amt-figure">{ethers.utils.formatEther(campaignDetails.currentBalance)}</p>
                 <p className="acp-amt-curr">{"ETH"}</p>
               </div>
               <div className="acp-goal">
-                {"raised out of 10 ETH"}
+                {`raised out of ${ethers.utils.formatEther(campaignDetails.goalAmount)} ETH`}
               </div>
             </div>
           
