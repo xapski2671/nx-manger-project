@@ -7,15 +7,16 @@
 
 .cf-category{
   padding: 0.5em 0.9em;
-  border: 1px solid #361E77;
-  border-radius: 0.5em;
+  /* border: 1px solid #361E77; */
+  border-radius: 0.7em;
   width: max-content;
+  background-color: #fcfcfc;
 
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1em;
-  color: #544776;
+  color: #361e77;
   cursor: pointer;
 
   -webkit-user-select: none;
