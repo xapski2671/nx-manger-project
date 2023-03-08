@@ -7,6 +7,9 @@
 
 .hd-hero{
   width: 100%;
+  -webkit-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
 }
 
 .hd-hero img{

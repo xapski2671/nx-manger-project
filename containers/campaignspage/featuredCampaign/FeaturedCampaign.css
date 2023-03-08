@@ -218,7 +218,7 @@
 }
 
 .fc-progress-level{
-  width: 30%;
+  /* width: 30%; */
   height: 100%;
   border-radius: min(0.34vw, 8.89px);
   background-color: var(--color-card-text);

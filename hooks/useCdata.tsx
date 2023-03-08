@@ -49,7 +49,7 @@ export function useCdata(address:string){
     }
     isIn && isConnected && startCard().catch(e=>console.log(e))
     return () => {isIn = false}
-  }, [isConnected, address, loading, campaignDetails])
+  }, [isConnected, address])
 
   const calcDetails = useCallback(async()=>{
     const plevel = (campaignDetails.currentBalance.div(loading ? BigNumber.from("1") : campaignDetails.goalAmount)).toNumber() * 100
