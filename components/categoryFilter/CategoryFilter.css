@@ -10,6 +10,7 @@
   border: 1px solid #361E77;
   border-radius: 0.7em;
   width: max-content;
+  white-space: nowrap;
   /* background-color: var(--color-sub-bg); */
 
   font-family: var(--font-family);

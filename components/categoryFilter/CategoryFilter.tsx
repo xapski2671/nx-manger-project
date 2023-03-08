@@ -6,6 +6,20 @@ interface props{
   name: string
 }
 
+let catArray:Array<string> = 
+[
+  "De-Fi",
+  "NFTs & Collectibles",
+  "Web 3.0",
+  "Metaverse",
+  "P2E",
+  "DAO",
+  "Games",
+  "Design & Tech",
+  "Movie",
+  "Comics & Illustration"
+]
+
 function Category({ name }:props){
   const [active, setActive] = useState(false)
 
@@ -34,17 +48,11 @@ export default function CategoryFilter() {
       <div className="cf-other-cat-wrapper fl-cc">
         <FontAwesomeIcon icon={faAnglesLeft} className="cf-arrow-btn" onClick={scrollLeft}/>
         <div className="cf-other-cat fl-cl" ref={scrollRef}>
-          <Category name="Metaverse"/>
-          <Category name="Metaverse"/>
-          <Category name="Metaverse"/>
-          <Category name="Metaverse"/>
-          <Category name="Metaverse"/>
-          <Category name="Metaverse"/>
-          <Category name="Metaverse"/>
-          <Category name="Metaverse"/>
-          <Category name="Metaverse"/>
-          <Category name="Metaverse"/>
-          <Category name="Metaverse"/>
+          {
+            catArray.map((cat, index)=>{
+              return <Category name={cat} key={index}/>
+            })
+          }
         </div>
         <FontAwesomeIcon icon={faAnglesRight} className="cf-arrow-btn" onClick={scrollRight}/>
       </div>
