@@ -16,7 +16,7 @@ export default function CampaignGrid({ mapArray }:props) {
     <div className="cg-container fl-cl fl-c">
       <div className="cg-grid">
         {
-          mapArray.map((cmpObj, index)=>{
+          !mapArray || !mapArray.length ? <p>{" "}</p> : mapArray.map((cmpObj, index)=>{
             const { campaignAddress, creator }:CmpObject = cmpObj
             return (
               <CampaignCard key={index} address={campaignAddress} creator={creator}/>

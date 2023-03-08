@@ -19,7 +19,7 @@ export default function Campaigns() {
             <p>{"Please connect your wallet to view campaigns"}</p> 
             <ReactLoading type={"bubbles"} color="#827B93"/>
           </div>
-          : loading ? <ReactLoading type={"bubbles"} color="#827B93"/> 
+          : loading || !campaigns ? <ReactLoading type={"bubbles"} color="#827B93"/> 
             : <CampaignGrid mapArray={campaigns}/>
       }
     </section>
