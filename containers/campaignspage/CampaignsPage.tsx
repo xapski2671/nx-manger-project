@@ -3,8 +3,11 @@ import { useCampaigns } from "@/hooks/useCampaigns"
 import { Blog, FeaturedCampaign } from "../exportConts"
 import ReactLoading from "react-loading"
 
+interface props {
+  cat: string
+}
 
-export default function CampaignsPage() {
+export default function CampaignsPage({ cat }:props) {
   const { isConnected, loading, campaigns } = useCampaigns()
 
   

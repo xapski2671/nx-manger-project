@@ -8,6 +8,7 @@ interface props{
 
 let catArray:Array<string> = 
 [
+  "All Categories",
   "De-Fi",
   "NFTs & Collectibles",
   "Web 3.0",
