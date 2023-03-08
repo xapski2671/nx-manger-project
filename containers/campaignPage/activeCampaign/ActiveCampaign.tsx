@@ -32,6 +32,10 @@ export default function ActiveCampaign({ address }: props) {
   
   return (
     <section className="acp-section sc-padding fl-cl">
+      <div className="acp-bg">
+        <img src={imageURI} alt="cc-mckp" onLoad={()=>{setImgLoad(true)}} style={!imgLoad ? { "display": "none" } : {}}/>
+        <div className="acp-bg-grad"></div>
+      </div>
       <div className="acp-img fl-cc">
         {!imgLoad && <ReactLoading type="bubbles" color="#544776"/>}
         <img src={imageURI} alt="cc-mckp" onLoad={()=>{setImgLoad(true)}} style={!imgLoad ? { "display": "none" } : {}}/>
