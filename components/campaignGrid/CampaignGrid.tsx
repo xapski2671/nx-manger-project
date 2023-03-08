@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { CampaignCard } from "../exportComps"
 
 interface props {
@@ -23,7 +24,7 @@ export default function CampaignGrid({ mapArray }:props) {
           })
         }
       </div>
-      <button className="cg-see-more fl-cc">{"See more"}</button>
+      <Link href={"/campaigns"}><button className="cg-see-more fl-cc">{"See more"}</button></Link>
     </div>
   )
 }

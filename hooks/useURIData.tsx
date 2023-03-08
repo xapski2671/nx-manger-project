@@ -21,13 +21,13 @@ export function useURIData(address:string){
         const httpUri = uri.replace("ipfs://", "https://ipfs.io/ipfs/")
         cmpd = await fetch(httpUri).then(res => res.json()).then(data => data).catch(e=>console.log(e))
         isIn && setCdata(cmpd)
-        isIn && setFcLoading(false)
+        isIn && cdata && setFcLoading(false)
       }catch(e){console.log(e)}
     }
 
     isConnected && start().catch(e=>console.log(e))
     return () => {isIn = false}
-  },[isConnected])
+  },[isConnected, address, fcLoading, cdata])
 
   return {
     fcLoading,

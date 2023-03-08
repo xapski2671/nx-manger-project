@@ -22,7 +22,6 @@ let cmpObject:cmp = {
 export function useCdata(address:string){
   const { isConnected, signer }:conn = useContext(ConnectionContext)!
   const [loading, setLoading] = useState(true)
-  // const [secloading, setSecloading] = useState(true)
   const [imgLoad, setImgLoad] = useState(false)
   const [campaignDetails, setCampaignDetails] = useState<cmp>(cmpObject)
   const [progress, setProgress] = useState(0)
@@ -50,13 +49,13 @@ export function useCdata(address:string){
     }
     isConnected && startCard().catch(e=>console.log(e))
     return () => {isIn = false}
-  }, [isConnected])
+  }, [isConnected, address, loading, campaignDetails])
 
   const calcDetails = useCallback(async()=>{
     const plevel = (campaignDetails.currentBalance.div(loading ? BigNumber.from("1") : campaignDetails.goalAmount)).toNumber() * 100
     setProgress(plevel)
   
-    let deadline = new Date(campaignDetails.deadline.toNumber() * 1000)
+    let deadline = new Date(loading ? Date.now() : campaignDetails.deadline.toNumber() * 1000)
     const options:Intl.DateTimeFormatOptions = { weekday: "short", year: "numeric", month: "long", day: "numeric" }
     const dDate = deadline.toLocaleDateString("en-US", options)
     const dTime = deadline.toLocaleTimeString("en-US")
@@ -72,7 +71,6 @@ export function useCdata(address:string){
   
     let uri = campaignDetails.imageURI.replace("ipfs://", "https://ipfs.io/ipfs/")
     setImageURI(uri)
-    // setSecloading(false)
   },[campaignDetails.imageURI, campaignDetails.currentBalance, campaignDetails.goalAmount])
 
   useEffect(()=>{

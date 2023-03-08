@@ -2,16 +2,13 @@ import { faEthereum, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { faCubes, faGlobe, faShareNodes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ethers } from "ethers"
-import { useContext, useEffect, useState } from "react"
-import campaignABI from "@/constants/Campaign.json"
-import { conn } from "@/types"
-import { ConnectionContext } from "@/contexts/connection"
 import Skeleton from "react-loading-skeleton"
 import "react-loading-skeleton/dist/skeleton.css"
 import { useCdata } from "@/hooks/useCdata"
 import { useQCData } from "@/hooks/useQCData"
 import { useURIData } from "@/hooks/useURIData"
-
+import Link from "next/link"
+import ReactLoading from "react-loading"
 
 
 interface props{
@@ -19,7 +16,6 @@ interface props{
 }
 
 export default function ActiveCampaign({ address }: props) {
-  const { isConnected, signer }:conn = useContext(ConnectionContext)!
   const {    
     loading,
     campaignDetails,
@@ -30,26 +26,22 @@ export default function ActiveCampaign({ address }: props) {
     daysUntil,
     deadlineStatement
   } = useCdata(address)
-  const { creatorVal, cDetails } = useQCData(address, campaignDetails.creator)
+  const { creatorVal, cDetails, dLoading } = useQCData(address, campaignDetails.creator)
   const { cdata, fcLoading } = useURIData(address)
-
-
-
-
 
   
   return (
     <section className="acp-section sc-padding fl-cl">
       <div className="acp-img fl-cc">
-        {!imgLoad && <Skeleton style={{ "width" : "100%", "height": "100%", "borderRadius": "1.39vw" }}/>}
+        {!imgLoad && <ReactLoading type="bubbles" color="#544776"/>}
         <img src={imageURI} alt="cc-mckp" onLoad={()=>{setImgLoad(true)}} style={!imgLoad ? { "display": "none" } : {}}/>
       </div>
 
       <div className="acp-details fl-tl fl-c">
 
         <div className="acp-camp-title fl-tl fl-c">
-          <h4>{loading ? <Skeleton/> : campaignDetails.title}</h4>
-          <p>{loading ? <Skeleton count={2}/> : campaignDetails.description}</p>
+          <h4>{loading ? <Skeleton style={{ "width": "100%" }}/> : campaignDetails.title}</h4>
+          <p>{loading ? <Skeleton count={2} style={{ "width": "90%" }}/> : campaignDetails.description}</p>
         </div>
 
         <div className="acp-status-container fl-tl fl-c">
@@ -69,7 +61,7 @@ export default function ActiveCampaign({ address }: props) {
             </div>
           
             <div className="acp-percent fl-bl fl-c">
-              <p>{ !cDetails ? 0 : cDetails.funderCount}</p>
+              <p>{ dLoading ? 0 : cDetails.funderCount}</p>
               <p>{"backers"}</p>
             </div>
 
@@ -95,14 +87,18 @@ export default function ActiveCampaign({ address }: props) {
           </div>
 
           <div className="acp-bio-socials fl-cr">
-            <FontAwesomeIcon icon={faTwitter} className="acp-social-icon"/>
-            <FontAwesomeIcon icon={faGlobe} className="acp-social-icon"/>
+            <Link href={`https://twitter.com/${fcLoading ? "" : cdata.twitter}`}>
+              <FontAwesomeIcon icon={faTwitter} className="acp-social-icon"/>
+            </Link>
+            <Link href={fcLoading ? "" : cdata.website}>
+              <FontAwesomeIcon icon={faGlobe} className="acp-social-icon"/>
+            </Link>
             <FontAwesomeIcon icon={faShareNodes} className="acp-social-icon"/>
           </div>
         </div>
 
         <div className="acp-info">
-          <p>{`Risks involved: Donations will no longer be refundable when this project reaches its goal by ${deadlineStatement}.`}</p>
+          <p>{`Risk involved: Donations will no longer be refundable when this project reaches its goal by ${deadlineStatement}.`}</p>
         </div>
       </div>
     </section>
