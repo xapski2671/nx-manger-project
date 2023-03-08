@@ -29,12 +29,11 @@ export default function FeaturedCampaign({ address }:props) {
 
   return (
     <section className="fc-container fl-tl">
+      <div className="fc-bg">
+        <img src={imageURI} alt="cc-mckp" onLoad={()=>{setImgLoad(true)}} style={!imgLoad ? { "display": "none" } : {}}/>
+        <div className="fc-bg-grad"></div>
+      </div>
 
-      {/*<div className="fc-bg"> */}
-      {/* <img src={imageURI} alt="cc-mckp" onLoad={()=>{setImgLoad(true)}} style={!imgLoad ? { "display": "none" } : {}}/> */}
-      {/* <div className="fc-bg-grad"></div> */}
-      {/*</div>*/}
-      
       <div className="fc-img">
         {!imgLoad && <ReactLoading type="bubbles" color="#544776"/>}
         <img src={imageURI} alt="cc-mckp" onLoad={()=>{setImgLoad(true)}} style={!imgLoad ? { "display": "none" } : {}}/>

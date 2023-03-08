@@ -4,6 +4,7 @@
   padding-top: 6.04vw;
   padding-bottom: 7.04vw;
   gap: 1.74vw;
+  z-index: 4;
 }
 @media (max-width: 1000px){
   .ccp-section.sc-padding.fl-cl.fl-c{

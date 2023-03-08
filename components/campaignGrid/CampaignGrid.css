@@ -1,6 +1,7 @@
 /* cg */
 .cg-container.fl-cl.fl-c{
   gap: 3.47vw;
+  z-index: 8;
 }
 @media(max-width: 1000px){
 .cg-container.fl-cl.fl-c{

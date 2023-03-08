@@ -2,6 +2,7 @@
 .cf-wrapper.fl-cc{
   max-width: 100%;
   gap: 0.7vw;
+  z-index: 8;
 }
 
 .cf-category{
