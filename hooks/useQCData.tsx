@@ -56,7 +56,7 @@ export function useQCData(cAddress:string, creator:string){
 
     isIn && getCmpData().catch(e=>console.log(e))
     return () => {isIn = false}
-  },[isConnected, cAddress, dLoading, cDetails])
+  },[isConnected, cAddress])
 
   return {
     creatorVal,
