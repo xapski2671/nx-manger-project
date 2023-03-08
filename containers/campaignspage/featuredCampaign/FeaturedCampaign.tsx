@@ -5,6 +5,7 @@ import { faEthereum } from "@fortawesome/free-brands-svg-icons"
 import { faCubes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ethers } from "ethers"
+import Link from "next/link"
 import ReactLoading from "react-loading"
 import Skeleton from "react-loading-skeleton"
 
@@ -25,7 +26,6 @@ export default function FeaturedCampaign({ address }:props) {
     deadlineStatement
   } = useCdata(address)
   const { creatorVal, cDetails, dLoading } = useQCData(address, campaignDetails.creator)
-  const { cdata, fcLoading } = useURIData(address)
 
   return (
     <section className="fc-container fl-tl">
@@ -44,9 +44,9 @@ export default function FeaturedCampaign({ address }:props) {
         <div className="fc-cta fl-tc fl-sb">
           <div className="fc-cat-name fl-cl">
             <FontAwesomeIcon icon={faCubes} className="fc-cat-icon"/>
-            {loading ? <ReactLoading type="balls" color="#544776"/> : campaignDetails.category}
+            {loading ? <ReactLoading type="bars" color="#544776"/> : campaignDetails.category}
           </div>
-          <button className="fl-fc">{"Learn more..."}</button>
+          <Link href={`/campaigns/${address}`}><button className="fl-fc">{"Learn more..."}</button></Link>
         </div>
 
         <div className="fc-camp-title fl-tl fl-c">

@@ -196,7 +196,7 @@
   font-size: 1.8rem; /*18px*/
   line-height: 1.33em;
   letter-spacing: 0.01em;
-  color: var(--color-subtext);
+  color: var(--color-card-text);
 } 
 @media(max-width: 1250px){
   .fc-camp-title p{
@@ -323,7 +323,7 @@
   font-weight: 400;
   font-size: 2rem;
   line-height: 1em;
-  color: var(--color-subtext);
+  color: var(--color-card-text);
 }
 @media(max-width: 1250px){
   .fc-amt-figure,
@@ -348,6 +348,7 @@
 }
 
 .fc-amt-curr{
+  font-weight: 600;
   color: var(--color-card-text);
 }
 
@@ -413,6 +414,7 @@
 
 .fc-creator.fl-cl{
   gap: min(0.69vw, 17.8px);
+  cursor: pointer;
 }
 @media(max-width: 1000px){
   .fc-creator.fl-cl{
@@ -452,7 +454,8 @@
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 1em;
-  color: var(--color-subtext);
+  color: var(--color-card-text);
+  transition: all 0.2s ease;
 }
 @media(max-width: 1250px){
   .fc-creator p{
@@ -469,6 +472,10 @@
     font-size: 1.2rem;
   }
 }
+.fc-creator p:hover{
+  color: var(--color-subtext);
+}
+
 
 .fc-fund-cta{
   padding: 0.65em 1.5em;

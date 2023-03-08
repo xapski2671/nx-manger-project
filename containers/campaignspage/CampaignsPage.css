@@ -57,9 +57,9 @@
   -webkit-user-select: none;
   -ms-user-select: none; 
   user-select: none;
-  background-color: var(--color-sub-bg);
-  padding: 0.4em 0.8em;
-  border-radius: 0.4em;
+  /* background-color: var(--color-sub-bg); */
+  /* padding: 0.4em 0.8em; */
+  /* border-radius: 0.4em; */
 }
 @media(max-width: 1250px){
   .ccp-subtitle{
