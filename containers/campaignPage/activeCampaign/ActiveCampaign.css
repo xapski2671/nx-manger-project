@@ -46,7 +46,7 @@
   right: 0;
   bottom: 0;
   z-index: 2;
-  background-color: #000;
+  background: radial-gradient(88.54% 88.54% at 49.91% 0%, rgba(0, 0, 0, 0) 56.25%, #FFFFFF 100%);
 }
 
 .acp-img.fl-cc{
