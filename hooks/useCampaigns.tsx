@@ -28,7 +28,7 @@ export function useCampaigns(){
       isIn && campaigns && setLoading(false)
     }
 
-    isConnected && callCampaigns()
+    isIn && isConnected && callCampaigns()
     return () => {isIn = false}
   }, [isConnected, campaigns, loading])
 

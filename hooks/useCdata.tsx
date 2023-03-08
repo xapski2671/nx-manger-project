@@ -47,7 +47,7 @@ export function useCdata(address:string){
         console.log(e)
       }
     }
-    isConnected && startCard().catch(e=>console.log(e))
+    isIn && isConnected && startCard().catch(e=>console.log(e))
     return () => {isIn = false}
   }, [isConnected, address, loading, campaignDetails])
 

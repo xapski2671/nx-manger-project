@@ -25,7 +25,7 @@ export function useURIData(address:string){
       }catch(e){console.log(e)}
     }
 
-    isConnected && start().catch(e=>console.log(e))
+    isIn && isConnected && start().catch(e=>console.log(e))
     return () => {isIn = false}
   },[isConnected, address, fcLoading, cdata])
 

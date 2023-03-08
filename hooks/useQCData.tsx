@@ -30,7 +30,7 @@ export function useQCData(cAddress:string, creator:string){
       else{isIn && setCreatorVal(userData.username)}
     }
   
-    getUserDetails().catch(e=>console.log(e))
+    isIn && getUserDetails().catch(e=>console.log(e))
     return () => {isIn = false}
   },[isConnected, creator, creatorVal])
 
@@ -54,7 +54,7 @@ export function useQCData(cAddress:string, creator:string){
       isIn && cDets && setDloading(false)
     }
 
-    getCmpData().catch(e=>console.log(e))
+    isIn && getCmpData().catch(e=>console.log(e))
     return () => {isIn = false}
   },[isConnected, cAddress, dLoading, cDetails])
 
