@@ -110,6 +110,9 @@
     font-size: 1rem;
   }
 }
+.cc-cat-name:hover{
+  color: var(--color-subtext);
+}
 
 .cc-cta button.fl-cc{
   padding: 0.6em 0.91em;
