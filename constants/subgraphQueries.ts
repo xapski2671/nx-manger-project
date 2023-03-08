@@ -30,4 +30,8 @@ export const GET_CAMPAIGN_DETAILS = gql`
   }
 `
 
+export const GET_CAMPAIGNS = gql`
+
+`
+
 
