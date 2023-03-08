@@ -53,10 +53,13 @@
   font-size: 1.8rem;
   line-height: 1em;
   letter-spacing: 0.02em;
-  color: var(--color-subtext);
+  color: var(--color-text);
   -webkit-user-select: none;
   -ms-user-select: none; 
   user-select: none;
+  background-color: var(--color-sub-bg);
+  padding: 0.4em 0.8em;
+  border-radius: 0.4em;
 }
 @media(max-width: 1250px){
   .ccp-subtitle{

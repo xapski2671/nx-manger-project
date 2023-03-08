@@ -7,16 +7,16 @@
 
 .cf-category{
   padding: 0.5em 0.9em;
-  /* border: 1px solid #361E77; */
+  border: 1px solid #361E77;
   border-radius: 0.7em;
   width: max-content;
-  background-color: #fcfcfc;
+  /* background-color: var(--color-sub-bg); */
 
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1em;
-  color: #361e77;
+  color: var(--color-card-text);
   cursor: pointer;
 
   -webkit-user-select: none;
