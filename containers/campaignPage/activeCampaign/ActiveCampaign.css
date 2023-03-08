@@ -134,7 +134,7 @@
   font-size: 1.8rem; /*18px*/
   line-height: 1.33em;
   letter-spacing: 0.01em;
-  color: var(--color-subtext);
+  color: var(--color-card-text);
 } 
 @media(max-width: 1250px){
   .acp-camp-title p{
@@ -261,7 +261,7 @@
   font-weight: 400;
   font-size: 2rem;
   line-height: 1em;
-  color: var(--color-subtext);
+  color: var(--color-card-text);
 }
 @media(max-width: 1250px){
   .acp-amt-figure,
@@ -286,6 +286,7 @@
 }
 
 .acp-amt-curr{
+  font-weight: 600;
   color: var(--color-card-text);
 }
 
