@@ -52,9 +52,6 @@ export default function CategoryFilter() {
 
   return (
     <div className="cf-wrapper fl-cc">
-      {/* <div className="cf-all-cat-wrapper">
-        <Category name="All Categories"/>
-      </div> */}
       <div className="cf-other-cat-wrapper fl-cc">
         <FontAwesomeIcon icon={faAnglesLeft} className="cf-arrow-btn" onClick={scrollLeft}/>
         <div className="cf-other-cat fl-cl" ref={scrollRef}>
