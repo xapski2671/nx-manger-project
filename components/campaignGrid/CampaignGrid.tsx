@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { useRouter } from "next/router"
+import { useState } from "react"
 import { CampaignCard } from "../exportComps"
 
 interface props {
@@ -13,6 +14,7 @@ interface CmpObject {
 
 export default function CampaignGrid({ mapArray }:props) {
   const router = useRouter()
+  const [offset, setOffset] = useState()
 
   function handleSeeMore(){
     if(router.pathname == "/"){
@@ -22,6 +24,7 @@ export default function CampaignGrid({ mapArray }:props) {
       
     }
   }
+
   return (
     <div className="cg-container fl-cl fl-c">
       <div className="cg-grid">
