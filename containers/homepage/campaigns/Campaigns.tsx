@@ -8,7 +8,7 @@ import { useContext, useEffect, useState } from "react"
 import ReactLoading from "react-loading"
 
 export default function Campaigns() {
-  const { isConnected, loading, campaigns } = useCampaigns()
+  const { isConnected, loading, campaigns } = useCampaigns("home")
 
   return (
     <section className="cp-campaigns sc-padding fl-cl fl-c">

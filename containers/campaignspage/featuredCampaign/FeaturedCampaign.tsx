@@ -46,7 +46,7 @@ export default function FeaturedCampaign({ address }:props) {
             <FontAwesomeIcon icon={faCubes} className="fc-cat-icon"/>
             {loading ? <ReactLoading type="bubbles" color="#544776"/> : campaignDetails.category}
           </div>
-          <Link href={`/campaigns/${address}`}><button className="fl-fc">{"Learn more..."}</button></Link>
+          <Link href={`/campaigns/campaign/${address}`}><button className="fl-fc">{"Learn more..."}</button></Link>
         </div>
 
         <div className="fc-camp-title fl-tl fl-c">

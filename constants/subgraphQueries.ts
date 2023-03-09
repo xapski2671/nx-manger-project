@@ -30,8 +30,25 @@ export const GET_CAMPAIGN_DETAILS = gql`
   }
 `
 
-export const GET_CAMPAIGNS = gql`
-
+export const GET_ALL_CAMPAIGNS = gql`
+  query getAllCampaigns{
+    campaignAddeds(first: 12, orderBy: createdAt, orderDirection: desc) {
+      id
+      campaignAddress
+      creator
+    }
+  }
 `
+
+export const GET_SOME_CAMPAIGNS = gql`
+  query getSomeCampaigns($category: String!){
+    campaignAddeds(first: 12, where:{category: $category}, orderBy: createdAt, orderDirection: desc) {
+      id
+      campaignAddress
+      creator
+    }   
+  }
+`
+
 
 

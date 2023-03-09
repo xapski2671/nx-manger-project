@@ -60,9 +60,9 @@ export default function CampaignCard({ address, creator }:props) {
         <div className="cc-cta fl-tc fl-sb">
           <div className="cc-cat-name fl-cl">
             <FontAwesomeIcon icon={faCubes} className="cc-cat-icon"/>
-            {loading ? <Skeleton/> : campaignDetails.category}
+            <Link href={`/campaigns${loading ? "" : "/"}${loading ? "" : campaignDetails.category}`}>{loading ? <Skeleton/> : campaignDetails.category}</Link>
           </div>
-          <Link href={`/campaigns/${address}`}><button className="fl-cc">{"Learn more..."}</button></Link>
+          <Link href={`/campaigns/campaign/${address}`}><button className="fl-cc">{"Learn more..."}</button></Link>
         </div>
 
         <div className="cc-camp-title fl-tl fl-c">

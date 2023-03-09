@@ -8,7 +8,7 @@ interface props {
 }
 
 export default function CampaignsPage({ cat }:props) {
-  const { isConnected, loading, campaigns } = useCampaigns()
+  const { isConnected, loading, campaigns } = useCampaigns(cat)
 
   
   return (

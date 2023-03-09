@@ -1,6 +1,8 @@
 import { faAnglesLeft, faAnglesRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useRef, useState } from "react"
+import Link from "next/link"
+import { useRouter } from "next/router"
+import { useEffect, useRef, useState } from "react"
 
 interface props{
   name: string
@@ -22,10 +24,18 @@ let catArray:Array<string> =
 ]
 
 function Category({ name }:props){
+  const router = useRouter()
   const [active, setActive] = useState(false)
 
+  useEffect(()=>{
+    console.log(router.asPath)
+    if(router.asPath.includes(name)){
+      setActive(true)
+    }else{setActive(false)}
+  },[name])
+
   return (
-    <div className={`cf-category ${active && "active"}`} onClick={()=>{setActive(prev=>!prev)}}>
+    <div className={`cf-category ${active && "active"}`} onClick={()=>{setActive(true)}}>
       {`${name}`}
     </div>
   )
@@ -51,7 +61,11 @@ export default function CategoryFilter() {
         <div className="cf-other-cat fl-cl" ref={scrollRef}>
           {
             catArray.map((cat, index)=>{
-              return <Category name={cat} key={index}/>
+              return (
+                <Link href={`/campaigns/${cat}`} key={index}>
+                  <Category name={cat} key={index}/>
+                </Link>
+              )
             })
           }
         </div>
