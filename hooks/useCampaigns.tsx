@@ -4,7 +4,7 @@ import { conn } from "@/types"
 import { ApolloClient, InMemoryCache } from "@apollo/client"
 import { useCallback, useContext, useEffect, useState } from "react"
 
-export function useCampaigns(id:string){
+export function useCampaigns(id:string, offset:number){
   const { isConnected }:conn = useContext(ConnectionContext)!
   const [loading, setLoading] = useState(true)
   const [campaigns, setCampaigns] = useState([])
@@ -26,15 +26,18 @@ export function useCampaigns(id:string){
     campaigns && setLoading(false)
   },[]) 
 
-  const callAllCampaigns = useCallback(async()=>{
+  const callAllCampaigns = useCallback(async(offValue:number)=>{
     const client = new ApolloClient({
       uri: process.env.NEXT_PUBLIC_SUBGRAPH_URI,
       cache: new InMemoryCache(),
     })
+    console.log(offValue)
+    
 
     const campaigns = await client
       .query({
-        query: GET_ALL_CAMPAIGNS
+        query: GET_ALL_CAMPAIGNS,
+        variables: { offset: offValue }
       })
       .then(async data => data.data.campaignAddeds)
       .catch(error => console.log(error))
@@ -43,7 +46,7 @@ export function useCampaigns(id:string){
     campaigns && setLoading(false)
   },[])
 
-  const callSomeCampaigns = useCallback(async(id:string)=>{
+  const callSomeCampaigns = useCallback(async(id:string, offValue:number)=>{
     const client = new ApolloClient({
       uri: process.env.NEXT_PUBLIC_SUBGRAPH_URI,
       cache: new InMemoryCache(),
@@ -52,7 +55,7 @@ export function useCampaigns(id:string){
     const campaigns = await client
       .query({
         query: GET_SOME_CAMPAIGNS,
-        variables: { category: id }
+        variables: { category: id, offset: offValue }
       })
       .then(async data => data.data.campaignAddeds)
       .catch(error => console.log(error))
@@ -64,8 +67,8 @@ export function useCampaigns(id:string){
   useEffect(() => {
     let isIn = true 
     if(id == "home"){isIn && isConnected && callHomeCampaigns()}
-    else if(id == "All Categories"){isIn && isConnected && callAllCampaigns()}
-    else{isIn && isConnected && callSomeCampaigns(id)}
+    else if(id == "All Categories"){isIn && isConnected && callAllCampaigns(offset)}
+    else{isIn && isConnected && callSomeCampaigns(id, offset)}
     return () => {isIn = false}
   }, [isConnected, callHomeCampaigns])
 

@@ -16,7 +16,7 @@ export default function Campaigns(){
         <link rel="icon" href="/assets/manger_favicon.svg" />
       </Head>
       {
-        category ? typeof(category) == "string" && <CampaignsPage cat={category}/> : <Error statusCode={404}/>
+        category ? typeof(category) == "string" && <CampaignsPage cat={category} offVal={0}/> : <Error statusCode={404}/>
       }
     </>
   )

@@ -6,10 +6,11 @@ import Error from "next/error"
 
 interface props {
   cat: string
+  offVal: number
 }
 
-export default function CampaignsPage({ cat }:props) {
-  const { isConnected, loading, campaigns } = useCampaigns(cat)
+export default function CampaignsPage({ cat, offVal }:props) {
+  const { isConnected, loading, campaigns } = useCampaigns(cat, offVal)
 
   
   return (

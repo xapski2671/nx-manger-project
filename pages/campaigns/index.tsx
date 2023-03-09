@@ -13,7 +13,7 @@ export default function Campaigns(){
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/assets/manger_favicon.svg" />
       </Head>
-      <CampaignsPage cat={"All Categories"}/>
+      <CampaignsPage cat={"All Categories"} offVal={0}/>
     </>
   )
 }
