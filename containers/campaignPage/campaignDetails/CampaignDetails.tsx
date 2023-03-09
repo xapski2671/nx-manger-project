@@ -1,10 +1,13 @@
 import { RewardsTab, SideNotice, SideBio } from "@/components/exportComps"
+import { useState } from "react"
 
 interface props{
   address: string
 }
 
 export default function CampaignDetails({ address }: props) {
+  const [activeTab, setActiveTab] = useState("REWARDS")
+
   return (
     <section className="cpd-section sc-padding fl-tc">
       <main className="cpd-trajectory">

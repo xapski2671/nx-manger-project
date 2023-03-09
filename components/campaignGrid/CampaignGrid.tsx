@@ -13,18 +13,6 @@ interface CmpObject {
 }
 
 export default function CampaignGrid({ mapArray }:props) {
-  const router = useRouter()
-  const [offset, setOffset] = useState()
-
-  function handleSeeMore(){
-    if(router.pathname == "/"){
-      router.push({ pathname: "/campaigns" })
-    }
-    else if(router.pathname.includes("/campaigns")){
-      
-    }
-  }
-
   return (
     <div className="cg-container fl-cl fl-c">
       <div className="cg-grid">
@@ -37,7 +25,6 @@ export default function CampaignGrid({ mapArray }:props) {
           })
         }
       </div>
-      <button className="cg-see-more fl-cc" onClick={handleSeeMore}>{"See more"}</button>
     </div>
   )
 }

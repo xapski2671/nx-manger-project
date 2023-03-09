@@ -4,11 +4,12 @@ import { ConnectionContext } from "@/contexts/connection"
 import { useCampaigns } from "@/hooks/useCampaigns"
 import { conn } from "@/types"
 import { ApolloClient, InMemoryCache, useQuery } from "@apollo/client"
+import Link from "next/link"
 import { useContext, useEffect, useState } from "react"
 import ReactLoading from "react-loading"
 
 export default function Campaigns() {
-  const { isConnected, loading, campaigns } = useCampaigns("home")
+  const { isConnected, loading, campaigns } = useCampaigns("home", 0)
 
   return (
     <section className="cp-campaigns sc-padding fl-cl fl-c">
@@ -22,6 +23,7 @@ export default function Campaigns() {
           : loading || !campaigns ? <ReactLoading type={"bubbles"} color="#827B93"/> 
             : <CampaignGrid mapArray={campaigns}/>
       }
-    </section>
+      <Link href={"/campaigns"}><button className="cg-see-more fl-cc">{"See more"}</button></Link>
+    </section>  
   )
 }

@@ -94,16 +94,16 @@ export default function ActiveCampaign({ address }: props) {
           </div>
 
           <div className="acp-bio-socials fl-cr">
-            <Link href={`https://twitter.com/${cdata && cdata.twitter}`}>
+            <Link href={`https://twitter.com/${cdata ? cdata.twitter : ""}`}>
               <FontAwesomeIcon icon={faTwitter} className="acp-social-icon"/>
             </Link>
             <FontAwesomeIcon icon={faGlobe} className="acp-social-icon" style={!cdata || !cdata.website ? { "display" : "none" } : {}} onClick={()=>{router.push(cdata.website)}}/>
-            <FontAwesomeIcon icon={faShareNodes} className="acp-social-icon" onClick={()=>{router.push("https://www.youtube.com/")}}/>
+            <FontAwesomeIcon icon={faShareNodes} className="acp-social-icon" onClick={()=>{router.push("https://www.youtube.com/", "_blank")}}/>
           </div>
         </div>
 
         <div className="acp-info">
-          <p>{`Risk involved: Donations will no longer be refundable when this project reaches its goal by ${deadlineStatement}.`}</p>
+          <p>{`Risk involved: Donations will no longer be refundable when this project expires by ${deadlineStatement}.`}</p>
         </div>
       </div>
     </section>

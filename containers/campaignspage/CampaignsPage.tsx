@@ -3,6 +3,7 @@ import { useCampaigns } from "@/hooks/useCampaigns"
 import { Blog, FeaturedCampaign } from "../exportConts"
 import ReactLoading from "react-loading"
 import Error from "next/error"
+import { useState } from "react"
 
 interface props {
   cat: string
@@ -10,9 +11,20 @@ interface props {
 }
 
 export default function CampaignsPage({ cat, offVal }:props) {
-  const { isConnected, loading, campaigns } = useCampaigns(cat, offVal)
+  const { isConnected, loading, campaigns, callSomeCampaigns, callAllCampaigns } = useCampaigns(cat, offVal)
+  const [offset, setOffset] = useState(0)
 
-  
+  async function handleSeemore(){
+    setOffset(prev=>prev + 6)
+
+    if(cat == "All Categories"){
+      await callAllCampaigns(offset)
+    }
+    else{
+      await callSomeCampaigns(cat, offset)
+    }
+  }
+
   return (
     <section className="ccp-section sc-padding fl-cl fl-c">
       <CategoryFilter/>
@@ -41,6 +53,7 @@ export default function CampaignsPage({ cat, offVal }:props) {
           }
         </>
       }
+      <button className="cg-see-more fl-cc" onClick={handleSeemore}>{"See more"}</button>
       <Blog/>
     </section>
   )

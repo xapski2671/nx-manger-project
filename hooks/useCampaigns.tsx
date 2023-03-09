@@ -31,8 +31,6 @@ export function useCampaigns(id:string, offset:number){
       uri: process.env.NEXT_PUBLIC_SUBGRAPH_URI,
       cache: new InMemoryCache(),
     })
-    console.log(offValue)
-    
 
     const campaigns = await client
       .query({
@@ -75,6 +73,8 @@ export function useCampaigns(id:string, offset:number){
   return {
     isConnected,
     loading,
-    campaigns
+    campaigns,
+    callAllCampaigns,
+    callSomeCampaigns
   }
 }
