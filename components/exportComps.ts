@@ -9,3 +9,6 @@ export { default as SideBio } from "./sideBio/SideBio"
 export { default as Logo } from "./logo/Logo"
 
 export { default as RewardsTab } from "./campaignTabs/rewardsTab/RewardsTab"
+export { default as PaymentTab } from "./campaignTabs/paymentTab/PaymentTab"
+export { default as StoryTab } from "./campaignTabs/storyTab/StoryTab"
+export { default as RisksTab } from "./campaignTabs/risksTab/RisksTab"
