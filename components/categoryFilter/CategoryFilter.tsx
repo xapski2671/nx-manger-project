@@ -28,14 +28,13 @@ function Category({ name }:props){
   const [active, setActive] = useState(false)
 
   useEffect(()=>{
-    console.log(router.asPath)
     if(router.asPath.includes(name)){
       setActive(true)
     }else{setActive(false)}
   },[name])
 
   return (
-    <div className={`cf-category ${active && "active"}`} onClick={()=>{setActive(true)}}>
+    <div className={`cf-category ${active && "active"}`}>
       {`${name}`}
     </div>
   )

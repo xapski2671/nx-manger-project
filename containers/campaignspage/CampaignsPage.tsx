@@ -2,6 +2,7 @@ import { CampaignGrid, CategoryFilter } from "@/components/exportComps"
 import { useCampaigns } from "@/hooks/useCampaigns"
 import { Blog, FeaturedCampaign } from "../exportConts"
 import ReactLoading from "react-loading"
+import Error from "next/error"
 
 interface props {
   cat: string
@@ -20,13 +21,13 @@ export default function CampaignsPage({ cat }:props) {
       {
         <>
           {loading || !campaigns 
-            ? <p>{" "}</p>
-            : <>
-              <FeaturedCampaign address={campaigns[0]["campaignAddress"]}/>
-              <div className="ccp-sub-wrapper fl-cl">
-                <h4 className="ccp-subtitle">{"Explore 320 Projects"}</h4>
-              </div>
-            </>
+            ? <p>{" "}</p> : !campaigns.length ? <Error statusCode={404}/>
+              : <>
+                <FeaturedCampaign address={campaigns[0]["campaignAddress"]}/>
+                <div className="ccp-sub-wrapper fl-cl">
+                  <h4 className="ccp-subtitle">{"Explore 320 Projects"}</h4>
+                </div>
+              </>
           }
           {
             !isConnected 
@@ -34,7 +35,7 @@ export default function CampaignsPage({ cat }:props) {
                 <p>{"Please connect your wallet to view campaigns"}</p> 
                 <ReactLoading type={"bubbles"} color="#827B93"/>
               </div>
-              : loading || !campaigns ? <ReactLoading type={"bubbles"} color="#827B93"/> 
+              : loading || !campaigns ? <ReactLoading type={"bubbles"} color="#827B93"/> : !campaigns.length ? <Error statusCode={404}/>
                 : <CampaignGrid mapArray={campaigns}/>
           }
         </>
