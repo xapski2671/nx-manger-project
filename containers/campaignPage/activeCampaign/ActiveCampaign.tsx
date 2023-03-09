@@ -95,7 +95,7 @@ export default function ActiveCampaign({ address }: props) {
             <Link href={`https://twitter.com/${cdata && cdata.twitter}`}>
               <FontAwesomeIcon icon={faTwitter} className="acp-social-icon"/>
             </Link>
-            <Link href={cdata && cdata.website}>
+            <Link href={!cdata ? "" : cdata.website}>
               <FontAwesomeIcon icon={faGlobe} className="acp-social-icon"/>
             </Link>
             <FontAwesomeIcon icon={faShareNodes} className="acp-social-icon"/>
