@@ -20,19 +20,15 @@ export default function CampaignDetails({ address }: props) {
             <div className={`cpd-tab-title ${activeTab == "REWARDS" && "cpd-active-tab"}`} onClick={()=>{setActiveTab("REWARDS")}}>{"REWARDS"}</div>
             <div className={`cpd-tab-title ${activeTab == "PAYMENT" && "cpd-active-tab"}`} onClick={()=>{setActiveTab("PAYMENT")}}>{"PAYMENT"}</div>
           </div>
-          <div className="cpd-separator">
-            {/* <div className="cpd-active-tab-indic"></div> */}
-          </div>
+          <div className="cpd-separator"></div>
         </div>
-
-        
+       
         <>
           {activeTab == "STORY" && <StoryTab/>}
           {activeTab == "RISKS" && <RisksTab/>}
           {activeTab == "REWARDS" && <RewardsTab/>}
           {activeTab == "PAYMENT" && <PaymentTab/>}
         </>
-        
       </main>
 
       <aside className="cpd-info">
