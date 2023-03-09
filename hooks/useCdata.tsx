@@ -70,7 +70,7 @@ export function useCdata(address:string){
     setDaysUntil(daysUntil)
   
     let uri = campaignDetails.imageURI.replace("ipfs://", "https://ipfs.io/ipfs/")
-    setImageURI(uri)
+    imageURI !== uri && setImageURI(uri)
   },[campaignDetails.imageURI, campaignDetails.currentBalance, campaignDetails.goalAmount])
 
   useEffect(()=>{

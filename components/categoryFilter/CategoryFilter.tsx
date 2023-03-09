@@ -28,10 +28,11 @@ function Category({ name }:props){
   const [active, setActive] = useState(false)
 
   useEffect(()=>{
-    if(router.asPath.includes(name)){
+    const query = router.asPath.replace("%20", " ")
+    if(query.includes(name)){
       setActive(true)
     }else{setActive(false)}
-  },[name])
+  },[name, router.asPath])
 
   return (
     <div className={`cf-category ${active && "active"}`}>

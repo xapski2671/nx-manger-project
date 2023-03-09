@@ -26,8 +26,8 @@ export default function ActiveCampaign({ address }: props) {
     daysUntil,
     deadlineStatement
   } = useCdata(address)
+  const { cdata, fcLoading } = useURIData(address)  
   const { creatorVal, cDetails, dLoading } = useQCData(address, campaignDetails.creator)
-  const { cdata, fcLoading } = useURIData(address)
 
   
   return (
@@ -92,10 +92,10 @@ export default function ActiveCampaign({ address }: props) {
           </div>
 
           <div className="acp-bio-socials fl-cr">
-            <Link href={`https://twitter.com/${fcLoading ? "" : cdata.twitter}`}>
+            <Link href={`https://twitter.com/${cdata && cdata.twitter}`}>
               <FontAwesomeIcon icon={faTwitter} className="acp-social-icon"/>
             </Link>
-            <Link href={fcLoading ? "" : cdata.website}>
+            <Link href={cdata && cdata.website}>
               <FontAwesomeIcon icon={faGlobe} className="acp-social-icon"/>
             </Link>
             <FontAwesomeIcon icon={faShareNodes} className="acp-social-icon"/>
