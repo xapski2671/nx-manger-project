@@ -9,6 +9,7 @@ import { useQCData } from "@/hooks/useQCData"
 import { useURIData } from "@/hooks/useURIData"
 import Link from "next/link"
 import ReactLoading from "react-loading"
+import { useRouter } from "next/router"
 
 
 interface props{
@@ -16,6 +17,7 @@ interface props{
 }
 
 export default function ActiveCampaign({ address }: props) {
+  const router = useRouter()
   const {    
     loading,
     campaignDetails,
@@ -96,7 +98,7 @@ export default function ActiveCampaign({ address }: props) {
               <FontAwesomeIcon icon={faTwitter} className="acp-social-icon"/>
             </Link>
             <Link href={!cdata ? "" : cdata.website}>
-              <FontAwesomeIcon icon={faGlobe} className="acp-social-icon"/>
+              <FontAwesomeIcon icon={faGlobe} className="acp-social-icon" style={!cdata.website ? { "display" : "none" } : {}}/>
             </Link>
             <FontAwesomeIcon icon={faShareNodes} className="acp-social-icon"/>
           </div>
