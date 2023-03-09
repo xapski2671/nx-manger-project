@@ -97,10 +97,8 @@ export default function ActiveCampaign({ address }: props) {
             <Link href={`https://twitter.com/${cdata && cdata.twitter}`}>
               <FontAwesomeIcon icon={faTwitter} className="acp-social-icon"/>
             </Link>
-            <Link href={!cdata ? "" : cdata.website}>
-              <FontAwesomeIcon icon={faGlobe} className="acp-social-icon" style={!cdata.website ? { "display" : "none" } : {}}/>
-            </Link>
-            <FontAwesomeIcon icon={faShareNodes} className="acp-social-icon"/>
+            <FontAwesomeIcon icon={faGlobe} className="acp-social-icon" style={!cdata || !cdata.website ? { "display" : "none" } : {}} onClick={()=>{router.push(cdata.website)}}/>
+            <FontAwesomeIcon icon={faShareNodes} className="acp-social-icon" onClick={()=>{router.push("https://www.youtube.com/")}}/>
           </div>
         </div>
 
