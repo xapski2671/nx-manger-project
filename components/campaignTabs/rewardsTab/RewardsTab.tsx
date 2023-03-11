@@ -11,14 +11,16 @@ interface props{
 }
 
 export default function RewardsTab({ address }:props) {
-  const { isConnected, signer }:conn = useContext(ConnectionContext)!
+  const { isConnected, signer, account }:conn = useContext(ConnectionContext)!
   const [rwIds, setRwIds] = useState<any>([])
 
 
   async function modArray(arr:BigNumber[]){
-    let strKeyArr = await arr.map((id:BigNumber)=>{ethers.utils.formatEther(id)}) // to string
+    let strKeyArr = await arr.map((id:BigNumber)=>{ return ethers.utils.formatEther(id)}) // to string
+    console.log(strKeyArr)
     let uniqueKeys:any[] = [...new Set(strKeyArr)] // remove duplicates
-    let newKeyArr:any[] = await uniqueKeys.map((id:string)=>{parseFloat(id)}) // to number
+    console.log(uniqueKeys)
+    let newKeyArr:any[] = await uniqueKeys.map((id:string)=>{return parseFloat(id)}) // to number
     let readyArr = await newKeyArr.sort((a, b)=> (a - b)) // sort in incrreasing order
     return readyArr
   }
@@ -26,11 +28,14 @@ export default function RewardsTab({ address }:props) {
   useEffect(()=>{
     let isIn = true
     async function startRewardsTab(){
-      const campaign = await new ethers.Contract(address, campaignABI.abi, signer)
+      const campaign = new ethers.Contract(address, campaignABI.abi, signer)
+      console.log(address)
       try {
         let fetchKeysTx = await campaign.getRewardKeys()
+        console.log(fetchKeysTx)
         const ids = await modArray(fetchKeysTx)
         if(ids !== rwIds){isIn && setRwIds(ids)}
+        console.log(ids)
       } catch (error) {
         console.log(error)
       }
@@ -47,7 +52,7 @@ export default function RewardsTab({ address }:props) {
       </div>
       <div className="rt-rewards-container fl-tl fl-c">
         {
-          !rwIds || !rwIds.length ? <p>{"loading.."}</p> : rwIds.map((rId:number, index:number)=>{
+          !rwIds || !rwIds.length || !typeof(rwIds[0] == "number") ? <p>{"loading.."}</p> : rwIds.map((rId:number, index:number)=>{
             return (
               <RewardCard address={address} id={rId} key={index}/>
             )

@@ -8,7 +8,6 @@ import Skeleton from "react-loading-skeleton"
 import "react-loading-skeleton/dist/skeleton.css"
 
 
-
 interface props {
   address:string
   id:number
@@ -37,7 +36,8 @@ export default function RewardCard({ address, id }:props) {
     async function startCard(){
       const campaign = await new ethers.Contract(address, campaignABI.abi, signer)
       try {
-        const reward = await campaign.rewards(ethers.utils.parseEther(id.toString()))
+        const reward = await campaign.rewards(!id ? ethers.utils.parseEther("0") : ethers.utils.parseEther(id.toString()))
+        console.log(reward)
         if(reward[0] !== BigNumber.from("0")){
           let rwdProxy:rwd | any = {}
           for(let i = 0; i < reward.length; i++){
@@ -72,7 +72,7 @@ export default function RewardCard({ address, id }:props) {
           <h5>{"INCLUDES"}</h5>
           <ul className="rc-perks fl-tl fl-c">
             {
-              loading ? <Skeleton style={{ "width": "60%" }} count={3}/>
+              loading || !rwdDetails.perks.length ? <Skeleton style={{ "width": "60%" }} count={3}/>
                 : rwdDetails.perks.map((perk, index)=>{
                   return (
                     <li key={index}>{perk}</li>
