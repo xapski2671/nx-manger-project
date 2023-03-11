@@ -28,8 +28,9 @@ export default function RewardsTab({ address }:props) {
     async function startRewardsTab(){
       const campaign = await new ethers.Contract(address, campaignABI.abi, signer)
       try {
-        let fetchKeysTx = await campaign.rKeys()
+        let fetchKeysTx = await campaign.getRewardKeys()
         const ids = await modArray(fetchKeysTx)
+        if(ids !== rwIds){isIn && setRwIds(ids)}
       } catch (error) {
         console.log(error)
       }
