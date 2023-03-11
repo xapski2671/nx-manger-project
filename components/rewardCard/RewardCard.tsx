@@ -4,6 +4,9 @@ import { conn, rwd } from "@/types"
 import { ConnectionContext } from "@/contexts/connection"
 import { BigNumber, ethers } from "ethers"
 import campaignABI from "@/constants/Campaign.json"
+import Skeleton from "react-loading-skeleton"
+import "react-loading-skeleton/dist/skeleton.css"
+
 
 
 interface props {
@@ -53,21 +56,27 @@ export default function RewardCard({ address, id }:props) {
   return (
     <div className="rc-container fl-tl fl-c">
       <div className="rc-id-del fl-tc fl-sb">
-        <div className="rc-reward-id fl-cc">{"Pledge 0.5 ETH"}</div>
+        <div className="rc-reward-id fl-cc">{`Pledge ${loading ? "0" : ethers.utils.formatEther(rwdDetails.price)} ETH`}</div>
         <div className="rc-reward-del fl-bl fl-c">
           <p>{"EST. DELIVERY"}</p>
-          <p>{"Nov 2023"}</p>
+          <p>{loading ? "" : rwdDetails.delDate.toString()}</p>
         </div>
       </div>
 
       <article className="rc-details fl-tl fl-c">
-        <h3 className="rc-title">{"Digital Edition"}</h3>
-        <p className="rc-description">{"The Complete DIGITAL Spider-Squirrel Volume One Ultimate Edition!"}</p>
+        <h3 className="rc-title">{loading ? <Skeleton style={{ "width": "40%" }}/> : rwdDetails.title}</h3>
+        <p className="rc-description">{loading ? <Skeleton style={{ "width": "60%" }}/> : rwdDetails.description}</p>
         <div className="rc-perks-container">
           <h5>{"INCLUDES"}</h5>
           <ul className="rc-perks fl-tl fl-c">
-            <li>{"Digital Spider-Squirrel Vol.1 Ultimate Edition"}</li>
-            <li>{"Digital Stretch Goals (As Unlocked)"}</li>
+            {
+              loading ? <Skeleton style={{ "width": "60%" }} count={3}/>
+                : rwdDetails.perks.map((perk, index)=>{
+                  return (
+                    <li key={index}>{perk}</li>
+                  )
+                })
+            }
           </ul>
         </div>
       </article>
@@ -82,7 +91,7 @@ export default function RewardCard({ address, id }:props) {
             </div>
           </div>
         </div>
-        <button className="rc-cta">{"Pledge 0.5 ETH"}</button>
+        <button className="rc-cta">{`Pledge ${loading ? "0" : ethers.utils.formatEther(rwdDetails.price)} ETH`}</button>
       </div>
     </div>
   )
