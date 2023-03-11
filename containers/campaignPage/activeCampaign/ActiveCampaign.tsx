@@ -40,7 +40,7 @@ export default function ActiveCampaign({ address }: props) {
       </div>
       
       <div className="acp-img fl-cc">
-        {!imgLoad && <ReactLoading type="bubbles" color="#544776"/>}
+        {!imgLoad && <Skeleton style={{ "height":"21vw", "width":"44vw", "borderRadius":"15px" }} className="acp-skl"/>}
         <img src={imageURI} alt="cc-mckp" onLoad={()=>{setImgLoad(true)}} style={!imgLoad ? { "display": "none" } : {}}/>
       </div>
 
