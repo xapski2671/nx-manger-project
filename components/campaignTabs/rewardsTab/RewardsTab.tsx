@@ -34,7 +34,7 @@ export default function RewardsTab({ address }:props) {
         console.log(error)
       }
     }
-    isConnected && startRewardsTab()
+    isIn && isConnected && startRewardsTab().catch(e=>console.log(e))
     return ()=>{isIn = false}
   },[isConnected])
 

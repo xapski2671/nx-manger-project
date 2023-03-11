@@ -26,7 +26,7 @@ export default function CampaignDetails({ address }: props) {
         <>
           {activeTab == "STORY" && <StoryTab/>}
           {activeTab == "RISKS" && <RisksTab/>}
-          {activeTab == "REWARDS" && <RewardsTab/>}
+          {activeTab == "REWARDS" && <RewardsTab address={address}/>}
           {activeTab == "PAYMENT" && <PaymentTab/>}
         </>
       </main>
