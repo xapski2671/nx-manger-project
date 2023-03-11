@@ -8,6 +8,8 @@ export function useURIData(address:string){
   const { isConnected, signer }:conn = useContext(ConnectionContext)!
   const [cdata, setCdata] = useState<any>()
   const [fcLoading, setFcLoading] = useState(true)
+  const [visLoaded, setVisLoaded] = useState(false)
+  const [visURI, setVisURI] = useState("")
 
   
   const start = useCallback(async () => {
@@ -19,9 +21,10 @@ export function useURIData(address:string){
       cmpd = await fetch(httpUri).then(res => res.json()).then(data => data).catch(e=>console.log(e))
       if(cdata !== cmpd){
         setCdata(cmpd)
+        setFcLoading(false)
+        setVisURI(cdata?.httpVisualURI)
       }
       // console.log(cdata)
-      cdata && setFcLoading(false)
     }catch(e){console.log(e)}
   },[isConnected, address])
 
@@ -34,6 +37,9 @@ export function useURIData(address:string){
 
   return {
     fcLoading,
-    cdata
+    cdata,
+    visURI,
+    visLoaded,
+    setVisLoaded
   }
 }

@@ -28,7 +28,7 @@ export default function ActiveCampaign({ address }: props) {
     daysUntil,
     deadlineStatement
   } = useCdata(address)
-  const { cdata, fcLoading } = useURIData(address)  
+  const { cdata, visLoaded, setVisLoaded } = useURIData(address)  
   const { creatorVal, cDetails, dLoading } = useQCData(address, campaignDetails.creator)
 
   
@@ -40,8 +40,8 @@ export default function ActiveCampaign({ address }: props) {
       </div>
       
       <div className="acp-img fl-cc">
-        {!imgLoad && <Skeleton style={{ "height":"21vw", "width":"44vw", "borderRadius":"15px" }} className="acp-skl"/>}
-        <img src={imageURI} alt="cc-mckp" onLoad={()=>{setImgLoad(true)}} style={!imgLoad ? { "display": "none" } : {}}/>
+        {!visLoaded && <Skeleton style={{ "height":"21vw", "width":"44vw", "borderRadius":"15px" }} className="acp-skl"/>}
+        <img src={cdata ? cdata.httpVisualURI : ""} alt="cc-mckp" onLoad={()=>{setVisLoaded(true)}} style={!visLoaded ? { "display": "none" } : {}}/>
       </div>
 
       <div className="acp-details fl-tl fl-c">
