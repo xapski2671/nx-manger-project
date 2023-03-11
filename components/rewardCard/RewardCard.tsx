@@ -38,12 +38,14 @@ export default function RewardCard({ address, id }:props) {
       const campaign = await new ethers.Contract(address, campaignABI.abi, signer)
       try {
         const reward = await campaign.rewards(ethers.utils.parseEther(id.toString()))
-        let rwdProxy:rwd | any = {}
-        for(let i = 0; i < reward.length; i++){
-          rwdProxy[(Object.keys(rwdObj)[i])] = reward[i]
+        if(reward[0] !== BigNumber.from("0")){
+          let rwdProxy:rwd | any = {}
+          for(let i = 0; i < reward.length; i++){
+            rwdProxy[(Object.keys(rwdObj)[i])] = reward[i]
+          }
+          isIn && setRwdDetails(rwdProxy)
+          isIn && setLoading(false)
         }
-        isIn && setRwdDetails(rwdProxy)
-        isIn && setLoading(false)
       } catch (error) {
         console.log(error)        
       }
