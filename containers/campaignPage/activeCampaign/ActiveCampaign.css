@@ -52,7 +52,6 @@
 .acp-img.fl-cc{
   width: 50%;
   border-radius: min(1.39vw, 35.5px);
-  box-shadow: 0px 10px 50px rgba(29, 7, 84, 0.08);
   z-index: 4;
 }
 @media(max-width: 1000px){
@@ -70,6 +69,7 @@
   -webkit-user-select: none;
   -ms-user-select: none; 
   user-select: none;
+  box-shadow: 0px 10px 50px rgba(29, 7, 84, 0.08);
 }
 
 .acp-details.fl-tl.fl-c{
