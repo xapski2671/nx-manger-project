@@ -1,21 +1,11 @@
 import { useEffect, useState } from "react"
 import DOMPurify from "dompurify"
 
-export default function RewardCard() {
+interface props {
+  id:number
+}
 
-  const [rData, setRData] = useState({ __html: "" })
-
-  async function fetchRData(){
-    const res = await fetch("/reward-text.txt")
-    const final = await res.text()
-    const html = { __html: DOMPurify.sanitize(final) }
-    setRData(html)
-  }
-
-  useEffect(()=>{
-    fetchRData()
-  },[])
-
+export default function RewardCard({ id }:props) {
   return (
     <div className="rc-container fl-tl fl-c">
       <div className="rc-id-del fl-tc fl-sb">
@@ -26,7 +16,6 @@ export default function RewardCard() {
         </div>
       </div>
 
-      {/* <article className="rc-description" dangerouslySetInnerHTML={rData}/> */}
       <article className="rc-details fl-tl fl-c">
         <h3 className="rc-title">{"Digital Edition"}</h3>
         <p className="rc-description">{"The Complete DIGITAL Spider-Squirrel Volume One Ultimate Edition!"}</p>
