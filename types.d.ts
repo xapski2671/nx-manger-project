@@ -23,3 +23,14 @@ export interface cmp{
   campaignURI: string
   deadline: BigNumber
 }
+
+export interface rwd{
+  price: BigNumber
+  title: string
+  description: string
+  perks: string[]
+  delDate: BigNumber
+  quantity: BigNumber
+  infinite: boolean
+  shipsTo: string[]
+}
