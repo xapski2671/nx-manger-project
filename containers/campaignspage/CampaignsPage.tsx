@@ -11,7 +11,8 @@ interface props {
 }
 
 export default function CampaignsPage({ cat, offVal }:props) {
-  const { isConnected, loading, campaigns, callSomeCampaigns, callAllCampaigns } = useCampaigns(cat, offVal)
+  const [nCategory, setNCategory] = useState(cat)
+  const { isConnected, loading, campaigns, callSomeCampaigns, callAllCampaigns } = useCampaigns(nCategory, offVal)
   const [offset, setOffset] = useState(0)
 
   async function handleSeemore(){
@@ -27,7 +28,7 @@ export default function CampaignsPage({ cat, offVal }:props) {
 
   return (
     <section className="ccp-section sc-padding fl-cl fl-c">
-      <CategoryFilter/>
+      <CategoryFilter changeCat={(ncat:string)=>{setNCategory(ncat)}}/>
       <div className="ccp-sub-wrapper fl-cl">
         <h4 className="ccp-subtitle">{"Featured"}</h4>
       </div>

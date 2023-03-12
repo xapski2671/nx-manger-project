@@ -68,7 +68,7 @@ export function useCampaigns(id:string, offset:number){
     else if(id == "All Categories"){isIn && isConnected && callAllCampaigns(offset)}
     else{isIn && isConnected && callSomeCampaigns(id, offset)}
     return () => {isIn = false}
-  }, [isConnected, callHomeCampaigns])
+  }, [isConnected, callHomeCampaigns, id, offset])
 
   return {
     isConnected,

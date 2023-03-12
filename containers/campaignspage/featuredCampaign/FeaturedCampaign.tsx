@@ -37,12 +37,11 @@ export default function FeaturedCampaign({ address }:props) {
       </div>
 
       <div className="fc-img">
-        {!imgLoad && <ReactLoading type="bubbles" color="#544776"/>}
+        {!imgLoad && <Skeleton style={{ "height":"21vw", "width":"44vw", "borderRadius":"15px" }}/>}
         <img src={imageURI} alt="cc-mckp" onLoad={()=>{setImgLoad(true)}} style={!imgLoad ? { "display": "none" } : {}}/>
       </div>
 
       <div className="fc-details fl-tl fl-c">
-
         <div className="fc-cta fl-tc fl-sb">
           <div className="fc-cat-name fl-cl">
             <FontAwesomeIcon icon={faCubes} className="fc-cat-icon"/>

@@ -6,6 +6,11 @@ import { useEffect, useRef, useState } from "react"
 
 interface props{
   name: string
+  catFc: Function
+}
+
+interface cfprops{
+  changeCat: Function
 }
 
 let catArray:Array<string> = 
@@ -23,7 +28,7 @@ let catArray:Array<string> =
   "Comics & Illustration"
 ]
 
-function Category({ name }:props){
+export function Category({ name, catFc }:props){
   const router = useRouter()
   const [active, setActive] = useState(false)
   const [path, setPath] = useState("")
@@ -37,13 +42,13 @@ function Category({ name }:props){
   },[name, router.asPath])
 
   return (
-    <div className={`cf-category ${active && "active"}`} onClick={()=>{router.push(`/campaigns/${name}`)}}>
+    <div className={`cf-category ${active && "active"}`} onClick={()=>{router.push(`/campaigns/${name}`); catFc(name)}}>
       {`${name}`}
     </div>
   )
 }
 
-export default function CategoryFilter() {
+export default function CategoryFilter({ changeCat }:cfprops) {
   const scrollRef = useRef<HTMLDivElement>(null)
 
   function scrollLeft(){
@@ -61,7 +66,7 @@ export default function CategoryFilter() {
           {
             catArray.map((cat, index)=>{
               return (
-                <Category name={cat} key={index}/>
+                <Category name={cat} key={index} catFc={(name:string)=>{changeCat(name)}}/>
               )
             })
           }

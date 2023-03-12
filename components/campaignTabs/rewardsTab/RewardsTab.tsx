@@ -23,7 +23,6 @@ export default function RewardsTab({ address }:props) {
         <p>{"Select an option below"}</p>
       </div>
       <div className="rt-rewards-container fl-tl fl-c">
-
         {
           loading || !rwIds || !rwIds.length || !typeof(rwIds[0] == "number") ? <ReactLoading type="bubbles" color="#C4A2E7"/> : 
             <>
