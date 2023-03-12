@@ -47,8 +47,8 @@ export default function ActiveCampaign({ address }: props) {
       <div className="acp-details fl-tl fl-c">
 
         <div className="acp-camp-title fl-tl fl-c">
-          <h4>{loading ? <Skeleton style={{ "width": "100%" }}/> : campaignDetails.title}</h4>
-          <p>{loading ? <Skeleton count={2} style={{ "width": "90%" }}/> : campaignDetails.description}</p>
+          <h4>{loading ? <Skeleton style={{ "width": "4.5vw" }}/> : campaignDetails.title}</h4>
+          <p>{loading ? <Skeleton count={2} style={{ "width": "4vw" }}/> : campaignDetails.description}</p>
         </div>
 
         <div className="acp-status-container fl-tl fl-c">
