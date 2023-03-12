@@ -52,8 +52,8 @@ export default function FeaturedCampaign({ address }:props) {
         </div>
 
         <div className="fc-camp-title fl-tl fl-c">
-          <h4>{loading ? <Skeleton style={{ "width": "100%" }}/> : campaignDetails.title}</h4>
-          <p>{loading ? <Skeleton count={2} style={{ "width": "90%" }}/> : campaignDetails.description}</p>
+          <h4>{loading ? <Skeleton style={{ "width": "10vw" }}/> : campaignDetails.title}</h4>
+          <p>{loading ? <Skeleton count={2} style={{ "width": "9vw" }}/> : campaignDetails.description}</p>
         </div>
 
         <div className="fc-status-container fl-tl fl-c">
