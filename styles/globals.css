@@ -55,12 +55,11 @@ button{
 
 .cpd-tab{
   margin-top: 1.74vw;
-  width: 90%;
+  width: 100%;
 }
 @media(max-width: 1000px){
   .cpd-tab{
     margin-top: 2.82vw;
-    width: 100%;
   }
 }
 @media(max-width: 550px){
@@ -182,5 +181,6 @@ button{
 @import "../components/rewardCard/RewardCard.css";
 @import "../components/sideNotice/SideNotice.css";
 @import "../components/campaignTabs/rewardsTab/RewardsTab.css";
+@import "../components/campaignTabs/storyTab/StoryTab.css";
 @import "../components/sideBio/SideBio.css";
 @import "../components/logo/Logo.css";

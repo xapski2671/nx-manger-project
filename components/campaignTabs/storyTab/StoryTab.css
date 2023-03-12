@@ -1,0 +1,31 @@
+/* st */
+
+/* .st-container.fl-tl.fl-c{
+  padding-right: 80px;
+  height: 80vw;
+  overflow: auto;
+} */
+
+.st-title{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1em;
+  letter-spacing: 0.04em;
+  color: var(--color-card-text);
+  margin-bottom: 0.5em;
+}
+
+.st-story{
+  padding-right: 5.55vw;
+  height: 40vw;
+  overflow: auto;
+}
+
+.st-story p{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.3em;
+  color: var(--color-text);
+}

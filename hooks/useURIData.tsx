@@ -3,6 +3,7 @@ import { useCallback, useContext, useEffect, useState } from "react"
 import campaignABI from "@/constants/Campaign.json"
 import { conn } from "@/types"
 import { ConnectionContext } from "@/contexts/connection"
+import DOMPurify from "dompurify"
 
 export function useURIData(address:string){
   const { isConnected, signer }:conn = useContext(ConnectionContext)!
@@ -10,6 +11,7 @@ export function useURIData(address:string){
   const [fcLoading, setFcLoading] = useState(true)
   const [visLoaded, setVisLoaded] = useState(false)
   const [visURI, setVisURI] = useState("")
+  const [cStory, setCStory] = useState({ __html: "" })
 
   
   const start = useCallback(async () => {
@@ -22,8 +24,11 @@ export function useURIData(address:string){
       if(cdata !== cmpd){
         setCdata(cmpd)
         setFcLoading(false)
-        setVisURI(cdata?.httpVisualURI)
+        setVisURI(cmpd.httpVisualURI)
       }
+
+      const story = { __html: DOMPurify.sanitize(cmpd.story) }
+      cStory !== story && setCStory(story)
       // console.log(cdata)
     }catch(e){console.log(e)}
   },[isConnected, address])
@@ -40,6 +45,7 @@ export function useURIData(address:string){
     cdata,
     visURI,
     visLoaded,
-    setVisLoaded
+    setVisLoaded,
+    cStory
   }
 }
