@@ -11,7 +11,7 @@ interface props {
 }
 
 export default function RewardCard({ address, id }:props) {
-  const { loading, setLoading, rwdDetails } = useRwdCard(address, id)
+  const { loading, setLoading, rwdDetails, deliDate } = useRwdCard(address, id)
 
   return (
     <div className="rc-container fl-tl fl-c">
@@ -19,7 +19,7 @@ export default function RewardCard({ address, id }:props) {
         <div className="rc-reward-id fl-cc">{`Pledge ${loading ? "0" : ethers.utils.formatEther(rwdDetails.price)} ETH`}</div>
         <div className="rc-reward-del fl-bl fl-c">
           <p>{"EST. DELIVERY"}</p>
-          <p>{loading ? "" : rwdDetails.delDate.toString()}</p>
+          <p>{loading ? "" : deliDate}</p>
         </div>
       </div>
 

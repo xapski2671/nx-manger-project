@@ -16,10 +16,13 @@ let rwdObj:rwd = {
   shipsTo: []
 }
 
+const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+
 export default function useRwdCard(address:string, id:number) {
   const { isConnected, signer }:conn = useContext(ConnectionContext)!
   const [loading, setLoading] = useState(true)
   const [rwdDetails, setRwdDetails] = useState<rwd>(rwdObj)
+  const [deliDate, setDeliDate] = useState("")
 
   useEffect(()=>{
     let isIn = true
@@ -36,6 +39,10 @@ export default function useRwdCard(address:string, id:number) {
           }
           isIn && setRwdDetails(rwdProxy)
           isIn && setLoading(false)
+          let deli = new Date(rwdProxy.delDate.toNumber() * 1000)
+          const deliMon = month[deli.getMonth()]
+          const deliYr = deli.getFullYear()
+          !deliDate.includes(deliMon) && setDeliDate(`${deliMon} ${deliYr}`) 
         }
       } catch (error) {
         console.log(error)        
@@ -50,6 +57,7 @@ export default function useRwdCard(address:string, id:number) {
   return {
     loading,
     setLoading,
-    rwdDetails
+    rwdDetails,
+    deliDate
   }
 }
