@@ -13,9 +13,10 @@ import { useRouter } from "next/router"
 
 interface props{
   address: string
+  click: Function
 }
 
-export default function ActiveCampaign({ address }: props) {
+export default function ActiveCampaign({ address, click }: props) {
   const router = useRouter()
   const {    
     loading,
@@ -78,7 +79,7 @@ export default function ActiveCampaign({ address }: props) {
           </div>
         </div>
 
-        <button className="acp-fund-cta">{"Fund this project"}</button>
+        <button className="acp-fund-cta" onClick={()=>{router.push(`${router.asPath}#cmpdetails`); click()}}>{"Fund this project"}</button>
 
         <div className="acp-bio fl-cl fl-sb">
           <div className="acp-bio-native fl-cl">

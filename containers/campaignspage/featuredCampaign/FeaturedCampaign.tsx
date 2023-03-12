@@ -6,6 +6,7 @@ import { faCubes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ethers } from "ethers"
 import Link from "next/link"
+import { useRouter } from "next/router"
 import ReactLoading from "react-loading"
 import Skeleton from "react-loading-skeleton"
 
@@ -15,6 +16,7 @@ interface props{
 }
 
 export default function FeaturedCampaign({ address }:props) {
+  const router = useRouter()
   const {    
     loading,
     campaignDetails,
@@ -44,7 +46,7 @@ export default function FeaturedCampaign({ address }:props) {
         <div className="fc-cta fl-tc fl-sb">
           <div className="fc-cat-name fl-cl">
             <FontAwesomeIcon icon={faCubes} className="fc-cat-icon"/>
-            {loading ? <ReactLoading type="bubbles" color="#544776"/> : campaignDetails.category}
+            {loading ? <Skeleton style={{ "width": "4vw" }}/> : campaignDetails.category}
           </div>
           <Link href={`/campaigns/campaign/${address}`}><button className="fl-fc">{"Learn more..."}</button></Link>
         </div>
@@ -87,7 +89,7 @@ export default function FeaturedCampaign({ address }:props) {
             <div className="fc-creator-jazzicon"></div>
             <p>{creatorVal}</p>
           </div>
-          <button className="fc-fund-cta">{"Fund this project"}</button>
+          <button className="fc-fund-cta" onClick={()=>{router.push(`/campaigns/campaign/${address}`)}}>{"Checkout this project"}</button>
         </div>
       </div>
     </section>
