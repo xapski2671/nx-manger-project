@@ -26,16 +26,16 @@ export default function CampaignDetails({ address, onFund, resetter }: props) {
             <div className={`cpd-tab-title ${activeTab == "STORY" && "cpd-active-tab"}`} onClick={()=>{setActiveTab("STORY")}}>{"STORY"}</div>
             <div className={`cpd-tab-title ${activeTab == "RISKS" && "cpd-active-tab"}`} onClick={()=>{setActiveTab("RISKS")}}>{"RISKS"}</div>
             <div className={`cpd-tab-title ${activeTab == "REWARDS" && "cpd-active-tab"}`} onClick={()=>{setActiveTab("REWARDS")}} ref={rwdRef}>{"REWARDS"}</div>
-            <div className={`cpd-tab-title ${activeTab == "PAYMENT" && "cpd-active-tab"}`} onClick={()=>{setActiveTab("PAYMENT")}}>{"PAYMENT"}</div>
+            {/* <div className={`cpd-tab-title ${activeTab == "PAYMENT" && "cpd-active-tab"}`} onClick={()=>{setActiveTab("PAYMENT")}}>{"PAYMENT"}</div> */}
           </div>
           <div className="cpd-separator"></div>
         </div>
        
         <>
-          {activeTab == "STORY" && <StoryTab/>}
-          {activeTab == "RISKS" && <RisksTab/>}
+          {activeTab == "STORY" && <StoryTab address={address}/>}
+          {activeTab == "RISKS" && <RisksTab address={address}/>}
           {activeTab == "REWARDS" && <RewardsTab address={address}/>}
-          {activeTab == "PAYMENT" && <PaymentTab/>}
+          {/* {activeTab == "PAYMENT" && <PaymentTab/>} */}
         </>
       </main>
 

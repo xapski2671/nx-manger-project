@@ -1,6 +1,9 @@
-import React from "react"
 
-export default function RisksTab() {
+interface props {
+  address: string
+}
+
+export default function RisksTab({ address }:props) {
   return (
     <div>RisksTab</div>
   )
