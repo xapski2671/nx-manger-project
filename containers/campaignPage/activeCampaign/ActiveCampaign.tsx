@@ -8,7 +8,6 @@ import { useCdata } from "@/hooks/useCdata"
 import { useQCData } from "@/hooks/useQCData"
 import { useURIData } from "@/hooks/useURIData"
 import Link from "next/link"
-import ReactLoading from "react-loading"
 import { useRouter } from "next/router"
 
 
@@ -47,8 +46,8 @@ export default function ActiveCampaign({ address }: props) {
       <div className="acp-details fl-tl fl-c">
 
         <div className="acp-camp-title fl-tl fl-c">
-          <h4>{loading ? <Skeleton style={{ "width": "4.5vw" }}/> : campaignDetails.title}</h4>
-          <p>{loading ? <Skeleton count={2} style={{ "width": "4vw" }}/> : campaignDetails.description}</p>
+          <h4>{loading ? <Skeleton style={{ "width": "13vw" }}/> : campaignDetails.title}</h4>
+          <p>{loading ? <Skeleton count={2} style={{ "width": "10vw" }}/> : campaignDetails.description}</p>
         </div>
 
         <div className="acp-status-container fl-tl fl-c">

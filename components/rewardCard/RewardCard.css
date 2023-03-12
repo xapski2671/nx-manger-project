@@ -51,11 +51,12 @@
   }
 }
 
-.rc-reward-del.fl-bl.fl-c{
+.rc-reward-del.fl-bl.fl-c,
+.rc-reward-del.fl-tl.fl-c{
   gap: 0.3em;
 }
 
-.rc-reward-del.fl-bl.fl-c p:first-child{
+.rc-reward-del p:first-child{
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 1.4rem;
@@ -64,17 +65,17 @@
   color: var(--color-card-text);
 }
 @media(max-width: 1250px){
-  .rc-reward-del.fl-bl.fl-c p:first-child{
+  .rc-reward-del p:first-child{
     font-size: 1.1rem;
   }
 }
 @media(max-width: 600px){
-  .rc-reward-del.fl-bl.fl-c p:first-child{
+  .rc-reward-del p:first-child{
     font-size: 0.8rem;
   }
 }
 
-.rc-reward-del.fl-bl.fl-c p:last-child{
+.rc-reward-del p:last-child{
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 1.5rem;
@@ -82,12 +83,12 @@
   color: var(--color-card-text);
 }
 @media(max-width: 1250px){
-  .rc-reward-del.fl-bl.fl-c p:last-child{
+  .rc-reward-del p:last-child{
     font-size: 1.2rem;
   }
 }
 @media(max-width: 600px){
-  .rc-reward-del.fl-bl.fl-c p:last-child{
+  .rc-reward-del p:last-child{
     font-size: 1rem;
   }
 }
@@ -174,11 +175,11 @@
   font-weight: 500;
 }
 
-.rc-input-container.fl-br{
+.rc-input-container.fl-bl.fl-sb{
   width: 100%;
 }
 @media(max-width: 600px){
-  .rc-input-container.fl-br{
+  .rc-input-container.fl-bl.fl-sb{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;

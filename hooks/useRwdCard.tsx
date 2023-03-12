@@ -23,6 +23,7 @@ export default function useRwdCard(address:string, id:number) {
   const [loading, setLoading] = useState(true)
   const [rwdDetails, setRwdDetails] = useState<rwd>(rwdObj)
   const [deliDate, setDeliDate] = useState("")
+  const [shipping, setShipping] = useState<any>(null)
 
   useEffect(()=>{
     let isIn = true
@@ -39,10 +40,15 @@ export default function useRwdCard(address:string, id:number) {
           }
           isIn && setRwdDetails(rwdProxy)
           isIn && setLoading(false)
+
           let deli = new Date(rwdProxy.delDate.toNumber() * 1000)
           const deliMon = month[deli.getMonth()]
           const deliYr = deli.getFullYear()
           !deliDate.includes(deliMon) && setDeliDate(`${deliMon} ${deliYr}`) 
+
+          if(rwdProxy.shipsTo[0] == "_NW"){setShipping(null)}
+          else if(rwdProxy.shipsTo[0] == "_AITW"){setShipping("Anywhere in the world")}
+          else{setShipping(rwdProxy.shipsTo)}
         }
       } catch (error) {
         console.log(error)        
@@ -58,6 +64,7 @@ export default function useRwdCard(address:string, id:number) {
     loading,
     setLoading,
     rwdDetails,
-    deliDate
+    deliDate,
+    shipping
   }
 }
