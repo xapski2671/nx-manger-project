@@ -12,6 +12,7 @@ export function useURIData(address:string){
   const [visLoaded, setVisLoaded] = useState(false)
   const [visURI, setVisURI] = useState("")
   const [cStory, setCStory] = useState({ __html: "" })
+  const [cRisks, setCRisks] = useState({ __html: "" })
 
   
   const start = useCallback(async () => {
@@ -29,6 +30,11 @@ export function useURIData(address:string){
 
       const story = { __html: DOMPurify.sanitize(cmpd.story) }
       cStory !== story && setCStory(story)
+
+      if(cmpd.risks){
+        const risks = { __html: DOMPurify.sanitize(cmpd.risks) }
+        cRisks !== risks && setCRisks(risks)
+      }
       // console.log(cdata)
     }catch(e){console.log(e)}
   },[isConnected, address])
@@ -46,6 +52,7 @@ export function useURIData(address:string){
     visURI,
     visLoaded,
     setVisLoaded,
-    cStory
+    cStory,
+    cRisks
   }
 }

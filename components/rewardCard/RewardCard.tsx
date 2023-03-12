@@ -40,7 +40,7 @@ export default function RewardCard({ address, id }:props) {
       </div>
 
       <article className="rc-details fl-tl fl-c">
-        <h3 className="rc-title">{loading ? <Skeleton style={{ "width": "40%" }}/> : rwdDetails.title}</h3>
+        <h3 className="rc-title">{loading ? <Skeleton style={{ "width": "15vw" }}/> : rwdDetails.title}</h3>
         <p className="rc-description">{loading ? <Skeleton style={{ "width": "60%" }}/> : rwdDetails.description}</p>
         <div className="rc-perks-container">
           <h5>{"INCLUDES"}</h5>

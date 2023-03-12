@@ -25,7 +25,8 @@ let catArray:Array<string> =
   "Games",
   "Design & Tech",
   "Movie",
-  "Comics & Illustration"
+  "Comics & Illustration",
+  "Startup"
 ]
 
 export function Category({ name, catFc }:props){
