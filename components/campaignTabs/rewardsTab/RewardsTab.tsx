@@ -26,7 +26,7 @@ export default function RewardsTab({ address }:props) {
         {
           loading || !rwIds || !rwIds.length || !typeof(rwIds[0] == "number") ? <ReactLoading type="bubbles" color="#C4A2E7"/> : 
             <>
-              <NullRewardCard/>
+              <NullRewardCard address={address}/>
               {
                 rwIds.map((rId:number, index:number)=>{
                   return (

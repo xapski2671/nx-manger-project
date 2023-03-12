@@ -1,7 +1,27 @@
-import { useState } from "react"
+import { BigNumber, ethers } from "ethers"
+import { useContext, useState } from "react"
+import { conn } from "@/types"
+import { ConnectionContext } from "@/contexts/connection"
+import crowdFunderABI from "@/constants/CrowdFunder.json"
 
-export default function NullRewardCard() {
+interface props{
+  address:string
+}
+
+export default function NullRewardCard({ address }:props) {
   const [inp, setInp] = useState("")
+  const { isConnected, signer }:conn = useContext(ConnectionContext)!
+
+  async function handleFund(donation:BigNumber){
+    const crowdfunder = new ethers.Contract(crowdFunderABI.address, crowdFunderABI.abi, signer)
+    try {
+      const donateTx = await crowdfunder.donateToCampaign(address,{ value:donation })
+      const donateTxR = await donateTx.wait(1)
+      console.log("successfully donated")
+    } catch (error) {
+      console.log(error)      
+    }
+  }
 
   return (
     <div className="rc-container fl-tl fl-c">
@@ -19,7 +39,7 @@ export default function NullRewardCard() {
             </div>
           </div>
         </div>
-        {!inp ? <p>{""}</p> : <button className="rc-cta">{`Pledge ${inp} ETH`}</button>}
+        {!inp ? <p>{""}</p> : <button className="rc-cta" onClick={()=>{handleFund(ethers.utils.parseEther(inp))}}>{`Pledge ${inp} ETH`}</button>}
       </div>
     </div>
   )
