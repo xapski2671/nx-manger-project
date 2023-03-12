@@ -26,16 +26,18 @@ let catArray:Array<string> =
 function Category({ name }:props){
   const router = useRouter()
   const [active, setActive] = useState(false)
+  const [path, setPath] = useState("")
 
   useEffect(()=>{
     const query = router.asPath.replace("%20", " ")
     if(query.includes(name)){
       setActive(true)
+      setPath(query)
     }else{setActive(false)}
   },[name, router.asPath])
 
   return (
-    <div className={`cf-category ${active && "active"}`}>
+    <div className={`cf-category ${active && "active"}`} onClick={()=>{router.push(`/campaigns/${name}`)}}>
       {`${name}`}
     </div>
   )
@@ -59,9 +61,7 @@ export default function CategoryFilter() {
           {
             catArray.map((cat, index)=>{
               return (
-                <Link href={`/campaigns/${cat}`} key={index}>
-                  <Category name={cat} key={index}/>
-                </Link>
+                <Category name={cat} key={index}/>
               )
             })
           }
