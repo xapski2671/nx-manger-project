@@ -22,7 +22,6 @@ export default function useRwdTab(address:string) {
     let isIn = true
     async function startRewardsTab(){
       const campaign = new ethers.Contract(address, campaignABI.abi, signer)
-      console.log(address)
       try {
         let fetchKeysTx = await campaign.getRewardKeys()
         const ids = await modArray(fetchKeysTx)

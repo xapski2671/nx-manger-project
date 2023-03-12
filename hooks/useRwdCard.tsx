@@ -32,7 +32,6 @@ export default function useRwdCard(address:string, id:number) {
       const campaign = await new ethers.Contract(address, campaignABI.abi, signer)
       try {
         const reward = await campaign.getReward(!id ? ethers.utils.parseEther("0") : ethers.utils.parseEther(id.toString()))
-        console.log(reward)
         if(reward[0] !== BigNumber.from("0")){
           let rwdProxy:rwd | any = {}
           for(let i = 0; i < reward.length; i++){
