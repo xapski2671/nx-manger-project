@@ -36,7 +36,7 @@ export default function RewardCard({ address, id }:props) {
     async function startCard(){
       const campaign = await new ethers.Contract(address, campaignABI.abi, signer)
       try {
-        const reward = await campaign.rewards(!id ? ethers.utils.parseEther("0") : ethers.utils.parseEther(id.toString()))
+        const reward = await campaign.getReward(!id ? ethers.utils.parseEther("0") : ethers.utils.parseEther(id.toString()))
         console.log(reward)
         if(reward[0] !== BigNumber.from("0")){
           let rwdProxy:rwd | any = {}
@@ -83,8 +83,8 @@ export default function RewardCard({ address, id }:props) {
         </div>
       </article>
 
-      <div className="rc-input-container fl-bl fl-sb">
-        <div className="rc-input">
+      <div className="rc-input-container fl-br">
+        {/* <div className="rc-input">
           <p>{"Bonus support (optional)"}</p>
           <div className="rc-fund-container fl-cl">
             <div className="rc-inp fl-cl fl-sb">
@@ -92,7 +92,7 @@ export default function RewardCard({ address, id }:props) {
               <input type="number" />
             </div>
           </div>
-        </div>
+        </div> */}
         <button className="rc-cta">{`Pledge ${loading ? "0" : ethers.utils.formatEther(rwdDetails.price)} ETH`}</button>
       </div>
     </div>

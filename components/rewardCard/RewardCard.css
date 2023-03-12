@@ -6,6 +6,8 @@
   box-shadow: 0px 4px 23px 4px rgba(54, 30, 119, 0.1);
   border-radius: 7px;
   gap: 2.08vw;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 @media(max-width: 1000px){
   .rc-container.fl-tl.fl-c{
@@ -18,6 +20,9 @@
     padding: 3.07vw;
     gap: 5.11vw;
   }
+}
+.rc-container.fl-tl.fl-c:hover{
+  transform: scale(1.02);
 }
 
 .rc-id-del.fl-tc.fl-sb{
@@ -168,11 +173,11 @@
   font-weight: 500;
 }
 
-.rc-input-container.fl-bl.fl-sb{
+.rc-input-container.fl-br{
   width: 100%;
 }
 @media(max-width: 600px){
-  .rc-input-container.fl-bl.fl-sb{
+  .rc-input-container.fl-br{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
