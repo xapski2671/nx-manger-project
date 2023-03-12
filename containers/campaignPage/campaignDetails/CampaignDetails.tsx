@@ -8,7 +8,7 @@ interface props{
 function TabTitle(){}
 
 export default function CampaignDetails({ address }: props) {
-  const [activeTab, setActiveTab] = useState("REWARDS")
+  const [activeTab, setActiveTab] = useState("STORY")
 
   return (
     <section className="cpd-section sc-padding fl-tc">
