@@ -15,7 +15,7 @@ export default function SideBio() {
               <FontAwesomeIcon icon={faEthereum} className="sb-bio-curr-icon"/>
               <p>{"0x82b9...be0c"}</p>
             </div>
-            <p className="sb-creator-name">{"tubbycat18"}</p>
+            <p className="sb-creator-name">{"do_cryola"}</p>
           </div>
         </div>
 
