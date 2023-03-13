@@ -1,8 +1,11 @@
 import { faEthereum, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { faGlobe, faShareNodes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useState } from "react"
 
 export default function SideBio() {
+  const [donAmount, setDonAmount] = useState("0")
+
   return (
     <div className="sb-container fl-tl fl-c">
       <div className="sb-bio fl-tl fl-c">
@@ -35,7 +38,7 @@ export default function SideBio() {
 
           <div className="sb-input fl-cl">
             <p>{"ETH"}</p>
-            <input type="number" />
+            <input type="number" onChange={(e)=>{setDonAmount(e.target.value)}} value={donAmount}/>
           </div>
 
           <div className="sb-support-info">
@@ -43,7 +46,7 @@ export default function SideBio() {
             <p>{"Support the project for no reward, just because it speaks to you."}</p>
           </div>
           
-          <button className="sb-fund-cta">{"Fund this project"}</button>
+          <button className="sb-fund-cta">{!donAmount ? "Fund this project" : `Donate ${donAmount} ETH`}</button>
         </div>
       </div>
     </div>
