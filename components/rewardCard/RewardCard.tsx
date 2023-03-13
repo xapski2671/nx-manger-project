@@ -46,7 +46,7 @@ export default function RewardCard({ address, id }:props) {
           <h5>{"INCLUDES"}</h5>
           <ul className="rc-perks fl-tl fl-c">
             {
-              loading || !rwdDetails.perks.length ? <Skeleton style={{ "width": "60%" }} count={3}/>
+              loading || !rwdDetails.perks.length ? <Skeleton count={3} style={{ "width": "15vw" }}/>
                 : rwdDetails.perks.map((perk, index)=>{
                   return (
                     <li key={index}>{perk}</li>
