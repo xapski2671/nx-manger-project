@@ -76,7 +76,7 @@ export default function RewardCard({ address, id }:props) {
           </div>
           : <p>{""}</p>
         }
-        <button className="rc-cta" onClick={()=>{handleFund(rwdDetails.price)}}>{`Pledge ${loading ? "" : ethers.utils.formatEther(rwdDetails.price)} ETH`}</button>
+        <button className="rc-cta" onClick={()=>{handleFund(rwdDetails.price)}}>{`Donate ${loading ? "" : ethers.utils.formatEther(rwdDetails.price)} ETH`}</button>
       </div>
     </div>
   )

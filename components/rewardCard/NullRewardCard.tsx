@@ -39,7 +39,7 @@ export default function NullRewardCard({ address }:props) {
             </div>
           </div>
         </div>
-        {!inp ? <p>{""}</p> : <button className="rc-cta" onClick={()=>{handleFund(ethers.utils.parseEther(inp))}}>{`Pledge ${inp} ETH`}</button>}
+        {!inp ? <p>{""}</p> : <button className="rc-cta" onClick={()=>{handleFund(ethers.utils.parseEther(inp))}}>{`Donate ${inp} ETH`}</button>}
       </div>
     </div>
   )
