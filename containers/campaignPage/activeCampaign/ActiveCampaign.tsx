@@ -100,7 +100,7 @@ export default function ActiveCampaign({ click }: props) {
               <FontAwesomeIcon icon={faTwitter} className="acp-social-icon"/>
             </Link>
             <FontAwesomeIcon icon={faGlobe} className="acp-social-icon" style={!cdata || !cdata.website ? { "display" : "none" } : {}} onClick={()=>{router.push(cdata.website)}}/>
-            <FontAwesomeIcon icon={faShareNodes} className="acp-social-icon" onClick={()=>{router.push("https://www.youtube.com/", "_blank")}}/>
+            <FontAwesomeIcon icon={faShareNodes} className="acp-social-icon"/>
           </div>
         </div>
 

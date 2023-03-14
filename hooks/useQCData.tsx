@@ -1,4 +1,4 @@
-import { GET_CAMPAIGN_DETAILS, GET_USERNAME } from "@/constants/subgraphQueries"
+import { GET_CAMPAIGN_DETAILS, GET_USER_DETAILS } from "@/constants/subgraphQueries"
 import { ConnectionContext } from "@/contexts/connection"
 import { conn } from "@/types"
 import { truncateStr } from "@/utils/truncateStr"
@@ -10,7 +10,7 @@ export function useQCData(cAddress:string, creator:string){
   const [creatorVal, setCreatorVal] = useState("")
   const [dLoading, setDloading] = useState(true)
   const [cDetails, setCDetails] = useState<any>()
-
+  const [userDets, setUserDets] = useState<any>()
   useEffect(()=>{
     let isIn = true
     async function getUserDetails(){
@@ -21,18 +21,19 @@ export function useQCData(cAddress:string, creator:string){
       
       const userData = await client
         .query({
-          query: GET_USERNAME,
-          variables: { userAddress: creator ? creator : "0x00000000000000000000000000000000000000000" }
+          query: GET_USER_DETAILS,
+          variables: { userAddress: creator.toLowerCase() }
         })
         .then(async (data) => {return data.data.userAdded})
         .catch(err => console.log("Error fetching data: ", err))
       if( userData == null || userData.username == null){setCreatorVal(truncateStr(creator ? creator : "0x00000000000000000000000000000000000000000", 10))}
       else{isIn && setCreatorVal(userData.username)}
+      userData && isIn && setUserDets(userData)
     }
   
     isIn && getUserDetails().catch(e=>console.log(e))
     return () => {isIn = false}
-  },[isConnected, creator, creatorVal])
+  },[isConnected, creator])
 
   useEffect(()=>{
     let isIn = true
@@ -45,7 +46,7 @@ export function useQCData(cAddress:string, creator:string){
       const cDets = await client
         .query({
           query: GET_CAMPAIGN_DETAILS,
-          variables: { campaignAddress: cAddress ? cAddress : "0x00000000000000000000000000000000000000000" }
+          variables: { campaignAddress: cAddress ? cAddress.toLowerCase() : "0x00000000000000000000000000000000000000000" }
         })
         .then(async (data) => data.data.campaignAdded)
         .catch(err => console.log("Error fetching data: ", err))
@@ -61,6 +62,7 @@ export function useQCData(cAddress:string, creator:string){
   return {
     creatorVal,
     cDetails,
+    userDets,
     dLoading
   }
 }

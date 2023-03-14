@@ -1,11 +1,17 @@
 import { CampaignContext } from "@/contexts/currentCampaign"
+import { useCdata } from "@/hooks/useCdata"
+import { useQCData } from "@/hooks/useQCData"
+import { truncateStr } from "@/utils/truncateStr"
 import { faEthereum, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { faGlobe, faShareNodes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Link from "next/link"
 import { useContext, useState } from "react"
 
 export default function SideBio() {
   const { currAddress } = useContext(CampaignContext)!
+  const { campaignDetails } = useCdata(currAddress)
+  const { creatorVal, userDets } = useQCData(currAddress, campaignDetails.creator)
   const [donAmount, setDonAmount] = useState("")
 
   return (
@@ -18,19 +24,20 @@ export default function SideBio() {
           <div className="sb-creator-details fl-tl fl-c">
             <div className="sb-creator-address fl-cl">
               <FontAwesomeIcon icon={faEthereum} className="sb-bio-curr-icon"/>
-              <p>{"0x82b9...be0c"}</p>
+              <p>{truncateStr(campaignDetails.creator, 10)}</p>
             </div>
-            <p className="sb-creator-name">{"do_cryola"}</p>
+            <p className="sb-creator-name">{creatorVal}</p>
           </div>
         </div>
 
         <div className="sb-creator-socials fl-cl">
-          <FontAwesomeIcon icon={faTwitter} className="sb-social-icon"/>
-          <FontAwesomeIcon icon={faGlobe} className="sb-social-icon"/>
+          <Link href={!userDets || !userDets.twitter ? "#" : userDets.twitter }>
+            <FontAwesomeIcon icon={faTwitter} className="sb-social-icon"/>
+          </Link>
           <FontAwesomeIcon icon={faShareNodes} className="sb-social-icon"/>
         </div>
 
-        <p className="sb-creator-bio">{"A VR engineer and game developer based in San Antonio"}</p>
+        <p className="sb-creator-bio">{userDets ? userDets.bio : ""}</p>
       </div>
 
       <div className="sb-support fl-tl fl-c">

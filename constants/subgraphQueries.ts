@@ -10,12 +10,22 @@ export const GET_HOMEPAGE_CAMPAIGNS = gql`
   }
 `
 
-export const GET_USERNAME = gql`
-  query getUserName($userAddress: String!){
-    userAdded(id: $userAddress){
-      username
+export const GET_USER_DETAILS = gql`
+  query getUserDetails($userAddress: String!){
+    userAdded(id:$userAddress){
+      id
       address
-    }
+      email
+      twitter
+      backedCount
+      backed
+      bio
+      username
+      created
+      createdCount
+      createdAt
+      location
+	  }
   }
 `
 
