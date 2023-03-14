@@ -1,12 +1,11 @@
+import { CampaignContext } from "@/contexts/currentCampaign"
 import { useURIData } from "@/hooks/useURIData"
+import { useContext } from "react"
 import ReactLoading from "react-loading"
 
-interface props {
-  address: string
-}
-
-export default function RisksTab({ address }:props) {
-  const { cdata, fcLoading, cRisks } = useURIData(address)
+export default function RisksTab() {
+  const { currAddress } = useContext(CampaignContext)!
+  const { cdata, fcLoading, cRisks } = useURIData(currAddress)
   return (
     <section className="cpd-tab st-container fl-tl fl-c" id="s_story">
       <h3 className="st-title">{"Risks"}</h3>

@@ -1,15 +1,12 @@
 import { RewardsTab, SideNotice, SideBio, StoryTab, RisksTab, PaymentTab } from "@/components/exportComps"
-import { useEffect, useRef, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 
 interface props{
-  address: string
   onFund: boolean
   resetter: Function
 }
 
-function TabTitle(){}
-
-export default function CampaignDetails({ address, onFund, resetter }: props) {
+export default function CampaignDetails({ onFund, resetter }: props) {
   const [activeTab, setActiveTab] = useState("STORY")
   const rwdRef = useRef<HTMLDivElement>(null)
 
@@ -32,9 +29,9 @@ export default function CampaignDetails({ address, onFund, resetter }: props) {
         </div>
        
         <>
-          {activeTab == "STORY" && <StoryTab address={address}/>}
-          {activeTab == "RISKS" && <RisksTab address={address}/>}
-          {activeTab == "REWARDS" && <RewardsTab address={address}/>}
+          {activeTab == "STORY" && <StoryTab />}
+          {activeTab == "RISKS" && <RisksTab />}
+          {activeTab == "REWARDS" && <RewardsTab/>}
           {/* {activeTab == "PAYMENT" && <PaymentTab/>} */}
         </>
       </main>

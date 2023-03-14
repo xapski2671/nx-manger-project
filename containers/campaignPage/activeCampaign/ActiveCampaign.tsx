@@ -9,14 +9,16 @@ import { useQCData } from "@/hooks/useQCData"
 import { useURIData } from "@/hooks/useURIData"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import { useContext } from "react"
+import { CampaignContext } from "@/contexts/currentCampaign"
 
 
 interface props{
-  address: string
   click: Function
 }
 
-export default function ActiveCampaign({ address, click }: props) {
+export default function ActiveCampaign({ click }: props) {
+  const { currAddress } = useContext(CampaignContext)!
   const router = useRouter()
   const {    
     loading,
@@ -27,9 +29,9 @@ export default function ActiveCampaign({ address, click }: props) {
     progress,
     daysUntil,
     deadlineStatement
-  } = useCdata(address)
-  const { cdata, visLoaded, setVisLoaded } = useURIData(address)  
-  const { creatorVal, cDetails, dLoading } = useQCData(address, campaignDetails.creator)
+  } = useCdata(currAddress)
+  const { cdata, visLoaded, setVisLoaded } = useURIData(currAddress)  
+  const { creatorVal, cDetails, dLoading } = useQCData(currAddress, campaignDetails.creator)
 
   
   return (

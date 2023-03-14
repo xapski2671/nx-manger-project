@@ -6,15 +6,13 @@ import { conn } from "@/types"
 import { ConnectionContext } from "@/contexts/connection"
 import useRwdTab from "@/hooks/useRwdTab"
 import ReactLoading from "react-loading"
+import { CampaignContext } from "@/contexts/currentCampaign"
 
 
 
-interface props{
-  address: string
-}
-
-export default function RewardsTab({ address }:props) {
-  const { loading, rwIds } = useRwdTab(address)
+export default function RewardsTab() {
+  const { currAddress } = useContext(CampaignContext)!
+  const { loading, rwIds } = useRwdTab(currAddress)
 
   return (
     <div className="cpd-tab rt-container fl-tl fl-c" id="r_rewards">
@@ -26,11 +24,11 @@ export default function RewardsTab({ address }:props) {
         {
           loading || !rwIds || !rwIds.length || !typeof(rwIds[0] == "number") ? <ReactLoading type="bubbles" color="#C4A2E7"/> : 
             <>
-              <NullRewardCard address={address}/>
+              <NullRewardCard address={currAddress}/>
               {
                 rwIds.map((rId:number, index:number)=>{
                   return (
-                    <RewardCard address={address} id={rId} key={index}/>
+                    <RewardCard address={currAddress} id={rId} key={index}/>
                   )
                 })
               }

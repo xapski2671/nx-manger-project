@@ -1,10 +1,12 @@
+import { CampaignContext } from "@/contexts/currentCampaign"
 import { faEthereum, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { faGlobe, faShareNodes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useState } from "react"
+import { useContext, useState } from "react"
 
 export default function SideBio() {
-  const [donAmount, setDonAmount] = useState("0")
+  const { currAddress } = useContext(CampaignContext)!
+  const [donAmount, setDonAmount] = useState("")
 
   return (
     <div className="sb-container fl-tl fl-c">

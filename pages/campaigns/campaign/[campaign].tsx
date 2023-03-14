@@ -1,4 +1,5 @@
 import { ActiveCampaign, CampaignDetails } from "@/containers/exportConts"
+import { CampaignProvider } from "@/contexts/currentCampaign"
 import Error from "next/error"
 import Head from "next/head"
 import { useRouter } from "next/router"
@@ -24,8 +25,10 @@ export default function Campaign() {
           ? <ReactLoading type="bubbles" color="#827B93"/> 
           : typeof(campaign) == "string" && campaign.includes("0x") && campaign.length == 42 
             ? <>
-              <ActiveCampaign address={campaign} click={()=>{setIsFund(true)}}/>
-              <CampaignDetails address={campaign} onFund={isFund} resetter={()=>{setIsFund(false)}}/>
+              <CampaignProvider address={campaign}>
+                <ActiveCampaign click={()=>{setIsFund(true)}}/>
+                <CampaignDetails onFund={isFund} resetter={()=>{setIsFund(false)}}/>
+              </CampaignProvider>
             </>
             : <Error statusCode={404}/>
       }
