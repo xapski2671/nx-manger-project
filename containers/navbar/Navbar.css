@@ -168,10 +168,16 @@
 }
 
 .nv-conn-info.fl-cl{
-  background: #AF9CDD;
+  background: #B8A8E1;
+  /* background: #AF9CDD; */
   gap: 5px;
   padding: 5px 8px;
   border-radius: 8px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.nv-conn-info.fl-cl:hover{
+  transform: scale(1.02);
 }
 
 .nv-jazzicon{
@@ -191,5 +197,7 @@
 
 .nv-drpdown-icon{
   height: 20px;
+  cursor: pointer;
   color: #fff;
 }
+

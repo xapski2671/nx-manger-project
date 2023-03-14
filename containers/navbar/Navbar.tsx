@@ -45,16 +45,17 @@ export default function Navbar() {
         <div className="nv-menu fl-cr">
           <div className="nv-menu-links fl-cr">
             <Menu/>
+            {
+              !isConnected
+                ? <button className="nv-connect" onClick={()=>{connect()}}>{isConnected ? "Connected" : "Connect"}</button>
+                : <div className="nv-conn-info fl-cl">
+                  <div className="nv-jazzicon"></div>
+                  <p className="nv-usr-address">{truncateStr(account, 14)}</p>
+                  <FontAwesomeIcon icon={faAngleDown} className="nv-drpdown-icon"/>
+                </div>
+            }
           </div>
-          {
-            !isConnected
-              ? <button className="nv-connect" onClick={()=>{connect()}}>{isConnected ? "Connected" : "Connect"}</button>
-              : <div className="nv-conn-info fl-cl">
-                <div className="nv-jazzicon"></div>
-                <p className="nv-usr-address">{truncateStr(account, 14)}</p>
-                <FontAwesomeIcon icon={faAngleDown} className="nv-drpdown-icon"/>
-              </div>
-          }
+
           <FontAwesomeIcon icon={faBarsStaggered} className="nv-hamburger" onClick={()=>{setSiInvis(prev=>!prev)}}/>
           {
             !SiInvis && (
