@@ -8,6 +8,7 @@ export { default as NullRewardCard } from "./rewardCard/NullRewardCard"
 export { default as SideNotice } from "./sideNotice/SideNotice"
 export { default as SideBio } from "./sideBio/SideBio"
 export { default as Logo } from "./logo/Logo"
+export { default as UserBox } from "./userBox/UserBox"
 
 export { default as RewardsTab } from "./campaignTabs/rewardsTab/RewardsTab"
 export { default as PaymentTab } from "./campaignTabs/paymentTab/PaymentTab"
