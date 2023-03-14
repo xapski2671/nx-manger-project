@@ -49,7 +49,7 @@ export default function Navbar() {
           {
             !isConnected
               ? <button className="nv-connect" onClick={()=>{connect()}}>{isConnected ? "Connected" : "Connect"}</button>
-              : <div className="nv-conn-info">
+              : <div className="nv-conn-info fl-cl">
                 <div className="nv-jazzicon"></div>
                 <p className="nv-usr-address">{truncateStr(account, 14)}</p>
                 <FontAwesomeIcon icon={faAngleDown} className="nv-drpdown-icon"/>

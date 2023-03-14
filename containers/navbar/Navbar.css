@@ -167,3 +167,29 @@
   } 
 }
 
+.nv-conn-info.fl-cl{
+  background: #AF9CDD;
+  gap: 5px;
+  padding: 5px 8px;
+  border-radius: 8px;
+}
+
+.nv-jazzicon{
+  height: 25px;
+  width: 25px;
+  background: var(--color-btn);
+  border-radius: 8px;
+}
+
+.nv-usr-address{
+  font-size: 1.58rem;
+  color: var(--color-htext);
+  font-family: var(--font-family);
+  font-weight: 600;
+  line-height: 1em;
+}
+
+.nv-drpdown-icon{
+  height: 20px;
+  color: #fff;
+}
