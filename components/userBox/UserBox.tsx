@@ -1,9 +1,22 @@
 import { faArrowLeft, faArrowsLeftRightToLine, faRightLeft } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { AnimationEvent, useState } from "react"
 
-export default function UserBox() {
+interface props{
+  iVisible: boolean
+  offMe: Function
+}
+
+export default function UserBox({ iVisible, offMe }:props) {
+  // const [showMe, setShowMe] = useState(true)
+  function handleAnimationFinished(e:AnimationEvent){
+    if(e.animationName.includes("slideout")){
+      offMe()
+    }
+  }
+
   return (
-    <div className="ub-container fl-cl fl-c"> 
+    <div className={`ub-container fl-cl fl-c ${!iVisible ? "ub-slide-in" : "ub-slide-out"}`} onAnimationEnd={(e)=>{handleAnimationFinished(e)}}> 
       <div className="ub-acc-grp fl-tl">
         <div className="ub-jazzicon"></div>
         <div className="ub-addr-grp fl-tl fl-c">

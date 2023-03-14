@@ -60,7 +60,7 @@ export default function Navbar() {
                 </div>
             }
           </div>
-          {!UBInvis && <UserBox/>}
+          {!UBInvis && <UserBox iVisible={UBInvis} offMe={()=>{setUBInvis(true)}}/>}
           <FontAwesomeIcon icon={faBarsStaggered} className="nv-hamburger" onClick={()=>{setSiInvis(prev=>!prev)}}/>
           {
             !SiInvis && (
