@@ -1,18 +1,34 @@
+import { ConnectionContext } from "@/contexts/connection"
 import { CampaignContext } from "@/contexts/currentCampaign"
 import { useCdata } from "@/hooks/useCdata"
 import { useQCData } from "@/hooks/useQCData"
+import { conn } from "@/types"
 import { truncateStr } from "@/utils/truncateStr"
 import { faEthereum, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { faGlobe, faShareNodes } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { BigNumber, ethers } from "ethers"
 import Link from "next/link"
+import crowdFunderABI from "@/constants/CrowdFunder.json"
 import { useContext, useState } from "react"
 
 export default function SideBio() {
   const { currAddress } = useContext(CampaignContext)!
+  const { isConnected, signer }:conn = useContext(ConnectionContext)!
   const { campaignDetails } = useCdata(currAddress)
   const { creatorVal, userDets } = useQCData(currAddress, campaignDetails.creator)
   const [donAmount, setDonAmount] = useState("")
+
+  async function handleFund(donation:BigNumber){
+    const crowdfunder = new ethers.Contract(crowdFunderABI.address, crowdFunderABI.abi, signer)
+    try {
+      const donateTx = await crowdfunder.donateToCampaign(currAddress,{ value:donation })
+      const donateTxR = await donateTx.wait(1)
+      console.log("successfully donated")
+    } catch (error) {
+      console.log(error)      
+    }
+  }
 
   return (
     <div className="sb-container fl-tl fl-c">
@@ -55,7 +71,9 @@ export default function SideBio() {
             <p>{"Support the project for no reward, just because it speaks to you."}</p>
           </div>
           
-          <button className="sb-fund-cta">{!donAmount ? "Fund this project" : `Donate ${donAmount} ETH`}</button>
+          <button className="sb-fund-cta" onClick={()=>{handleFund(ethers.utils.parseEther(donAmount))}}>
+            {!donAmount ? "Fund this project" : `Donate ${donAmount} ETH`}
+          </button>
         </div>
       </div>
     </div>

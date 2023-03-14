@@ -33,7 +33,7 @@ export function useQCData(cAddress:string, creator:string){
   
     isIn && getUserDetails().catch(e=>console.log(e))
     return () => {isIn = false}
-  },[isConnected, creator])
+  },[isConnected, creator, creatorVal])
 
   useEffect(()=>{
     let isIn = true
