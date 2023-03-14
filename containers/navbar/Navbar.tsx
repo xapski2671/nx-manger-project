@@ -25,6 +25,7 @@ export default function Navbar() {
   const { isConnected, connect, account, signer }:conn = useContext(ConnectionContext)!
 
   const [SiInvis, setSiInvis] = useState(true)
+  const [UBInvis, setUBInvis] = useState(true)
   const { scrollY, scrollX, scrollDirection } = useScroll()
   const router = useRouter()
 
