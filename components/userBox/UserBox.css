@@ -1,0 +1,112 @@
+.ub-container.fl-cl.fl-c{
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  /* background: #AF9CDD; */
+  background: linear-gradient(0deg, #907CC0 0%, rgba(221, 213, 241, 0.6) 105.07%);
+  padding: 30px 30px 15px;
+  gap: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 23px 4px rgba(0, 0, 0, 0.13);
+}
+
+.ub-acc-grp.fl-tl{
+  width: 100%;
+  gap: 10px;
+}
+
+.ub-jazzicon{
+  width: 35px;
+  height: 35px;
+  background: var(--color-btn);
+  border-radius: 10px;
+}
+
+.ub-addr-grp.fl-tl.fl-c{
+  gap: 8px;
+}
+
+.ub-addr-grp.fl-tl.fl-c p:first-child,
+.ub-addr-grp.fl-tl.fl-c p:last-child{
+  font-family: var(--font-family);
+  color: var(--color-sub-bg);
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+  line-height: 1em;
+}
+
+.ub-addr-grp.fl-tl.fl-c p:last-child{
+  color: var(--color-htext);
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
+}
+
+.ub-details-cont{
+  display: grid;
+  grid-template-columns: 100px 200px;
+  grid-row-gap: 20px;
+}
+
+.ub-attribute-grp{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.ub-attribute-grp p:first-child,
+.ub-attribute-grp p:last-child{
+  white-space: nowrap;
+  font-family: var(--font-family);
+  color: var(--color-sub-bg);
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+  line-height: 1em;
+}
+
+.ub-attribute-grp p:last-child{
+  color: var(--color-htext);
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
+}
+
+.ub-cta{
+  white-space: nowrap;
+  font-family: var(--font-family);
+  color: var(--color-htext);
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  line-height: 1em;
+  background: var(--color-text);
+  width: 100%;
+  padding: 0.6em 0.6em 0.7em;
+  cursor: pointer;
+  border-radius: 0.5em;
+  box-shadow: 0px 4px 23px 4px rgba(0, 0, 0, 0.13);
+}
+
+
+.ub-wallet-options.fl-cl{
+  width: 100%;
+  justify-content: space-between;
+}
+
+.ub-wallet-option.fl-cl{
+  gap: 10px;
+}
+
+.ub-wallet-option.fl-cl p:last-child{
+  font-family: var(--font-family);
+  line-height: 1em;
+  color: var(--color-htext);
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.ub-w-option-icon{
+  height: 1.5rem;
+  color: var(--color-htext);
+}

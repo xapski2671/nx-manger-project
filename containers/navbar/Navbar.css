@@ -169,7 +169,6 @@
 
 .nv-conn-info.fl-cl{
   background: #B8A8E1;
-  /* background: #AF9CDD; */
   gap: 5px;
   padding: 5px 8px;
   border-radius: 8px;
@@ -191,12 +190,13 @@
   font-size: 1.58rem;
   color: var(--color-htext);
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1em;
+  letter-spacing: 0.02em;
 }
 
 .nv-drpdown-icon{
-  height: 20px;
+  height: 18px;
   cursor: pointer;
   color: #fff;
 }

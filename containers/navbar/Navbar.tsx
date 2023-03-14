@@ -1,9 +1,9 @@
-import { Logo, Sidebar } from "@/components/exportComps"
+import { Logo, Sidebar, UserBox } from "@/components/exportComps"
 import { ConnectionContext } from "@/contexts/connection"
 import { useScroll } from "@/hooks/useScroll"
 import { conn } from "@/types"
 import { truncateStr } from "@/utils/truncateStr"
-import { faAngleDown, faBarsStaggered } from "@fortawesome/free-solid-svg-icons"
+import { faAngleDown, faAngleUp, faBarsStaggered } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"
 import { useRouter } from "next/router"
@@ -52,11 +52,15 @@ export default function Navbar() {
                 : <div className="nv-conn-info fl-cl">
                   <div className="nv-jazzicon"></div>
                   <p className="nv-usr-address">{truncateStr(account, 14)}</p>
-                  <FontAwesomeIcon icon={faAngleDown} className="nv-drpdown-icon"/>
+                  { 
+                    UBInvis ?
+                      <FontAwesomeIcon icon={faAngleDown} className="nv-drpdown-icon" onClick={()=>{setUBInvis(false)}}/>
+                      : <FontAwesomeIcon icon={faAngleUp} className="nv-drpdown-icon" onClick={()=>{setUBInvis(true)}}/>
+                  }
                 </div>
             }
           </div>
-
+          {!UBInvis && <UserBox/>}
           <FontAwesomeIcon icon={faBarsStaggered} className="nv-hamburger" onClick={()=>{setSiInvis(prev=>!prev)}}/>
           {
             !SiInvis && (
