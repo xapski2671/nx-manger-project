@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default function UserBox() {
   return (
-    // 400x424.19
     <div className="ub-container fl-cl fl-c"> 
       <div className="ub-acc-grp fl-tl">
         <div className="ub-jazzicon"></div>
