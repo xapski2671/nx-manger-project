@@ -2,7 +2,8 @@ import { Logo, Sidebar } from "@/components/exportComps"
 import { ConnectionContext } from "@/contexts/connection"
 import { useScroll } from "@/hooks/useScroll"
 import { conn } from "@/types"
-import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons"
+import { truncateStr } from "@/utils/truncateStr"
+import { faAngleDown, faBarsStaggered } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"
 import { useRouter } from "next/router"
@@ -21,7 +22,7 @@ function Menu(){
 }
 
 export default function Navbar() {
-  const payload:conn = useContext(ConnectionContext)!
+  const { isConnected, connect, account, signer }:conn = useContext(ConnectionContext)!
 
   const [SiInvis, setSiInvis] = useState(true)
   const { scrollY, scrollX, scrollDirection } = useScroll()
@@ -45,7 +46,15 @@ export default function Navbar() {
           <div className="nv-menu-links fl-cr">
             <Menu/>
           </div>
-          <button className="nv-connect" onClick={()=>{payload.connect()}}>{payload.isConnected ? "Connected" : "Connect"}</button>
+          {
+            !isConnected
+              ? <button className="nv-connect" onClick={()=>{connect()}}>{isConnected ? "Connected" : "Connect"}</button>
+              : <div className="nv-conn-info">
+                <div className="nv-jazzicon"></div>
+                <p className="nv-usr-address">{truncateStr(account, 14)}</p>
+                <FontAwesomeIcon icon={faAngleDown} className="nv-drpdown-icon"/>
+              </div>
+          }
           <FontAwesomeIcon icon={faBarsStaggered} className="nv-hamburger" onClick={()=>{setSiInvis(prev=>!prev)}}/>
           {
             !SiInvis && (

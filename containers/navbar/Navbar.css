@@ -94,8 +94,8 @@
 
 .nv-connect{
   padding: 0.65em 1.5em;
-  /* background: var(--color-btn); */
-  background: var(--color-sub-bg);
+  background: var(--color-btn);
+  /* background: #C4B3D6; */
   box-shadow: 0px 4px 23px 4px rgba(0, 0, 0, 0.13);
   border: none;
   border-radius: 8px;
